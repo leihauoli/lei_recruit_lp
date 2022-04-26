@@ -1,0 +1,228 @@
+div#header-paragraph-interviews {
+  position: relative;
+  overflow: hidden;
+  height: 1em;
+  width: 430px;
+  margin: 0 0 1em 1em;
+  font-size: 70px;
+}
+div#div-interviews {
+  background-color: #f8f4e4;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.interview-header1 {
+  width: 12em;
+  height: 1.2em;
+  margin-top: 260px;
+  margin-bottom: 10px;
+}
+.interview-header2 {
+  width: 10em;
+  height: 1.2em;
+}
+.interview-header1,
+.interview-header2 {
+  font-size: 50px;
+}
+.sumbnail-interview {
+  position: relative;
+}
+.sumbnail-title-interview {
+  position: absolute;
+  height: 100%;
+  left: 170px;
+  width: 100%;
+}
+div#header-interviews {
+  position: relative;
+}
+.sumbnail-background-interview {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+p.interviewee {
+  margin-top: 30px;
+  position: relative;
+  font-weight: bold;
+  z-index: 100;
+}
+span.interviewee-position {
+  display: block;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+span.interviewee-name {
+  display: block;
+  font-weight: 600;
+}
+.sumnail-leihauoli-logo {
+  position: relative;
+  left: 60px;
+  top: -10px;
+}
+
+.content-interviews {
+  width: 1226px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.ul-schedule-time-line {
+  border-left: solid black;
+  padding-top: 3em;
+  height: 1124px;
+}
+.ul-schedule-time-line > li.li-schedule-time {
+  list-style: none;
+  position: relative;
+  left: -2em;
+  background-color: white;
+  width: 4em;
+  border-radius: 1em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+ul.ul-schedule-time-line::before {
+  content: "";
+  position: relative;
+  top: -3.5em;
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+  border-radius: 2em;
+  background: black;
+  left: -0.8em;
+}
+ul.ul-schedule-todo {
+  top: 6em;
+  width: 317px;
+  position: relative;
+}
+.div-schedule-interview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.div-schedule-interview::before {
+  content: "OneDay";
+  font-weight: 600;
+  position: relative;
+  top: -25px;
+}
+li.li-schedule-todo::before {
+  content: "";
+  width: 3em;
+  border-top: solid;
+  position: relative;
+  left: -4em;
+  display: block;
+  top: 1em;
+}
+li.li-schedule-todo {
+  list-style: none;
+}
+
+/*-------------
+schedule list
+*/
+.ul-schedule-todo > .li-schedule-todo {
+  position: absolute;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
+  top: 10px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
+  top: 40px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
+  top: 60px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
+  top: 80px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
+  top: 90px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
+  top: 100px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
+  top: 110px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
+  top: 140px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
+  top: 190px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
+  top: 210px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
+  top: 260px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
+  top: 290px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
+  top: 300px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+  top: 360px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
+  top: 390px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(16) {
+  top: 410px;
+}
+
+/*-------------
+interview list
+*/
+
+.div-interview-QA {
+  counter-reset: interview-counter;
+  width: 560px;
+}
+.interview-counter {
+  counter-increment: interview-counter;
+  margin-top: 50px;
+  width: 100%;
+  height: 16px;
+  display: block;
+}
+.interview-counter::before {
+  position: relative;
+  top: -5px;
+  content: "";
+  display: inline-block;
+  width: 52px;
+  border-bottom: #c1ab58 1px solid;
+  margin-right: 10px;
+}
+.interview-counter::after {
+  content: "Interview" counter(interview-counter, decimal-leading-zero);
+  color: #c1ab58;
+  font-weight: 600;
+}
+
+.dt-interview-question {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 49px;
+}
+.dd-interview-answer {
+  font-size: 16px;
+}

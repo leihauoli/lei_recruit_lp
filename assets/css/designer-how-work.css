@@ -1,0 +1,121 @@
+p#title-designer-how-work {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+}
+p.subtitle-designer-how-work {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+p.supplement-designer-how-work {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container-designer-how-work {
+  margin-top: 40px;
+}
+dl.examples-designer-how-work {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  counter-reset: title-counter;
+}
+.definition-designer-how-work {
+  width: 100%;
+  height: 8em;
+  background: #f8f4e4;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: start;
+  justify-items: start;
+  position: relative;
+}
+.definition-designer-how-work:nth-child(even) {
+  background: #f2ebcc;
+}
+
+.definition-designer-how-work::after {
+  content: "";
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 7em;
+  left: 2em;
+  background-color: inherit;
+  z-index: 100;
+  transform: rotate(45deg);
+}
+.definition-designer-how-work:last-child::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+dt.example-title-designer-how-work {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  grid-column: 1/2;
+  padding-left: 2em;
+  counter-increment: title-counter;
+}
+dt.example-title-designer-how-work > span.title-counter {
+  content: counter(title-counter, decimal-leading-zero);
+  font-weight: bold;
+  background: #c1ab58;
+  border-radius: 100%;
+  width: 2em;
+  color: white;
+  height: 2em;
+  display: inline-block;
+  text-align: center;
+  line-height: 2em;
+  margin-right: 1em;
+}
+dt.example-title-designer-how-work > .title-counter::before {
+  content: counter(title-counter, decimal-leading-zero);
+  line-height: inherit;
+}
+dt.example-title-designer-how-work::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 6em;
+  border-left: dashed 1px #c1ab58;
+  right: 4em;
+  top: -2em;
+}
+dd.example-content-designer-how-work {
+  margin-inline-start: 0;
+  grid-column: 2/2;
+  padding-right: 1em;
+}
+/* tea party */
+
+#div-tea-party {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 5px #f2ebcc;
+  padding: 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+div#div-content-tea-party {
+  padding: 2em;
+}
+p#title-tea-party {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+p#title-tea-party {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}

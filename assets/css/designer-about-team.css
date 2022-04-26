@@ -1,0 +1,251 @@
+#div-about-team {
+  width: 1226px;
+  margin: 0 auto;
+}
+#header-about-team {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5em;
+}
+#header-title-about-team {
+  position: relative;
+  overflow: hidden;
+  width: 10em;
+  height: 1.5em;
+  font-size: 4em;
+  background-color: transparent;
+}
+/* #header-title-about-team > .header-inner { */
+.header-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  background: black;
+  z-index: 50;
+  color: white;
+  animation-name: header-inner-left-in;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+/* #header-title-about-team > .header-wrapper { */
+.header-wrapper {
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: block;
+  z-index: 100;
+  animation-name: header-wrapper-left-in;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+/* チーム紹介 */
+#div-design-team {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.div-design-member {
+  opacity: 0;
+  position: relative;
+  width: 300px;
+  height: 320px;
+  animation-name: flowed-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-delay: calc(100 * var(--nth));
+  animation-play-state: running;
+}
+.header-design-member {
+  display: flex;
+  width: 117px;
+  height: 70px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+.design-member-content {
+  width: 100%;
+}
+.design-member-content::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border: dashed 1px #e5e5e5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.design-member-icon {
+  grid-area: icon;
+  height: 100%;
+}
+.design-member-name {
+  height: 1em;
+  vertical-align: bottom;
+  font-weight: bold;
+  padding-left: 1em;
+}
+.design-member-position {
+  height: 1em;
+  vertical-align: bottom;
+  padding-left: 1em;
+}
+.para-like,
+.para-dislike {
+  width: 4em;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 3px;
+}
+.design-member-likes > ul,
+.design-member-dislikes > ul {
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.design-member-likes > ul > li,
+.design-member-dislikes > ul > li {
+  list-style: none;
+  display: inline;
+  font-size: 0.7em;
+}
+.design-member-likes > ul > li::after,
+.design-member-dislikes > ul > li::after {
+  content: "/";
+}
+.design-member-likes > ul > li:last-child::after,
+.design-member-dislikes > ul > li:last-child::after {
+  content: "";
+}
+#div-designer-style {
+  padding-bottom: 2em;
+}
+#header-designer-style {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+#container-designer-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: stretch;
+  counter-reset: counter-card-designer-style;
+}
+.card-designer-style {
+  background: #f8f4e4;
+  width: 310px;
+  height: 512px;
+}
+.card-designer-style-number {
+  color: #c1ab58;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-left: 1em;
+  counter-increment: counter-card-designer-style;
+}
+.card-designer-style-number::before {
+  content: "";
+  display: inline-block;
+  width: 2em;
+  position: relative;
+  top: -0.3em;
+  margin: 0 0.5em 0 1em;
+  border-bottom: 2px solid #c1ab58;
+}
+.card-designer-style-number::after {
+  content: "Style " counter(counter-card-designer-style, decimal-leading-zero);
+}
+.card-designer-style-icon {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  margin: 1em auto 1em;
+  display: block;
+  background: white;
+  padding: 40px;
+}
+.card-title-desiner-style {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.card-subtitle-desiner-style {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: #c1ab58;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  padding: 0.5em 0;
+  font-size: 16px;
+}
+
+.card-message-designer-style {
+  margin-top: 1em;
+  margin-left: 4em;
+}
+.card-message-designer-style > li {
+  list-style: disc;
+}
+.card-designer-style {
+  padding-bottom: 2em;
+}
+
+/* Animation */
+/* header */
+@keyframes header-inner-left-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes header-wrapper-left-in {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+@keyframes flowed-in {
+  0% {
+    opacity: 0;
+    top: 200px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

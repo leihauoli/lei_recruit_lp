@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* クラス名はハイフン方式で命名 */
+/* OK　→　.section-sample */
+/* NG　→　.sectionSample .SectionSample */
+
+/*---------------------------------------------------------------------
+コンテンツ名
+---------------------------------------------------------------------*/
+.section-sample {
+  /* カラーコードは6桁大文字 */
+  color: #33AAAA;
+  /* line-heightは比率で記述 */
+  line-height: 1.7;
+  /* letter-spacingはemに変換する */
+  letter-spacing: 0.2em;
+  /* font-weightは数字で統一 */
+  font-weight: 500;
+}
+
+
+
+/* プロパティの数値が0の場合、単位（px等）は不要とする。また"border"や"background"等は汎用性を失わない限り、まとめて記述する。 */
+/* 悪い例 */
+.box {
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #333333;
+  background-color: #f5f5f5;
+  background-image: url(img/bg.png);
+  background-repeat: repeat-x;
+  background-position: left top;
+  background-attachment: scroll;
+}
+/* 良い例 */
+.box {
+  padding: 10px 0;
+  border: 1px solid #333333;
+  background: #F5F5F5 url(img/bg.png) repeat-x left top scroll;
+}
+
+
+@media screen and (max-width: 1024px) {
+  /* 1024px以下の画面サイズで適用されるので、この中にSP版のデザインを記述します。 */
+}
+
+/*---------------------------------------------------------------------
+ABOUT（例）
+---------------------------------------------------------------------*/
+.section-about {
+  background-color: #FFFFFF;
+  padding: 110px 70px;
+  max-width: 1226px;
+  margin: 0 auto;
+}

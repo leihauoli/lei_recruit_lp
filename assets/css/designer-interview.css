@@ -17,7 +17,6 @@ div.container-interviews {
   margin-top: 60px;
 }
 .interview-header1 {
-  margin-top: 260px;
   margin-bottom: 10px;
 }
 .interview-header1,
@@ -33,11 +32,9 @@ div.container-interviews {
   position: absolute;
   height: 100%;
   left: 170px;
+  top: 50%;
   width: 100%;
 }
-/* div#header-interviews {
-  position: relative;
-} */
 .sumbnail-background-interview {
   position: relative;
   display: flex;
@@ -79,6 +76,13 @@ span.interviewee-name {
 /*-----
 schedule time line
 */
+.schedule-container {
+  margin-top: 50px;
+  overflow: hidden;
+}
+.menu-handler-schedule-interview {
+  display: none;
+}
 .ul-schedule-time-line {
   border-left: solid black;
   padding-top: 3em;

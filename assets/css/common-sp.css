@@ -1,0 +1,7 @@
+/*SP*/
+@media screen and (max-width: 1024px) {
+  .contents-block {
+    width: 100vw;
+    max-width: 100vw;
+  }
+}

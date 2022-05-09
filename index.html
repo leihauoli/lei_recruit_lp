@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="jp">
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/designer-common.css" />
-  <link rel="stylesheet" href="./assets/css/designer-about-team.css" />
-  <link rel="stylesheet" href="./assets/css/designer-how-work.css" />
-  <link rel="stylesheet" href="./assets/css/designer-interview.css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/common-sp.css" />
+    <link rel="stylesheet" href="./assets/css/designer-common.css" />
+    <link rel="stylesheet" href="./assets/css/designer-about-team.css" />
+    <link rel="stylesheet" href="./assets/css/designer-how-work.css" />
+    <link rel="stylesheet" href="./assets/css/designer-interview.css" />
+    <link rel="stylesheet" href="./assets/css/designer-about-team-sp.css" />
+    <link rel="stylesheet" href="./assets/css/designer-how-work-sp.css" />
+    <link rel="stylesheet" href="./assets/css/designer-interview-sp.css" />
+    <script src="./assets/js/schedule-handler.js"></script>
+  </head>
   <body>
     <div id="div-designer" class="contents-block">
       <div id="div-about-team">
@@ -524,95 +532,105 @@
                 alt="leihauoli_logo"
               />
               <img
+                class="sumbnail-interview-image"
                 src="./assets/images/svg/submnail-interview1.svg"
                 alt="submnail-interview1"
               />
             </div>
           </div>
           <div class="content-interviews">
-            <div class="div-schedule-interview">
-              <ul class="ul-schedule-time-line">
-                <li class="li-schedule-time">7:00</li>
-                <li class="li-schedule-time">9:00</li>
-                <li class="li-schedule-time">11:00</li>
-                <li class="li-schedule-time">13:00</li>
-                <li class="li-schedule-time">15:00</li>
-                <li class="li-schedule-time">17:00</li>
-                <li class="li-schedule-time">19:00</li>
-                <li class="li-schedule-time">21:00</li>
-                <li class="li-schedule-time">23:00</li>
-              </ul>
-              <ul id="ul-shiraishi-schedule" class="ul-schedule-todo">
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">7:20 起床</span
-                  ><span class="schedule-detail"
-                    >起床、子供も起こして子供の朝ご飯や支度</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">8:20</span
-                  ><span class="schedule-detail">夫が子供を保育園に送る</span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">8:30 業務開始</span
-                  ><span class="schedule-detail"
-                    >メールを確認してタスクを洗い出したら、デザイン作業を進める</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">10:30 デザインチームの朝会</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">11:00 クライアントとMTG</span
-                  ><span class="schedule-detail"
-                    >ZOOMを使ってクライアントと定例MTG</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">13:00 ランチ休憩</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">14:00 デザイン作業</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">17:00 業務終了</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">17:30 子供のお迎え</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title"
-                    >18:30 帰宅後、子供にご飯を食べさせる</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">19:30 子供の寝る準備</span
-                  ><span class="schedule-detail"
-                    >お風呂に入れたり歯磨きなどをさせる</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">20:30 子供を寝かしつける</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">21:30 夫と晩御飯</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">22:30 自由時間</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">24:00 就寝</span
-                  ><span class="schedule-detail"></span>
-                </li>
-              </ul>
+            <div
+              class="schedule-container schedule-closed"
+              onclick="playScheduleAnimation(this, 500)"
+            >
+              <div class="menu-handler-schedule-interview">
+                デザイナーのとある一日
+              </div>
+              <div class="div-schedule-interview">
+                <ul class="ul-schedule-time-line">
+                  <li class="li-schedule-time">7:00</li>
+                  <li class="li-schedule-time">9:00</li>
+                  <li class="li-schedule-time">11:00</li>
+                  <li class="li-schedule-time">13:00</li>
+                  <li class="li-schedule-time">15:00</li>
+                  <li class="li-schedule-time">17:00</li>
+                  <li class="li-schedule-time">19:00</li>
+                  <li class="li-schedule-time">21:00</li>
+                  <li class="li-schedule-time">23:00</li>
+                </ul>
+                <ul id="ul-shiraishi-schedule" class="ul-schedule-todo">
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">7:20 起床</span
+                    ><span class="schedule-detail"
+                      >起床、子供も起こして子供の朝ご飯や支度</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">8:20</span
+                    ><span class="schedule-detail">夫が子供を保育園に送る</span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">8:30 業務開始</span
+                    ><span class="schedule-detail"
+                      >メールを確認してタスクを洗い出したら、デザイン作業を進める</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title"
+                      >10:30 デザインチームの朝会</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">11:00 クライアントとMTG</span
+                    ><span class="schedule-detail"
+                      >ZOOMを使ってクライアントと定例MTG</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">13:00 ランチ休憩</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">14:00 デザイン作業</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">17:00 業務終了</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">17:30 子供のお迎え</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title"
+                      >18:30 帰宅後、子供にご飯を食べさせる</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">19:30 子供の寝る準備</span
+                    ><span class="schedule-detail"
+                      >お風呂に入れたり歯磨きなどをさせる</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">20:30 子供を寝かしつける</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">21:30 夫と晩御飯</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">22:30 自由時間</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">24:00 就寝</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="div-interview-QA">
               <ul>
@@ -670,90 +688,101 @@
                 alt="leihauoli_logo"
               />
               <img
+                class="sumbnail-interview-image"
                 src="./assets/images/svg/submnail-interview2.svg"
                 alt="submnail-interview1"
               />
             </div>
           </div>
           <div class="content-interviews">
-            <div class="div-schedule-interview">
-              <ul class="ul-schedule-time-line">
-                <li class="li-schedule-time">7:00</li>
-                <li class="li-schedule-time">9:00</li>
-                <li class="li-schedule-time">11:00</li>
-                <li class="li-schedule-time">13:00</li>
-                <li class="li-schedule-time">15:00</li>
-                <li class="li-schedule-time">17:00</li>
-                <li class="li-schedule-time">19:00</li>
-                <li class="li-schedule-time">21:00</li>
-                <li class="li-schedule-time">23:00</li>
-              </ul>
-              <ul id="ul-yahata-schedule" class="ul-schedule-todo">
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">7:00 起床</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">8:00 業務開始</span
-                  ><span class="schedule-detail"
-                    >1日のタスク確認しスケジュール設定する</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">8:30 デザイン作業</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">10:30 デザインチームの朝会</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">11:00 デザイン作業</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">13:00 ランチ休憩</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">14:00 MTG前の確認</span
-                  ><span class="schedule-detail"
-                    >定例MTG前に進捗と共有事項整理する</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">14:30 クライアントと定例MTG</span
-                  ><span class="schedule-detail"
-                    >ZOOMを使ってクライアントと定例MTG</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">17:00 業務終了</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">17:15 移動</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">18:30 ライブ</span
-                  ><span class="schedule-detail"
-                    >以前から楽しみにしていたライブへ</span
-                  >
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">23:00 帰宅</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">24:00 自由時間</span
-                  ><span class="schedule-detail"></span>
-                </li>
-                <li class="li-schedule-todo">
-                  <span class="schedule-title">2:00 就寝</span
-                  ><span class="schedule-detail"></span>
-                </li>
-              </ul>
+            <div
+              class="schedule-container schedule-closed"
+              onclick="playScheduleAnimation(this, 500)"
+            >
+              <div class="menu-handler-schedule-interview">
+                デザイナーのとある一日
+              </div>
+              <div class="div-schedule-interview">
+                <ul class="ul-schedule-time-line">
+                  <li class="li-schedule-time">7:00</li>
+                  <li class="li-schedule-time">9:00</li>
+                  <li class="li-schedule-time">11:00</li>
+                  <li class="li-schedule-time">13:00</li>
+                  <li class="li-schedule-time">15:00</li>
+                  <li class="li-schedule-time">17:00</li>
+                  <li class="li-schedule-time">19:00</li>
+                  <li class="li-schedule-time">21:00</li>
+                  <li class="li-schedule-time">23:00</li>
+                </ul>
+                <ul id="ul-yahata-schedule" class="ul-schedule-todo">
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">7:00 起床</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">8:00 業務開始</span
+                    ><span class="schedule-detail"
+                      >1日のタスク確認しスケジュール設定する</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">8:30 デザイン作業</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title"
+                      >10:30 デザインチームの朝会</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">11:00 デザイン作業</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">13:00 ランチ休憩</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">14:00 MTG前の確認</span
+                    ><span class="schedule-detail"
+                      >定例MTG前に進捗と共有事項整理する</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title"
+                      >14:30 クライアントと定例MTG</span
+                    ><span class="schedule-detail"
+                      >ZOOMを使ってクライアントと定例MTG</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">17:00 業務終了</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">17:15 移動</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">18:30 ライブ</span
+                    ><span class="schedule-detail"
+                      >以前から楽しみにしていたライブへ</span
+                    >
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">23:00 帰宅</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">24:00 自由時間</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                  <li class="li-schedule-todo">
+                    <span class="schedule-title">2:00 就寝</span
+                    ><span class="schedule-detail"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="div-interview-QA">
               <ul>

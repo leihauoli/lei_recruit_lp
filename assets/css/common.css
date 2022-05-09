@@ -1,0 +1,138 @@
+/* main containers*/
+.div-container {
+  width: 1024px;
+}
+.contents-block {
+  width: 100vw;
+  max-width: 1396px;
+  height: 100%;
+  margin: 1em auto;
+}
+/* headers */
+/* header title */
+#header-svg-designer > path {
+  stroke: transparent;
+  fill: transparent;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  stroke-width: 1;
+}
+/* header for only link (invisible, not show)*/
+.header-for-link {
+  visibility: hidden;
+}
+/* header parts for animation*/
+.header-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  background: black;
+  z-index: 50;
+  color: white;
+  animation-name: header-inner-left-in;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+.header-wrapper {
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: block;
+  z-index: 100;
+  animation-name: header-wrapper-left-in;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+/*ENTRY button*/
+.button-entry {
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 10em;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+.button-entry:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+/* Animation */
+/* header */
+@keyframes header-inner-left-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes header-wrapper-left-in {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+@keyframes flowed-in {
+  0% {
+    opacity: 0;
+    top: 200px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+/* Animation */
+/* svg */
+@keyframes svg-text-writing {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 2000;
+  }
+
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: url(#pattern);
+  }
+}
+
+@keyframes slide-in-slash {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 2000;
+  }
+
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 2000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ece0b1;
+  }
+}

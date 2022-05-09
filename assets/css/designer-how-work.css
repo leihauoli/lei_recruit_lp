@@ -1,3 +1,4 @@
+/*title*/
 p#title-designer-how-work {
   font-weight: bold;
   text-align: center;
@@ -9,6 +10,7 @@ p.subtitle-designer-how-work {
   text-align: center;
   margin-bottom: 20px;
 }
+/*supplements*/
 p.supplement-designer-how-work {
   text-align: center;
   margin-bottom: 20px;
@@ -16,13 +18,14 @@ p.supplement-designer-how-work {
 .container-designer-how-work {
   margin-top: 40px;
 }
+/*examples container*/
 dl.examples-designer-how-work {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
   counter-reset: title-counter;
 }
-.definition-designer-how-work {
+div.definition-designer-how-work {
   width: 100%;
   height: 8em;
   background: #f8f4e4;
@@ -33,11 +36,10 @@ dl.examples-designer-how-work {
   justify-items: start;
   position: relative;
 }
-.definition-designer-how-work:nth-child(even) {
+div.definition-designer-how-work:nth-child(even) {
   background: #f2ebcc;
 }
-
-.definition-designer-how-work::after {
+div.definition-designer-how-work::after {
   content: "";
   width: 2em;
   height: 2em;
@@ -48,11 +50,12 @@ dl.examples-designer-how-work {
   z-index: 100;
   transform: rotate(45deg);
 }
-.definition-designer-how-work:last-child::after {
+div.definition-designer-how-work:last-child::after {
   content: "";
   width: 0;
   height: 0;
 }
+/*examples header(dt)*/
 dt.example-title-designer-how-work {
   text-align: left;
   width: 100%;
@@ -87,13 +90,12 @@ dt.example-title-designer-how-work::after {
   right: 4em;
   top: -2em;
 }
+/*examples content(dd)*/
 dd.example-content-designer-how-work {
-  margin-inline-start: 0;
   grid-column: 2/2;
   padding-right: 1em;
 }
 /* tea party */
-
 #div-tea-party {
   width: inherit;
   display: flex;
@@ -106,15 +108,14 @@ dd.example-content-designer-how-work {
   margin-top: 5em;
   margin-bottom: 5em;
 }
-div#div-content-tea-party {
+#div-content-tea-party {
   padding: 2em;
 }
-p#title-tea-party {
+#title-tea-party {
   font-size: 1.5em;
   font-weight: bold;
 }
-
-p#title-tea-party {
+#title-tea-party {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 1em;

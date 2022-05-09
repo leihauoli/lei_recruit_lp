@@ -8,6 +8,7 @@ div#header-paragraph-interviews {
   line-height: 1.3;
 }
 div#div-interviews {
+  width: 100%;
   background-color: #f8f4e4;
   padding-top: 5em;
   padding-bottom: 5em;

@@ -1,25 +1,10 @@
-.div-container {
-  width: 1024px;
-}
-#div-designer {
-  width: 100vw;
-  max-width: 1396px;
-  height: 100%;
-  margin: 0 auto;
-}
 #div-design-team,
 #div-designer-style,
 #div-designer-how-work {
   padding: 0 101px;
 }
-/* ヘッダータイトル */
-#header-svg-designer > path {
-  stroke: transparent;
-  fill: transparent;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 0;
-  stroke-width: 1;
-}
+/* header svg */
+/* animation settings*/
 #path_designer_1 {
   animation: slide-in-slash 500ms ease-in 1s forwards;
 }
@@ -30,39 +15,4 @@
   font-family: "Noto Sans JP";
   overflow: hidden;
   position: relative;
-}
-/* Animation */
-/* svg */
-@keyframes svg-text-writing {
-  0% {
-    fill: transparent;
-    stroke-dashoffset: 2000;
-  }
-
-  50% {
-    fill: transparent;
-    stroke-dashoffset: 1000;
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: url(#pattern);
-  }
-}
-
-@keyframes slide-in-slash {
-  0% {
-    fill: transparent;
-    stroke-dashoffset: 2000;
-  }
-
-  50% {
-    fill: transparent;
-    stroke-dashoffset: 2000;
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: #ece0b1;
-  }
 }

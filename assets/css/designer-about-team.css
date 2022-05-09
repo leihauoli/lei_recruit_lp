@@ -1,5 +1,6 @@
 #div-about-team {
-  width: 1226px;
+  max-width: 1226px;
+  width: 100%;
   margin: 0 auto;
 }
 #header-about-team {

@@ -2,12 +2,13 @@
 @media screen and (max-width: 1024px) {
   /* チーム紹介 */
   #div-about-team {
-    width: 90%;
+    width: calc(100% - 16px);
     margin: 0 auto;
   }
   #header-about-team {
     overflow: hidden;
     flex-direction: column;
+    margin-bottom: 32px;
   }
   #header-svg-designer {
     width: 90%;
@@ -20,11 +21,11 @@
   #div-design-team,
   #div-designer-style,
   #div-designer-how-work {
-    margin: 0 auto 100px;
-    padding: 0 55px;
+    margin: 0 auto 64px;
   }
   /*team member */
   #div-design-team {
+    height: 330px;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
@@ -46,7 +47,7 @@
   }
   /*STYLE（行動指針）*/
   #container-designer-style {
-    width: 310px;
+    width: 100%;
     margin: 0 auto;
     flex-direction: column;
   }
@@ -54,6 +55,8 @@
     font-size: 28px;
   }
   .card-designer-style {
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 323px;
+    margin: 0 auto 20px;
   }
 }

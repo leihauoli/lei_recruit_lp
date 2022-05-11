@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./assets/css/designer-about-team-sp.css" />
     <link rel="stylesheet" href="./assets/css/designer-how-work-sp.css" />
     <link rel="stylesheet" href="./assets/css/designer-interview-sp.css" />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/notosansjp.css"
+    />
     <script src="./assets/js/schedule-handler.js"></script>
   </head>
   <body>
@@ -64,7 +68,6 @@
               fill="transparent"
             />
           </svg>
-
           <div id="header-title-about-team" class="content-header">
             <div class="header-wrapper"></div>
             <h2 class="header-inner">チームについて</h2>
@@ -82,7 +85,7 @@
               <p class="design-member-position">マネージャー</p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>シンプルなデザイン</li>
@@ -121,7 +124,7 @@
               <p class="design-member-position">リーダー</p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>登山</li>
@@ -156,7 +159,7 @@
               <p class="design-member-position"></p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>いちご</li>
@@ -193,7 +196,7 @@
               <p class="design-member-position"></p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>猫</li>
@@ -231,7 +234,7 @@
               <p class="design-member-position"></p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>ポップなデザイン</li>
@@ -264,7 +267,7 @@
               <p class="design-member-position"></p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>レトロデザイン</li>
@@ -296,7 +299,7 @@
               <p class="design-member-position"></p>
             </div>
             <div class="design-member-content">
-              <div class="design-member-likes">
+              <div class="design-member-likes line-spacing-emphasis">
                 <p class="para-like">スキ</p>
                 <ul>
                   <li>ポップなデザイン</li>
@@ -494,7 +497,7 @@
             />
             <div id="div-content-tea-party">
               <p id="title-tea-party">お茶会（1on1）</p>
-              <p id="explain-tea-party">
+              <p id="explain-tea-party" class="line-spacing-text">
                 日々の困りごとの解消や、やりたいことを実現するためにどんなアプローチが必要かを考えることを目的に、月1回のペースで実施しています。<br />
                 なんでも気軽に話してほしい、息抜きの場であってほしい、そんな想いを込めてD0チームでは1on1をお茶会と呼んでいます。
               </p>
@@ -539,11 +542,11 @@
             </div>
           </div>
           <div class="content-interviews">
-            <div
-              class="schedule-container schedule-closed"
-              onclick="playScheduleAnimation(this, 500)"
-            >
-              <div class="menu-handler-schedule-interview">
+            <div class="schedule-container schedule-closed">
+              <div
+                class="menu-handler-schedule-interview"
+                onclick="playScheduleAnimation(this, 500)"
+              >
                 デザイナーのとある一日
               </div>
               <div class="div-schedule-interview">
@@ -564,6 +567,14 @@
                     ><span class="schedule-detail"
                       >起床、子供も起こして子供の朝ご飯や支度</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-breakfast"
+                        src="./assets/images/oneday/breakfast.png"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">8:20</span
@@ -574,6 +585,14 @@
                     ><span class="schedule-detail"
                       >メールを確認してタスクを洗い出したら、デザイン作業を進める</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-working"
+                        src="./assets/images/oneday/working.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title"
@@ -585,6 +604,14 @@
                     ><span class="schedule-detail"
                       >ZOOMを使ってクライアントと定例MTG</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-online-meeting"
+                        src="./assets/images/oneday/online-meeting.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">13:00 ランチ休憩</span
@@ -601,6 +628,14 @@
                   <li class="li-schedule-todo">
                     <span class="schedule-title">17:30 子供のお迎え</span
                     ><span class="schedule-detail"></span>
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-kindergarten"
+                        src="./assets/images/oneday/kindergarten.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title"
@@ -612,6 +647,14 @@
                     ><span class="schedule-detail"
                       >お風呂に入れたり歯磨きなどをさせる</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-dentifrice"
+                        src="./assets/images/oneday/dentifrice.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">20:30 子供を寝かしつける</span
@@ -624,6 +667,14 @@
                   <li class="li-schedule-todo">
                     <span class="schedule-title">22:30 自由時間</span
                     ><span class="schedule-detail"></span>
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-relaxed"
+                        src="./assets/images/oneday/relaxed.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">24:00 就寝</span
@@ -635,26 +686,26 @@
             <div class="div-interview-QA">
               <ul>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   どんなお仕事をしてますか。
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   入社当初よりデザイナーとして、主にアプリのデザイン業務（UI/UX改善）に携わっております。<br />
                   誰が見ても分かりやすい、直感的に理解できてユーザーを迷わせないデザインの追求を意識しています。
                 </dd>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   やりがいを教えてください。
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   前職はグラフィックデザイナーでしたので、基本的には自分自身で解決して、クライアントの要望に応えることに喜びを見出していましたが、現在はコミュニケーションの幅が広がったと思います。<br />
                   クライアント、ユーザー、そしてチームメンバーの課題解決に貢献するために、開発メンバーと相談をしながら共創していけることに魅力を感じています。
                 </dd>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   子育てと仕事の両立はどのようにしてますか？
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   まず家族の協力が必要不可欠です。<br />
                   夫や実家など協力を仰げる人たちに頼り、「孤育て」ではなく助け合いながら「子育て」していける環境作りが大切だと思います。<br />
                   また、夫とはTimeTreeアプリでスケジュールの共有をしていますので、オンラインセミナーなど勉強時間を確保したいときは、事前に子供のことをお願いしています。<br />
@@ -695,11 +746,11 @@
             </div>
           </div>
           <div class="content-interviews">
-            <div
-              class="schedule-container schedule-closed"
-              onclick="playScheduleAnimation(this, 500)"
-            >
-              <div class="menu-handler-schedule-interview">
+            <div class="schedule-container schedule-closed">
+              <div
+                class="menu-handler-schedule-interview"
+                onclick="playScheduleAnimation(this, 500)"
+              >
                 デザイナーのとある一日
               </div>
               <div class="div-schedule-interview">
@@ -724,10 +775,26 @@
                     ><span class="schedule-detail"
                       >1日のタスク確認しスケジュール設定する</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-calendar"
+                        src="./assets/images/oneday/calendar.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">8:30 デザイン作業</span
                     ><span class="schedule-detail"></span>
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-designing"
+                        src="./assets/images/oneday/designing.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title"
@@ -747,6 +814,14 @@
                     ><span class="schedule-detail"
                       >定例MTG前に進捗と共有事項整理する</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-take-note"
+                        src="./assets/images/oneday/take-note.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title"
@@ -754,6 +829,14 @@
                     ><span class="schedule-detail"
                       >ZOOMを使ってクライアントと定例MTG</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-online-meeting"
+                        src="./assets/images/oneday/online-meeting.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">17:00 業務終了</span
@@ -768,6 +851,14 @@
                     ><span class="schedule-detail"
                       >以前から楽しみにしていたライブへ</span
                     >
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-live-music"
+                        src="./assets/images/oneday/live-music.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">23:00 帰宅</span
@@ -776,6 +867,14 @@
                   <li class="li-schedule-todo">
                     <span class="schedule-title">24:00 自由時間</span
                     ><span class="schedule-detail"></span>
+                    <span class="img-window-schedule">
+                      <img
+                        id="img-schedule-relaxed"
+                        src="./assets/images/oneday/relaxed.jpg"
+                        alt="breakfast"
+                        srcset=""
+                      />
+                    </span>
                   </li>
                   <li class="li-schedule-todo">
                     <span class="schedule-title">2:00 就寝</span
@@ -787,28 +886,28 @@
             <div class="div-interview-QA">
               <ul>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   どんなお仕事をしてますか。
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   1ページのランディングページやバナー、大規模な管理画面デザインまで主にWeb中心でデザインしています。<br />
                   大手2社の常駐経験もあり、デザインだけでなく企画からアプリ開発のプロジェクトに参画させていただくこともありました。<br />
                   現在常駐している会社ではアプリのUI改修などの依頼も多く、Web以外の領域も広げながら知見や経験を増やしています。
                 </dd>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   やりがいを教えてください。
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   チーム全体で良いモノを完成させ公開された時に一番やりがいを感じますね。<br />
                   例題として大規模なページ改修を上げると、膨大な情報を整理し課題解決のために再構築して、＋見やすさ・伝わりやすさなど肉付けするのがデザイナーなのでデザイン観点での仕様提案も必要不可欠です。<br />
                   特にWebやアプリはデザイナー一人で完結できるものではないので、肩書きに囚われずディスカッションを重ねコミュニケーションを取りながらみんなで課題に対して取り組んでいます。<br />
                 </dd>
                 <span class="interview-counter"></span>
-                <dt class="dt-interview-question">
+                <dt class="dt-interview-question line-spacing-emphasis">
                   自分から見てレイはどんな会社ですか。
                 </dt>
-                <dd class="dd-interview-answer">
+                <dd class="dd-interview-answer line-spacing-text">
                   個人の意思を尊重してくれる会社だと思います。<br />
                   社員がやりたいことを定期的にヒアリングし、実現させるためのアクションを上司も一緒に考えてくれるので、”自分では少しハードルが高いかも…”という課題にも積極的に挑戦してステップアップできる環境だと思います。<br />
                 </dd>

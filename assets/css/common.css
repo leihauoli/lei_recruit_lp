@@ -1,9 +1,21 @@
+* {
+  font-family: "Noto Sans JP";
+}
+.line-spacing-title {
+  line-height: 1.5;
+}
+.line-spacing-emphasis {
+  line-height: 2;
+}
+.line-spacing-text {
+  line-height: 1.7;
+}
 /* main containers*/
 .div-container {
   width: 1024px;
 }
 .contents-block {
-  width: 100vw;
+  width: 100%;
   max-width: 1396px;
   height: 100%;
   margin: 1em auto;

@@ -4,6 +4,7 @@ section {
   max-width: 1226px;
   padding-left: 70px;
   padding-right: 70px;
+  padding-bottom: 110px;
 }
 li {
   list-style: none;
@@ -41,8 +42,8 @@ img {
   background-image: url(../images/background.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 110px;
+  background-position: center 36%;
+  margin-top: 110px;
 }
 .leivision-text {
   width: calc(100% / 2);
@@ -60,6 +61,7 @@ img {
   font-size: 70px;
   color: #ffffff;
   background-color: #151515;
+  margin-top: 70px;
 }
 .wantedlist {
   list-style: none;
@@ -68,13 +70,40 @@ img {
 .heading {
   display: flex;
   flex-direction: row-reverse;
+  margin-top: 45px;
+}
+.workstyle-section {
+  background-color: #ffffff;
+  position: relative;
+  height: 1800px;
+}
+.workstyle-wrapper-large {
+  position: absolute;
+  width: 1025px;
+  left: 100px;
+  background-color: #fff;
+  top: 300px;
 }
 .workstyle-wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 75px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
+
 .workstyle-large {
   width: calc(100% / 2);
+  margin-top: 70px;
+  font-size: 16px;
+}
+.workstyle-large > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.workstyle-large > p {
+  margin-top: 20px;
 }
 .workstyle-large:nth-child(odd) {
   padding-right: 40px;
@@ -165,16 +194,53 @@ img {
   display: flex;
 }
 .leifact-wrapper > li {
-  margin-bottom: 10px;
+  width: calc(100% / 2);
 }
-.leifact-wrapper > li:last-of-type {
-  margin-bottom: 0px;
+.leifact-wrapper > li:last-child {
+  margin-left: 10px;
 }
-.leifact-wrapper > li > img {
-  padding-right: 10px;
+.leifact-wrapper:first-of-type {
+  margin-top: 40px;
 }
-.leifact-wrapper > li > img:nth-child(3) {
-  padding-right: 0;
+.leifact-large {
+  width: 608px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+.leifact-small {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 300px;
+  background-color: #ffffff;
+}
+.leifact-small > img {
+  margin-top: 45px;
+}
+.leifact-text-small {
+  margin-top: 40px;
+}
+.leifact-small-wrapper {
+  display: flex;
+}
+.leifact-small-wrapper > div:not(:first-child) {
+  margin-left: 10px;
+}
+.leifact-small > img {
+  height: 160px;
+  width: auto;
+}
+.leifact-text-large {
+  font-size: 40px;
+}
+.leifact-text-small {
+  font-size: 30px;
+}
+.leifact-number {
+  font-size: 70px;
 }
 .step-wrapper {
   display: flex;
@@ -214,4 +280,33 @@ img {
 .workflow-section > h2 {
   font-size: 30px;
   margin-top: 75px;
+}
+@media screen and (max-width: 1024px) {
+  .heading > h1 {
+    font-size: 90px;
+  }
+  .wantedlist {
+    font-size: 46px;
+  }
+  section {
+    padding: 0 auto;
+  }
+  .workstyle-wrapper {
+    padding: 0 auto;
+  }
+  .workstyle-wrapper-large {
+    position: static;
+    width: 100%;
+    background-color: #fff;
+  }
+  .leivition-section {
+    background-image: none;
+  }
+  .wantedlist > li {
+    margin-left: 15px;
+  }
+  .workstyle-section {
+    height: auto;
+    position: static;
+  }
 }

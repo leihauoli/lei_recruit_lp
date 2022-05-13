@@ -282,6 +282,15 @@ img {
   margin-top: 75px;
 }
 @media screen and (max-width: 1024px) {
+  .flex {
+    flex-direction: column;
+  }
+  .leivision-text {
+    width: 100%;
+  }
+  .leifact-wrapper {
+    flex-direction: column;
+  }
   .heading > h1 {
     font-size: 90px;
   }
@@ -289,10 +298,25 @@ img {
     font-size: 46px;
   }
   section {
-    padding: 0 auto;
+    padding: 0;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+  .wantedlist {
+    font-size: 23px;
   }
   .workstyle-wrapper {
-    padding: 0 auto;
+    padding: 0;
+  }
+  .vertical-wrapper {
+    flex-direction: column;
+  }
+  .workstyle-small {
+    width: calc(100% / 2);
+  }
+  .leifact-small {
+    width: 100%;
   }
   .workstyle-wrapper-large {
     position: static;
@@ -308,5 +332,31 @@ img {
   .workstyle-section {
     height: auto;
     position: static;
+  }
+  .leifact-small > img {
+    height: 89px;
+    width: auto;
+  }
+  .leifact-number {
+    font-size: 39px;
+  }
+  .leifact-wrapper > li {
+    width: 100%;
+  }
+  .leifact-small-wrapper > div:not(:first-child) {
+    margin-left: 0px;
+  }
+  .leifact-wrapper > li:last-child {
+    margin-left: 0px;
+  }
+  .leifact-small-wrapper > .leifact-small {
+    width: calc(100% / 2);
+  }
+  .workstyle-large:nth-child(odd) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .workstyle-large:nth-child(even) {
+    padding-left: 10px;
   }
 }

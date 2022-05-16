@@ -16,7 +16,6 @@
 }
 .contents-block {
   width: 100%;
-  max-width: 1396px;
   height: 100%;
   margin: 1em auto;
 }
@@ -38,6 +37,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  padding-left: 16px;
   font-weight: bold;
   background: black;
   z-index: 50;

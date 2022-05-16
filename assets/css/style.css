@@ -1,4 +1,5 @@
 body {
+  font-family: "Noto Sans JP", sans-serif;
 }
 section {
   max-width: 1226px;
@@ -75,7 +76,7 @@ img {
 .workstyle-section {
   background-color: #ffffff;
   position: relative;
-  height: 1800px;
+  height: 1600px;
 }
 .workstyle-wrapper-large {
   position: absolute;
@@ -196,12 +197,18 @@ img {
 .leifact-wrapper > li {
   width: calc(100% / 2);
 }
-.leifact-wrapper > li:last-child {
-  margin-left: 10px;
+.margin-right-10px {
+  margin-right: 10px;
+}
+.leifact-wrapper > li:first-child {
+}
+.leifact-wrapper {
+  margin-top: 10px;
 }
 .leifact-wrapper:first-of-type {
   margin-top: 40px;
 }
+
 .leifact-large {
   width: 608px;
   display: flex;
@@ -281,7 +288,29 @@ img {
   font-size: 30px;
   margin-top: 75px;
 }
+.display-pc-flex {
+  display: flex;
+}
+.display-sp-flex {
+  display: none;
+}
+.leifact-text-gender {
+  font-size: 20px;
+  white-space: nowrap;
+}
+.leifact-number-gender {
+  font-size: 60px;
+}
 @media screen and (max-width: 1024px) {
+  .display-sp-flex {
+    display: flex;
+  }
+  .display-pc-flex {
+    display: none;
+  }
+  .leifact-text-small {
+    font-size: 11px;
+  }
   .flex {
     flex-direction: column;
   }
@@ -290,6 +319,9 @@ img {
   }
   .leifact-wrapper {
     flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 0px;
   }
   .heading > h1 {
     font-size: 90px;
@@ -302,6 +334,7 @@ img {
   }
   .section-title {
     font-size: 36px;
+    max-width: 230px;
   }
   .wantedlist {
     font-size: 23px;
@@ -314,6 +347,7 @@ img {
   }
   .workstyle-small {
     width: calc(100% / 2);
+    margin-top: 24px;
   }
   .leifact-small {
     width: 100%;
@@ -322,6 +356,7 @@ img {
     position: static;
     width: 100%;
     background-color: #fff;
+    padding-bottom: 60px;
   }
   .leivition-section {
     background-image: none;
@@ -332,6 +367,7 @@ img {
   .workstyle-section {
     height: auto;
     position: static;
+    margin-top: 64px;
   }
   .leifact-small > img {
     height: 89px;
@@ -342,15 +378,20 @@ img {
   }
   .leifact-wrapper > li {
     width: 100%;
+    margin-top: 10px;
   }
   .leifact-small-wrapper > div:not(:first-child) {
-    margin-left: 0px;
+    margin-left: 10px;
+  }
+  .leifact-small > p {
+    margin-bottom: 20px;
   }
   .leifact-wrapper > li:last-child {
     margin-left: 0px;
   }
   .leifact-small-wrapper > .leifact-small {
     width: calc(100% / 2);
+    margin: 0 auto;
   }
   .workstyle-large:nth-child(odd) {
     padding-right: 10px;
@@ -358,5 +399,36 @@ img {
   }
   .workstyle-large:nth-child(even) {
     padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-title-sp {
+    flex-direction: column;
+  }
+  .about-title-sp > img {
+    max-width: 290px;
+  }
+  .leifact-text-gender {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .leifact-number-gender {
+    font-size: 34px;
+  }
+  .workstyle-large {
+    margin-top: 20px;
+  }
+  .workstyle-large > h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+  .workstyle-large > p {
+    font-size: 14px;
+  }
+  .leifact-section {
+    padding-bottom: 64px;
+  }
+  .heading {
+    margin-top: 64px;
   }
 }

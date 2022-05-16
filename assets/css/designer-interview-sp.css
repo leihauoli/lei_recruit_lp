@@ -1,0 +1,278 @@
+@media screen and (max-width: 1024px) {
+  div#header-paragraph-interviews {
+    height: 1.2em;
+    width: 8em;
+    font-size: 36px;
+  }
+  #header-interviews {
+    padding: 0 16px;
+  }
+  .sumbnail-background-interview {
+    padding-left: 16px;
+  }
+  .sumbnail-interview-image {
+    width: 100%;
+  }
+  .content-interviews {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .sumnail-leihauoli-logo {
+    left: 0;
+    width: 20%;
+    height: unset;
+  }
+  .sumbnail-title-interview {
+    left: 10%;
+  }
+  .sumbnail-interview-image {
+    width: 60%;
+  }
+  #interviewee-shiraishi .interview-header1 {
+    width: 12em;
+  }
+  .interview-header1,
+  .interview-header2 {
+    font-size: 24px;
+  }
+  /*-----
+schedule time line
+*/
+  .schedule-container {
+    overflow: hidden;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+    max-width: 342px;
+  }
+  .menu-handler-schedule-interview {
+    font-weight: 600;
+    position: absolute;
+    display: flex;
+    width: 342px;
+    height: 50px;
+    background: #e0cb7d;
+    padding: 0 1em 0 2em;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  /* schedule opened*/
+  .menu-handler-schedule-interview::after {
+    position: relative;
+    right: 10px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 5px solid transparent;
+    border-top: 8px solid black;
+    border-left: 5px solid transparent;
+    transition: ease-in-out 500ms;
+  }
+  .schedule-opened.schedule-container {
+    animation-name: schedule-container-open;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  /* schedule closed */
+  .schedule-closed.schedule-container {
+    animation-name: schedule-container-open;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+  }
+  .schedule-container {
+    height: 50px;
+  }
+  .schedule-closed > .menu-handler-schedule-interview::after {
+    transform: rotate3d(1, 0, 0, -180deg);
+  }
+  .div-schedule-interview {
+    width: 100%;
+    background-color: white;
+    transition: ease-in-out 500ms;
+  }
+  .div-schedule-interview::before {
+    display: none;
+  }
+  .schedule-closed > .div-schedule-interview {
+    transform: translateY(calc(-100% - 50px));
+  }
+
+  .ul-schedule-time-line {
+    font-size: 14px;
+    height: auto;
+  }
+  .ul-schedule-time-line > li.li-schedule-time {
+    list-style: none;
+    position: relative;
+    left: -2em;
+    background-color: white;
+    width: 4em;
+    border-radius: 1em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+
+  ul.ul-schedule-time-line::before {
+  }
+  ul.ul-schedule-todo {
+    width: 317px;
+    height: 1124px;
+    margin-top: 0;
+  }
+
+  /*-------------
+  schedule list
+  */
+  li.li-schedule-todo {
+    list-style: none;
+    position: relative;
+  }
+  .ul-schedule-todo > .li-schedule-todo {
+    z-index: 1;
+  }
+
+  /*-------------
+  interview list
+  */
+
+  .div-interview-QA {
+    width: 90%;
+  }
+  .interview-counter {
+    width: 90%;
+  }
+  .dt-interview-question {
+    font-size: 20px;
+  }
+  .dd-interview-answer {
+    font-size: 16px;
+  }
+  .schedule-title {
+    font-size: 13px;
+  }
+  .schedule-detail {
+    font-size: 12px;
+    width: 169px;
+  }
+  span.img-window-schedule {
+    right: 10px;
+    top: 0;
+    transform: scale(1.2);
+  }
+  @keyframes schedule-container-open {
+    0% {
+      height: 50px;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
+    top: 50px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
+    top: 55px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
+    top: 60px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
+    top: 80px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
+    top: 105px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
+    top: 175px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
+    top: 220px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
+    top: 365px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
+    top: 370px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
+    top: 400px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
+    top: 425px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
+    top: 435px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
+    top: 480px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+    top: 505px;
+  }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
+    top: 575px;
+  }
+
+  /*-----
+YAHATA Schedule
+*/
+  #interviewee-yahata .interview-header1 {
+    width: 4em;
+  }
+  #interviewee-yahata .interview-header2 {
+    width: 10em;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
+    top: 40px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(2) {
+    top: 38px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
+    top: 65px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
+    top: 100px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
+    top: 161px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
+    top: 257px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
+    top: 260px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
+    top: 285px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
+    top: 370px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
+    top: 365px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
+    top: 400px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
+    top: 628px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
+    top: 650px;
+  }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
+    top: 675px;
+  }
+}

@@ -1,0 +1,398 @@
+div#header-interviews {
+  width: 100%;
+  max-width: 1226px;
+  margin: 0 auto;
+}
+div#header-paragraph-interviews {
+  position: relative;
+  overflow: hidden;
+  height: 1.2em;
+  width: 540px;
+  margin-bottom: 1em;
+  font-size: 70px;
+}
+div#div-interviews {
+  width: 100%;
+  background-color: #f8f4e4;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+div.container-interviews {
+  margin-top: 60px;
+  max-width: 1396px;
+  margin: 0 auto;
+}
+.interview-header1 {
+  margin-bottom: 10px;
+}
+.interview-header1,
+.interview-header2 {
+  height: 1.2em;
+  font-size: 50px;
+}
+.sumbnail-interview {
+  position: relative;
+}
+.sumbnail-title-interview {
+  position: absolute;
+  height: 100%;
+  left: 170px;
+  top: 50%;
+}
+.sumbnail-background-interview {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+p.interviewee {
+  margin-top: 30px;
+  position: relative;
+  font-weight: bold;
+  z-index: 100;
+}
+span.interviewee-position {
+  display: block;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+span.interviewee-name {
+  display: block;
+  font-weight: 600;
+}
+.sumnail-leihauoli-logo {
+  width: 288px;
+  height: 500px;
+  position: relative;
+  left: 60px;
+  top: -10px;
+}
+
+.content-interviews {
+  max-width: 1226px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+/*-----
+schedule time line
+*/
+.schedule-container {
+  margin-top: 50px;
+  overflow: hidden;
+  max-width: 342px;
+  width: 100%;
+}
+.menu-handler-schedule-interview {
+  display: none;
+}
+.ul-schedule-time-line {
+  border-left: solid black;
+  padding-top: 20px;
+  height: 1124px;
+  z-index: 100;
+  margin-top: 20px;
+  position: relative;
+}
+ul.ul-schedule-time-line::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 2em;
+  background: black;
+  left: -11px;
+}
+.ul-schedule-time-line > li.li-schedule-time {
+  list-style: none;
+  position: relative;
+  left: -2em;
+  background-color: white;
+  width: 4em;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 110px;
+}
+
+.ul-schedule-todo > li.li-schedule-todo > .schedule-detail {
+  line-height: 1.5;
+}
+ul.ul-schedule-todo {
+  position: relative;
+  left: -10px;
+  width: 317px;
+  height: 1124px;
+  margin-top: 20px;
+}
+.div-schedule-interview {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding: 60px 0 0 25px;
+}
+.div-schedule-interview::before {
+  content: "OneDay";
+  font-weight: 600;
+  position: absolute;
+  top: 0px;
+  font-size: 30px;
+  left: 0px;
+}
+span.img-window-schedule {
+  display: inline-block;
+  width: 59px;
+  height: 59px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 100%;
+  top: -12px;
+  right: -10px;
+}
+#img-schedule-breakfast {
+  position: relative;
+  top: 0px;
+  left: -15px;
+  width: 86px;
+  height: 100%;
+}
+#img-schedule-working {
+  width: 90px;
+  height: 100%;
+  position: relative;
+  left: -10px;
+  top: -1px;
+}
+img#img-schedule-online-meeting {
+  width: 100px;
+  height: 100%;
+  position: relative;
+  left: -20px;
+}
+img#img-schedule-kindergarten {
+  width: 240px;
+  position: relative;
+  left: -128px;
+  top: -34px;
+}
+img#img-schedule-dentifrice {
+  width: 260px;
+  position: relative;
+  left: -90px;
+  top: -85px;
+}
+img#img-schedule-relaxed {
+  width: 170px;
+  position: relative;
+  left: -70px;
+  top: -50px;
+}
+img#img-schedule-calendar {
+  width: 100px;
+  position: relative;
+  left: -40px;
+}
+img#img-schedule-designing {
+  width: 100px;
+}
+img#img-schedule-take-note {
+  width: 100px;
+  position: relative;
+  left: -24px;
+}
+img#img-schedule-live-music {
+  width: 90px;
+  position: relative;
+  left: -10px;
+}
+/*-------------
+schedule list
+*/
+li.li-schedule-todo {
+  list-style: none;
+  position: relative;
+}
+li.li-schedule-todo::before {
+  content: "";
+  width: 42px;
+  border-top: 1px solid black;
+  position: relative;
+  left: -48px;
+  display: block;
+  top: 8px;
+}
+.ul-schedule-todo > .li-schedule-todo {
+  z-index: 1;
+}
+
+/*-----------
+SHIRAISHI Schedule
+*/
+#interviewee-shiraishi .interview-header1 {
+  width: 12em;
+}
+#interviewee-shiraishi .interview-header2 {
+  width: 10em;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
+  top: 30px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
+  top: 30px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
+  top: 35px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
+  top: 80px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
+  top: 98px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
+  top: 168px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
+  top: 205px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
+  top: 378px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
+  top: 390px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
+  top: 430px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
+  top: 460px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
+  top: 465px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
+  top: 515px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+  top: 550px;
+}
+#ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
+  top: 600px;
+}
+
+/*-----
+YAHATA Schedule
+*/
+#interviewee-yahata .interview-header1 {
+  width: 4em;
+}
+#interviewee-yahata .interview-header2 {
+  width: 10em;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
+  top: 20px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(2) {
+  top: 35px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
+  top: 45px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
+  top: 125px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
+  top: 151px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
+  top: 258px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
+  top: 280px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
+  top: 285px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
+  top: 375px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
+  top: 375px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
+  top: 440px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
+  top: 653px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
+  top: 685px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
+  top: 690px;
+}
+/*-------------
+interview list
+*/
+
+.div-interview-QA {
+  counter-reset: interview-counter;
+  width: 560px;
+}
+.interview-counter {
+  counter-increment: interview-counter;
+  margin-top: 50px;
+  width: 100%;
+  height: 16px;
+  display: block;
+}
+.interview-counter::before {
+  position: relative;
+  top: -3px;
+  content: "";
+  display: inline-block;
+  width: 52px;
+  border-bottom: #c1ab58 1px solid;
+  margin-right: 10px;
+}
+.interview-counter::after {
+  content: "Interview\00A0"counter(interview-counter, decimal-leading-zero);
+  color: #c1ab58;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dt-interview-question {
+  font-size: 20px;
+  font-weight: 600;
+}
+.dd-interview-answer {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.1em;
+  margin-top: 22px;
+}
+.schedule-title,
+.schedule-detail {
+  width: 200px;
+}
+.schedule-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.schedule-detail {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  padding: 5px 0px 0px 0;
+}

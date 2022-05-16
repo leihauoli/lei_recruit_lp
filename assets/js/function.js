@@ -1,70 +1,56 @@
 var LEIHAUOLI = LEIHAUOLI || {};
-LEIHAUOLI.DESIGNER_LP = {};
-
+LEIHAUOLI.DEMO_ANIMATION = LEIHAUOLI.DEMO_ANIMATION || {};
 /**
- * 機能名
+ * 画面をスクロールして該当要素が表示領域に入ったとき、該当要素を表示させる
  */
-LEIHAUOLI.DESIGNER_LP.機能名 = {
-  init: function () {
-    this.setParameters(); //変数を格納する関数を実行
-    this.bindEvent(); //イベント（処理）を発火させる関数を実行
-  },
-  setParameters: function () {
-    //jqueryオブジェクト等はここで変数化してください
-    this.$href = $('a[href^="#"]');
-    this.$body = $("body, html");
-    this.$sample = $(".jsc-sample"); //
-  },
-  bindEvent: function () {
-    //(例)this.$hrefをクリックしたとき、processAを実行させる
-    this.$href.on("click", this.processA.bind(this));
-  },
-  processA: function () {
-    //ここに具体的な処理内容を記述
-  },
-};
-
-/**
- * ハンバーガーメニュー（実装例）
- */
-LEIHAUOLI.DESIGNER_LP.HamburgerMenu = {
-  init: function () {
-    this.setParameters();
-    this.bindEvent();
-  },
-  setParameters: function () {
-    this.$hamburgerMenu = $(".jsc-cm-hamburger-menu");
-    this.$headerMenu = $(".jsc-cm-header-list");
-    this.$hamburgerBorderTop = $(".jsc-cm-hamburger-border-top");
-    this.$hamburgerBorderMiddle = $(".jsc-cm-hamburger-border-middle");
-    this.$hamburgerBorderBottom = $(".jsc-cm-hamburger-border-bottom");
-    this.$menuItem = this.$headerMenu.find("li").find("a");
-    this.$headerBg = $(".jsc-cm-header-bg");
-    this.$menuBg = $(".jsc-cm-header");
-    this.$body = $("body");
-  },
-  bindEvent: function () {
-    var myself = this;
-    this.$hamburgerMenu.on("click", function () {
-      if (myself.$headerMenu.is(":animated")) return;
-      myself.toggleHamburger();
-    });
-    this.$menuItem.on("click", this.toggleHamburger.bind(this));
-    this.$headerBg.on("click", this.toggleHamburger.bind(this));
-  },
-  toggleHamburger: function () {
-    this.$hamburgerMenu.toggleClass("is-active");
-    this.$body.toggleClass("is-fixed");
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      this.$headerMenu.slideToggle(0);
-    } else {
-      this.$headerMenu.slideToggle(this.SLIDE_SPEED);
+LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
+    ACTIVE_CLASS: 'is-active',
+    init: function(){
+        this.setParameters();
+        this.bindEvent();
+    },
+    setParameters: function(){
+        this.options = {
+            root: null,
+            rootMargin: "0px 0px",
+            threshould: 0
+        },
+        this.ttlBgLeft = document.querySelectorAll(".jsc-ttl-bg-left");
+        this.contentLeft = document.querySelectorAll(".jsc-left-content");
+        this.contentRight = document.querySelectorAll(".jsc-right-content");
+        this.emergeTop = document.querySelectorAll(".jsc-emerge-top");
+        this.emergeBottom = document.querySelectorAll(".jsc-emerge-bottom");
+        // this.emerge02 = document.querySelectorAll(".jsc-emerge-02");
+        // this.emerge03 = document.querySelectorAll(".jsc-emerge-03");
+        // this.emerge04 = document.querySelectorAll(".jsc-emerge-04");
+        // this.emerge05 = document.querySelectorAll(".jsc-emerge-05");
+        this.observer = new IntersectionObserver(this.showContents, this.options);
+    },
+    bindEvent: function(){
+        var myself = this;
+        Array.prototype.forEach.call(this.ttlBgLeft, function(box){
+            myself.observer.observe(box);
+        });
+        Array.prototype.forEach.call(this.contentLeft, function(box){
+            myself.observer.observe(box);
+        });
+        Array.prototype.forEach.call(this.emergeTop, function(box){
+            myself.observer.observe(box);
+        });
+        Array.prototype.forEach.call(this.emergeBottom, function(box){
+          myself.observer.observe(box);
+      });
+    },
+    showContents: function(entries){
+        var myself = this;
+        Array.prototype.some.call(entries, function(entry){
+            if (entry.isIntersecting){
+                //要素が表示領域に入ったとき
+                entry.target.classList.add('is-active');
+            }
+        });
     }
-    this.$headerBg.toggleClass("is-active");
-  },
 };
-
-//各機能をここで呼び出します
-$(function () {
-  LEIHAUOLI.DESIGNER_LP.HamburgerMenu.init();
+$(function(){
+    LEIHAUOLI.DEMO_ANIMATION.showByScroll.init();
 });

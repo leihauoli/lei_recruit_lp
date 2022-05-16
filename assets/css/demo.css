@@ -1,0 +1,254 @@
+@charset "utf-8";
+ul,ol,p,h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 120px;
+    display: block;
+    margin: 600px auto;
+    text-align: center;
+}
+
+.section-vision {
+    padding: 110px 70px;
+    position: relative;
+}
+.section-vision::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(/assets/images/about-bg.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    animation: fadeInBg 1s;
+}
+@keyframes fadeInBg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.vision-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* 左から右へタイトルを表示させる */
+.ttl-bg-left {
+    margin-top: 295px;
+}
+.ttl-bg-left,
+.ttl-bg-right {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 70px;
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    white-space: nowrap;
+	overflow: hidden;
+    /* width: 0; */
+}
+.ttl-bg-left.is-active,
+.ttl-bg-right.is-active {
+    animation: slideContentInLeft 1s forwards linear;
+}
+.ttl-bg-right {
+    /* text-align: right; */
+}
+.ttl-bg-left::before,
+.ttl-bg-right::before {
+    content: "";
+    background-color: #333333;
+    width: 0;
+    height: 90px;
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+}
+.ttl-bg-left.is-active::before,
+.ttl-bg-right.is-active::before {
+    animation: slideContentInLeft 1s forwards;
+}
+@keyframes slideContentInLeft {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 450px;
+    }
+}
+.vision-txt-left {
+    animation: showContentInLeft 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes showContentInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.vision-txt-right {
+    animation: showContentInRight 1s;
+    animation-fill-mode: forwards;
+    font-size: 18px;
+    line-height: 2;
+}
+@keyframes showContentInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.vision-container {
+    width: 100%;
+}
+.vision-container + .vision-container {
+    margin-left: 154px;
+}
+.vision-num-content {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+}
+.vision-num-main-txt {
+    font-size: 180px;
+    opacity: 0;
+}
+.vision-num-list {
+    list-style-type: none;
+}
+.vision-num-list > li {
+    font-size: 46px;
+}
+.vision-num-list > li + li {
+    margin-right: 38px;
+}
+.vision-num-main-txt.is-active {
+    animation: showContentInTop 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+.vision-num-list > li.is-active {
+    animation: showContentInTop 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.vision-num-list > li:nth-of-type(1).is-active {
+    animation-delay: 1s;
+}
+.vision-num-list > li:nth-of-type(2).is-active {
+    animation-delay: 1.5s;
+}
+.vision-num-list > li:nth-of-type(3).is-active {
+    animation-delay: 2s;
+}
+.vision-num-list > li:nth-of-type(4).is-active {
+    animation-delay: 2.5s;
+}
+@keyframes showContentInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ABOUT */
+.vision-main-text {
+    margin-top: 40px;
+    font-size: 28px;
+    line-height: 2;
+}
+.vision-sub-text {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 2;
+}
+.vision-last-text {
+    margin-top: 30px;
+    font-size: 28px;
+    line-height: 2;
+}
+
+
+
+
+
+
+
+/* 働き方制度 */
+.work-style-section {
+    padding: 110px 70px;
+    position: relative;
+}
+.work-style-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/images/work-style-bg.png) no-repeat;
+    width: 100%;
+    height: 400px;
+}
+.work-style-main-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 500px 100px 0;
+}
+.work-style-main-list > li {
+    opacity: 0;
+    width: calc(100% / 2 - 39px);
+}
+.work-style-main-list > li:nth-of-type(2n) {
+    margin-left: 78px;
+}
+.work-style-main-list > li:nth-of-type(n + 3){
+    margin-top: 60px;
+}
+.work-style-main-list > li:nth-of-type(2n).is-active {
+    animation: showContentInBottom 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.work-style-main-list > li:nth-of-type(2n + 1).is-active {
+    animation: showContentInBottom 1s;
+    animation-fill-mode: forwards;
+}
+.work-style-main-list > li > img {
+    width: 100%;
+}
+
+@keyframes showContentInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -83,6 +83,7 @@ schedule time line
     animation-play-state: running;
   }
   .schedule-container {
+    overflow: hidden;
     height: 50px;
   }
   .schedule-closed > .menu-handler-schedule-interview::after {

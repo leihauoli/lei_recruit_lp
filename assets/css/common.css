@@ -37,7 +37,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  text-align: center;
   font-weight: bold;
   background: black;
   z-index: 50;

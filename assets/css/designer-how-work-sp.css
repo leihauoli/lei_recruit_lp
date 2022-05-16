@@ -34,6 +34,9 @@
     padding: 0;
     font-size: 14px;
   }
+  dd.example-content-designer-how-work::before {
+    display: none;
+  }
   /* tea party */
   div#div-tea-party {
     flex-direction: column-reverse;

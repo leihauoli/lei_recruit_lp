@@ -1,7 +1,5 @@
 @media screen and (max-width: 1024px) {
   div#header-paragraph-interviews {
-    height: 1.2em;
-    width: 8em;
     font-size: 36px;
   }
   #header-interviews {
@@ -34,9 +32,6 @@
   .sumbnail-interview-image {
     width: 60%;
   }
-  #interviewee-shiraishi .interview-header1 {
-    width: 12em;
-  }
   .interview-header1,
   .interview-header2 {
     font-size: 24px;
@@ -45,12 +40,10 @@
 schedule time line
 */
   .schedule-container {
-    overflow: hidden;
     animation-iteration-count: 1;
     animation-duration: 500ms;
     animation-play-state: paused;
     animation-timing-function: ease-in-out;
-    max-width: 342px;
   }
   .menu-handler-schedule-interview {
     font-weight: 600;
@@ -111,17 +104,6 @@ schedule time line
     font-size: 14px;
     height: auto;
   }
-  .ul-schedule-time-line > li.li-schedule-time {
-    list-style: none;
-    position: relative;
-    left: -2em;
-    background-color: white;
-    width: 4em;
-    border-radius: 1em;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 100px;
-  }
 
   ul.ul-schedule-time-line::before {
   }
@@ -129,17 +111,6 @@ schedule time line
     width: 317px;
     height: 1124px;
     margin-top: 0;
-  }
-
-  /*-------------
-  schedule list
-  */
-  li.li-schedule-todo {
-    list-style: none;
-    position: relative;
-  }
-  .ul-schedule-todo > .li-schedule-todo {
-    z-index: 1;
   }
 
   /*-------------
@@ -178,61 +149,59 @@ schedule time line
       height: 100%;
     }
   }
+
+  /*-----------
+SHIRAISHI Schedule
+*/
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
     top: 50px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
-    top: 55px;
+    top: 50px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
-    top: 60px;
+    top: 55px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
     top: 80px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
-    top: 105px;
+    top: 100px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
-    top: 175px;
+    top: 170px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
     top: 220px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
-    top: 365px;
+    top: 380px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
-    top: 370px;
+    top: 375px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
-    top: 400px;
+    top: 420px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
-    top: 425px;
+    top: 450px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
-    top: 435px;
+    top: 460px;
   }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
-    top: 480px;
-  }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
     top: 505px;
   }
+  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+    top: 545px;
+  }
   #ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
-    top: 575px;
+    top: 615px;
   }
 
   /*-----
 YAHATA Schedule
 */
-  #interviewee-yahata .interview-header1 {
-    width: 4em;
-  }
-  #interviewee-yahata .interview-header2 {
-    width: 10em;
-  }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
     top: 40px;
   }
@@ -246,33 +215,33 @@ YAHATA Schedule
     top: 100px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
-    top: 161px;
+    top: 173px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
-    top: 257px;
+    top: 278px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
-    top: 260px;
-  }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
     top: 285px;
   }
+  #ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
+    top: 305px;
+  }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
-    top: 370px;
+    top: 395px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
-    top: 365px;
+    top: 390px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
-    top: 400px;
+    top: 440px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
-    top: 628px;
+    top: 674px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
-    top: 650px;
+    top: 690px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
-    top: 675px;
+    top: 710px;
   }
 }

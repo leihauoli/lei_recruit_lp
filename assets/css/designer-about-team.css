@@ -4,16 +4,17 @@
 }
 #header-about-team {
   width: 100%;
+  max-width: 1336px;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 5em;
 }
 #header-title-about-team {
   position: relative;
   overflow: hidden;
-  width: 8em;
+  width: 7.5em;
   height: 1.2em;
   font-size: 50px;
   background-color: transparent;
@@ -22,6 +23,8 @@
 /* チーム紹介 */
 #div-design-team {
   width: 100%;
+  max-width: 1024px;
+  margin: 80px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -59,9 +62,8 @@
   content: "";
   display: inline-block;
   width: 100%;
-  border: dashed 1px #e5e5e5;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-bottom: dashed 1px #e5e5e5;
+  margin: 10px 0 10px 0;
 }
 .design-member-icon {
   grid-area: icon;
@@ -69,12 +71,14 @@
 }
 .design-member-name {
   height: 1.5em;
+  font-size: 16px;
   font-weight: bold;
-  padding-left: 1em;
+  padding-left: 16px;
 }
 .design-member-position {
   height: 1.5em;
-  padding-left: 1em;
+  font-size: 12px;
+  padding-left: 16px;
 }
 .para-like,
 .para-dislike {
@@ -92,8 +96,7 @@
   margin-top: 7px;
 }
 .design-member-likes > ul {
-  margin-top: 7px;
-  margin-bottom: 21px;
+  margin: 7px 0 21px 0;
 }
 
 .design-member-likes > ul > li,
@@ -111,25 +114,19 @@
 .design-member-dislikes > ul > li:last-child::after {
   content: "";
 }
-#div-design-team,
-#div-designer-style,
-#div-designer-how-work {
+#div-designer-style {
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
-}
-#div-designer-style {
-  margin-top: 80px;
-  padding-bottom: 2em;
+  margin: 80px auto 0 auto;
 }
 #header-designer-style {
   width: 100%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 40px;
   font-weight: bold;
-  margin-bottom: 1em;
 }
 #container-designer-style {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -142,12 +139,13 @@
   background: #f8f4e4;
   width: 310px;
   height: 512px;
+  padding-top: 21px;
 }
 .card-designer-style-number {
   color: #c1ab58;
+  font-size: 12px;
   font-weight: bold;
-  margin-top: 2em;
-  margin-left: 1em;
+  margin: 0 0 0 20px;
   counter-increment: counter-card-designer-style;
 }
 .card-designer-style-number::before {
@@ -166,16 +164,16 @@
   border-radius: 100%;
   width: 200px;
   height: 200px;
-  margin: 1em auto 1em;
+  margin: 20px auto 0 auto;
   display: block;
   background: white;
   padding: 40px;
 }
 .card-title-desiner-style {
   text-align: center;
-  font-size: 2em;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-top: 13px;
 }
 .card-subtitle-desiner-style {
   text-align: center;
@@ -183,16 +181,18 @@
   color: white;
   background: #c1ab58;
   width: calc(100% - 50px);
-  margin: 0 auto;
+  margin: 24px auto 0 auto;
   padding: 0.5em 0;
   font-size: 16px;
 }
 .card-message-designer-style {
-  padding: 30px;
+  padding: 0 30px 0 30px;
+  margin-top: 14px;
 }
 .card-message-designer-style > li {
   list-style: disc;
   list-style-position: inside;
+  line-height: 1.7;
 }
 .card-designer-style {
   padding-bottom: 2em;

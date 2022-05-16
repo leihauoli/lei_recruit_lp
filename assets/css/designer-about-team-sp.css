@@ -8,7 +8,6 @@
   #header-about-team {
     overflow: hidden;
     flex-direction: column;
-    margin-bottom: 32px;
   }
   #header-svg-designer {
     width: 90%;
@@ -26,6 +25,7 @@
   /*team member */
   #div-design-team {
     height: 330px;
+    margin-top: 32px;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
@@ -48,15 +48,20 @@
   /*STYLE（行動指針）*/
   #container-designer-style {
     width: 100%;
-    margin: 0 auto;
     flex-direction: column;
   }
   #header-designer-style {
     font-size: 28px;
   }
+  .card-outer-style {
+    width: 100%;
+    min-width: 323px;
+    background: #f8f4e4;
+    margin-bottom: 20px;
+  }
   .card-designer-style {
     width: 100%;
     max-width: 323px;
-    margin: 0 auto 20px;
+    margin: 0 auto 0 auto;
   }
 }

@@ -63,7 +63,7 @@
 /*ENTRY button*/
 .button-entry {
   display: block;
-  margin: 0 auto;
+  margin: 90px auto 0;
   background-color: black;
   color: white;
   font-size: 20px;

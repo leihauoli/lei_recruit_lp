@@ -6,4 +6,7 @@
   * {
     box-sizing: border-box;
   }
+  .entry-button-container {
+    display: none;
+  }
 }

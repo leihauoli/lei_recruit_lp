@@ -114,8 +114,8 @@ dd.example-content-designer-how-work::before {
   margin-top: 80px;
   margin-bottom: 120px;
 }
-#div-content-tea-party {
-  padding: 2em;
+div#div-content-tea-party {
+  margin-left: 32px;
 }
 #title-tea-party {
   font-size: 1.5em;

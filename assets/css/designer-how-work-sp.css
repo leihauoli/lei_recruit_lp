@@ -35,17 +35,22 @@
     font-size: 14px;
   }
   /* tea party */
-  #div-tea-party {
+  div#div-tea-party {
     flex-direction: column-reverse;
   }
-  #div-content-tea-party {
-    padding: 16px;
+  div#div-content-tea-party {
+    padding: initial;
+    margin-left: 0;
   }
   #title-tea-party {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
     font-size: 24px;
     font-weight: 600;
   }
   #explain-tea-party {
     font-size: 14px;
+    margin-top: 16px;
   }
 }

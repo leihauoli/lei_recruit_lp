@@ -7,23 +7,22 @@ div#header-paragraph-interviews {
   position: relative;
   overflow: hidden;
   height: 1.2em;
-  width: 540px;
-  margin-bottom: 1em;
+  width: 6.5em;
   font-size: 70px;
 }
 div#div-interviews {
   width: 100%;
   background-color: #f8f4e4;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  margin-top: 120px;
+  padding-top: 125px;
+  padding-bottom: 120px;
 }
 div.container-interviews {
-  margin-top: 60px;
   max-width: 1396px;
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
 }
-.interview-header1 {
-  margin-bottom: 10px;
+.interview-header2 {
+  margin-top: 10px;
 }
 .interview-header1,
 .interview-header2 {
@@ -54,11 +53,11 @@ p.interviewee {
 span.interviewee-position {
   display: block;
   font-weight: 100;
-  margin-bottom: 10px;
 }
 span.interviewee-name {
   display: block;
   font-weight: 600;
+  margin-top: 10px;
 }
 .sumnail-leihauoli-logo {
   width: 288px;
@@ -83,7 +82,7 @@ schedule time line
 */
 .schedule-container {
   margin-top: 50px;
-  overflow: hidden;
+  overflow: visible;
   max-width: 342px;
   width: 100%;
 }
@@ -138,7 +137,7 @@ ul.ul-schedule-todo {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
-  padding: 60px 0 0 25px;
+  padding: 60px 0 32px 25px;
 }
 .div-schedule-interview::before {
   content: "OneDay";
@@ -238,10 +237,10 @@ li.li-schedule-todo::before {
 SHIRAISHI Schedule
 */
 #interviewee-shiraishi .interview-header1 {
-  width: 12em;
+  width: 10.5em;
 }
 #interviewee-shiraishi .interview-header2 {
-  width: 10em;
+  width: 8.5em;
 }
 #ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
   top: 30px;
@@ -293,10 +292,10 @@ SHIRAISHI Schedule
 YAHATA Schedule
 */
 #interviewee-yahata .interview-header1 {
-  width: 4em;
+  width: 3.5em;
 }
 #interviewee-yahata .interview-header2 {
-  width: 10em;
+  width: 9.5em;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
   top: 20px;

@@ -7,7 +7,6 @@
   animation: svg-text-writing 1s ease-in 0s forwards;
 }
 .content-header {
-  font-family: "Noto Sans JP";
   overflow: hidden;
   position: relative;
 }

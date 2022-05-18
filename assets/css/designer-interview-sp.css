@@ -1,4 +1,9 @@
 @media screen and (max-width: 1024px) {
+  div#div-interviews {
+    margin-top: 64px;
+    padding-top: 54px;
+    padding-bottom: 64px;
+  }
   div#header-paragraph-interviews {
     font-size: 36px;
   }
@@ -10,6 +15,7 @@
   }
   .sumbnail-interview-image {
     width: 100%;
+    max-width: 256px;
   }
   .content-interviews {
     width: 100%;
@@ -29,9 +35,6 @@
   .sumbnail-title-interview {
     left: 10%;
   }
-  .sumbnail-interview-image {
-    width: 60%;
-  }
   .interview-header1,
   .interview-header2 {
     font-size: 24px;
@@ -40,6 +43,9 @@
 schedule time line
 */
   .schedule-container {
+    height: 50px;
+    margin-top: 90px;
+    overflow: hidden;
     animation-iteration-count: 1;
     animation-duration: 500ms;
     animation-play-state: paused;
@@ -82,10 +88,7 @@ schedule time line
     animation-fill-mode: backwards;
     animation-play-state: running;
   }
-  .schedule-container {
-    overflow: hidden;
-    height: 50px;
-  }
+
   .schedule-closed > .menu-handler-schedule-interview::after {
     transform: rotate3d(1, 0, 0, -180deg);
   }

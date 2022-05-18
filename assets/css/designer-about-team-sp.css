@@ -17,20 +17,26 @@
     font-size: 36px;
     width: 8em;
   }
-  #div-design-team,
-  #div-designer-style,
-  #div-designer-how-work {
-    margin: 0 auto 64px;
+  #div-design-team {
+    margin: 64px auto 0 auto;
   }
+  #div-designer-style {
+    margin: 64px auto 0 auto;
+  }
+
   /*team member */
   #div-design-team {
-    height: 330px;
+    height: auto;
     margin-top: 32px;
+    padding: 0 20px 0 20px;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
   .div-design-member {
     flex-shrink: 0;
+    width: 232px;
+    height: auto;
+    margin: 0 20px 30px 20px;
   }
   /*scroll bar*/
   #div-design-team::-webkit-scrollbar {
@@ -61,7 +67,23 @@
   }
   .card-designer-style {
     width: 100%;
-    max-width: 323px;
+    max-width: 293px;
     margin: 0 auto 0 auto;
+  }
+  .card-designer-style-number {
+    margin: 0;
+  }
+  .card-designer-style-number::before {
+    margin: 0 1em 0 0;
+  }
+  .card-title-desiner-style {
+    font-size: 24px;
+  }
+  .card-subtitle-desiner-style {
+    width: 100%;
+    margin: 21px 0 0 0;
+  }
+  .card-message-designer-style {
+    padding: 0;
   }
 }

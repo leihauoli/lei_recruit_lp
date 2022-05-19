@@ -1,0 +1,33 @@
+/*SP*/
+@media screen and (max-width: 1024px) {
+  div#div-works {
+    width: calc(100% - 16px);
+    margin: 0 auto;
+  }
+  #img-about-works {
+    width: 70%;
+  }
+  div#div-works-examples {
+    width: 100%;
+    margin-top: 47px;
+  }
+  div#div-works-examples-container {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 30px;
+  }
+  .work-example-cards {
+    width: 232px;
+    flex-shrink: 0;
+    margin: 0 16px;
+  }
+  .work-example-cards:nth-child(3n),
+  .work-example-cards:nth-child(3n + 1),
+  .work-example-cards:nth-child(3n + 2) {
+    margin-top: 0px;
+  }
+  span.works-example-company {
+    font-size: 16px;
+    margin: 6px 0 6px 0;
+  }
+}

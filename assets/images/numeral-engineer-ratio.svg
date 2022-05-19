@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="63.375" viewBox="0 0 90 63.375">
+  <g id="グループ_2528" data-name="グループ 2528" transform="translate(0 -12)">
+    <g id="長方形_1703" data-name="長方形 1703" transform="translate(13.5 20.1)" fill="#e0cb7d" stroke="#151515" stroke-width="4">
+      <rect width="63" height="44.1" rx="4" stroke="none"/>
+      <rect x="2" y="2" width="59" height="40.1" rx="2" fill="none"/>
+    </g>
+    <path id="パス_5301" data-name="パス 5301" d="M84.375,46H5.625A5.632,5.632,0,0,1,0,40.375V31H90v9.375A5.632,5.632,0,0,1,84.375,46M3.75,34.75v5.625A1.876,1.876,0,0,0,5.625,42.25h78.75a1.876,1.876,0,0,0,1.875-1.875V34.75Z" transform="translate(0 29.375)" fill="#151515"/>
+    <path id="パス_5302" data-name="パス 5302" d="M81.75,62.25H78V17.625a1.876,1.876,0,0,0-1.875-1.875H8.625A1.876,1.876,0,0,0,6.75,17.625V62.25H3V17.625A5.632,5.632,0,0,1,8.625,12h67.5a5.632,5.632,0,0,1,5.625,5.625Z" transform="translate(2.625)" fill="#151515"/>
+    <rect id="長方形_1697" data-name="長方形 1697" width="3.75" height="5.625" transform="translate(75 67.875)" fill="#151515"/>
+    <rect id="長方形_1698" data-name="長方形 1698" width="3.75" height="5.625" transform="translate(67.5 67.875)" fill="#151515"/>
+    <rect id="長方形_1699" data-name="長方形 1699" width="3.75" height="5.625" transform="translate(60 67.875)" fill="#151515"/>
+  </g>
+</svg>

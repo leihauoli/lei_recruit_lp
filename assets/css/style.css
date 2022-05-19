@@ -697,7 +697,46 @@ ABOUT　働き方/制度
 ABOUT　数字で見るレイハウオリ
 -------------------------------------*/
 .numeral-wrapper {
-  background-color: #E0CB7D;
-  width: 100%;
+  position: relative;
+}
+.numeral-wrapper::before {
+  position: absolute;
+  margin: 0 calc(50% - 50vw);
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100%;
+  content: "";
+  background-color: #E0CB7D;
+}
+
+.numeral-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.numeral-list > li {
+  height: 400px;
+  background: #FFFFFF;
+  width: 25%;
+}
+.numeral-list > li:nth-of-type(1),
+.numeral-list > li:nth-of-type(6),
+.numeral-list > li:nth-of-type(7) {
+  width: 50%;
+}
+
+.big-panel-texts {
+  font-weight: bold;
+}
+.big-panel-ttl {
+  font-size: 40px;
+}
+.small-panel-texts {
+  font-size: 30px;
+}
+.small-panel-ttl {
+
+}
+.panel-numeral {
+  font-size: 70px;
 }

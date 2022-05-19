@@ -18,6 +18,7 @@
   }
   .sp-scroll-bar::-webkit-scrollbar-track {
     background: #e5e5e5;
+  }
   .entry-button-container {
     display: none;
   }

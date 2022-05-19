@@ -83,7 +83,6 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
       var myself = this;
       Array.prototype.some.call(entries, function(entry){
         if (!entry.isIntersecting){
-          console.log('kvから外れた');
           $(".jsc-main-header").addClass('is-change');
           $(".jsc-header-menu-list").addClass("is-change");
           $(".jsc-header-logo").attr("src", "/assets/images/header-black-logo.png");
@@ -91,7 +90,6 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
             $(".jsc-hamburger-menu").addClass("is-change");
           }
         } else {
-          console.log('kvに入った');
           $(".jsc-main-header").removeClass('is-change');
           $(".jsc-header-menu-list").removeClass("is-change");
           $(".jsc-header-logo").attr("src", "/assets/images/header-logo.png");
@@ -166,7 +164,6 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
     var myself = this;
     this.$href.on('click', function(e){
         e.preventDefault();
-        console.log(myself.$header.height());
         var href = $(this).attr('href');
         var target = $(href == '#' || href == '' ? 'html' : href);
         var position = target.offset().top - myself.$header.height();

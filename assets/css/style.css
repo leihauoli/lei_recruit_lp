@@ -312,6 +312,11 @@ FOOTER
   display: block;
   margin-top: 30px;
   font-size: 12px;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.footer-privacypolicy-link:hover {
+  text-decoration: underline;
 }
 .footer-copyright {
   margin-bottom: 14px;
@@ -355,4 +360,344 @@ FOOTER
     margin: 30px 0 0 0;
     text-align: left;
   }
+}
+
+
+
+
+/*-------------------------------------
+ABOUT　レイビジョン
+-------------------------------------*/
+.section-about {
+  padding: 110px 70px;
+  max-width: 1226px;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.section-vision::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: url(/assets/images/about-bg.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  animation: fadeInBg 1s;
+}
+@keyframes fadeInBg {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.vision-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* 左から右へタイトルを表示させる */
+.ttl-bg-left {
+  margin-top: 295px;
+}
+.ttl-bg-left,
+.ttl-bg-right {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 70px;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  white-space: nowrap;
+overflow: hidden;
+  /* width: 0; */
+}
+.ttl-bg-left.is-active,
+.ttl-bg-right.is-active {
+  animation: slideContentInLeft 1s forwards linear;
+}
+.ttl-bg-right {
+  /* text-align: right; */
+}
+.ttl-bg-left::before,
+.ttl-bg-right::before {
+  content: "";
+  background-color: #333333;
+  width: 0;
+  height: 90px;
+  z-index: -1;
+  display: inline-block;
+  position: absolute;
+}
+.ttl-bg-left.is-active::before,
+.ttl-bg-right.is-active::before {
+  animation: slideContentInLeft 1s forwards;
+}
+@keyframes slideContentInLeft {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 450px;
+  }
+}
+.vision-txt-left {
+  animation: showContentInLeft 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes showContentInLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+.vision-txt-right {
+  animation: showContentInRight 1s;
+  animation-fill-mode: forwards;
+  font-size: 18px;
+  line-height: 2;
+}
+@keyframes showContentInRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+.vision-container {
+  width: 100%;
+}
+.vision-container + .vision-container {
+  margin-left: 154px;
+}
+.vision-num-content {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-weight: bold;
+}
+.vision-num-main-txt {
+  font-size: 180px;
+  opacity: 0;
+}
+.vision-num-list {
+  list-style-type: none;
+}
+.vision-num-list > li {
+  font-size: 46px;
+}
+.vision-num-list > li + li {
+  margin-right: 38px;
+}
+.vision-num-main-txt.is-active {
+  animation: showContentInTop 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.vision-num-list > li.is-active {
+  animation: showContentInTop 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.vision-num-list > li:nth-of-type(1).is-active {
+  animation-delay: 1s;
+}
+.vision-num-list > li:nth-of-type(2).is-active {
+  animation-delay: 1.5s;
+}
+.vision-num-list > li:nth-of-type(3).is-active {
+  animation-delay: 2s;
+}
+.vision-num-list > li:nth-of-type(4).is-active {
+  animation-delay: 2.5s;
+}
+@keyframes showContentInTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* ABOUT */
+.vision-main-text {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 2;
+}
+.vision-sub-text {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 2;
+}
+.vision-last-text {
+  margin-top: 30px;
+  font-size: 28px;
+  line-height: 2;
+}
+
+
+
+
+
+
+
+/*-------------------------------------
+ABOUT　働き方/制度
+-------------------------------------*/
+.work-style-wrapper {
+  padding: 114px 100px;
+  position: relative;
+}
+.work-style-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/assets/images/work-style-bg.png) no-repeat;
+  width: 100%;
+  height: 400px;
+}
+.work-style-main-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.work-style-main-list > li {
+  opacity: 0;
+  width: calc(100% / 2 - 39px);
+}
+.work-style-main-list > li:nth-of-type(2n) {
+  margin-left: 78px;
+}
+.work-style-main-list > li:nth-of-type(n + 3){
+  margin-top: 60px;
+}
+.work-style-main-list > li:nth-of-type(2n).is-active {
+  animation: showContentInBottom 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.work-style-main-list > li:nth-of-type(2n + 1).is-active {
+  animation: showContentInBottom 1s;
+  animation-fill-mode: forwards;
+}
+.work-style-main-list > li > img {
+  width: 100%;
+}
+.workstyle-ttl {
+  margin-top: 27px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.workstyle-text {
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.workstyle-sub-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 67px;
+}
+.workstyle-sub-list > li {
+  position: relative;
+  padding-top: 90px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  width: calc(100% / 5);
+}
+.workstyle-sub-list > li::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.workstyle-sub-list > li:nth-of-type(1)::before {
+  background: url(/assets/images/workstyle-severance-pay.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(2)::before {
+  background: url(/assets/images/workstyle-social-insurance.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(3)::before {
+  background: url(/assets/images/workstyle-overtime-allowance.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(4)::before {
+  background: url(/assets/images/workstyle-transportation-costs.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(5)::before {
+  background: url(/assets/images/workstyle-remote-insurance.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(6)::before {
+  background: url(/assets/images/workstyle-medical-examination.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(7)::before {
+  background: url(/assets/images/workstyle-paid.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(8)::before {
+  background: url(/assets/images/workstyle-childcare-leave.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(9)::before {
+  background: url(/assets/images/workstyle-book-purchase.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(10)::before {
+  background: url(/assets/images/workstyle-plain-clothes.svg) no-repeat;
+}
+.workstyle-sub-list > li:nth-of-type(n + 6) {
+  margin-top: 35px;
+}
+.workstyle-sub-list > li:nth-of-type(5) {
+  flex-wrap: wrap;
+}
+.workstyle-sub-list > li:nth-of-type(1),
+.workstyle-sub-list > li:nth-of-type(5) {
+  margin-left: 0;
+}
+.workstyle-sub-supplement {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@keyframes showContentInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/*-------------------------------------
+ABOUT　数字で見るレイハウオリ
+-------------------------------------*/
+.numeral-wrapper {
+  background-color: #E0CB7D;
+  width: 100%;
+  height: 100%;
 }

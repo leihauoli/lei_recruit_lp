@@ -1,28 +1,45 @@
 /*SP*/
 @media screen and (max-width: 1024px) {
+  #div-designer-how-work {
+    margin: 64px auto 0 auto;
+  }
+  p#title-designer-how-work {
+    font-size: 28px;
+  }
+  .container-designer-how-work {
+    margin-top: 39px;
+  }
+  .subtitle-designer-how-work {
+    font-size: 24px;
+  }
   p.supplement-designer-how-work {
     text-align: left;
     font-size: 14px;
+    margin-top: 32px;
   }
   div.definition-designer-how-work {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
-    height: 210px;
-    padding: 20px;
+    grid-template-rows: 37px auto;
+    padding: 18px 15px 40px 15px;
   }
   div.definition-designer-how-work::after {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     top: unset;
-    bottom: -15px;
-    left: calc(50% - 15px);
+    bottom: -10px;
+    left: calc(50% - 10px);
+  }
+  /*examples container(dl)*/
+  dl.examples-designer-how-work {
+    margin-top: 25px;
   }
   /*examples header(dt)*/
   dt.example-title-designer-how-work {
+    font-size: 18px;
     grid-column: 1;
     grid-row: 1/2;
     border-bottom: dashed 1px #c1ab58;
-    padding: 0 0 10px 0;
+    padding: 0 0 12px 0;
   }
   dt.example-title-designer-how-work::after {
     display: none;
@@ -33,19 +50,30 @@
     grid-row: 2/2;
     padding: 0;
     font-size: 14px;
+    line-height: 1.7;
+    margin-top: 11px;
+  }
+  dd.example-content-designer-how-work::before {
+    display: none;
   }
   /* tea party */
-  #div-tea-party {
+  div#div-tea-party {
     flex-direction: column-reverse;
+    margin-top: 40px;
   }
-  #div-content-tea-party {
-    padding: 16px;
+  div#div-content-tea-party {
+    padding: initial;
+    margin-left: 0;
   }
   #title-tea-party {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
     font-size: 24px;
     font-weight: 600;
   }
   #explain-tea-party {
     font-size: 14px;
+    margin-top: 16px;
   }
 }

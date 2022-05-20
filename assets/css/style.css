@@ -24,7 +24,7 @@ HEADER
   width: 100%;
   height: 76px;
   background-color: transparent;
-  z-index: 2;
+  z-index: 4;
 }
 .main-header.is-change {
   background-color: #FFFFFF;
@@ -362,18 +362,24 @@ FOOTER
   }
 }
 
-
-
-
 /*-------------------------------------
 ABOUT　レイビジョン
 -------------------------------------*/
 .section-about {
-  padding: 110px 70px;
+  padding: 62px 70px 110px;
   max-width: 1226px;
   position: relative;
   margin: 0 auto;
   box-sizing: content-box;
+}
+.head-section {
+  position: absolute;
+  top: 62px;
+  left: 40px;
+}
+.head-section > img {
+  width: 100%;
+  height: 100%;
 }
 .section-vision::before {
   position: absolute;
@@ -396,13 +402,23 @@ ABOUT　レイビジョン
 .vision-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 240px;
   font-weight: bold;
+  position: relative;
+}
+.vision-wrapper::before {
+  margin: 0 calc(50% - 50vw);
+  position: absolute;
+  top: 252px;
+  left: 0;
+  content: "";
+  background: url(/assets/images/vision-bg.png) no-repeat center / contain;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
 }
 
 /* 左から右へタイトルを表示させる */
-.ttl-bg-left {
-  margin-top: 295px;
-}
 .ttl-bg-left,
 .ttl-bg-right {
   color: #FFFFFF;
@@ -412,29 +428,31 @@ ABOUT　レイビジョン
   z-index: 2;
   position: relative;
   white-space: nowrap;
-overflow: hidden;
+  overflow: hidden;
   /* width: 0; */
 }
 .ttl-bg-left.is-active,
 .ttl-bg-right.is-active {
-  animation: slideContentInLeft 1s forwards linear;
+  /* animation: slideContentInLeft 1s forwards linear; */
 }
 .ttl-bg-right {
-  /* text-align: right; */
+  position: absolute;
+  top: -40px;
+  right: 0;
 }
 .ttl-bg-left::before,
 .ttl-bg-right::before {
   content: "";
   background-color: #333333;
-  width: 0;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   display: inline-block;
   position: absolute;
 }
 .ttl-bg-left.is-active::before,
 .ttl-bg-right.is-active::before {
-  animation: slideContentInLeft 1s forwards;
+  /* animation: slideContentInLeft 1s forwards; */
 }
 @keyframes slideContentInLeft {
   0% {
@@ -477,39 +495,50 @@ overflow: hidden;
 
 
 .vision-container {
+  margin-top: 340px;
   width: 100%;
 }
 .vision-container + .vision-container {
-  margin-left: 154px;
+  margin: 90px 0 0 min(11.27vw, 154px);
 }
 .vision-num-content {
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  display: flex;
+  flex-direction: row-reverse;
   font-weight: bold;
 }
 .vision-num-main-txt {
-  font-size: 180px;
-  opacity: 0;
+  margin-left: min(2.29vw, 40px);
+  font-size: min(13.17vw, 180px);
+  opacity: 1;
+  writing-mode: vertical-lr;
 }
 .vision-num-list {
+  display: flex;
+  flex-direction: row-reverse;
   list-style-type: none;
 }
 .vision-num-list > li {
-  font-size: 46px;
+  display: flex;
+  flex-direction: column;
+  margin-left: min(2.78vw, 38px);
+  font-size: min(3.36vw, 46px);
 }
-.vision-num-list > li + li {
-  margin-right: 38px;
+.vision-num-list > li:nth-of-type(4){
+  margin-left: 0;
+}
+.vision-num-list > li > span {
+  /* display: block; */
 }
 .vision-num-main-txt.is-active {
-  animation: showContentInTop 2s;
+  /* animation: showContentInTop 2s;
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
-  opacity: 0;
+  opacity: 0; */
 }
 .vision-num-list > li.is-active {
-  animation: showContentInTop 2s;
+  /* animation: showContentInTop 2s;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0; */
 }
 .vision-num-list > li:nth-of-type(1).is-active {
   animation-delay: 1s;
@@ -552,7 +581,47 @@ overflow: hidden;
   line-height: 2;
 }
 
-
+/* 共通パーツ */
+@media screen and (max-width: 1024px){
+  .section-about {
+    padding: 38px 16px;
+  }
+  .head-section {
+    width: 288px;
+    height: 133px;
+  }
+  .ttl-bg-left,
+  .ttl-bg-right {
+    font-size: 36px;
+  }
+  .vision-wrapper {
+    flex-direction: column;
+  }
+  .vision-wrapper::before {
+    display: none;
+  }
+  .vision-container {
+    margin-top: 216px;
+  }
+  .vision-container + .vision-container {
+    margin: 90px 0 0 0;
+  }
+  .vision-main-text {
+    font-size: 24px;
+  }
+  .vision-sub-text {
+    font-size: 16px;
+  }
+  .vision-num-main-txt {
+    font-size: calc(90 / 375 * 100vw);
+  }
+  .vision-num-list > li {
+    font-size: calc(23 / 375 * 100vw);
+  }
+  .no-break {
+    display: none;
+  }
+}
 
 
 
@@ -561,45 +630,48 @@ overflow: hidden;
 /*-------------------------------------
 ABOUT　働き方/制度
 -------------------------------------*/
-.work-style-wrapper {
-  padding: 114px 100px;
+.workstyle-wrapper {
+  padding: 290px 0 120px;
   position: relative;
 }
-.work-style-section::before {
+.workstyle-wrapper::before {
+  margin: 0 calc(50% - 50vw);
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background: url(/assets/images/work-style-bg.png) no-repeat;
-  width: 100%;
+  background: url(/assets/images/workstyle-bg.png) no-repeat center / contain;
+  width: 100vw;
   height: 400px;
+  z-index: -1;
 }
-.work-style-main-list {
+.workstyle-main-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  padding: 100px 100px 67px;
+  background-color: #FFFFFF;
 }
-.work-style-main-list > li {
-  opacity: 0;
+.workstyle-main-list > li {
+  opacity: 1;
   width: calc(100% / 2 - 39px);
 }
-.work-style-main-list > li:nth-of-type(2n) {
+.workstyle-main-list > li:nth-of-type(2n) {
   margin-left: 78px;
 }
-.work-style-main-list > li:nth-of-type(n + 3){
+.workstyle-main-list > li:nth-of-type(n + 3){
   margin-top: 60px;
 }
-.work-style-main-list > li:nth-of-type(2n).is-active {
-  animation: showContentInBottom 1s;
+.workstyle-main-list > li:nth-of-type(2n).is-active {
+  /* animation: showContentInBottom 1s;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.5s; */
 }
-.work-style-main-list > li:nth-of-type(2n + 1).is-active {
-  animation: showContentInBottom 1s;
-  animation-fill-mode: forwards;
+.workstyle-main-list > li:nth-of-type(2n + 1).is-active {
+  /* animation: showContentInBottom 1s;
+  animation-fill-mode: forwards; */
 }
-.work-style-main-list > li > img {
+.workstyle-main-list > li > img {
   width: 100%;
 }
 .workstyle-ttl {
@@ -617,13 +689,13 @@ ABOUT　働き方/制度
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 67px;
 }
 .workstyle-sub-list > li {
   position: relative;
   padding-top: 90px;
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.5;
   text-align: center;
   width: calc(100% / 5);
 }
@@ -667,7 +739,7 @@ ABOUT　働き方/制度
   background: url(/assets/images/workstyle-plain-clothes.svg) no-repeat;
 }
 .workstyle-sub-list > li:nth-of-type(n + 6) {
-  margin-top: 35px;
+  margin-top: 36px;
 }
 .workstyle-sub-list > li:nth-of-type(5) {
   flex-wrap: wrap;
@@ -693,11 +765,51 @@ ABOUT　働き方/制度
   }
 }
 
+/* 共通パーツ */
+@media screen and (max-width: 1024px){
+  .workstyle-wrapper {
+    padding: ;
+  }
+  .workstyle-wrapper::before {
+    height: min(110px);
+  }
+  .workstyle-main-list {
+    padding: 0;
+  }
+  .workstyle-main-list > li {
+    width: calc(100% / 2 - 7.5px);
+  }
+  .workstyle-main-list > li:nth-of-type(2n) {
+    margin-left: 15px;
+  }
+  .workstyle-main-list > li:nth-of-type(n + 3){
+    margin-top: 20px;
+  }
+  .workstyle-ttl {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .workstyle-text {
+    margin-top: 7px;
+    font-size: 14px;
+  }
+  .workstyle-sub-list {
+    margin-top: 26px;
+  }
+  .workstyle-sub-list > li {
+    width: calc(100% / 2);
+  }
+  .workstyle-sub-list > li:nth-of-type(n + 3) {
+    margin-top: 18px;
+  }
+}
+
 /*-------------------------------------
 ABOUT　数字で見るレイハウオリ
 -------------------------------------*/
 .numeral-wrapper {
   position: relative;
+  padding: 130px 0;
 }
 .numeral-wrapper::before {
   position: absolute;
@@ -708,35 +820,167 @@ ABOUT　数字で見るレイハウオリ
   height: 100%;
   content: "";
   background-color: #E0CB7D;
+  z-index: -1;
 }
 
 .numeral-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 .numeral-list > li {
-  height: 400px;
-  background: #FFFFFF;
-  width: 25%;
+  width: calc(100% / 4 - 7.5px);
+  background-color: #FFFFFF;
+  margin-left: 10px;
+  padding: min(3.51vw, 48px) 18px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.numeral-list > li:nth-of-type(1),
+.numeral-list > li:nth-of-type(4),
+.numeral-list > li:nth-of-type(7) {
+  margin-left: 0;
+}
+.numeral-list > li:nth-of-type(n + 4) {
+  margin-top: 10px;
 }
 .numeral-list > li:nth-of-type(1),
 .numeral-list > li:nth-of-type(6),
 .numeral-list > li:nth-of-type(7) {
-  width: 50%;
+  width: calc(100% / 2 - 5px);
+}
+.numeral-list > li:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .big-panel-texts {
   font-weight: bold;
 }
 .big-panel-ttl {
-  font-size: 40px;
+  font-size: min(2.9vw, 40px);
 }
 .small-panel-texts {
-  font-size: 30px;
+  font-size: min(2.2vw, 30px);
+  text-align: center;
 }
 .small-panel-ttl {
-
+  font-size: min(2.2vw, 30px);
+}
+.small-panel-image {
+  margin-top: min(2.92vw, 40px);
+  width: min(9.43vw, 128.87px);
 }
 .panel-numeral {
-  font-size: 70px;
+  margin-top: min(1.46vw, 20px);
+  font-size: min(2.2vw, 30px);
+}
+.panel-numeral-founded {
+  font-size: min(5.1vw, 70px);
+}
+.panel-img-founded {
+  width: min(16.25vw, 222px);
+  margin-left: 14px;
+}
+.panel-img-average-age {
+  width: min(37.95vw, 518.39px);
+}
+.panel-img-workarea {
+  width: min(6.58vw, 90px);
+}
+.panel-numeral > span {
+  font-size: min(5.1vw, 70px);
+}
+.panel-gender-ratio-numeral {
+  font-size: min(1.5vw, 20px);
+}
+.panel-gender-ratio-numeral > span {
+  font-size: min(4.4vw, 60px);
+}
+/*職域割合*/
+.numeral-workarea-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: min(2.19vw, 30px);
+  padding: 0 27px;
+}
+.numeral-workarea-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% / 2 - 15px);
+  margin-left: min(2.19vw, 30px);
+  padding: min(0.89vw, 12px) min(1.46vw, 20px);
+  background-color: #F4F4F4;
+}
+.numeral-workarea-list > li:nth-of-type(n + 3) {
+  margin-top: min(1.5vw, 20px);
+}
+.numeral-workarea-list > li:nth-of-type(1),
+.numeral-workarea-list > li:nth-of-type(3) {
+  margin-left: 0;
+}
+.numeral-list > li:nth-of-type(7) {
+  padding: min(2.92vw, 40px) 18px 0;
+}
+.panel-workarea-numeral {
+  font-size: min(2.2vw, 30px);
+}
+.panel-workarea-numeral > span {
+  font-size: min(4.09vw, 56px);
+}
+
+@media screen and (max-width: 1024px){
+  .ttl-bg-left > span {
+    display: block;
+  }
+  .numeral-wrapper {
+    padding: 74px 0;
+  }
+  .numeral-list {
+    margin-top: 34px;
+  }
+  .numeral-list > li {
+    margin: 0;
+    width: calc(100% / 2 - 5px);
+    padding: calc(26 / 375 * 100vw) 10px calc(18 / 375 * 100vw);
+    position: relative;
+  }
+  .numeral-list > li:nth-of-type(3),
+  .numeral-list > li:nth-of-type(5),
+  .numeral-list > li:nth-of-type(9) {
+    margin-left: 10px;
+  }
+  .numeral-list > li:nth-of-type(n + 2) {
+    margin-top: 10px;
+  }
+  .numeral-list > li:nth-of-type(1),
+  .numeral-list > li:nth-of-type(6),
+  .numeral-list > li:nth-of-type(7) {
+    width: 100%;
+  }
+  .big-panel-ttl {
+    font-size: calc(22 / 375 * 100vw);
+  }
+  .panel-numeral-founded {
+    font-size: calc(39 / 375 * 100vw);
+  }
+  .panel-img-founded {
+    
+  }
+  .small-panel-ttl {
+    font-size: calc(16 / 375 * 100vw);
+  }
+  .small-panel-image {
+    width: calc(72.04 / 375 * 100vw);
+  }
+  .panel-numeral {
+    width: calc(16px / 375 * 100vw);
+  }
+  .panel-numeral > span {
+    font-size: calc(38 / 375 * 100vw);
+  }
+
 }

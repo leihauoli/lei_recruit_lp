@@ -14,8 +14,7 @@
     padding-left: 16px;
   }
   .sumbnail-interview-image {
-    width: 100%;
-    max-width: 256px;
+    width: 75%;
   }
   .content-interviews {
     width: 100%;
@@ -39,11 +38,20 @@
   .interview-header2 {
     font-size: 24px;
   }
+  .interviewee-position {
+    font-size: 12px;
+  }
+  .interviewee-name {
+    font-size: 16px;
+  }
   /*-----
 schedule time line
 */
   .schedule-container {
     height: 50px;
+    width: 60%;
+    min-width: 342px;
+    max-width: none;
     margin-top: 90px;
     overflow: hidden;
     animation-iteration-count: 1;
@@ -55,7 +63,8 @@ schedule time line
     font-weight: 600;
     position: absolute;
     display: flex;
-    width: 342px;
+    width: 60%;
+    min-width: 342px;
     height: 50px;
     background: #e0cb7d;
     padding: 0 1em 0 2em;
@@ -96,6 +105,7 @@ schedule time line
     width: 100%;
     background-color: white;
     transition: ease-in-out 500ms;
+    padding: 82px 0 32px 25px;
   }
   .div-schedule-interview::before {
     display: none;
@@ -107,9 +117,6 @@ schedule time line
   .ul-schedule-time-line {
     font-size: 14px;
     height: auto;
-  }
-
-  ul.ul-schedule-time-line::before {
   }
   ul.ul-schedule-todo {
     width: 317px;
@@ -142,7 +149,6 @@ schedule time line
   }
   span.img-window-schedule {
     right: 10px;
-    top: 0;
     transform: scale(1.2);
   }
   @keyframes schedule-container-open {
@@ -213,7 +219,7 @@ YAHATA Schedule
     top: 38px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
-    top: 65px;
+    top: 75px;
   }
   #ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
     top: 100px;

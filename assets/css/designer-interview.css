@@ -137,6 +137,7 @@ ul.ul-schedule-todo {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
+  justify-content: center;
   padding: 60px 0 32px 25px;
 }
 .div-schedule-interview::before {
@@ -154,7 +155,7 @@ span.img-window-schedule {
   overflow: hidden;
   position: absolute;
   border-radius: 100%;
-  top: -12px;
+  top: calc((100% - 59px) / 2);
   right: -10px;
 }
 #img-schedule-breakfast {
@@ -304,7 +305,7 @@ YAHATA Schedule
   top: 35px;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
-  top: 45px;
+  top: 58px;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
   top: 125px;
@@ -378,7 +379,7 @@ interview list
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.1em;
-  margin-top: 22px;
+  margin-top: 11px;
 }
 .schedule-title,
 .schedule-detail {

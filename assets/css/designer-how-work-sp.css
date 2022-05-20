@@ -44,6 +44,14 @@
   dt.example-title-designer-how-work::after {
     display: none;
   }
+  dt.example-title-designer-how-work > span.title-counter {
+    height: 24px;
+    width: 24px;
+    line-height: 1;
+  }
+  dt.example-title-designer-how-work > span.title-counter::before {
+    font-size: 12px;
+  }
   /*examples content(dd)*/
   dd.example-content-designer-how-work {
     grid-column: 1;

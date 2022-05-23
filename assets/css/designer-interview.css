@@ -158,58 +158,58 @@ span.img-window-schedule {
   top: calc((100% - 59px) / 2);
   right: -10px;
 }
-#img-schedule-breakfast {
+.img-schedule-breakfast {
   position: relative;
   top: 0px;
   left: -15px;
   width: 86px;
   height: 100%;
 }
-#img-schedule-working {
+.img-schedule-working {
   width: 90px;
   height: 100%;
   position: relative;
   left: -10px;
   top: -1px;
 }
-img#img-schedule-online-meeting {
+.img-schedule-online-meeting {
   width: 100px;
   height: 100%;
   position: relative;
   left: -20px;
 }
-img#img-schedule-kindergarten {
+.img-schedule-kindergarten {
   width: 240px;
   position: relative;
   left: -128px;
   top: -34px;
 }
-img#img-schedule-dentifrice {
+.img-schedule-dentifrice {
   width: 260px;
   position: relative;
   left: -90px;
   top: -85px;
 }
-img#img-schedule-relaxed {
+.img-schedule-relaxed {
   width: 170px;
   position: relative;
   left: -70px;
   top: -50px;
 }
-img#img-schedule-calendar {
+.img-schedule-calendar {
   width: 100px;
   position: relative;
   left: -40px;
 }
-img#img-schedule-designing {
+.img-schedule-designing {
   width: 100px;
 }
-img#img-schedule-take-note {
+.img-schedule-take-note {
   width: 100px;
   position: relative;
   left: -24px;
 }
-img#img-schedule-live-music {
+.img-schedule-live-music {
   width: 90px;
   position: relative;
   left: -10px;
@@ -350,10 +350,10 @@ interview list
 }
 .interview-counter {
   counter-increment: interview-counter;
-  margin-top: 50px;
+  margin-bottom: 5px;
   width: 100%;
   height: 16px;
-  display: block;
+  display: inline-block;
 }
 .interview-counter::before {
   position: relative;
@@ -370,10 +370,13 @@ interview list
   font-size: 12px;
   font-weight: 600;
 }
-
 .dt-interview-question {
   font-size: 20px;
   font-weight: 600;
+  margin-top: 50px;
+}
+.interview-question {
+  line-height: 2;
 }
 .dd-interview-answer {
   font-size: 16px;

@@ -20,12 +20,12 @@ body.is-fixed {
 HEADER
 -------------------------------------*/
 .main-header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 76px;
   background-color: transparent;
   z-index: 4;
-  transition: transform 0.4s;
+  /* transition: transform 0.4s; */
 }
 .main-header.is-change {
   position: fixed;
@@ -36,8 +36,8 @@ HEADER
 }
 .main-header.is-hidden {
   position: absolute;
-  transform: translateY(0);
-  animation: headerHidden 0.4s;
+  /* transform: translateY(0);
+  animation: headerHidden 0.4s; */
 }
 @keyframes headerSlideIn {
   0% {
@@ -181,6 +181,7 @@ HAMBURGER MENU
 
 @media screen and (max-width: 1024px){
   .main-header {
+    display: none;
     height: 60px;
   }
   .header-nav-pc {
@@ -252,6 +253,9 @@ HAMBURGER MENU
   }
   .header-menu-list > li + li {
     margin: 30px 0 0;
+  }
+  .header-menu-list > li:last-child {
+    margin: 0;
   }
   .header-menu-list > li > a {
     display: inline-block;
@@ -394,7 +398,7 @@ FOOTER
 ABOUT　レイビジョン
 -------------------------------------*/
 .section-about {
-  padding: 62px 70px 110px;
+  padding: 62px 70px 0;
   max-width: 1226px;
   position: relative;
   margin: 0 auto;
@@ -406,7 +410,7 @@ ABOUT　レイビジョン
   left: 40px;
 }
 .head-section > img {
-  width: 100%;
+  width: min(43.22vw, 577.49px);
   height: 100%;
 }
 .section-vision::before {
@@ -430,14 +434,14 @@ ABOUT　レイビジョン
 .vision-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 240px;
+  padding-bottom: 240px;
   font-weight: bold;
   position: relative;
 }
 .vision-wrapper::before {
   margin: 0 calc(50% - 50vw);
   position: absolute;
-  top: 252px;
+  top: 0;
   left: 0;
   content: "";
   background: url(/assets/images/vision-bg.png) no-repeat center / contain;
@@ -465,7 +469,7 @@ ABOUT　レイビジョン
 }
 .ttl-bg-right {
   position: absolute;
-  top: -15px;
+  top: -40px;
   right: 0;
 }
 .ttl-bg-left::before,
@@ -523,7 +527,7 @@ ABOUT　レイビジョン
 
 
 .vision-container {
-  margin-top: 340px;
+  margin-top: min(25.07vw, 335px);
   width: 100%;
 }
 .vision-container + .vision-container {
@@ -612,29 +616,38 @@ ABOUT　レイビジョン
 /* 共通パーツ */
 @media screen and (max-width: 1024px){
   .section-about {
-    padding: 38px 16px;
+    padding: 64px 16px 0;
+    overflow: hidden;
   }
   .head-section {
-    width: 288px;
-    height: 133px;
+    top: 64px;
+    left: 0;
+  }
+  .head-section > img {
+    width: calc(288.06 / 375 * 100vw);
   }
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 36px;
   }
+  .ttl-bg-right {
+    top: -15px;
+  }
   .vision-wrapper {
     flex-direction: column;
+    padding-bottom: 64px;
   }
   .vision-wrapper::before {
     display: none;
   }
   .vision-container {
-    margin-top: 216px;
+    margin-top: calc(173 / 375 * 100vw);
   }
   .vision-container + .vision-container {
-    margin: 90px 0 0 0;
+    margin: 64px 0 0 0;
   }
   .vision-main-text {
+    margin-top: 32px;
     font-size: 24px;
   }
   .vision-sub-text {
@@ -642,6 +655,9 @@ ABOUT　レイビジョン
   }
   .vision-num-main-txt {
     font-size: calc(90 / 375 * 100vw);
+  }
+  .vision-num-main-txt > span {
+    display: inline-block;
   }
   .vision-num-list > li {
     font-size: calc(23 / 375 * 100vw);
@@ -720,6 +736,7 @@ ABOUT　働き方/制度
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 100px;
 }
 .workstyle-sub-list > li {
   position: relative;
@@ -799,13 +816,14 @@ ABOUT　働き方/制度
 /* 共通パーツ */
 @media screen and (max-width: 1024px){
   .workstyle-wrapper {
-    padding: 142px 0;
+    padding: 64px 0;
   }
   .workstyle-wrapper::before {
-    height: 110px
+    height: 110px;
   }
   .workstyle-main-list {
-    padding: 0;
+    padding: 88px 0 0;
+    background: none;
   }
   .workstyle-main-list > li {
     width: calc(100% / 2 - 7.5px);
@@ -814,7 +832,7 @@ ABOUT　働き方/制度
     margin-left: 15px;
   }
   .workstyle-main-list > li:nth-of-type(n + 3){
-    margin-top: 20px;
+    margin-top: 24px;
   }
   .workstyle-ttl {
     margin-top: 15px;
@@ -825,13 +843,14 @@ ABOUT　働き方/制度
     font-size: 14px;
   }
   .workstyle-sub-list {
-    margin-top: 26px;
+    margin-top: 24px;
+    padding: 0;
   }
   .workstyle-sub-list > li {
     width: calc(100% / 2);
   }
   .workstyle-sub-list > li:nth-of-type(n + 3) {
-    margin-top: 18px;
+    margin-top: 24px;
   }
 }
 
@@ -864,7 +883,7 @@ ABOUT　数字で見るレイハウオリ
   width: calc(100% / 4 - 7.5px);
   background-color: #FFFFFF;
   margin-left: 10px;
-  padding: min(3.51vw, 48px) 18px min(1.49vw, 20px);
+  padding: min(3.51vw, 48px) min(1.31vw, 18px) min(2.19vw, 30px);
   font-weight: bold;
   text-align: center;
 }
@@ -905,15 +924,36 @@ ABOUT　数字で見るレイハウオリ
   width: min(9.43vw, 128.87px);
 }
 .panel-numeral {
-  margin-top: min(1.46vw, 20px);
+  margin-top: min(1.17vw, 20px);
   font-size: min(2.2vw, 30px);
 }
 .panel-numeral-founded {
+  margin-top: min(2.19vw, 30px);
   font-size: min(5.1vw, 70px);
 }
 .panel-img-founded {
   width: min(16.25vw, 222px);
-  margin-left: 14px;
+  margin-left: min(0.87vw, 12px);
+}
+.panel-img-num-employees {
+  margin-top: min(2.92vw, 40px);
+  width: min(9.34vw, 128.87px);
+}
+.panel-img-num-employees {
+  margin-top: min(2.92vw, 40px);
+  width: min(9.22vw, 125.97px);
+}
+.panel-img-paid {
+  margin-top: min(2.92vw, 40px);
+  width: min(13.48vw, 184.19px);
+}
+.panel-img-side-business {
+  margin-top: min(2.92vw, 40px);
+  width: min(9.22vw, 125.97px);
+}
+.panel-img-holiday {
+  margin-top: min(2.92vw, 40px);
+  width: min(14.05vw, 192px);
 }
 .panel-img-average-age {
   width: min(37.95vw, 518.39px);
@@ -922,30 +962,61 @@ ABOUT　数字で見るレイハウオリ
   width: min(6.58vw, 90px);
 }
 .panel-numeral > span {
+  display: inline-block;
   font-size: min(5.1vw, 70px);
 }
-.panel-gender-ratio-numeral {
-  font-size: min(1.5vw, 20px);
+.panel-img-engineer {
+  width: min(6.58vw, 90px);
 }
-.panel-gender-ratio-numeral > span {
-  font-size: min(4.4vw, 60px);
+.panel-img-designer {
+  width: min(5.84vw, 79.88px);
+}
+.panel-img-sales {
+  width: min(6.29vw, 86px);
+}
+.panel-img-management {
+  width: min(4.79vw, 66.53px);
+}
+.panel-img-gender-ratio {
+  margin-top: min(2.92vw, 40px);
+  width: min(11.49vw, 157.07px);
+}
+.panel-gender-ratio-numeral {
+  display: flex;
+  justify-content: center;
+  margin-top: min(2.63vw, 36px);
+}
+.panel-gender-ratio-numeral > li {
+  font-size: min(1.46vw, 20px);
+  white-space: nowrap;
+}
+.panel-gender-ratio-numeral > li + li {
+  margin-left: min(0.58vw, 8px);
+}
+.panel-gender-ratio-numeral > li > span {
+  display: inline-block;
+  font-size: min(4.49vw, 60px);
+}
+.panel-img-average-overtime {
+  margin-top: min(2.92vw, 40px);
+  width: min(11.39vw, 155.63px);
 }
 /*職域割合*/
 .numeral-workarea-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: min(2.19vw, 30px);
-  padding: 0 27px;
 }
 .numeral-workarea-list > li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: calc(100% / 2 - 15px);
+  flex: 1;
   margin-left: min(2.19vw, 30px);
   padding: min(0.89vw, 12px) min(1.46vw, 20px);
   background-color: #F4F4F4;
+  border-radius: 6px;
 }
 .numeral-workarea-list > li:nth-of-type(n + 3) {
   margin-top: min(1.5vw, 20px);
@@ -955,13 +1026,89 @@ ABOUT　数字で見るレイハウオリ
   margin-left: 0;
 }
 .numeral-list > li:nth-of-type(7) {
-  padding: min(2.92vw, 40px) 18px min(1.68vw, 23px);
+  padding: min(2.92vw, 40px) min(3.36vw, 46px);
+}
+.panel-workarea-ttl {
+  font-size: min(1.46vw, 20px);
 }
 .panel-workarea-numeral {
   font-size: min(2.2vw, 30px);
 }
 .panel-workarea-numeral > span {
+  display: inline-block;
   font-size: min(4.09vw, 56px);
+}
+.entry-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 0;
+}
+.entry-btn-container > li {
+  width: 340px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+.entry-btn-container > li + li {
+  margin-left: 40px;
+}
+.entry-btn-container > li > a {
+  display: block;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  transition: color 0.2s;
+}
+.entry-btn-container > li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 100px;
+}
+.entry-btn-container > li:first-child {
+  border: 1px solid #151515;
+}
+.entry-btn-container > li:last-child {
+  border: 1px solid #009CBA;
+}
+.entry-btn-container > li:first-child::before {
+  background-image: linear-gradient(#151515, #151515, #151515, #151515);
+}
+.entry-btn-container > li:last-child::before {
+  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
+}
+.entry-btn-container > li::after {
+  content: "";
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 0.2s;
+  border-radius: 100px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.entry-btn-container > li:first-child::after {
+  background-color: #FFFFFF;
+}
+.entry-btn-container > li:last-child::after {
+  background-color: #0CA9C7;
+}
+.entry-btn-container > li:first-child:hover > a {
+  color: #151515;
+}
+.entry-btn-container > li:hover::after {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1024px){
@@ -969,16 +1116,19 @@ ABOUT　数字で見るレイハウオリ
     display: block;
   }
   .numeral-wrapper {
-    padding: 74px 0;
+    padding: 64px 0;
   }
   .numeral-list {
-    margin-top: 34px;
+    margin-top: 32px;
   }
   .numeral-list > li {
     margin: 0;
     width: calc(100% / 2 - 5px);
-    padding: calc(26 / 375 * 100vw) 10px calc(18 / 375 * 100vw);
+    padding: calc(26 / 375 * 100vw) calc(10 / 375 * 100vw) calc(18 / 375 * 100vw);
     position: relative;
+  }
+  .numeral-list > li:first-child {
+    padding: calc(46 / 375 * 100vw) calc(28 / 375 * 100vw);
   }
   .numeral-list > li:nth-of-type(3),
   .numeral-list > li:nth-of-type(5),
@@ -993,33 +1143,64 @@ ABOUT　数字で見るレイハウオリ
   .numeral-list > li:nth-of-type(7) {
     width: 100%;
   }
+  .numeral-list > li:nth-of-type(7) {
+    padding: calc(23 / 375 * 100vw) calc(25 / 375 * 100vw);
+  }
   .big-panel-ttl {
     font-size: calc(22 / 375 * 100vw);
   }
   .panel-numeral-founded {
+    margin-top: calc(16 / 375 * 100vw);
     font-size: calc(39 / 375 * 100vw);
   }
   .panel-img-founded {
-    
+    width: calc(125.31 / 375 * 100vw);
+    margin-left: calc(8 / 375 * 100vw);
+  }
+  .panel-img-num-employees {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(72.04 / 375 * 100vw);
+  }
+  .panel-img-side-business {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(70.15 / 375 * 100vw);
+  }
+  .panel-img-paid {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(102.57 / 375 * 100vw);
+  }
+  .panel-img-holiday {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(106.92 / 375 * 100vw);
+  }
+  .panel-img-gender-ratio {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(87.89 / 375 * 100vw);
   }
   .small-panel-ttl {
     font-size: calc(16 / 375 * 100vw);
   }
   .small-panel-image {
+    margin-top: calc(23 / 375 * 100vw);
     width: calc(72.04 / 375 * 100vw);
   }
   .panel-img-average-age {
     width: calc(292 / 375 * 100vw);
   }
   .panel-numeral {
+    margin-top: calc(16 / 375 * 100vw);
     font-size: calc(16 / 375 * 100vw);
   }
   .panel-numeral > span {
+    display: inline-block;
     font-size: calc(38 / 375 * 100vw);
   }
+  .numeral-workarea-list {
+    margin-top: calc(16 / 375 * 100vw);
+  }
   .numeral-workarea-list > li {
-    width: calc(100% / 2 - 15px);
-    margin-left: min(2.19vw, 30px);
+    width: calc(100% / 2 - 8px);
+    margin-left: 16px;
     padding: calc(11 / 375 * 100vw) calc(11 / 375 * 100vw) calc(6 / 375 * 100vw);
   }
   .panel-workarea-ttl {
@@ -1041,20 +1222,28 @@ ABOUT　数字で見るレイハウオリ
     font-size: calc(17 / 375 * 100vw);
   }
   .panel-workarea-numeral > span {
+    display: inline-block;
     font-size: calc(31 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral {
-    display: flex;
-    justify-content: center;
+    margin-top: calc(20 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral > li {
     font-size: calc(11 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral > li + li {
-    margin-left: 8px;
+    margin-left: calc(8 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral > li > span {
-    font-size: calc(34 / 375 * 100vw)
+    display: inline-block;
+    font-size: calc(33 / 375 * 100vw);
+  }
+  .panel-img-average-overtime {
+    margin-top: calc(23 / 375 * 100vw);
+    width: calc(88.89 / 375 * 100vw);
+  }
+  .entry-btn-container {
+    display: none;
   }
 
 }

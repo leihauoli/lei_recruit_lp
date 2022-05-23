@@ -20,14 +20,42 @@ body.is-fixed {
 HEADER
 -------------------------------------*/
 .main-header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 76px;
   background-color: transparent;
   z-index: 4;
+  transition: transform 0.4s;
 }
 .main-header.is-change {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #FFFFFF;
+  animation: headerSlideIn 0.4s forwards;
+}
+.main-header.is-hidden {
+  position: absolute;
+  transform: translateY(0);
+  animation: headerHidden 0.4s;
+}
+@keyframes headerSlideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes headerHidden {
+  0% {
+    position: fixed;
+    transform: translateY(0);
+  }
+  100% {
+    position: fixed;
+    transform: translateY(-100%);
+  }
 }
 .header-nav-pc {
   display: flex;
@@ -119,7 +147,7 @@ HEADER
 .header-entry-list > li::after {
   content: "";
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 500ms;
+  transition-duration: 0.2s;
   border-radius: 0;
   width: 0;
   height: 0;
@@ -190,13 +218,13 @@ HAMBURGER MENU
     margin-top: 4px;
   }
   .hamburger-menu.is-active > .hamburger-border-top {
-    transform: translateY(2.5px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
   }
   .hamburger-menu.is-active > .hamburger-border-middle {
     display: none;
   }
   .hamburger-menu.is-active > .hamburger-border-bottom {
-    transform: translateY(-2.5px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);
   }
 
 
@@ -437,7 +465,7 @@ ABOUT　レイビジョン
 }
 .ttl-bg-right {
   position: absolute;
-  top: -40px;
+  top: -15px;
   right: 0;
 }
 .ttl-bg-left::before,
@@ -621,6 +649,9 @@ ABOUT　レイビジョン
   .no-break {
     display: none;
   }
+  .vision-txt-right {
+    font-size: 16px;
+  }
 }
 
 
@@ -640,7 +671,7 @@ ABOUT　働き方/制度
   position: absolute;
   top: 0;
   left: 0;
-  background: url(/assets/images/workstyle-bg.png) no-repeat center / contain;
+  background: url(/assets/images/workstyle-bg.png) no-repeat center / cover;
   width: 100vw;
   height: 400px;
   z-index: -1;
@@ -768,10 +799,10 @@ ABOUT　働き方/制度
 /* 共通パーツ */
 @media screen and (max-width: 1024px){
   .workstyle-wrapper {
-    padding: ;
+    padding: 142px 0;
   }
   .workstyle-wrapper::before {
-    height: min(110px);
+    height: 110px
   }
   .workstyle-main-list {
     padding: 0;
@@ -827,12 +858,13 @@ ABOUT　数字で見るレイハウオリ
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+  line-height: 1;
 }
 .numeral-list > li {
   width: calc(100% / 4 - 7.5px);
   background-color: #FFFFFF;
   margin-left: 10px;
-  padding: min(3.51vw, 48px) 18px 0;
+  padding: min(3.51vw, 48px) 18px min(1.49vw, 20px);
   font-weight: bold;
   text-align: center;
 }
@@ -923,7 +955,7 @@ ABOUT　数字で見るレイハウオリ
   margin-left: 0;
 }
 .numeral-list > li:nth-of-type(7) {
-  padding: min(2.92vw, 40px) 18px 0;
+  padding: min(2.92vw, 40px) 18px min(1.68vw, 23px);
 }
 .panel-workarea-numeral {
   font-size: min(2.2vw, 30px);
@@ -976,11 +1008,53 @@ ABOUT　数字で見るレイハウオリ
   .small-panel-image {
     width: calc(72.04 / 375 * 100vw);
   }
+  .panel-img-average-age {
+    width: calc(292 / 375 * 100vw);
+  }
   .panel-numeral {
-    width: calc(16px / 375 * 100vw);
+    font-size: calc(16 / 375 * 100vw);
   }
   .panel-numeral > span {
     font-size: calc(38 / 375 * 100vw);
+  }
+  .numeral-workarea-list > li {
+    width: calc(100% / 2 - 15px);
+    margin-left: min(2.19vw, 30px);
+    padding: calc(11 / 375 * 100vw) calc(11 / 375 * 100vw) calc(6 / 375 * 100vw);
+  }
+  .panel-workarea-ttl {
+    font-size: calc(11 / 375 * 100vw);
+  }
+  .panel-img-engineer {
+    width: calc(50.77 / 375 * 100vw);
+  }
+  .panel-img-designer {
+    width: calc(46.14 / 375 * 100vw);
+  }
+  .panel-img-sales {
+    width: calc(50.77 / 375 * 100vw);
+  }
+  .panel-img-management {
+    width: calc(39.79 / 375 * 100vw);
+  }
+  .panel-workarea-numeral {
+    font-size: calc(17 / 375 * 100vw);
+  }
+  .panel-workarea-numeral > span {
+    font-size: calc(31 / 375 * 100vw);
+  }
+  .panel-gender-ratio-numeral {
+    display: flex;
+    justify-content: center;
+  }
+  .panel-gender-ratio-numeral > li {
+    font-size: calc(11 / 375 * 100vw);
+  }
+  .panel-gender-ratio-numeral > li + li {
+    margin-left: 8px;
+  }
+  .panel-gender-ratio-numeral > li > span {
+    font-size: calc(34 / 375 * 100vw)
   }
 
 }

@@ -83,14 +83,14 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
       var myself = this;
       Array.prototype.some.call(entries, function(entry){
         if (!entry.isIntersecting){
-          $(".jsc-main-header").addClass('is-change');
+          $(".jsc-main-header").removeClass('is-hidden').css('display', 'block').addClass('is-change');
           $(".jsc-header-menu-list").addClass("is-change");
           $(".jsc-header-logo").attr("src", "/assets/images/header-black-logo.png");
           if (window.matchMedia('(max-width: 1024px)').matches){
             $(".jsc-hamburger-menu").addClass("is-change");
           }
         } else {
-          $(".jsc-main-header").removeClass('is-change');
+          $(".jsc-main-header").addClass('is-hidden').removeClass('is-change');
           $(".jsc-header-menu-list").removeClass("is-change");
           $(".jsc-header-logo").attr("src", "/assets/images/header-logo.png");
           if (window.matchMedia('(max-width: 1024px)').matches){

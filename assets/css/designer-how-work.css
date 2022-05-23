@@ -49,7 +49,7 @@ div.definition-designer-how-work::after {
   bottom: -10px;
   left: 2em;
   background-color: inherit;
-  z-index: 100;
+  z-index: 2;
   transform: rotate(45deg);
 }
 div.definition-designer-how-work:last-child::after {
@@ -65,7 +65,7 @@ dt.example-title-designer-how-work {
   grid-column: 1/2;
   padding-left: 2em;
   counter-increment: title-counter;
-  z-index: 110;
+  z-index: 3;
 }
 dt.example-title-designer-how-work > span.title-counter {
   content: counter(title-counter, decimal-leading-zero);

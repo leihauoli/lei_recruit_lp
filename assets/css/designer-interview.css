@@ -48,7 +48,7 @@ p.interviewee {
   margin-top: 30px;
   position: relative;
   font-weight: bold;
-  z-index: 100;
+  z-index: 2;
 }
 span.interviewee-position {
   display: block;
@@ -93,7 +93,7 @@ schedule time line
   border-left: solid black;
   padding-top: 20px;
   height: 1124px;
-  z-index: 100;
+  z-index: 2;
   margin-top: 20px;
   position: relative;
 }

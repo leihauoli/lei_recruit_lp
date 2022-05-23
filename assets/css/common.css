@@ -40,7 +40,7 @@
   text-align: center;
   font-weight: bold;
   background: black;
-  z-index: 50;
+  z-index: 1;
   color: white;
   animation-name: header-inner-left-in;
   animation-duration: 0.5s;
@@ -54,7 +54,7 @@
   width: 100%;
   background: black;
   display: block;
-  z-index: 100;
+  z-index: 2;
   animation-name: header-wrapper-left-in;
   animation-duration: 2s;
   animation-direction: normal;

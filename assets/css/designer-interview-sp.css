@@ -70,7 +70,7 @@ schedule time line
     padding: 0 1em 0 2em;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 2;
   }
   /* schedule opened*/
   .menu-handler-schedule-interview::after {

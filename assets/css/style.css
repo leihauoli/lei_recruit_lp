@@ -20,12 +20,12 @@ body.is-fixed {
 HEADER
 -------------------------------------*/
 .main-header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 76px;
   background-color: transparent;
   z-index: 4;
-  /* transition: transform 0.4s; */
+  transition: transform 0.4s;
 }
 .main-header.is-change {
   position: fixed;
@@ -36,8 +36,8 @@ HEADER
 }
 .main-header.is-hidden {
   position: absolute;
-  /* transform: translateY(0);
-  animation: headerHidden 0.4s; */
+  transform: translateY(0);
+  animation: headerHidden 0.4s;
 }
 @keyframes headerSlideIn {
   0% {
@@ -181,7 +181,6 @@ HAMBURGER MENU
 
 @media screen and (max-width: 1024px){
   .main-header {
-    display: none;
     height: 60px;
   }
   .header-nav-pc {
@@ -227,8 +226,6 @@ HAMBURGER MENU
   .hamburger-menu.is-active > .hamburger-border-bottom {
     transform: translateY(-3px) rotate(-45deg);
   }
-
-
   .header-menu-list {
     display: flex;
     justify-content: flex-start;
@@ -314,8 +311,6 @@ HAMBURGER MENU
     display: block;
   }
 }
-
-
 .section-kv {
   height: 100vh;
   width: 100%;
@@ -559,6 +554,7 @@ ABOUT　レイビジョン
   margin-left: 0;
 }
 .vision-num-list > li > span {
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   /* display: block; */
 }
 .vision-num-main-txt.is-active {
@@ -883,8 +879,8 @@ ABOUT　数字で見るレイハウオリ
   width: calc(100% / 4 - 7.5px);
   background-color: #FFFFFF;
   margin-left: 10px;
-  padding: min(3.51vw, 48px) min(1.31vw, 18px) min(2.19vw, 30px);
-  font-weight: bold;
+  padding: min(3.51vw, 48px) min(1.31vw, 18px) min(2.39vw, 32px);
+  font-weight: 700;
   text-align: center;
 }
 .numeral-list > li:nth-of-type(1),
@@ -924,12 +920,14 @@ ABOUT　数字で見るレイハウオリ
   width: min(9.43vw, 128.87px);
 }
 .panel-numeral {
-  margin-top: min(1.17vw, 20px);
+  margin-top: min(1.79vw, 24px);
   font-size: min(2.2vw, 30px);
 }
 .panel-numeral-founded {
   margin-top: min(2.19vw, 30px);
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   font-size: min(5.1vw, 70px);
+  font-weight: 400;
 }
 .panel-img-founded {
   width: min(16.25vw, 222px);
@@ -963,7 +961,9 @@ ABOUT　数字で見るレイハウオリ
 }
 .panel-numeral > span {
   display: inline-block;
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   font-size: min(5.1vw, 70px);
+  font-weight: 400;
 }
 .panel-img-engineer {
   width: min(6.58vw, 90px);
@@ -984,7 +984,7 @@ ABOUT　数字で見るレイハウオリ
 .panel-gender-ratio-numeral {
   display: flex;
   justify-content: center;
-  margin-top: min(2.63vw, 36px);
+  margin-top: min(2.19vw, 30px);
 }
 .panel-gender-ratio-numeral > li {
   font-size: min(1.46vw, 20px);
@@ -995,7 +995,9 @@ ABOUT　数字で見るレイハウオリ
 }
 .panel-gender-ratio-numeral > li > span {
   display: inline-block;
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   font-size: min(4.49vw, 60px);
+  font-weight: 400;
 }
 .panel-img-average-overtime {
   margin-top: min(2.92vw, 40px);
@@ -1036,7 +1038,10 @@ ABOUT　数字で見るレイハウオリ
 }
 .panel-workarea-numeral > span {
   display: inline-block;
+  margin-top: min(1.04vw, 14px);
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   font-size: min(4.09vw, 56px);
+  font-weight: 400;
 }
 .entry-btn-container {
   display: flex;
@@ -1223,6 +1228,7 @@ ABOUT　数字で見るレイハウオリ
   }
   .panel-workarea-numeral > span {
     display: inline-block;
+    margin-top: calc(0.74vw, 10px);
     font-size: calc(31 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral {

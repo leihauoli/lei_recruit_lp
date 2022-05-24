@@ -19,7 +19,7 @@ div#div-interviews {
   padding-bottom: 120px;
 }
 div.container-interviews {
-  max-width: 1396px;
+  max-width: 1366px;
   margin: 80px auto 0 auto;
 }
 .interview-header2 {
@@ -48,8 +48,8 @@ div.container-interviews {
 .sumbnail-interview-image {
   max-width: 900px;
   max-height: 500px;
-  width: 75%;
-  height: 100%;
+  width: 65%;
+  height: auto;
 }
 p.interviewee {
   margin-top: 30px;
@@ -68,11 +68,13 @@ span.interviewee-name {
   margin-top: 10px;
 }
 .sumnail-leihauoli-logo {
-  width: 288px;
-  height: 500px;
+  width: 20%;
+  max-width: 288px;
+  height: auto;
   position: relative;
-  left: 60px;
   top: -10px;
+  margin: 0px 109px 0 30px;
+  display: block;
 }
 
 .content-interviews {

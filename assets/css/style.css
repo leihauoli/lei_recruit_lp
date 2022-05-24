@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Noto Sans JP', sans-serif;
+  color: #151515;
 }
 body.is-fixed {
   overflow: hidden;
@@ -301,7 +302,7 @@ HAMBURGER MENU
   }
   .hamburger-bg {
     display: none;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -1251,5 +1252,153 @@ ABOUT　数字で見るレイハウオリ
   .entry-btn-container {
     display: none;
   }
+}
+
+/*-------------------------------------
+RECRUIT 募集要項
+-------------------------------------*/
+.head-section-recruit {
+  width: 100%;
+  height: 400px;
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  background: url(/assets/images/recruit-bg.jpg) no-repeat center/ cover;
+}
+.head-section-recruit > img {
+  width: 558.76px;
+  height: 277.84px;
+  position: absolute;
+  top: 53px;
+  left: 59px;
+}
+.section-recruit {
+}
+.job-description-wrapper {
+  background-color: #F7F7F7;
+  padding: 80px 170px;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.job-description-list {
 
 }
+.job-description-list > li {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px dotted #B9B9B9;
+  color: #151515;
+  font-weight: 700;
+}
+.job-description-ttl {
+  min-width: 205px;
+  font-size: 16px;
+}
+.job-description-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/*-------------------------------------
+RECRUIT 採用までの流れ
+-------------------------------------*/
+.section-recruit {
+  position: relative;
+}
+.recruit-flow-wrapper {
+  padding: 130px 170px;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.recruit-flow-head {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center
+}
+.recruit-flow-accent {
+  margin-top: 76px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+.recruit-flow-accent::before {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 14px;
+  background-color: #ECE0B1;
+  content: "";
+  z-index: -1;
+}
+.recruit-flow-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.recruit-flow-list > li {
+  position: relative;
+  width: 220px;
+}
+.recruit-flow-num {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #C1AB58;
+  font-size: 12px;
+}
+.recruit-flow-list > li::before {
+  content: "";
+  background-color: #F8F4E4;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.recruit-flow-list > li::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.recruit-flow-list > li:nth-of-type(1)::after {
+  background: url(/assets/images/recruit-flow-01.svg) no-repeat;
+  width: 102.44px;
+  height: 90px;
+}
+.recruit-flow-list > li:nth-of-type(2)::after {
+  background: url(/assets/images/recruit-flow-02.svg) no-repeat;
+  width: 75.5px;
+  height: 90px;
+}
+.recruit-flow-list > li:nth-of-type(3)::after {
+  background: url(/assets/images/recruit-flow-03.svg) no-repeat;
+  width: 85.91px;
+  height: 85.91px;
+}
+.recruit-flow-list > li:nth-of-type(4)::after {
+  background: url(/assets/images/recruit-flow-04.svg) no-repeat;
+  width: 108.84px;
+  height: 91px;
+}
+.recruit-flow-ttl {
+  padding-top: 200px;
+  font-size: 20px;
+  text-align: center;
+}
+.recruit-flow-text {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+

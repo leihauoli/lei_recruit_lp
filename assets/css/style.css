@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Noto Sans JP', sans-serif;
-  color: #151515;
 }
 body.is-fixed {
   overflow: hidden;
@@ -1103,14 +1102,15 @@ ABOUT　数字で見るレイハウオリ
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-.entry-btn-container > li:first-child::after {
-  background-color: #FFFFFF;
-}
+.entry-btn-container > li:first-child::after,
 .entry-btn-container > li:last-child::after {
-  background-color: #0CA9C7;
+  background-color: #FFFFFF;
 }
 .entry-btn-container > li:first-child:hover > a {
   color: #151515;
+}
+.entry-btn-container > li:last-child:hover > a {
+  color: #21BDDB;
 }
 .entry-btn-container > li:hover::after {
   width: 100%;
@@ -1257,28 +1257,49 @@ ABOUT　数字で見るレイハウオリ
 /*-------------------------------------
 RECRUIT 募集要項
 -------------------------------------*/
-.head-section-recruit {
-  width: 100%;
+.section-recruit {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 70px;
+  box-sizing: content-box;
+}
+.section-recruit::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 400px;
   margin: 0 calc(50% - 50vw);
+  background: url(/assets/images/recruit-bg.jpg) no-repeat center right / cover;
+}
+.head-section-recruit {
+  width: min(41.82vw, 558.76px);
   position: relative;
-  background: url(/assets/images/recruit-bg.jpg) no-repeat center/ cover;
+  padding: 0 70px;
 }
 .head-section-recruit > img {
-  width: 558.76px;
-  height: 277.84px;
   position: absolute;
   top: 53px;
-  left: 59px;
+  left: -100px;
 }
 .section-recruit {
 }
 .job-description-wrapper {
+  padding: 480px 0 135px;
+  position: relative;
+}
+.job-description-wrapper::before {
   background-color: #F7F7F7;
-  padding: 80px 170px;
-  max-width: 1024px;
-  margin: 0 auto;
-  box-sizing: content-box;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 .job-description-list {
 
@@ -1287,9 +1308,12 @@ RECRUIT 募集要項
   display: flex;
   align-items: center;
   padding: 30px 0;
-  border-bottom: 1px dotted #B9B9B9;
+  border-bottom: 1px dashed #B9B9B9;
   color: #151515;
   font-weight: 700;
+}
+.job-description-list > li:first-child {
+  padding-top: 0;
 }
 .job-description-ttl {
   min-width: 205px;
@@ -1307,7 +1331,7 @@ RECRUIT 採用までの流れ
   position: relative;
 }
 .recruit-flow-wrapper {
-  padding: 130px 170px;
+  padding: 130px 0;
   max-width: 1024px;
   margin: 0 auto;
   box-sizing: content-box;
@@ -1344,6 +1368,9 @@ RECRUIT 採用までの流れ
   position: relative;
   width: 220px;
 }
+.recruit-flow-list > li + li {
+  margin-left: 50px;
+}
 .recruit-flow-num {
   position: absolute;
   top: 29px;
@@ -1351,6 +1378,8 @@ RECRUIT 採用までの流れ
   transform: translateX(-50%);
   color: #C1AB58;
   font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
 }
 .recruit-flow-list > li::before {
   content: "";
@@ -1394,6 +1423,7 @@ RECRUIT 採用までの流れ
 .recruit-flow-ttl {
   padding-top: 200px;
   font-size: 20px;
+  font-weight: 700;
   text-align: center;
 }
 .recruit-flow-text {
@@ -1402,3 +1432,112 @@ RECRUIT 採用までの流れ
   line-height: 1.7;
 }
 
+@media screen and (max-width: 1024px){
+  .section-recruit {
+    padding: 0 16px;
+  }
+  .section-recruit::before {
+    height: calc(180 / 375 * 100vw);
+  }
+  .head-section-recruit {
+    width: calc(278.69 / 375 * 100vw);
+  }
+  .head-section-recruit > img {
+    width: 100%;
+    left: 11px;
+  }
+  .job-description-wrapper {
+    padding: calc(225 / 375 * 100vw) 0 64px;
+  }
+  .job-description-list > li {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px 0;
+  }
+  .job-description-ttl {
+
+  }
+  .job-description-text {
+    margin-top: 18px;
+  }
+  /*-------------------------------------
+  RECRUIT 採用までの流れ
+  -------------------------------------*/
+  .recruit-flow-wrapper {
+    padding: 70px 0;
+  }
+  .recruit-flow-head {
+    font-size: 24px;
+  }
+  .recruit-flow-accent {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .recruit-flow-accent::before {
+    width: 286px;
+    height: 8px;
+    bottom: -3px;
+  }
+  .recruit-flow-list {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .recruit-flow-list > li + li {
+    margin: 38px 0 0;
+  }
+  .recruit-flow-num {
+    top: 14px;
+    left: 50px;
+  }
+  .recruit-flow-list > li {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+  }
+  .recruit-flow-list > li::before {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    transform: none;
+  }
+  .recruit-flow-list > li::after {
+    top: 32px;
+    left: 0;
+    transform: none;
+  }
+  .recruit-flow-list > li:nth-of-type(1)::after {
+    background-size: 56.91px 50px;
+    width: 56.91px;
+    height: 50px;
+    left: 21px;
+  }
+  .recruit-flow-list > li:nth-of-type(2)::after {
+    background-size: 41.95px 50px;
+    width: 41.95px;
+    height: 50px;
+    left: 29px;
+  }
+  .recruit-flow-list > li:nth-of-type(3)::after {
+    background-size: 49.39px 49.39px;
+    width: 49.39px;
+    height: 49.39px;
+    left: 25px;
+  }
+  .recruit-flow-list > li:nth-of-type(4)::after {
+    background-size: 60.46px 50.56px;
+    width: 60.46px;
+    height: 50.56px;
+    left: 20px;
+  }
+  .recruit-flow-contents {
+    padding-left: 116px;
+  }
+  .recruit-flow-ttl {
+    padding-top: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  .recruit-flow-text {
+    margin-top: 18px;
+  }
+}

@@ -1,6 +1,7 @@
 div#div-works {
   margin-top: 100px;
   max-width: 1226px;
+  padding-bottom: 80px;
   width: 100%;
 }
 #img-about-works {
@@ -16,6 +17,7 @@ div#div-works-examples-container {
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
+  padding: 0 16px 0 16px;
 }
 .work-example-cards {
   position: relative;
@@ -60,7 +62,7 @@ img.img-works-example {
 .description-works-example {
   color: white;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.7em;
   padding: 0 20px;
 }
 span.works-example-company {

@@ -4,7 +4,10 @@
     padding-top: 54px;
     padding-bottom: 64px;
   }
-  div#header-paragraph-interviews {
+  div#interviewee-yahata {
+    margin-top: 40px;
+  }
+  div.header-paragraph-interviews {
     font-size: 36px;
   }
   #header-interviews {
@@ -38,10 +41,14 @@
   .interview-header2 {
     font-size: 24px;
   }
+  .interview-header2 {
+    margin-top: 5px;
+  }
   .interviewee-position {
     font-size: 12px;
   }
-  .interviewee-name {
+  span.interviewee-name {
+    margin-top: 5px;
     font-size: 16px;
   }
   /*-----
@@ -52,7 +59,7 @@ schedule time line
     width: 60%;
     min-width: 342px;
     max-width: none;
-    margin-top: 90px;
+    margin-top: 40px;
     overflow: hidden;
     animation-iteration-count: 1;
     animation-duration: 500ms;
@@ -131,11 +138,9 @@ schedule time line
   .div-interview-QA {
     width: 90%;
   }
-  .interview-counter {
-    width: 90%;
-  }
   .dt-interview-question {
     font-size: 20px;
+    margin-top: 32px;
   }
   .dd-interview-answer {
     font-size: 16px;

@@ -3,11 +3,12 @@ div#header-interviews {
   max-width: 1226px;
   margin: 0 auto;
 }
-div#header-paragraph-interviews {
+div.header-paragraph-interviews {
   position: relative;
   overflow: hidden;
   height: 1.2em;
-  width: 6.5em;
+  max-width: 6.5em;
+  min-width: 6.5em;
   font-size: 70px;
 }
 div#div-interviews {
@@ -44,6 +45,12 @@ div.container-interviews {
   justify-content: space-between;
   overflow: hidden;
 }
+.sumbnail-interview-image {
+  max-width: 900px;
+  max-height: 500px;
+  width: 75%;
+  height: 100%;
+}
 p.interviewee {
   margin-top: 30px;
   position: relative;
@@ -56,6 +63,7 @@ span.interviewee-position {
 }
 span.interviewee-name {
   display: block;
+  font-size: 20px;
   font-weight: 600;
   margin-top: 10px;
 }
@@ -90,7 +98,7 @@ schedule time line
   display: none;
 }
 .ul-schedule-time-line {
-  border-left: solid black;
+  border-left: 4px solid black;
   padding-top: 20px;
   height: 1124px;
   z-index: 2;
@@ -148,71 +156,12 @@ ul.ul-schedule-todo {
   font-size: 30px;
   left: 0px;
 }
-span.img-window-schedule {
-  display: inline-block;
-  width: 59px;
-  height: 59px;
-  overflow: hidden;
+.img-schedule {
   position: absolute;
-  border-radius: 100%;
   top: calc((100% - 59px) / 2);
   right: -10px;
-}
-.img-schedule-breakfast {
-  position: relative;
-  top: 0px;
-  left: -15px;
-  width: 86px;
-  height: 100%;
-}
-.img-schedule-working {
-  width: 90px;
-  height: 100%;
-  position: relative;
-  left: -10px;
-  top: -1px;
-}
-.img-schedule-online-meeting {
-  width: 100px;
-  height: 100%;
-  position: relative;
-  left: -20px;
-}
-.img-schedule-kindergarten {
-  width: 240px;
-  position: relative;
-  left: -128px;
-  top: -34px;
-}
-.img-schedule-dentifrice {
-  width: 260px;
-  position: relative;
-  left: -90px;
-  top: -85px;
-}
-.img-schedule-relaxed {
-  width: 170px;
-  position: relative;
-  left: -70px;
-  top: -50px;
-}
-.img-schedule-calendar {
-  width: 100px;
-  position: relative;
-  left: -40px;
-}
-.img-schedule-designing {
-  width: 100px;
-}
-.img-schedule-take-note {
-  width: 100px;
-  position: relative;
-  left: -24px;
-}
-.img-schedule-live-music {
-  width: 90px;
-  position: relative;
-  left: -10px;
+  width: 50px;
+  height: 50px;
 }
 /*-------------
 schedule list
@@ -238,10 +187,12 @@ li.li-schedule-todo::before {
 SHIRAISHI Schedule
 */
 #interviewee-shiraishi .interview-header1 {
-  width: 10.5em;
+  max-width: 10.5em;
+  min-width: 10.5em;
 }
 #interviewee-shiraishi .interview-header2 {
-  width: 8.5em;
+  max-width: 8.5em;
+  min-width: 8.5em;
 }
 #ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
   top: 30px;
@@ -293,10 +244,12 @@ SHIRAISHI Schedule
 YAHATA Schedule
 */
 #interviewee-yahata .interview-header1 {
-  width: 3.5em;
+  max-width: 3.5em;
+  min-width: 3.5em;
 }
 #interviewee-yahata .interview-header2 {
-  width: 9.5em;
+  max-width: 9.5em;
+  min-width: 9.5em;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
   top: 20px;
@@ -332,13 +285,16 @@ YAHATA Schedule
   top: 440px;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
-  top: 653px;
+  top: 528px;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
-  top: 685px;
+  top: 633px;
 }
 #ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
-  top: 690px;
+  top: 650px;
+}
+#ul-yahata-schedule > .li-schedule-todo:nth-child(15) {
+  top: 660px;
 }
 /*-------------
 interview list
@@ -381,10 +337,8 @@ interview list
 .dd-interview-answer {
   font-size: 16px;
   font-weight: 300;
-  letter-spacing: -0.1em;
   margin-top: 11px;
 }
-.schedule-title,
 .schedule-detail {
   width: 200px;
 }

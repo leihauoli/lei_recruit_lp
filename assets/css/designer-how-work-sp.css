@@ -9,7 +9,7 @@
   .container-designer-how-work {
     margin-top: 39px;
   }
-  .subtitle-designer-how-work {
+  p.subtitle-designer-how-work {
     font-size: 24px;
   }
   p.supplement-designer-how-work {
@@ -48,6 +48,7 @@
     height: 24px;
     width: 24px;
     line-height: 1;
+    margin-right: 10px;
   }
   dt.example-title-designer-how-work > span.title-counter::before {
     font-size: 12px;

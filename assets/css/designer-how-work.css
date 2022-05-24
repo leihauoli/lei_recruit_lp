@@ -59,6 +59,8 @@ div.definition-designer-how-work:last-child::after {
 }
 /*examples header(dt)*/
 dt.example-title-designer-how-work {
+  display: flex;
+  align-items: center;
   text-align: left;
   width: 100%;
   position: relative;
@@ -90,6 +92,7 @@ dd.example-content-designer-how-work {
   padding-right: 1em;
   padding: 30px;
   position: relative;
+  line-height: 1.7;
 }
 dd.example-content-designer-how-work::before {
   position: absolute;

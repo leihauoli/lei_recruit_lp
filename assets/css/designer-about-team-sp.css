@@ -7,15 +7,18 @@
   }
   #header-about-team {
     overflow: hidden;
-    flex-direction: column;
+    display: block;
   }
   #header-svg-designer {
-    width: 90%;
+    width: 290px;
+    height: 168px;
     margin-right: 10%;
   }
   #header-title-about-team {
     font-size: 36px;
-    width: 8em;
+    position: relative;
+    left: calc(100% - 7.5em);
+    margin-top: 17px;
   }
   #div-design-team {
     margin: 64px auto 0 auto;
@@ -49,12 +52,14 @@
   .card-outer-style {
     width: 100%;
     min-width: 323px;
+    height: 498px;
     background: #f8f4e4;
     margin-bottom: 20px;
   }
   .card-designer-style {
     width: 100%;
     max-width: 293px;
+    height: 444px;
     margin: 0 auto 0 auto;
   }
   .card-designer-style-number {

@@ -14,7 +14,8 @@
 #header-title-about-team {
   position: relative;
   overflow: hidden;
-  width: 7.5em;
+  max-width: 7.5em;
+  min-width: 7.5em;
   height: 1.2em;
   font-size: 70px;
   background-color: transparent;
@@ -34,7 +35,9 @@
 .div-design-member {
   opacity: 0;
   position: relative;
-  width: 300px;
+  max-width: 300px;
+  /* 3 columns width = (100% - the total of margin) / 3 */
+  width: calc((100% - 120px) / 3);
   height: 240px;
   animation-name: flowed-in;
   animation-duration: 2s;
@@ -134,7 +137,6 @@
   align-items: stretch;
   counter-reset: counter-card-designer-style;
 }
-
 .card-designer-style {
   background: #f8f4e4;
   width: 310px;
@@ -160,14 +162,21 @@
 .card-designer-style-number::after {
   content: "Style " counter(counter-card-designer-style, decimal-leading-zero);
 }
-.card-designer-style-icon {
+.card-designer-style-icon-window {
+  position: relative;
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   margin: 20px auto 0 auto;
-  display: block;
   background: white;
-  padding: 40px;
+}
+.card-designer-style-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  display: block;
 }
 .card-title-desiner-style {
   text-align: center;

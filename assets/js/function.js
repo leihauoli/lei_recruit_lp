@@ -6,6 +6,8 @@ LEIHAUOLI.DEMO_ANIMATION = LEIHAUOLI.DEMO_ANIMATION || {};
  */
 LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
     ACTIVE_CLASS: 'is-active',
+    CHANGE_CLASS: 'is-change',
+    HIDDEN_CLASS: 'is-hidden',
     init: function(){
         this.setParameters();
         this.bindEvent();
@@ -83,19 +85,22 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
       Array.prototype.some.call(entries, function(entry){
         if (!entry.isIntersecting){
           $(".jsc-main-header").removeClass('is-hidden').addClass('is-change');
-          $(".jsc-header-menu-list").addClass("is-change");
+          $(".jsc-header-menu-list").addClass('is-change');
           $(".jsc-header-logo").attr("src", "/assets/images/header-black-logo.png");
+
           if (window.matchMedia('(max-width: 1024px)').matches){
-            $(".jsc-hamburger-menu").addClass("is-change");
+            $(".jsc-hamburger-menu").addClass('is-change');
           }
         } else {
           if ($(".jsc-main-header").css('position') === 'fixed'){
             $(".jsc-main-header").removeClass('is-change').addClass('is-hidden');
           }
-          $(".jsc-header-menu-list").removeClass("is-change");
+
+          $(".jsc-header-menu-list").removeClass('is-change');
           $(".jsc-header-logo").attr("src", "/assets/images/header-logo.png");
+
           if (window.matchMedia('(max-width: 1024px)').matches){
-            $(".jsc-hamburger-menu").removeClass("is-change");
+            $(".jsc-hamburger-menu").removeClass('is-change');
           }
         }
       });
@@ -108,6 +113,7 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
  */
  LEIHAUOLI.DEMO_ANIMATION.HamburgerMenu = {
   ACTIVE_CLASS: 'is-active',
+  FIXED_CLASS: 'is-fixed',
   SLIDE_SPEED: 400,
   init: function(){
     this.setParameters();
@@ -139,11 +145,11 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
     this.$hamburgerBg.on('click', this.toggleHamburger.bind(this));
   },
   toggleHamburger: function(){
-    this.$hamburgerMenu.toggleClass('is-active');
-    this.$body.toggleClass('is-fixed');
-    this.$headerMenuList.toggleClass('is-active');
-    this.$headerNavSp.toggleClass('is-active');
-    this.$hamburgerBg.toggleClass('is-active');
+    this.$hamburgerMenu.toggleClass(this.ACTIVE_CLASS);
+    this.$body.toggleClass(this.FIXED_CLASS);
+    this.$headerMenuList.toggleClass(this.ACTIVE_CLASS);
+    this.$headerNavSp.toggleClass(this.ACTIVE_CLASS);
+    this.$hamburgerBg.toggleClass(this.ACTIVE_CLASS);
   }
 };
 
@@ -151,7 +157,7 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
  * スムーススクロール
  */
  LEIHAUOLI.DEMO_ANIMATION.SmoothScroll = {
-  SMOOTH_SCROLL_SPEED: 500,
+  SMOOTH_SCROLL_SPEED: 400,
   init: function(){
     this.setParameters();
     this.bindEvent();
@@ -165,9 +171,10 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
     var myself = this;
     this.$href.on('click', function(e){
         e.preventDefault();
-        var href = $(this).attr('href');
-        var target = $(href == '#' || href == '' ? 'html' : href);
-        var position = target.offset().top - myself.$header.height();
+        var href = $(this).attr('href'),
+          target = $(href == '#' || href == '' ? 'html' : href),
+          position = target.offset().top - myself.$header.height();
+
         myself.$body.animate({scrollTop: position}, myself.SMOOTH_SCROLL_SPEED);
         return false;
     });

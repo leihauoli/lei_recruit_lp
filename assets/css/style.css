@@ -25,19 +25,18 @@ HEADER
   height: 76px;
   background-color: transparent;
   z-index: 4;
-  transition: transform 0.4s;
 }
 .main-header.is-change {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #FFFFFF;
-  animation: headerSlideIn 0.4s forwards;
+  animation: headerSlideIn 0.2s forwards;
 }
 .main-header.is-hidden {
   position: absolute;
   transform: translateY(0);
-  animation: headerHidden 0.4s;
+  animation: headerHidden 0.2s;
 }
 @keyframes headerSlideIn {
   0% {
@@ -105,21 +104,23 @@ HEADER
 }
 .header-entry-list > li {
   width: 160px;
-  height: 76px;
-  display: block;
   text-align: center;
-  padding: 10px 0;
   line-height: 1.5;
   overflow: hidden;
   position: relative;
 }
 .header-entry-list > li > a {
+  display: block;
+  height: 76px;
   color: #FFFFFF;
   font-size: 13px;
   font-weight: 700;
+  line-height: 1;
+  padding: 20px 0;
 }
 .header-entry-list > li > a > span {
   display: block;
+  margin-top: 8px;
   font-size: 16px;
 }
 .header-entry-list > li:first-child {
@@ -168,9 +169,8 @@ HEADER
   height: 100%;
 }
 .header-logo-list {
-    display: none;
+  display: none;
 }
-
 
 /*-------------------------------------
 HAMBURGER MENU

@@ -10,8 +10,10 @@
     display: block;
   }
   #header-svg-designer {
-    width: 290px;
-    height: 168px;
+    min-width: 290px;
+    min-height: 168px;
+    width: 70%;
+    height: auto;
     margin-right: 10%;
   }
   #header-title-about-team {

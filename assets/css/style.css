@@ -429,7 +429,7 @@ ABOUT　レイビジョン
 .vision-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 240px;
+  padding-bottom: 80px;
   font-weight: bold;
   position: relative;
 }
@@ -692,7 +692,7 @@ ABOUT　働き方/制度
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 100px 100px 67px;
+  padding: 70px 100px 67px;
   background-color: #FFFFFF;
 }
 .workstyle-main-list > li {
@@ -1453,9 +1453,6 @@ RECRUIT 採用までの流れ
     align-items: flex-start;
     flex-direction: column;
     padding: 28px 0;
-  }
-  .job-description-ttl {
-
   }
   .job-description-text {
     margin-top: 18px;

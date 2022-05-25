@@ -15,92 +15,85 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
     setParameters: function(){
       this.$window = $(window);
       this.options = {
-        rootMargin: "0px 0px"
+        rootMargin: '0px 0px'
       };
       if (window.matchMedia('(max-width: 1024px)').matches){
         this.headerOptions = {
-          rootMargin: "-60px 0px 0px 0px"
+          rootMargin: '-60px 0px 0px 0px'
         };
       } else {
         this.headerOptions = {
-          rootMargin: "-76px 0px 0px 0px"
+          rootMargin: '-76px 0px 0px 0px'
         };
       }
-      this.ttlBgLeft = document.querySelectorAll(".jsc-ttl-bg-left");
-      this.contentLeft = document.querySelectorAll(".jsc-left-content");
-      this.contentRight = document.querySelectorAll(".jsc-right-content");
-      this.emergeTop = document.querySelectorAll(".jsc-emerge-top");
-      this.emergeBottom = document.querySelectorAll(".jsc-emerge-bottom");
-      this.header = document.getElementsByClassName(".jsc-main-header");
-      this.sectionKv = document.querySelectorAll(".jsc-section-kv");
-      // this.emerge02 = document.querySelectorAll(".jsc-emerge-02");
-      // this.emerge03 = document.querySelectorAll(".jsc-emerge-03");
-      // this.emerge04 = document.querySelectorAll(".jsc-emerge-04");
-      // this.emerge05 = document.querySelectorAll(".jsc-emerge-05");
+      this.$ttlBgLeft = $('.jsc-ttl-bg-left');
+      this.$contentLeft = $('.jsc-left-content');
+      this.$contentRight = $('.jsc-right-content');
+      this.$emergeTop = $('.jsc-emerge-top');
+      this.$emergeBottom = $('.jsc-emerge-bottom');
+      this.$header = $('.jsc-main-header');
+      this.$sectionKv = $('.jsc-section-kv');
       this.observer = new IntersectionObserver(this.showContents, this.options);
       this.headerObserver = new IntersectionObserver(this.changeHeaderBg, this.headerOptions);
-      this.headerLogo = document.querySelectorAll(".jsc-header-logo");
-      this.$header = $(".jsc-main-header");
     },
     bindEvent: function(){
       var myself = this;
-      Array.prototype.forEach.call(this.ttlBgLeft, function(box){
+      Array.prototype.forEach.call(this.$ttlBgLeft, function(box){
           myself.observer.observe(box);
       });
-      Array.prototype.forEach.call(this.contentLeft, function(box){
+      Array.prototype.forEach.call(this.$contentLeft, function(box){
           myself.observer.observe(box);
       });
-      Array.prototype.forEach.call(this.emergeTop, function(box){
+      Array.prototype.forEach.call(this.$emergeTop, function(box){
           myself.observer.observe(box);
       });
-      Array.prototype.forEach.call(this.emergeBottom, function(box){
+      Array.prototype.forEach.call(this.$emergeBottom, function(box){
         myself.observer.observe(box);
       });
-      Array.prototype.forEach.call(this.sectionKv, function(box){
+      Array.prototype.forEach.call(this.$sectionKv, function(box){
         myself.headerObserver.observe(box);
       });
       this.$window.on('resize', function(){
         if (window.matchMedia('(max-width: 1024px)').matches){
           myself.headerOptions = {
-            rootMargin: "-60px 0px 0px 0px"
+            rootMargin: '-60px 0px 0px 0px'
           };
         } else {
           myself.headerOptions = {
-            rootMargin: "-76px 0px 0px 0px"
+            rootMargin: '-76px 0px 0px 0px'
           };
         }
       });
     },
     showContents: function(entries){
-        var myself = this;
-        Array.prototype.some.call(entries, function(entry){
-            if (entry.isIntersecting){
-                //要素が表示領域に入ったとき
-                entry.target.classList.add('is-active');
-            }
-        });
+      Array.prototype.some.call(entries, function(entry){
+        if (entry.isIntersecting){
+          //要素が表示領域に入ったとき
+          entry.target.classList.add('is-active');
+        }
+      });
     },
     changeHeaderBg: function(entries){
       var myself = this;
       Array.prototype.some.call(entries, function(entry){
         if (!entry.isIntersecting){
-          $(".jsc-main-header").removeClass('is-hidden').addClass('is-change');
-          $(".jsc-header-menu-list").addClass('is-change');
-          $(".jsc-header-logo").attr("src", "/assets/images/header-black-logo.png");
+          $('.jsc-main-header').removeClass('is-hidden').addClass('is-change');
+          $('.jsc-header-menu-list').addClass('is-change');
+          $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.png');
 
           if (window.matchMedia('(max-width: 1024px)').matches){
-            $(".jsc-hamburger-menu").addClass('is-change');
+            $('.jsc-hamburger-menu').addClass('is-change');
           }
         } else {
-          if ($(".jsc-main-header").css('position') === 'fixed'){
-            $(".jsc-main-header").removeClass('is-change').addClass('is-hidden');
+          if ($('.jsc-main-header').css('position') === 'fixed'){
+            $('.jsc-main-header').removeClass('is-change').addClass('is-hidden');
           }
 
-          $(".jsc-header-menu-list").removeClass('is-change');
-          $(".jsc-header-logo").attr("src", "/assets/images/header-logo.png");
+          $('.jsc-header-menu-list').removeClass('is-change');
+          $('.jsc-header-logo').attr('src', '/assets/images/header-logo.png');
 
           if (window.matchMedia('(max-width: 1024px)').matches){
-            $(".jsc-hamburger-menu").removeClass('is-change');
+            $('.jsc-hamburger-menu').removeClass('is-change');
           }
         }
       });
@@ -157,7 +150,7 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
  * スムーススクロール
  */
  LEIHAUOLI.DEMO_ANIMATION.SmoothScroll = {
-  SMOOTH_SCROLL_SPEED: 400,
+  SMOOTH_SCROLL_SPEED: 200,
   init: function(){
     this.setParameters();
     this.bindEvent();

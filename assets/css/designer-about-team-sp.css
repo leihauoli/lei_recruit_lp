@@ -1,50 +1,45 @@
 /*SP*/
 @media screen and (max-width: 1024px) {
   /* チーム紹介 */
-  #div-about-team {
-    width: calc(100% - 16px);
-    margin: 0 auto;
+  .div-about-team {
+    padding: 16px;
   }
-  #header-about-team {
+  .header-about-team {
     overflow: hidden;
     display: block;
   }
-  #header-svg-designer {
+  .header-svg-designer {
     min-width: 290px;
     min-height: 168px;
     width: 70%;
     height: auto;
     margin-right: 10%;
   }
-  #header-title-about-team {
+  .header-title-about-team {
     font-size: 36px;
     position: relative;
     left: calc(100% - 7.5em);
     margin-top: 17px;
   }
-  #div-design-team {
+  .div-designer-style {
     margin: 64px auto 0 auto;
   }
-  #div-designer-style {
-    margin: 64px auto 0 auto;
-  }
-
   /*team member */
-  #div-design-team {
+  .ul-design-team {
     height: auto;
-    margin-top: 32px;
+    margin: 32px auto 0 auto;
     padding: 0 20px 0 20px;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
-  .div-design-member {
+  .ul-design-team > li {
     flex-shrink: 0;
     width: 232px;
     height: auto;
     margin: 0 20px 30px 20px;
   }
   /*STYLE（行動指針）*/
-  #container-designer-style {
+  .ul-designer-style {
     width: 100%;
     flex-direction: column;
   }

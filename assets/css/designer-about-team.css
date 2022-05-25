@@ -1,8 +1,8 @@
-#div-about-team {
+.div-about-team {
   width: 100%;
   padding: 0 16px;
 }
-#header-about-team {
+.header-about-team {
   width: 100%;
   max-width: 1336px;
   margin: 0 auto 0 auto;
@@ -11,18 +11,20 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-#header-title-about-team {
+.header-title-about-team {
   position: relative;
-  overflow: hidden;
   max-width: 7.5em;
   min-width: 7.5em;
-  height: 1.2em;
   font-size: 70px;
-  background-color: transparent;
+}
+.header-svg-designer {
+  max-width: 588px;
+  width: 100%;
+  height: auto;
 }
 
 /* チーム紹介 */
-#div-design-team {
+.ul-design-team {
   width: 100%;
   max-width: 1024px;
   margin: 80px auto 0 auto;
@@ -32,20 +34,12 @@
   align-items: flex-start;
   flex-direction: row;
 }
-.div-design-member {
-  opacity: 0;
+.ul-design-team > li {
   position: relative;
   max-width: 300px;
   /* 3 columns width = (100% - the total of margin) / 3 */
   width: calc((100% - 120px) / 3);
   height: 240px;
-  animation-name: flowed-in;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-delay: calc(100 * var(--nth));
-  animation-play-state: running;
   margin: 0 20px 80px 20px;
 }
 .header-design-member {
@@ -60,17 +54,12 @@
 }
 .design-member-content {
   width: 100%;
-}
-.design-member-content::before {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  border-bottom: dashed 1px #e5e5e5;
-  margin: 10px 0 10px 0;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: dashed 1px #e5e5e5;
 }
 .design-member-icon {
-  grid-area: icon;
-  height: 100%;
+  width: 70px;
 }
 .design-member-name {
   height: 1.5em;
@@ -83,8 +72,7 @@
   font-size: 12px;
   padding-left: 16px;
 }
-.para-like,
-.para-dislike {
+.para-preference {
   width: 4em;
   background: black;
   color: white;
@@ -92,32 +80,27 @@
   font-size: 12px;
   padding: 3px;
 }
-.design-member-likes > ul,
-.design-member-dislikes > ul {
+.design-member-preference-list > ul {
   list-style-type: none;
   display: inline-block;
   margin-top: 7px;
 }
-.design-member-likes > ul {
+.design-member-preference-list:nth-child(1) {
   margin: 7px 0 21px 0;
 }
-
-.design-member-likes > ul > li,
-.design-member-dislikes > ul > li {
+.design-member-preference-list > ul > li {
   list-style: none;
   display: inline;
   font-size: 12px;
   line-height: 1.7;
 }
-.design-member-likes > ul > li::after,
-.design-member-dislikes > ul > li::after {
+.design-member-preference-list > ul > li::after {
   content: "/";
 }
-.design-member-likes > ul > li:last-child::after,
-.design-member-dislikes > ul > li:last-child::after {
+.design-member-preference-list > ul > li:last-child::after {
   content: "";
 }
-#div-designer-style {
+.div-designer-style {
   width: 100%;
   max-width: 1024px;
   margin: 80px auto 0 auto;
@@ -128,7 +111,7 @@
   font-size: 40px;
   font-weight: bold;
 }
-#container-designer-style {
+.ul-designer-style {
   margin-top: 40px;
   display: flex;
   flex-direction: row;
@@ -202,7 +185,4 @@
   list-style: disc;
   list-style-position: inside;
   line-height: 1.7;
-}
-.card-designer-style {
-  padding-bottom: 2em;
 }

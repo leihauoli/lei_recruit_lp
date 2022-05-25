@@ -1,8 +1,5 @@
 /*SP*/
 @media screen and (max-width: 1024px) {
-  .contents-block {
-    width: 100%;
-  }
   * {
     box-sizing: border-box;
   }

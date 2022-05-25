@@ -1,17 +1,17 @@
 /*SP*/
 @media screen and (max-width: 1024px) {
-  div#div-works {
+  .section-works {
     width: calc(100% - 16px);
     margin: 0 auto;
   }
-  #img-about-works {
+  .header-svg-works {
     width: 70%;
   }
-  div#div-works-examples {
+  .div-works-examples {
     width: 100%;
     margin-top: 47px;
   }
-  div#div-works-examples-container {
+  .ul-works-examples-container {
     flex-wrap: nowrap;
     overflow-x: scroll;
     margin-top: 39px;
@@ -27,7 +27,7 @@
   .work-example-cards:nth-child(3n + 2) {
     margin-top: 0px;
   }
-  span.works-example-company {
+  .works-example-company {
     font-size: 16px;
     margin: 6px 0 6px 0;
   }

@@ -1,17 +1,13 @@
 @media screen and (max-width: 1024px) {
-  div#div-interviews {
+  .section-interviews {
     margin-top: 64px;
-    padding-top: 54px;
-    padding-bottom: 64px;
+    padding: 54px 0 64px 16px;
   }
-  div#interviewee-yahata {
-    margin-top: 40px;
-  }
-  div.header-paragraph-interviews {
+  .header-interviews {
     font-size: 36px;
   }
-  #header-interviews {
-    padding: 0 16px;
+  .interviewee-yahata {
+    margin-top: 40px;
   }
   .sumbnail-background-interview {
     padding-left: 16px;
@@ -30,9 +26,8 @@
     margin-top: 60px;
   }
   .sumnail-leihauoli-logo {
+    top:45px;
     left: 0;
-    width: 20%;
-    height: unset;
     margin: 0 33px 0 0;
   }
   .sumbnail-title-interview {
@@ -136,7 +131,7 @@ schedule time line
   interview list
   */
 
-  .div-interview-QA {
+  .dl-interview-QA {
     width: 90%;
   }
   .dt-interview-question {
@@ -153,7 +148,7 @@ schedule time line
     font-size: 12px;
     width: 169px;
   }
-  span.img-window-schedule {
+  .img-window-schedule {
     right: 10px;
     transform: scale(1.2);
   }
@@ -169,95 +164,95 @@ schedule time line
   /*-----------
 SHIRAISHI Schedule
 */
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
     top: 50px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
     top: 50px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
     top: 55px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
     top: 80px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
     top: 100px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
     top: 170px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
     top: 220px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
     top: 380px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
     top: 375px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
     top: 420px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
     top: 450px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
     top: 460px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
     top: 505px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
     top: 545px;
   }
-  #ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
+  .ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
     top: 615px;
   }
 
   /*-----
 YAHATA Schedule
 */
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
     top: 40px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(2) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(2) {
     top: 38px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
     top: 75px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
     top: 100px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
     top: 173px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
     top: 278px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
     top: 285px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
     top: 305px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
     top: 395px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
     top: 390px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
     top: 440px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
     top: 674px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
     top: 690px;
   }
-  #ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
+  .ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
     top: 710px;
   }
 }

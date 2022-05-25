@@ -1,16 +1,16 @@
-div#div-works {
-  margin-top: 100px;
+.section-works {
+  margin: 100px auto 0;
   max-width: 1226px;
   padding-bottom: 80px;
   width: 100%;
 }
-#img-about-works {
+.header-svg-works {
   width: 552px;
 }
-div#div-works-examples {
+.div-works-examples {
   width: 100%;
 }
-div#div-works-examples-container {
+.ul-works-examples-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -43,7 +43,11 @@ img.img-works-example {
   position: relative;
   width: 100%;
 }
-.div-description-works-example {
+.description-works-example {
+  color: white;
+  font-weight: 600;
+  font-size: 1.7em;
+  padding: 0 20px;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -56,27 +60,21 @@ img.img-works-example {
   background-color: #0000005c;
   transition: ease-in-out 0.5s;
 }
-.div-description-works-example:hover {
+.description-works-example:hover {
   opacity: 1;
 }
-.description-works-example {
-  color: white;
-  font-weight: 600;
-  font-size: 1.7em;
-  padding: 0 20px;
-}
-span.works-example-company {
+.works-example-company {
   display: inline-block;
   font-weight: 600;
   font-size: 20px;
   width: 100%;
   margin: 0.5em 0 0.5em 0;
 }
-span.works-example-type {
+.works-example-type {
   font-size: 12px;
   display: inline-block;
   width: 100%;
 }
-span.works-example-application-type::after {
+.works-example-application-type::after {
   content: "／";
 }

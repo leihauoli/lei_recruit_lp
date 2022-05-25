@@ -1,22 +1,17 @@
-div#header-interviews {
+.header-interviews {
   width: 100%;
   max-width: 1226px;
-  margin: 0 auto;
-}
-div.header-paragraph-interviews {
   position: relative;
   overflow: hidden;
-  height: 1.2em;
   max-width: 6.5em;
   min-width: 6.5em;
   font-size: 70px;
 }
-div#div-interviews {
+.section-interviews {
   width: 100%;
   background-color: #f8f4e4;
   margin-top: 120px;
-  padding-top: 125px;
-  padding-bottom: 120px;
+  padding: 125px 0 120px calc((100% - 1336px) / 2);
 }
 div.container-interviews {
   max-width: 1366px;
@@ -27,7 +22,6 @@ div.container-interviews {
 }
 .interview-header1,
 .interview-header2 {
-  height: 1.2em;
   font-size: 50px;
 }
 .sumbnail-interview {
@@ -35,9 +29,9 @@ div.container-interviews {
 }
 .sumbnail-title-interview {
   position: absolute;
-  height: 100%;
   left: 170px;
   top: 50%;
+  z-index: 2;
 }
 .sumbnail-background-interview {
   position: relative;
@@ -70,9 +64,9 @@ span.interviewee-name {
 .sumnail-leihauoli-logo {
   width: 20%;
   max-width: 288px;
-  height: auto;
+  height: 20%;
   position: relative;
-  top: -10px;
+  top: 100px;
   margin: 0px 109px 0 30px;
   display: block;
 }
@@ -131,7 +125,7 @@ ul.ul-schedule-time-line::before {
   margin-bottom: 110px;
 }
 
-.ul-schedule-todo > li.li-schedule-todo > .schedule-detail {
+.ul-schedule-todo > li > .schedule-detail {
   line-height: 1.5;
 }
 ul.ul-schedule-todo {
@@ -161,18 +155,18 @@ ul.ul-schedule-todo {
 .img-schedule {
   position: absolute;
   top: calc((100% - 59px) / 2);
-  right: -10px;
+  right: 0px;
   width: 50px;
   height: 50px;
 }
 /*-------------
 schedule list
 */
-li.li-schedule-todo {
+.ul-schedule-todo > li {
   list-style: none;
   position: relative;
 }
-li.li-schedule-todo::before {
+.ul-schedule-todo > li::before {
   content: "";
   width: 42px;
   border-top: 1px solid black;
@@ -181,128 +175,128 @@ li.li-schedule-todo::before {
   display: block;
   top: 8px;
 }
-.ul-schedule-todo > .li-schedule-todo {
+.ul-schedule-todo > li {
   z-index: 1;
 }
 
 /*-----------
 SHIRAISHI Schedule
 */
-#interviewee-shiraishi .interview-header1 {
+.interviewee-shiraishi .interview-header1 {
   max-width: 10.5em;
   min-width: 10.5em;
 }
-#interviewee-shiraishi .interview-header2 {
+.interviewee-shiraishi .interview-header2 {
   max-width: 8.5em;
   min-width: 8.5em;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(1) {
+.ul-shiraishi-schedule > li:nth-child(1) {
   top: 30px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(2) {
+.ul-shiraishi-schedule > li:nth-child(2) {
   top: 30px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(3) {
+.ul-shiraishi-schedule > li:nth-child(3) {
   top: 35px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(4) {
+.ul-shiraishi-schedule > li:nth-child(4) {
   top: 80px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(5) {
+.ul-shiraishi-schedule > li:nth-child(5) {
   top: 98px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(6) {
+.ul-shiraishi-schedule > li:nth-child(6) {
   top: 168px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(7) {
+.ul-shiraishi-schedule > li:nth-child(7) {
   top: 205px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(8) {
+.ul-shiraishi-schedule > li:nth-child(8) {
   top: 378px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(9) {
+.ul-shiraishi-schedule > li:nth-child(9) {
   top: 390px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(10) {
+.ul-shiraishi-schedule > li:nth-child(10) {
   top: 430px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(11) {
+.ul-shiraishi-schedule > li:nth-child(11) {
   top: 460px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(12) {
+.ul-shiraishi-schedule > li:nth-child(12) {
   top: 465px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(13) {
+.ul-shiraishi-schedule > li:nth-child(13) {
   top: 515px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(14) {
+.ul-shiraishi-schedule > li:nth-child(14) {
   top: 550px;
 }
-#ul-shiraishi-schedule > .li-schedule-todo:nth-child(15) {
+.ul-shiraishi-schedule > li:nth-child(15) {
   top: 600px;
 }
 
 /*-----
 YAHATA Schedule
 */
-#interviewee-yahata .interview-header1 {
+.interviewee-yahata .interview-header1 {
   max-width: 3.5em;
   min-width: 3.5em;
 }
-#interviewee-yahata .interview-header2 {
+.interviewee-yahata .interview-header2 {
   max-width: 9.5em;
   min-width: 9.5em;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(1) {
+.ul-yahata-schedule > li:nth-child(1) {
   top: 20px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(2) {
+.ul-yahata-schedule > li:nth-child(2) {
   top: 35px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(3) {
+.ul-yahata-schedule > li:nth-child(3) {
   top: 58px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(4) {
+.ul-yahata-schedule > li:nth-child(4) {
   top: 125px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(5) {
+.ul-yahata-schedule > li:nth-child(5) {
   top: 151px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(6) {
+.ul-yahata-schedule > li:nth-child(6) {
   top: 258px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(7) {
+.ul-yahata-schedule > li:nth-child(7) {
   top: 280px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(8) {
+.ul-yahata-schedule > li:nth-child(8) {
   top: 285px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(9) {
+.ul-yahata-schedule > li:nth-child(9) {
   top: 375px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(10) {
+.ul-yahata-schedule > li:nth-child(10) {
   top: 375px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(11) {
+.ul-yahata-schedule > li:nth-child(11) {
   top: 440px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(12) {
+.ul-yahata-schedule > li:nth-child(12) {
   top: 528px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(13) {
+.ul-yahata-schedule > li:nth-child(13) {
   top: 633px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(14) {
+.ul-yahata-schedule > li:nth-child(14) {
   top: 650px;
 }
-#ul-yahata-schedule > .li-schedule-todo:nth-child(15) {
+.ul-yahata-schedule > li:nth-child(15) {
   top: 660px;
 }
 /*-------------
 interview list
 */
 
-.div-interview-QA {
+.dl-interview-QA {
   counter-reset: interview-counter;
   width: 560px;
 }

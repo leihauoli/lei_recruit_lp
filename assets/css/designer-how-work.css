@@ -1,21 +1,21 @@
-#div-designer-how-work {
+.div-designer-how-work {
   width: 100%;
   max-width: 1024px;
   margin: 80px auto 0 auto;
 }
 /*title*/
-p#title-designer-how-work {
+.title-designer-how-work {
   font-weight: bold;
   text-align: center;
   font-size: 40px;
 }
-p.subtitle-designer-how-work {
+.subtitle-designer-how-work {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
 /*supplements*/
-p.supplement-designer-how-work {
+.supplement-designer-how-work {
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
@@ -24,11 +24,11 @@ p.supplement-designer-how-work {
   margin-top: 60px;
 }
 /*examples container*/
-dl.examples-designer-how-work {
+.examples-designer-how-work {
   margin-top: 20px;
-  counter-reset: title-counter;
+  counter-reset: title-counter-how-work;
 }
-div.definition-designer-how-work {
+.definition-designer-how-work {
   width: 100%;
   background: #f8f4e4;
   display: grid;
@@ -38,10 +38,10 @@ div.definition-designer-how-work {
   justify-items: start;
   position: relative;
 }
-div.definition-designer-how-work:nth-child(even) {
+.definition-designer-how-work:nth-child(even) {
   background: #f2ebcc;
 }
-div.definition-designer-how-work::after {
+.definition-designer-how-work::after {
   content: "";
   width: 2em;
   height: 2em;
@@ -52,13 +52,13 @@ div.definition-designer-how-work::after {
   z-index: 2;
   transform: rotate(45deg);
 }
-div.definition-designer-how-work:last-child::after {
+.definition-designer-how-work:last-child::after {
   content: "";
   width: 0;
   height: 0;
 }
 /*examples header(dt)*/
-dt.example-title-designer-how-work {
+.definition-designer-how-work > dt {
   display: flex;
   align-items: center;
   text-align: left;
@@ -66,11 +66,11 @@ dt.example-title-designer-how-work {
   position: relative;
   grid-column: 1/2;
   padding-left: 2em;
-  counter-increment: title-counter;
+  counter-increment: title-counter-how-work;
   z-index: 3;
 }
-dt.example-title-designer-how-work > span.title-counter {
-  content: counter(title-counter, decimal-leading-zero);
+.definition-designer-how-work > dt > .title-counter-how-work {
+  content: counter(title-counter-how-work, decimal-leading-zero);
   font-weight: bold;
   background: #c1ab58;
   border-radius: 100%;
@@ -82,19 +82,19 @@ dt.example-title-designer-how-work > span.title-counter {
   line-height: 2em;
   margin-right: 1em;
 }
-dt.example-title-designer-how-work > .title-counter::before {
-  content: counter(title-counter, decimal-leading-zero);
+.definition-designer-how-work > dt > .title-counter-how-work::before {
+  content: counter(title-counter-how-work, decimal-leading-zero);
   line-height: inherit;
 }
 /*examples content(dd)*/
-dd.example-content-designer-how-work {
+.definition-designer-how-work > dd {
   grid-column: 2/2;
   padding-right: 1em;
   padding: 30px;
   position: relative;
   line-height: 1.7;
 }
-dd.example-content-designer-how-work::before {
+.definition-designer-how-work > dd::before {
   position: absolute;
   content: "";
   width: 1px;
@@ -104,7 +104,7 @@ dd.example-content-designer-how-work::before {
   top: 10%;
 }
 /* tea party */
-#div-tea-party {
+.div-tea-party {
   width: inherit;
   display: flex;
   flex-direction: row;
@@ -115,13 +115,13 @@ dd.example-content-designer-how-work::before {
   padding: 2em;
   margin-top: 80px;
 }
-div#div-content-tea-party {
+.dl-content-tea-party {
   margin-left: 32px;
 }
-#title-tea-party {
+.term-tea-party {
   font-size: 30px;
   font-weight: bold;
 }
-#explain-tea-party {
+.definition-tea-party {
   margin-top: 18px;
 }

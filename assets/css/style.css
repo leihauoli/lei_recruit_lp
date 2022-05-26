@@ -355,7 +355,7 @@ DESIGNER HOW WORK(EXAMPLES)
   counter-increment: title-counter-how-work;
   z-index: 3;
 }
-.definition-designer-how-work > dt > .title-counter-how-work {
+.title-counter-how-work {
   content: counter(title-counter-how-work, decimal-leading-zero);
   font-weight: bold;
   background: #c1ab58;
@@ -368,7 +368,7 @@ DESIGNER HOW WORK(EXAMPLES)
   line-height: 2em;
   margin-right: 1em;
 }
-.definition-designer-how-work > dt > .title-counter-how-work::before {
+.title-counter-how-work::before {
   content: counter(title-counter-how-work, decimal-leading-zero);
   line-height: inherit;
 }

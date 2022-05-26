@@ -7,6 +7,7 @@ body.is-fixed {
   overflow: hidden;
   height: 100%;
 }
+/*削除予定*/
 .dummy-h1 {
   color: #FFFFFF;
   position: absolute;
@@ -14,6 +15,125 @@ body.is-fixed {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
+}
+
+/*-------------------------------------
+共通パーツ
+-------------------------------------*/
+.ttl-bg-left,
+.ttl-bg-right {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: min(5.23vw, 70px);
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ttl-bg-right {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+.ttl-bg-left::before,
+.ttl-bg-right::before {
+  content: "";
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: inline-block;
+  position: absolute;
+}
+.entry-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 0;
+}
+.entry-btn-container > li {
+  width: 340px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+.entry-btn-container > li + li {
+  margin-left: 40px;
+}
+.entry-btn-container > li > a {
+  display: block;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  transition: color 0.2s;
+}
+.entry-btn-container > li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 100px;
+}
+.entry-btn-container > li:first-child {
+  border: 1px solid #151515;
+}
+.entry-btn-container > li:last-child {
+  border: 1px solid #009CBA;
+}
+.entry-btn-container > li:first-child::before {
+  background-image: linear-gradient(#151515, #151515, #151515, #151515);
+}
+.entry-btn-container > li:last-child::before {
+  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
+}
+.entry-btn-container > li::after {
+  content: "";
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 0.2s;
+  border-radius: 100px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.entry-btn-container > li:first-child::after,
+.entry-btn-container > li:last-child::after {
+  background-color: #FFFFFF;
+}
+.entry-btn-container > li:first-child:hover > a {
+  color: #151515;
+}
+.entry-btn-container > li:last-child:hover > a {
+  color: #21BDDB;
+}
+.entry-btn-container > li:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  .ttl-bg-left,
+  .ttl-bg-right {
+    font-size: 36px;
+  }
+  .ttl-bg-right {
+    top: -15px;
+  }
+  .ttl-bg-left > span {
+    display: block;
+  }
+  .entry-btn-container {
+    display: none;
+  }
 }
 
 /*-------------------------------------
@@ -123,13 +243,6 @@ HEADER
   margin-top: 8px;
   font-size: 16px;
 }
-.header-entry-list > li:first-child {
-  /* background-color: #C1AB58; */
-}
-.header-entry-list > li:last-child {
-  margin-left: 1px;
-  /* background-color: #21BDDB; */
-}
 .header-entry-list > li::before {
   content: "";
   position: absolute;
@@ -168,9 +281,6 @@ HEADER
   width: 100%;
   height: 100%;
 }
-.header-logo-list {
-  display: none;
-}
 
 /*-------------------------------------
 HAMBURGER MENU
@@ -198,12 +308,12 @@ HAMBURGER MENU
     flex-shrink: 0;
   }
   .hamburger-menu {
+    display: block;
     position: fixed;
     top: 23px;
     right: 16px;
-    display: block;
   }
-  .hamburger-menu span {
+  .hamburger-menu > span {
     display: block;
     width: 26px;
     height: 2px;
@@ -214,7 +324,7 @@ HAMBURGER MENU
   .hamburger-menu.is-change span {
     background-color: #151515;
   }
-  .hamburger-menu span + span {
+  .hamburger-menu > span + span {
     margin-top: 4px;
   }
   .hamburger-menu.is-active > .hamburger-border-top {
@@ -284,6 +394,13 @@ HAMBURGER MENU
   .header-logo-list.is-active {
     transform: translateX(0);
   }
+  .header-logo-list > li + li {
+    margin-left: 20px;
+  }
+  .header-logo-list > li > a {
+    display: block;
+    width: 100%;
+  }
   .header-wantedly-logo {
     width: 27px;
     height: 17px;
@@ -291,13 +408,6 @@ HAMBURGER MENU
   .header-facebook-logo {
     width: 21.5px;
     height: 21.5px;
-  }
-  .header-logo-list > li + li {
-    margin-left: 20px;
-  }
-  .header-logo-list > li > a {
-    display: block;
-    width: 100%;
   }
   .hamburger-bg {
     display: none;
@@ -339,11 +449,11 @@ FOOTER
   display: block;
   margin-top: 30px;
   font-size: 12px;
-  text-decoration: none;
-  transition: text-decoration 0.2s;
+  txt-decoration: none;
+  transition: txt-decoration 0.2s;
 }
 .footer-privacypolicy-link:hover {
-  text-decoration: underline;
+  txt-decoration: underline;
 }
 .footer-copyright {
   margin-bottom: 14px;
@@ -416,15 +526,6 @@ ABOUT　レイビジョン
   background: url(/assets/images/about-bg.png) no-repeat;
   width: 100%;
   height: 100%;
-  animation: fadeInBg 1s;
-}
-@keyframes fadeInBg {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
 }
 .vision-wrapper {
   display: flex;
@@ -444,84 +545,11 @@ ABOUT　レイビジョン
   height: 100%;
   z-index: -1;
 }
-
-/* 左から右へタイトルを表示させる */
-.ttl-bg-left,
-.ttl-bg-right {
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: min(5.23vw, 70px);
-  display: inline-block;
-  z-index: 2;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  /* width: 0; */
-}
-.ttl-bg-left.is-active,
-.ttl-bg-right.is-active {
-  /* animation: slideContentInLeft 1s forwards linear; */
-}
-.ttl-bg-right {
-  position: absolute;
-  top: -40px;
-  right: 0;
-}
-.ttl-bg-left::before,
-.ttl-bg-right::before {
-  content: "";
-  background-color: #333333;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: inline-block;
-  position: absolute;
-}
-.ttl-bg-left.is-active::before,
-.ttl-bg-right.is-active::before {
-  /* animation: slideContentInLeft 1s forwards; */
-}
-@keyframes slideContentInLeft {
-  0% {
-      width: 0;
-  }
-  100% {
-      width: 450px;
-  }
-}
-.vision-txt-left {
-  animation: showContentInLeft 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes showContentInLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
 .vision-txt-right {
   margin-top: min(3.66vw, 50px);
-  animation: showContentInRight 1s;
-  animation-fill-mode: forwards;
-  /* font-size: 18px; */
   font-size: min(1.31vw, 18px);;
   line-height: 2;
 }
-@keyframes showContentInRight {
-  0% {
-      transform: translateX(100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
 
 .vision-container {
   margin-top: min(25.07vw, 335px);
@@ -536,7 +564,7 @@ ABOUT　レイビジョン
   flex-direction: row-reverse;
   font-weight: bold;
 }
-.vision-num-main-txt {
+.vision-num-txt-main {
   margin-left: min(1.17vw, 16px);
   font-size: min(13.17vw, 180px);
   opacity: 1;
@@ -565,59 +593,19 @@ ABOUT　レイビジョン
 }
 .vision-num-list > li > span {
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
-  /* display: block; */
 }
-.vision-num-main-txt.is-active {
-  /* animation: showContentInTop 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-  opacity: 0; */
-}
-.vision-num-list > li.is-active {
-  /* animation: showContentInTop 2s;
-  animation-fill-mode: forwards;
-  opacity: 0; */
-}
-.vision-num-list > li:nth-of-type(1).is-active {
-  animation-delay: 1s;
-}
-.vision-num-list > li:nth-of-type(2).is-active {
-  animation-delay: 1.5s;
-}
-.vision-num-list > li:nth-of-type(3).is-active {
-  animation-delay: 2s;
-}
-.vision-num-list > li:nth-of-type(4).is-active {
-  animation-delay: 2.5s;
-}
-@keyframes showContentInTop {
-  0% {
-      opacity: 0;
-      transform: translateY(-100px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-
-/* ABOUT */
-.vision-main-text {
+.vision-txt-main {
   margin-top: min(2.92vw, 40px);
-  /* font-size: 28px; */
   font-size: min(2.04vw, 28px);
   line-height: 2;
 }
-.vision-sub-text {
+.vision-txt-sub {
   margin-top: min(1.46vw, 20px);
-  /* font-size: 18px; */
   font-size: min(1.31vw, 18px);
   line-height: 2;
 }
-.vision-last-text {
+.vision-txt-last {
   margin-top: min(2.19vw, 30px);
-  /* font-size: 24px; */
   font-size: min(1.75vw, 24px);
   line-height: 2;
 }
@@ -635,14 +623,6 @@ ABOUT　レイビジョン
   .head-section > img {
     width: calc(288.06 / 375 * 100vw);
   }
-  .ttl-bg-left,
-  .ttl-bg-right {
-    font-size: 36px;
-    /* font-size: calc(36 / 375 * 100vw); */
-  }
-  .ttl-bg-right {
-    top: -15px;
-  }
   .vision-wrapper {
     flex-direction: column;
     padding-bottom: 80px;
@@ -657,22 +637,22 @@ ABOUT　レイビジョン
   .vision-container + .vision-container {
     margin: 64px 0 0 0;
   }
-  .vision-main-text {
+  .vision-txt-main {
     margin-top: 32px;
     font-size: 24px;
   }
-  .vision-sub-text {
+  .vision-txt-sub {
     margin-top: 20px;
     font-size: 16px;
   }
-  .vision-last-text {
+  .vision-txt-last {
     margin-top: 30px;
     font-size: 24px;
   }
-  .vision-num-main-txt {
+  .vision-num-txt-main {
     font-size: calc(90 / 375 * 100vw);
   }
-  .vision-num-main-txt > span {
+  .vision-num-txt-main > span {
     display: inline-block;
   }
   .vision-num-punctuation {
@@ -692,10 +672,6 @@ ABOUT　レイビジョン
   }
 }
 
-
-
-
-
 /*-------------------------------------
 ABOUT　働き方/制度
 -------------------------------------*/
@@ -714,33 +690,24 @@ ABOUT　働き方/制度
   height: 400px;
   z-index: -1;
 }
-.workstyle-main-list {
+.workstyle-list-main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 70px 100px 67px;
   background-color: #FFFFFF;
 }
-.workstyle-main-list > li {
+.workstyle-list-main > li {
   opacity: 1;
   width: calc(100% / 2 - 39px);
 }
-.workstyle-main-list > li:nth-of-type(2n) {
+.workstyle-list-main > li:nth-of-type(2n) {
   margin-left: 78px;
 }
-.workstyle-main-list > li:nth-of-type(n + 3){
+.workstyle-list-main > li:nth-of-type(n + 3){
   margin-top: 60px;
 }
-.workstyle-main-list > li:nth-of-type(2n).is-active {
-  /* animation: showContentInBottom 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s; */
-}
-.workstyle-main-list > li:nth-of-type(2n + 1).is-active {
-  /* animation: showContentInBottom 1s;
-  animation-fill-mode: forwards; */
-}
-.workstyle-main-list > li > img {
+.workstyle-list-main > li > img {
   width: 100%;
 }
 .workstyle-ttl {
@@ -749,18 +716,18 @@ ABOUT　働き方/制度
   font-weight: 700;
   line-height: 1.5;
 }
-.workstyle-text {
+.workstyle-txt {
   margin-top: 16px;
   line-height: 1.7;
 }
 
-.workstyle-sub-list {
+.workstyle-list-sub {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 100px;
 }
-.workstyle-sub-list > li {
+.workstyle-list-sub > li {
   margin-left: 10px;
   position: relative;
   padding-top: 90px;
@@ -771,7 +738,7 @@ ABOUT　働き方/制度
   width: calc(100% / 5 - 15px);
   max-width: 180px;
 }
-.workstyle-sub-list > li::before {
+.workstyle-list-sub > li::before {
   position: absolute;
   content: "";
   width: 80px;
@@ -780,44 +747,44 @@ ABOUT　働き方/制度
   left: 50%;
   transform: translateX(-50%);
 }
-.workstyle-sub-list > li:nth-of-type(1)::before {
+.workstyle-list-sub > li:nth-of-type(1)::before {
   background: url(/assets/images/workstyle-severance-pay.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(2)::before {
+.workstyle-list-sub > li:nth-of-type(2)::before {
   background: url(/assets/images/workstyle-social-insurance.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(3)::before {
+.workstyle-list-sub > li:nth-of-type(3)::before {
   background: url(/assets/images/workstyle-overtime-allowance.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(4)::before {
+.workstyle-list-sub > li:nth-of-type(4)::before {
   background: url(/assets/images/workstyle-transportation-costs.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(5)::before {
+.workstyle-list-sub > li:nth-of-type(5)::before {
   background: url(/assets/images/workstyle-remote-insurance.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(6)::before {
+.workstyle-list-sub > li:nth-of-type(6)::before {
   background: url(/assets/images/workstyle-medical-examination.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(7)::before {
+.workstyle-list-sub > li:nth-of-type(7)::before {
   background: url(/assets/images/workstyle-paid.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(8)::before {
+.workstyle-list-sub > li:nth-of-type(8)::before {
   background: url(/assets/images/workstyle-childcare-leave.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(9)::before {
+.workstyle-list-sub > li:nth-of-type(9)::before {
   background: url(/assets/images/workstyle-book-purchase.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(10)::before {
+.workstyle-list-sub > li:nth-of-type(10)::before {
   background: url(/assets/images/workstyle-plain-clothes.svg) no-repeat;
 }
-.workstyle-sub-list > li:nth-of-type(n + 6) {
+.workstyle-list-sub > li:nth-of-type(n + 6) {
   margin-top: 36px;
 }
-.workstyle-sub-list > li:nth-of-type(5) {
+.workstyle-list-sub > li:nth-of-type(5) {
   flex-wrap: wrap;
 }
-.workstyle-sub-list > li:nth-of-type(1),
-.workstyle-sub-list > li:nth-of-type(6) {
+.workstyle-list-sub > li:nth-of-type(1),
+.workstyle-list-sub > li:nth-of-type(6) {
   margin-left: 0;
 }
 .workstyle-sub-supplement {
@@ -846,42 +813,42 @@ ABOUT　働き方/制度
     height: 110px;
     /* height: calc(110px / 375 * 100vw); */
   }
-  .workstyle-main-list {
+  .workstyle-list-main {
     /* padding: 88px 0 0; */
     padding: 0;
     background: none;
   }
-  .workstyle-main-list > li {
+  .workstyle-list-main > li {
     width: calc(100% / 2 - 7.5px);
   }
-  .workstyle-main-list > li:nth-of-type(2n) {
+  .workstyle-list-main > li:nth-of-type(2n) {
     margin-left: 15px;
   }
-  .workstyle-main-list > li:nth-of-type(n + 3){
+  .workstyle-list-main > li:nth-of-type(n + 3){
     margin-top: 24px;
   }
   .workstyle-ttl {
     margin-top: 15px;
     font-size: 16px;
   }
-  .workstyle-text {
+  .workstyle-txt {
     margin-top: 7px;
     font-size: 14px;
   }
-  .workstyle-sub-list {
+  .workstyle-list-sub {
     margin-top: 24px;
     padding: 0;
   }
-  .workstyle-sub-list > li {
+  .workstyle-list-sub > li {
     width: calc(100% / 2);
     max-width: 100%;
     margin-left: 0;
     font-size: 16px;
   }
-  .workstyle-sub-list > li > span {
+  .workstyle-list-sub > li > span {
     font-size: 12px;
   }
-  .workstyle-sub-list > li:nth-of-type(n + 3) {
+  .workstyle-list-sub > li:nth-of-type(n + 3) {
     margin-top: 24px;
   }
 }
@@ -938,13 +905,13 @@ ABOUT　数字で見るレイハウオリ
   justify-content: center;
 }
 
-.big-panel-texts {
+.big-panel-txts {
   font-weight: bold;
 }
 .big-panel-ttl {
   font-size: min(2.9vw, 40px);
 }
-.small-panel-texts {
+.small-panel-txts {
   font-size: min(2.2vw, 30px);
   text-align: center;
 }
@@ -1079,84 +1046,8 @@ ABOUT　数字で見るレイハウオリ
   font-size: min(4.09vw, 56px);
   font-weight: 400;
 }
-.entry-btn-container {
-  display: flex;
-  justify-content: center;
-  margin: 80px auto 0;
-}
-.entry-btn-container > li {
-  width: 340px;
-  display: block;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  border-radius: 100px;
-}
-.entry-btn-container > li + li {
-  margin-left: 40px;
-}
-.entry-btn-container > li > a {
-  display: block;
-  color: #FFFFFF;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 60px;
-  transition: color 0.2s;
-}
-.entry-btn-container > li::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  border-radius: 100px;
-}
-.entry-btn-container > li:first-child {
-  border: 1px solid #151515;
-}
-.entry-btn-container > li:last-child {
-  border: 1px solid #009CBA;
-}
-.entry-btn-container > li:first-child::before {
-  background-image: linear-gradient(#151515, #151515, #151515, #151515);
-}
-.entry-btn-container > li:last-child::before {
-  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
-}
-.entry-btn-container > li::after {
-  content: "";
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 0.2s;
-  border-radius: 100px;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-.entry-btn-container > li:first-child::after,
-.entry-btn-container > li:last-child::after {
-  background-color: #FFFFFF;
-}
-.entry-btn-container > li:first-child:hover > a {
-  color: #151515;
-}
-.entry-btn-container > li:last-child:hover > a {
-  color: #21BDDB;
-}
-.entry-btn-container > li:hover::after {
-  width: 100%;
-  height: 100%;
-}
 
 @media screen and (max-width: 1024px){
-  .ttl-bg-left > span {
-    display: block;
-  }
   .numeral-wrapper {
     padding: 64px 0;
   }
@@ -1266,7 +1157,7 @@ ABOUT　数字で見るレイハウオリ
   }
   .panel-workarea-numeral > span {
     display: inline-block;
-    margin-top: calc(0.74vw, 10px);
+    margin-top: calc(10 / 375 * 100vw);
     font-size: calc(31 / 375 * 100vw);
   }
   .panel-gender-ratio-numeral {
@@ -1286,9 +1177,6 @@ ABOUT　数字で見るレイハウオリ
     margin-top: calc(23 / 375 * 100vw);
     width: calc(88.89 / 375 * 100vw);
   }
-  .entry-btn-container {
-    display: none;
-  }
 }
 
 /*-------------------------------------
@@ -1296,7 +1184,6 @@ RECRUIT 募集要項
 -------------------------------------*/
 .section-recruit {
   margin: 0 auto;
-  /* max-width: 1024px; */
   padding: 0 70px;
   box-sizing: content-box;
 }
@@ -1316,11 +1203,6 @@ RECRUIT 募集要項
   top: 53px;
   left: 70px;
 }
-.head-section-recruit > img {
-  
-}
-.section-recruit {
-}
 .job-description-wrapper {
   padding: 480px 0 135px;
   position: relative;
@@ -1339,9 +1221,6 @@ RECRUIT 募集要項
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
-.job-description-list {
-
-}
 .job-description-list > li {
   display: flex;
   align-items: center;
@@ -1357,7 +1236,7 @@ RECRUIT 募集要項
   min-width: 205px;
   font-size: 16px;
 }
-.job-description-text {
+.job-description-txt {
   font-size: 14px;
   line-height: 1.7;
 }
@@ -1464,7 +1343,7 @@ RECRUIT 採用までの流れ
   font-weight: 700;
   text-align: center;
 }
-.recruit-flow-text {
+.recruit-flow-txt {
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.7;
@@ -1494,7 +1373,7 @@ RECRUIT 採用までの流れ
     flex-direction: column;
     padding: 28px 0;
   }
-  .job-description-text {
+  .job-description-txt {
     margin-top: 18px;
   }
   /*-------------------------------------
@@ -1574,7 +1453,7 @@ RECRUIT 採用までの流れ
     font-size: 16px;
     text-align: left;
   }
-  .recruit-flow-text {
+  .recruit-flow-txt {
     margin-top: 10px;
   }
 }

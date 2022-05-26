@@ -1,3 +1,529 @@
+/* アニメ実装時にstyle.cssにマージする */
+/*-------------------------------------
+ABOUT　レイビジョン
+-------------------------------------*/
+.section-about {
+    padding: 62px 70px 0;
+    max-width: 1226px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
+  .head-section {
+    position: absolute;
+    top: 62px;
+    left: 40px;
+  }
+  .head-section > img {
+    width: min(43.22vw, 577.49px);
+    height: 100%;
+  }
+  .section-vision::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(/assets/images/about-bg.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    animation: fadeInBg 1s;
+  }
+  @keyframes fadeInBg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  .vision-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    font-weight: bold;
+    position: relative;
+  }
+  .vision-wrapper::before {
+    margin: 0 calc(50% - 50vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(/assets/images/vision-bg.jpg) no-repeat center / contain;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* 左から右へタイトルを表示させる */
+  .ttl-bg-left,
+  .ttl-bg-right {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: min(5.23vw, 70px);
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    /* width: 0; */
+  }
+  .ttl-bg-left.is-active,
+  .ttl-bg-right.is-active {
+    /* animation: slideContentInLeft 1s forwards linear; */
+  }
+  .ttl-bg-right {
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+  .ttl-bg-left::before,
+  .ttl-bg-right::before {
+    content: "";
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+  }
+  .ttl-bg-left.is-active::before,
+  .ttl-bg-right.is-active::before {
+    /* animation: slideContentInLeft 1s forwards; */
+  }
+  @keyframes slideContentInLeft {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 450px;
+    }
+  }
+  .vision-txt-left {
+    animation: showContentInLeft 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showContentInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  .vision-txt-right {
+    margin-top: min(3.66vw, 50px);
+    animation: showContentInRight 1s;
+    animation-fill-mode: forwards;
+    /* font-size: 18px; */
+    font-size: min(1.31vw, 18px);;
+    line-height: 2;
+  }
+  @keyframes showContentInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  
+  .vision-container {
+    margin-top: min(25.07vw, 335px);
+    width: 100%;
+    max-width: 520px;
+  }
+  .vision-container + .vision-container {
+    margin: 90px 0 0 min(11.27vw, 154px);
+  }
+  .vision-num-content {
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: bold;
+  }
+  .vision-num-main-txt {
+    margin-left: min(1.17vw, 16px);
+    font-size: min(13.17vw, 180px);
+    opacity: 1;
+    writing-mode: vertical-lr;
+    position: relative;
+  }
+  .vision-num-punctuation {
+    font-size: min(8.78vw, 120px);
+    position: absolute;
+    top: 95%;
+    right: 0;
+  }
+  .vision-num-list {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+  }
+  .vision-num-list > li {
+    display: flex;
+    flex-direction: column;
+    margin-left: min(2.78vw, 38px);
+    font-size: min(3.36vw, 46px);
+  }
+  .vision-num-list > li:nth-of-type(4){
+    margin-left: 0;
+  }
+  .vision-num-list > li > span {
+    font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
+    /* display: block; */
+  }
+  .vision-num-main-txt.is-active {
+    /* animation: showContentInTop 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0; */
+  }
+  .vision-num-list > li.is-active {
+    /* animation: showContentInTop 2s;
+    animation-fill-mode: forwards;
+    opacity: 0; */
+  }
+  .vision-num-list > li:nth-of-type(1).is-active {
+    animation-delay: 1s;
+  }
+  .vision-num-list > li:nth-of-type(2).is-active {
+    animation-delay: 1.5s;
+  }
+  .vision-num-list > li:nth-of-type(3).is-active {
+    animation-delay: 2s;
+  }
+  .vision-num-list > li:nth-of-type(4).is-active {
+    animation-delay: 2.5s;
+  }
+  @keyframes showContentInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  
+  /* ABOUT */
+  .vision-main-text {
+    margin-top: min(2.92vw, 40px);
+    /* font-size: 28px; */
+    font-size: min(2.04vw, 28px);
+    line-height: 2;
+  }
+  .vision-sub-text {
+    margin-top: min(1.46vw, 20px);
+    /* font-size: 18px; */
+    font-size: min(1.31vw, 18px);
+    line-height: 2;
+  }
+  .vision-last-text {
+    margin-top: min(2.19vw, 30px);
+    /* font-size: 24px; */
+    font-size: min(1.75vw, 24px);
+    line-height: 2;
+  }
+  
+  /* 共通パーツ */
+  @media screen and (max-width: 1024px){
+    .section-about {
+      padding: 64px 16px 0;
+      overflow: hidden;
+    }
+    .head-section {
+      top: calc(38 / 375 * 100vw);
+      left: 0;
+    }
+    .head-section > img {
+      width: calc(288.06 / 375 * 100vw);
+    }
+    .ttl-bg-left,
+    .ttl-bg-right {
+      font-size: 36px;
+      /* font-size: calc(36 / 375 * 100vw); */
+    }
+    .ttl-bg-right {
+      top: -15px;
+    }
+    .vision-wrapper {
+      flex-direction: column;
+      padding-bottom: 80px;
+    }
+    .vision-wrapper::before {
+      display: none;
+    }
+    .vision-container {
+      margin-top: calc(152 / 375 * 100vw);
+      max-width: 100%;
+    }
+    .vision-container + .vision-container {
+      margin: 64px 0 0 0;
+    }
+    .vision-main-text {
+      margin-top: 32px;
+      font-size: 24px;
+    }
+    .vision-sub-text {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .vision-last-text {
+      margin-top: 30px;
+      font-size: 24px;
+    }
+    .vision-num-main-txt {
+      font-size: calc(90 / 375 * 100vw);
+    }
+    .vision-num-main-txt > span {
+      display: inline-block;
+    }
+    .vision-num-punctuation {
+      font-size: calc(60 / 375 * 100vw);
+      top: 100%;
+    }
+    .vision-num-list > li {
+      margin-left: calc(17 / 375 * 100vw);
+      font-size: calc(23 / 375 * 100vw);
+    }
+    .no-break {
+      display: none;
+    }
+    .vision-txt-right {
+      margin-top: calc(40 / 375 * 100vw);
+      font-size: 16px;
+    }
+  }
+
+
+  /*-------------------------------------
+ABOUT　働き方/制度
+-------------------------------------*/
+.workstyle-wrapper {
+    padding: 290px 0 120px;
+    position: relative;
+  }
+  .workstyle-wrapper::before {
+    margin: 0 calc(50% - 50vw);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/images/workstyle-bg.jpg) no-repeat center / cover;
+    width: 100vw;
+    height: 400px;
+    z-index: -1;
+  }
+  .workstyle-main-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 100px 67px;
+    background-color: #FFFFFF;
+  }
+  .workstyle-main-list > li {
+    opacity: 1;
+    width: calc(100% / 2 - 39px);
+  }
+  .workstyle-main-list > li:nth-of-type(2n) {
+    margin-left: 78px;
+  }
+  .workstyle-main-list > li:nth-of-type(n + 3){
+    margin-top: 60px;
+  }
+  .workstyle-main-list > li:nth-of-type(2n).is-active {
+    /* animation: showContentInBottom 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s; */
+  }
+  .workstyle-main-list > li:nth-of-type(2n + 1).is-active {
+    /* animation: showContentInBottom 1s;
+    animation-fill-mode: forwards; */
+  }
+  .workstyle-main-list > li > img {
+    width: 100%;
+  }
+  .workstyle-ttl {
+    margin-top: 27px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .workstyle-text {
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+  
+  .workstyle-sub-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 100px;
+  }
+  .workstyle-sub-list > li {
+    margin-left: 10px;
+    position: relative;
+    padding-top: 90px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    width: calc(100% / 5 - 15px);
+    max-width: 180px;
+  }
+  .workstyle-sub-list > li::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .workstyle-sub-list > li:nth-of-type(1)::before {
+    background: url(/assets/images/workstyle-severance-pay.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(2)::before {
+    background: url(/assets/images/workstyle-social-insurance.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(3)::before {
+    background: url(/assets/images/workstyle-overtime-allowance.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(4)::before {
+    background: url(/assets/images/workstyle-transportation-costs.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(5)::before {
+    background: url(/assets/images/workstyle-remote-insurance.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(6)::before {
+    background: url(/assets/images/workstyle-medical-examination.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(7)::before {
+    background: url(/assets/images/workstyle-paid.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(8)::before {
+    background: url(/assets/images/workstyle-childcare-leave.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(9)::before {
+    background: url(/assets/images/workstyle-book-purchase.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(10)::before {
+    background: url(/assets/images/workstyle-plain-clothes.svg) no-repeat;
+  }
+  .workstyle-sub-list > li:nth-of-type(n + 6) {
+    margin-top: 36px;
+  }
+  .workstyle-sub-list > li:nth-of-type(5) {
+    flex-wrap: wrap;
+  }
+  .workstyle-sub-list > li:nth-of-type(1),
+  .workstyle-sub-list > li:nth-of-type(6) {
+    margin-left: 0;
+  }
+  .workstyle-sub-supplement {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  @keyframes showContentInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* 共通パーツ */
+  @media screen and (max-width: 1024px){
+    .workstyle-wrapper {
+      padding: 152px 0 64px;
+    }
+    .workstyle-wrapper::before {
+      height: 110px;
+      /* height: calc(110px / 375 * 100vw); */
+    }
+    .workstyle-main-list {
+      /* padding: 88px 0 0; */
+      padding: 0;
+      background: none;
+    }
+    .workstyle-main-list > li {
+      width: calc(100% / 2 - 7.5px);
+    }
+    .workstyle-main-list > li:nth-of-type(2n) {
+      margin-left: 15px;
+    }
+    .workstyle-main-list > li:nth-of-type(n + 3){
+      margin-top: 24px;
+    }
+    .workstyle-ttl {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    .workstyle-text {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+    .workstyle-sub-list {
+      margin-top: 24px;
+      padding: 0;
+    }
+    .workstyle-sub-list > li {
+      width: calc(100% / 2);
+      max-width: 100%;
+      margin-left: 0;
+      font-size: 16px;
+    }
+    .workstyle-sub-list > li > span {
+      font-size: 12px;
+    }
+    .workstyle-sub-list > li:nth-of-type(n + 3) {
+      margin-top: 24px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @charset "utf-8";
 ul,ol,p,h1,h2,h3,h4,h5 {
     margin: 0;

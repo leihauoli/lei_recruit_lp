@@ -449,11 +449,11 @@ FOOTER
   display: block;
   margin-top: 30px;
   font-size: 12px;
-  txt-decoration: none;
-  transition: txt-decoration 0.2s;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
 }
 .footer-privacypolicy-link:hover {
-  txt-decoration: underline;
+  text-decoration: underline;
 }
 .footer-copyright {
   margin-bottom: 14px;
@@ -509,12 +509,12 @@ ABOUT　レイビジョン
   margin: 0 auto;
   box-sizing: content-box;
 }
-.head-section {
+.head-section-about {
   position: absolute;
   top: 62px;
   left: 40px;
 }
-.head-section > img {
+.head-section-about > img {
   width: min(43.22vw, 577.49px);
   height: 100%;
 }
@@ -530,7 +530,7 @@ ABOUT　レイビジョン
 .vision-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 80px;
+  padding-bottom: 118px;
   font-weight: bold;
   position: relative;
 }
@@ -550,7 +550,6 @@ ABOUT　レイビジョン
   font-size: min(1.31vw, 18px);;
   line-height: 2;
 }
-
 .vision-container {
   margin-top: min(25.07vw, 335px);
   width: 100%;
@@ -610,18 +609,17 @@ ABOUT　レイビジョン
   line-height: 2;
 }
 
-/* 共通パーツ */
 @media screen and (max-width: 1024px){
   .section-about {
     padding: 64px 16px 0;
     overflow: hidden;
   }
-  .head-section {
-    top: calc(38 / 375 * 100vw);
+  .head-section-about {
+    top: 38px;
     left: 0;
   }
-  .head-section > img {
-    width: calc(288.06 / 375 * 100vw);
+  .head-section-about > img {
+    width: 288.06px;
   }
   .vision-wrapper {
     flex-direction: column;
@@ -631,7 +629,7 @@ ABOUT　レイビジョン
     display: none;
   }
   .vision-container {
-    margin-top: calc(152 / 375 * 100vw);
+    margin-top: 152px;
     max-width: 100%;
   }
   .vision-container + .vision-container {
@@ -804,17 +802,14 @@ ABOUT　働き方/制度
   }
 }
 
-/* 共通パーツ */
 @media screen and (max-width: 1024px){
   .workstyle-wrapper {
-    padding: 152px 0 64px;
+    padding: calc(142 / 375 * 100vw) 0 64px;
   }
   .workstyle-wrapper::before {
-    height: 110px;
-    /* height: calc(110px / 375 * 100vw); */
+    height: calc(110 / 375 * 100vw);
   }
   .workstyle-list-main {
-    /* padding: 88px 0 0; */
     padding: 0;
     background: none;
   }
@@ -1006,7 +1001,6 @@ ABOUT　数字で見るレイハウオリ
   margin-top: min(2.92vw, 40px);
   width: min(11.39vw, 155.63px);
 }
-/*職域割合*/
 .numeral-workarea-list {
   display: flex;
   justify-content: center;
@@ -1236,7 +1230,8 @@ RECRUIT 募集要項
   min-width: 205px;
   font-size: 16px;
 }
-.job-description-txt {
+.job-description-txt,
+.job-description-txt-list > li {
   font-size: 14px;
   line-height: 1.7;
 }
@@ -1373,7 +1368,8 @@ RECRUIT 採用までの流れ
     flex-direction: column;
     padding: 28px 0;
   }
-  .job-description-txt {
+  .job-description-txt,
+  .job-description-txt-list {
     margin-top: 18px;
   }
   /*-------------------------------------

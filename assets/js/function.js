@@ -1,22 +1,16 @@
 var LEIHAUOLI = LEIHAUOLI || {};
-LEIHAUOLI.DEMO_ANIMATION = LEIHAUOLI.DEMO_ANIMATION || {};
+LEIHAUOLI.RECRUIT_DESIGNER = LEIHAUOLI.RECRUIT_DESIGNER || {};
 
 /**
- * 画面をスクロールして該当要素が表示領域に入ったとき、該当要素を表示させる
+ * 画面をスクロールして該当要素が表示領域に入ったとき、該当要素をアニメーションさせる
  */
-LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
-    ACTIVE_CLASS: 'is-active',
-    CHANGE_CLASS: 'is-change',
-    HIDDEN_CLASS: 'is-hidden',
+LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     init: function(){
         this.setParameters();
         this.bindEvent();
     },
     setParameters: function(){
       this.$window = $(window);
-      this.options = {
-        rootMargin: '0px 0px'
-      };
       if (window.matchMedia('(max-width: 1024px)').matches){
         this.headerOptions = {
           rootMargin: '-60px 0px 0px 0px'
@@ -26,30 +20,12 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
           rootMargin: '-76px 0px 0px 0px'
         };
       }
-      this.$ttlBgLeft = $('.jsc-ttl-bg-left');
-      this.$contentLeft = $('.jsc-left-content');
-      this.$contentRight = $('.jsc-right-content');
-      this.$emergeTop = $('.jsc-emerge-top');
-      this.$emergeBottom = $('.jsc-emerge-bottom');
       this.$header = $('.jsc-main-header');
       this.$sectionKv = $('.jsc-section-kv');
-      this.observer = new IntersectionObserver(this.showContents, this.options);
       this.headerObserver = new IntersectionObserver(this.changeHeaderBg, this.headerOptions);
     },
     bindEvent: function(){
       var myself = this;
-      Array.prototype.forEach.call(this.$ttlBgLeft, function(box){
-          myself.observer.observe(box);
-      });
-      Array.prototype.forEach.call(this.$contentLeft, function(box){
-          myself.observer.observe(box);
-      });
-      Array.prototype.forEach.call(this.$emergeTop, function(box){
-          myself.observer.observe(box);
-      });
-      Array.prototype.forEach.call(this.$emergeBottom, function(box){
-        myself.observer.observe(box);
-      });
       Array.prototype.forEach.call(this.$sectionKv, function(box){
         myself.headerObserver.observe(box);
       });
@@ -65,35 +41,27 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
         }
       });
     },
-    showContents: function(entries){
-      Array.prototype.some.call(entries, function(entry){
-        if (entry.isIntersecting){
-          //要素が表示領域に入ったとき
-          entry.target.classList.add('is-active');
-        }
-      });
-    },
     changeHeaderBg: function(entries){
-      var myself = this;
       Array.prototype.some.call(entries, function(entry){
         if (!entry.isIntersecting){
-          $('.jsc-main-header').removeClass('is-hidden').addClass('is-change');
-          $('.jsc-header-menu-list').addClass('is-change');
-          $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.png');
-
-          if (window.matchMedia('(max-width: 1024px)').matches){
-            $('.jsc-hamburger-menu').addClass('is-change');
+          if (!$('.jsc-main-header').is(':animated')){
+            $('.jsc-main-header').removeClass('is-hidden').addClass('is-change');
+            $('.jsc-header-menu-list').addClass('is-change');
+            $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.png');
+            if (window.matchMedia('(max-width: 1024px)').matches){
+              $('.jsc-hamburger-menu').addClass('is-change');
+            }
           }
         } else {
-          if ($('.jsc-main-header').css('position') === 'fixed'){
-            $('.jsc-main-header').removeClass('is-change').addClass('is-hidden');
-          }
-
-          $('.jsc-header-menu-list').removeClass('is-change');
-          $('.jsc-header-logo').attr('src', '/assets/images/header-logo.png');
-
-          if (window.matchMedia('(max-width: 1024px)').matches){
-            $('.jsc-hamburger-menu').removeClass('is-change');
+          if (!$('.jsc-main-header').is(':animated')){
+            if ($('.jsc-main-header').css('position') === 'fixed'){
+              $('.jsc-main-header').removeClass('is-change').addClass('is-hidden');
+            }
+            $('.jsc-header-menu-list').removeClass('is-change');
+            $('.jsc-header-logo').attr('src', '/assets/images/header-logo.png');
+            if (window.matchMedia('(max-width: 1024px)').matches){
+              $('.jsc-hamburger-menu').removeClass('is-change');
+            }
           }
         }
       });
@@ -104,7 +72,7 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
 /**
  * ハンバーガーメニュー
  */
- LEIHAUOLI.DEMO_ANIMATION.HamburgerMenu = {
+ LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
   ACTIVE_CLASS: 'is-active',
   FIXED_CLASS: 'is-fixed',
   SLIDE_SPEED: 400,
@@ -149,7 +117,7 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
 /**
  * スムーススクロール
  */
- LEIHAUOLI.DEMO_ANIMATION.SmoothScroll = {
+ LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll = {
   SMOOTH_SCROLL_SPEED: 200,
   init: function(){
     this.setParameters();
@@ -163,19 +131,19 @@ LEIHAUOLI.DEMO_ANIMATION.showByScroll = {
   bindEvent: function(){
     var myself = this;
     this.$href.on('click', function(e){
-        e.preventDefault();
-        var href = $(this).attr('href'),
-          target = $(href == '#' || href == '' ? 'html' : href),
-          position = target.offset().top - myself.$header.height();
+      e.preventDefault();
+      var href = $(this).attr('href'),
+        target = $(href == '#' || href == '' ? 'html' : href),
+        position = target.offset().top - myself.$header.height();
 
-        myself.$body.animate({scrollTop: position}, myself.SMOOTH_SCROLL_SPEED);
-        return false;
+      myself.$body.animate({scrollTop: position}, myself.SMOOTH_SCROLL_SPEED);
+      return false;
     });
   }
 };
 
 $(function(){
-  LEIHAUOLI.DEMO_ANIMATION.showByScroll.init();
-  LEIHAUOLI.DEMO_ANIMATION.HamburgerMenu.init();
-  LEIHAUOLI.DEMO_ANIMATION.SmoothScroll.init();
+  LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll.init();
+  LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu.init();
+  LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll.init();
 });

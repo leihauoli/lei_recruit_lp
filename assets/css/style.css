@@ -450,7 +450,7 @@ ABOUT　レイビジョン
 .ttl-bg-right {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 70px;
+  font-size: min(5.23vw, 70px);
   display: inline-block;
   z-index: 2;
   position: relative;
@@ -504,9 +504,11 @@ ABOUT　レイビジョン
   }
 }
 .vision-txt-right {
+  margin-top: min(3.66vw, 50px);
   animation: showContentInRight 1s;
   animation-fill-mode: forwards;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: min(1.31vw, 18px);;
   line-height: 2;
 }
 @keyframes showContentInRight {
@@ -524,9 +526,11 @@ ABOUT　レイビジョン
 .vision-container {
   margin-top: min(25.07vw, 335px);
   width: 100%;
+  max-width: 520px;
 }
 .vision-container + .vision-container {
-  margin: 90px 0 0 min(11.27vw, 154px);
+  /* margin: 90px 0 0 min(11.27vw, 154px); */
+  margin: 90px 0 0 0;
 }
 .vision-num-content {
   display: flex;
@@ -534,10 +538,17 @@ ABOUT　レイビジョン
   font-weight: bold;
 }
 .vision-num-main-txt {
-  margin-left: min(2.29vw, 40px);
+  margin-left: min(1.17vw, 16px);
   font-size: min(13.17vw, 180px);
   opacity: 1;
   writing-mode: vertical-lr;
+  position: relative;
+}
+.vision-num-punctuation {
+  font-size: min(8.78vw, 120px);
+  position: absolute;
+  top: 95%;
+  right: 0;
 }
 .vision-num-list {
   display: flex;
@@ -595,17 +606,20 @@ ABOUT　レイビジョン
 /* ABOUT */
 .vision-main-text {
   margin-top: 40px;
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: min(2.04vw, 28px);
   line-height: 2;
 }
 .vision-sub-text {
   margin-top: 20px;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: min(1.31vw, 18px);
   line-height: 2;
 }
 .vision-last-text {
   margin-top: 30px;
-  font-size: 28px;
+  /* font-size: 24px; */
+  font-size: min(1.75vw, 24px);
   line-height: 2;
 }
 
@@ -616,7 +630,7 @@ ABOUT　レイビジョン
     overflow: hidden;
   }
   .head-section {
-    top: 64px;
+    top: calc(38 / 375 * 100vw);
     left: 0;
   }
   .head-section > img {
@@ -625,6 +639,7 @@ ABOUT　レイビジョン
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 36px;
+    /* font-size: calc(36 / 375 * 100vw); */
   }
   .ttl-bg-right {
     top: -15px;
@@ -637,7 +652,8 @@ ABOUT　レイビジョン
     display: none;
   }
   .vision-container {
-    margin-top: calc(173 / 375 * 100vw);
+    margin-top: calc(152 / 375 * 100vw);
+    max-width: 100%;
   }
   .vision-container + .vision-container {
     margin: 64px 0 0 0;
@@ -655,13 +671,19 @@ ABOUT　レイビジョン
   .vision-num-main-txt > span {
     display: inline-block;
   }
+  .vision-num-punctuation {
+    font-size: calc(60 / 375 * 100vw);
+    top: 100%;
+  }
   .vision-num-list > li {
+    margin-left: calc(17 / 375 * 100vw);
     font-size: calc(23 / 375 * 100vw);
   }
   .no-break {
     display: none;
   }
   .vision-txt-right {
+    margin-top: calc(40 / 375 * 100vw);
     font-size: 16px;
   }
 }
@@ -735,6 +757,7 @@ ABOUT　働き方/制度
   padding: 0 100px;
 }
 .workstyle-sub-list > li {
+  /* margin-left: 10px; */
   position: relative;
   padding-top: 90px;
   font-size: 18px;
@@ -742,6 +765,7 @@ ABOUT　働き方/制度
   line-height: 1.5;
   text-align: center;
   width: calc(100% / 5);
+  max-width: 180px;
 }
 .workstyle-sub-list > li::before {
   position: absolute;
@@ -812,13 +836,15 @@ ABOUT　働き方/制度
 /* 共通パーツ */
 @media screen and (max-width: 1024px){
   .workstyle-wrapper {
-    padding: 64px 0;
+    padding: 152px 0 64px;
   }
   .workstyle-wrapper::before {
     height: 110px;
+    /* height: calc(110px / 375 * 100vw); */
   }
   .workstyle-main-list {
-    padding: 88px 0 0;
+    /* padding: 88px 0 0; */
+    padding: 0;
     background: none;
   }
   .workstyle-main-list > li {
@@ -1014,11 +1040,11 @@ ABOUT　数字で見るレイハウオリ
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex: 1;
   margin-left: min(2.19vw, 30px);
   padding: min(0.89vw, 12px) min(1.46vw, 20px);
   background-color: #F4F4F4;
   border-radius: 6px;
+  flex: 1;
 }
 .numeral-workarea-list > li:nth-of-type(n + 3) {
   margin-top: min(1.5vw, 20px);
@@ -1208,6 +1234,7 @@ ABOUT　数字で見るレイハウオリ
     width: calc(100% / 2 - 8px);
     margin-left: 16px;
     padding: calc(11 / 375 * 100vw) calc(11 / 375 * 100vw) calc(6 / 375 * 100vw);
+    flex: none;
   }
   .panel-workarea-ttl {
     font-size: calc(11 / 375 * 100vw);
@@ -1275,13 +1302,13 @@ RECRUIT 募集要項
 }
 .head-section-recruit {
   width: min(41.82vw, 558.76px);
-  position: relative;
-  padding: 0 70px;
-}
-.head-section-recruit > img {
   position: absolute;
   top: 53px;
-  left: -100px;
+  left: 0;
+  padding-left: 70px;
+}
+.head-section-recruit > img {
+  
 }
 .section-recruit {
 }
@@ -1535,6 +1562,6 @@ RECRUIT 採用までの流れ
     text-align: left;
   }
   .recruit-flow-text {
-    margin-top: 18px;
+    margin-top: 10px;
   }
 }

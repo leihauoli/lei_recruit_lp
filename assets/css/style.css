@@ -529,8 +529,7 @@ ABOUT　レイビジョン
   max-width: 520px;
 }
 .vision-container + .vision-container {
-  /* margin: 90px 0 0 min(11.27vw, 154px); */
-  margin: 90px 0 0 0;
+  margin: 90px 0 0 min(11.27vw, 154px);
 }
 .vision-num-content {
   display: flex;
@@ -605,19 +604,19 @@ ABOUT　レイビジョン
 
 /* ABOUT */
 .vision-main-text {
-  margin-top: 40px;
+  margin-top: min(2.92vw, 40px);
   /* font-size: 28px; */
   font-size: min(2.04vw, 28px);
   line-height: 2;
 }
 .vision-sub-text {
-  margin-top: 20px;
+  margin-top: min(1.46vw, 20px);
   /* font-size: 18px; */
   font-size: min(1.31vw, 18px);
   line-height: 2;
 }
 .vision-last-text {
-  margin-top: 30px;
+  margin-top: min(2.19vw, 30px);
   /* font-size: 24px; */
   font-size: min(1.75vw, 24px);
   line-height: 2;
@@ -646,7 +645,7 @@ ABOUT　レイビジョン
   }
   .vision-wrapper {
     flex-direction: column;
-    padding-bottom: 64px;
+    padding-bottom: 80px;
   }
   .vision-wrapper::before {
     display: none;
@@ -663,7 +662,12 @@ ABOUT　レイビジョン
     font-size: 24px;
   }
   .vision-sub-text {
+    margin-top: 20px;
     font-size: 16px;
+  }
+  .vision-last-text {
+    margin-top: 30px;
+    font-size: 24px;
   }
   .vision-num-main-txt {
     font-size: calc(90 / 375 * 100vw);
@@ -757,14 +761,14 @@ ABOUT　働き方/制度
   padding: 0 100px;
 }
 .workstyle-sub-list > li {
-  /* margin-left: 10px; */
+  margin-left: 10px;
   position: relative;
   padding-top: 90px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  width: calc(100% / 5);
+  width: calc(100% / 5 - 15px);
   max-width: 180px;
 }
 .workstyle-sub-list > li::before {
@@ -813,7 +817,7 @@ ABOUT　働き方/制度
   flex-wrap: wrap;
 }
 .workstyle-sub-list > li:nth-of-type(1),
-.workstyle-sub-list > li:nth-of-type(5) {
+.workstyle-sub-list > li:nth-of-type(6) {
   margin-left: 0;
 }
 .workstyle-sub-supplement {
@@ -870,6 +874,12 @@ ABOUT　働き方/制度
   }
   .workstyle-sub-list > li {
     width: calc(100% / 2);
+    max-width: 100%;
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .workstyle-sub-list > li > span {
+    font-size: 12px;
   }
   .workstyle-sub-list > li:nth-of-type(n + 3) {
     margin-top: 24px;
@@ -1286,7 +1296,7 @@ RECRUIT 募集要項
 -------------------------------------*/
 .section-recruit {
   margin: 0 auto;
-  max-width: 1024px;
+  /* max-width: 1024px; */
   padding: 0 70px;
   box-sizing: content-box;
 }
@@ -1304,8 +1314,7 @@ RECRUIT 募集要項
   width: min(41.82vw, 558.76px);
   position: absolute;
   top: 53px;
-  left: 0;
-  padding-left: 70px;
+  left: 70px;
 }
 .head-section-recruit > img {
   
@@ -1315,6 +1324,8 @@ RECRUIT 募集要項
 .job-description-wrapper {
   padding: 480px 0 135px;
   position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .job-description-wrapper::before {
   background-color: #F7F7F7;
@@ -1467,6 +1478,8 @@ RECRUIT 採用までの流れ
     height: calc(180 / 375 * 100vw);
   }
   .head-section-recruit {
+    top: 0;
+    left: 16px;
     width: calc(278.69 / 375 * 100vw);
   }
   .head-section-recruit > img {

@@ -93,6 +93,7 @@ ABOUT TEAM
 ---------------------------------------------------------------------*/
 .div-about-team {
   width: 100%;
+  margin-top: 80px;
   padding: 0 16px;
 }
 .header-about-team {
@@ -857,7 +858,8 @@ SP
 ABOUT TEAM(SP)
 ---------------------------------------------------------------------*/
   .div-about-team {
-    padding: 16px;
+    margin-top: 26px;
+    padding: 0 16px 16px;
   }
   .header-about-team {
     overflow: hidden;

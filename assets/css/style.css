@@ -431,7 +431,7 @@ INTERVIEW
 }
 .container-interviews {
   max-width: 1366px;
-  margin-top: 80px;
+  margin-top: 32px;
 }
 .interview-header2 {
   margin-top: 10px;
@@ -861,7 +861,7 @@ ABOUT TEAM(SP)
 ---------------------------------------------------------------------*/
   .div-about-team {
     margin-top: 26px;
-    padding: 0 16px 16px;
+    padding: 0 16px 0;
   }
   .header-about-team {
     overflow: hidden;
@@ -1026,17 +1026,14 @@ DESIGNER HOW WORK(EXAMPLES) (SP)
 INTERVIEWS(SP)
 ---------------------------------------------------------------------*/
   .section-interviews {
-    margin-top: 64px;
-    padding: 54px 0 64px 16px;
+    margin-top: 60px;
+    padding: 60px 0 64px 16px;
   }
   .header-interviews {
     font-size: 36px;
   }
   .interviewee-yahata {
     margin-top: 40px;
-  }
-  .sumbnail-background-interview {
-    padding-left: 16px;
   }
   .sumbnail-interview-image {
     width: 75%;
@@ -1075,6 +1072,7 @@ INTERVIEWS(SP)
   }
   /* schedule time line */
   .schedule-container {
+    position: relative;
     height: 50px;
     width: 60%;
     min-width: 342px;
@@ -1090,7 +1088,7 @@ INTERVIEWS(SP)
     font-weight: 600;
     position: absolute;
     display: flex;
-    width: 60%;
+    width: 100%;
     min-width: 342px;
     height: 50px;
     background: #e0cb7d;

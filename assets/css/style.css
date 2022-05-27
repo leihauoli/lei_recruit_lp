@@ -22,29 +22,33 @@ body.is-fixed {
 -------------------------------------*/
 .ttl-bg-left,
 .ttl-bg-right {
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: min(5.23vw, 70px);
   display: inline-block;
-  z-index: 2;
+  padding: 0 10px 5px;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
+  color: #FFFFFF;
+  font-size: min(5.23vw, 70px);
+  font-weight: 700;
+  z-index: 2;
 }
 .ttl-bg-right {
   position: absolute;
-  top: -40px;
+  top: -35px;
   right: 0;
 }
 .ttl-bg-left::before,
 .ttl-bg-right::before {
-  content: "";
-  background-color: #333333;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
   display: inline-block;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  content: "";
+  z-index: -1;
 }
 .entry-btn-container {
   display: flex;
@@ -52,11 +56,11 @@ body.is-fixed {
   margin: 80px auto 0;
 }
 .entry-btn-container > li {
-  width: 340px;
   display: block;
   text-align: center;
   overflow: hidden;
   position: relative;
+  width: 340px;
   border-radius: 100px;
 }
 .entry-btn-container > li + li {
@@ -71,14 +75,14 @@ body.is-fixed {
   transition: color 0.2s;
 }
 .entry-btn-container > li::before {
-  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: -1;
   border-radius: 100px;
+  content: "";
 }
 .entry-btn-container > li:first-child {
   border: 1px solid #151515;
@@ -93,16 +97,16 @@ body.is-fixed {
   background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
 }
 .entry-btn-container > li::after {
-  content: "";
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 0.2s;
-  border-radius: 100px;
-  width: 0;
-  height: 0;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 100px;
+  content: "";
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 0.2s;
   z-index: -1;
 }
 .entry-btn-container > li:first-child::after,
@@ -126,7 +130,7 @@ body.is-fixed {
     font-size: 36px;
   }
   .ttl-bg-right {
-    top: -15px;
+    top: -20px;
   }
   .ttl-bg-left > span {
     display: block;
@@ -188,10 +192,6 @@ HEADER
   width: 70px;
   height: 50px;
   flex-shrink: 0;
-}
-.header-logo-link > img {
-  width: 100%;
-  height: 100%;
 }
 .header-menu-list {
   display: flex;
@@ -306,6 +306,9 @@ HAMBURGER MENU
     width: 51px;
     height: 36px;
     flex-shrink: 0;
+  }
+  .header-logo-link > img {
+    width: 100%;
   }
   .hamburger-menu {
     display: block;
@@ -531,7 +534,7 @@ ABOUT　レイビジョン
   display: flex;
   justify-content: space-between;
   padding-bottom: 118px;
-  font-weight: bold;
+  font-weight: 700;
   position: relative;
 }
 .vision-wrapper::before {
@@ -561,7 +564,7 @@ ABOUT　レイビジョン
 .vision-num-content {
   display: flex;
   flex-direction: row-reverse;
-  font-weight: bold;
+  font-weight: 700;
 }
 .vision-num-txt-main {
   margin-left: min(1.17vw, 16px);
@@ -736,45 +739,6 @@ ABOUT　働き方/制度
   width: calc(100% / 5 - 15px);
   max-width: 180px;
 }
-.workstyle-list-sub > li::before {
-  position: absolute;
-  content: "";
-  width: 80px;
-  height: 80px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.workstyle-list-sub > li:nth-of-type(1)::before {
-  background: url(/assets/images/workstyle-severance-pay.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(2)::before {
-  background: url(/assets/images/workstyle-social-insurance.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(3)::before {
-  background: url(/assets/images/workstyle-overtime-allowance.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(4)::before {
-  background: url(/assets/images/workstyle-transportation-costs.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(5)::before {
-  background: url(/assets/images/workstyle-remote-insurance.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(6)::before {
-  background: url(/assets/images/workstyle-medical-examination.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(7)::before {
-  background: url(/assets/images/workstyle-paid.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(8)::before {
-  background: url(/assets/images/workstyle-childcare-leave.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(9)::before {
-  background: url(/assets/images/workstyle-book-purchase.svg) no-repeat;
-}
-.workstyle-list-sub > li:nth-of-type(10)::before {
-  background: url(/assets/images/workstyle-plain-clothes.svg) no-repeat;
-}
 .workstyle-list-sub > li:nth-of-type(n + 6) {
   margin-top: 36px;
 }
@@ -785,21 +749,49 @@ ABOUT　働き方/制度
 .workstyle-list-sub > li:nth-of-type(6) {
   margin-left: 0;
 }
+.workstyle-list-sub > li::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.workstyle-list-sub > li:nth-of-type(1)::before {
+  background: url(/assets/images/workstyle-severance-pay.svg);
+}
+.workstyle-list-sub > li:nth-of-type(2)::before {
+  background: url(/assets/images/workstyle-social-insurance.svg);
+}
+.workstyle-list-sub > li:nth-of-type(3)::before {
+  background: url(/assets/images/workstyle-overtime-allowance.svg);
+}
+.workstyle-list-sub > li:nth-of-type(4)::before {
+  background: url(/assets/images/workstyle-transportation-costs.svg);
+}
+.workstyle-list-sub > li:nth-of-type(5)::before {
+  background: url(/assets/images/workstyle-remote-insurance.svg);
+}
+.workstyle-list-sub > li:nth-of-type(6)::before {
+  background: url(/assets/images/workstyle-medical-examination.svg);
+}
+.workstyle-list-sub > li:nth-of-type(7)::before {
+  background: url(/assets/images/workstyle-paid.svg);
+}
+.workstyle-list-sub > li:nth-of-type(8)::before {
+  background: url(/assets/images/workstyle-childcare-leave.svg);
+}
+.workstyle-list-sub > li:nth-of-type(9)::before {
+  background: url(/assets/images/workstyle-book-purchase.svg);
+}
+.workstyle-list-sub > li:nth-of-type(10)::before {
+  background: url(/assets/images/workstyle-plain-clothes.svg);
+}
 .workstyle-sub-supplement {
   display: block;
   font-size: 12px;
   font-weight: 500;
-}
-
-@keyframes showContentInBottom {
-  0% {
-      opacity: 0;
-      transform: translateY(100%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
 }
 
 @media screen and (max-width: 1024px){
@@ -840,11 +832,11 @@ ABOUT　働き方/制度
     margin-left: 0;
     font-size: 16px;
   }
-  .workstyle-list-sub > li > span {
-    font-size: 12px;
-  }
   .workstyle-list-sub > li:nth-of-type(n + 3) {
     margin-top: 24px;
+  }
+  .workstyle-list-sub > li > span {
+    font-size: 12px;
   }
 }
 
@@ -866,7 +858,6 @@ ABOUT　数字で見るレイハウオリ
   background-color: #E0CB7D;
   z-index: -1;
 }
-
 .numeral-list {
   display: flex;
   flex-wrap: wrap;
@@ -899,9 +890,8 @@ ABOUT　数字で見るレイハウオリ
   align-items: center;
   justify-content: center;
 }
-
 .big-panel-txts {
-  font-weight: bold;
+  font-weight: 700;
 }
 .big-panel-ttl {
   font-size: min(2.9vw, 40px);
@@ -1221,7 +1211,6 @@ RECRUIT 募集要項
   padding: 30px 0;
   border-bottom: 1px dashed #B9B9B9;
   color: #151515;
-  font-weight: 700;
 }
 .job-description-list > li:first-child {
   padding-top: 0;
@@ -1229,6 +1218,7 @@ RECRUIT 募集要項
 .job-description-ttl {
   min-width: 205px;
   font-size: 16px;
+  font-weight: 700;
 }
 .job-description-txt,
 .job-description-txt-list > li {

@@ -229,7 +229,7 @@ DESIGNER WORK STYLE
   margin: 80px auto 0;
 }
 
-#header-designer-style {
+.header-designer-style {
   width: 100%;
   text-align: center;
   font-size: 40px;
@@ -1043,7 +1043,7 @@ DESINGER WORK STYLE(SP)
     flex-direction: column;
   }
 
-  #header-designer-style {
+  .header-designer-style {
     font-size: 28px;
   }
 

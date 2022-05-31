@@ -95,12 +95,12 @@ ENTRY button
 }
 
 .button-entry-wantedly {
-  background-color: #009cba;
-  border: solid 1px #009cba;
+  background-color: #009CBA;
+  border: solid 1px #009CBA;
 }
 
 .button-entry-wantedly:hover .button-entry-label {
-  color: #009cba;
+  color: #009CBA;
 }
 
 /*---------------------------------------------------------------------
@@ -171,7 +171,7 @@ TEAM MEMBER
   width: 100%;
   margin-top: 10px;
   padding-top: 17px;
-  border-top: dashed 1px #e5e5e5;
+  border-top: dashed 1px #E5E5E5;
 }
 
 .design-member-icon {
@@ -245,14 +245,14 @@ DESIGNER WORK STYLE
 }
 
 .card-designer-style {
-  background: #f8f4e4;
+  background: #F8F4E4;
   width: 310px;
   height: 512px;
   padding-top: 21px;
 }
 
 .card-designer-style-number {
-  color: #c1ab58;
+  color: #C1AB58;
   font-size: 12px;
   font-weight: 600;
   margin-left: 20px;
@@ -266,7 +266,7 @@ DESIGNER WORK STYLE
   position: relative;
   top: -0.3em;
   margin: 0 0.5em 0 1em;
-  border-bottom: 2px solid #c1ab58;
+  border-bottom: 2px solid #C1AB58;
 }
 
 .card-designer-style-number::after {
@@ -299,7 +299,7 @@ DESIGNER WORK STYLE
   text-align: center;
   font-weight: 600;
   color: #FFFFFF;
-  background: #c1ab58;
+  background: #C1AB58;
   width: 260px;
   margin: 24px auto 0;
   padding: 0.5em 0;
@@ -307,7 +307,7 @@ DESIGNER WORK STYLE
 }
 
 .card-message-designer-style {
-  padding: 0 30px 0 30px;
+  padding: 0 30px;
   margin-top: 14px;
 }
 
@@ -355,7 +355,7 @@ DESIGNER HOW WORK(EXAMPLES)
 
 .definition-designer-how-work {
   width: 100%;
-  background: #f8f4e4;
+  background: #F8F4E4;
   display: grid;
   grid-template-columns: 306px minmax(500px, 716px);
   align-items: center;
@@ -365,7 +365,7 @@ DESIGNER HOW WORK(EXAMPLES)
 }
 
 .definition-designer-how-work:nth-child(even) {
-  background: #f2ebcc;
+  background: #F2EBCC;
 }
 
 .definition-designer-how-work::after {
@@ -402,7 +402,7 @@ DESIGNER HOW WORK(EXAMPLES)
 .title-counter-how-work {
   content: counter(title-counter-how-work, decimal-leading-zero);
   font-weight: 600;
-  background: #c1ab58;
+  background: #C1AB58;
   border-radius: 50%;
   width: 2em;
   color: #FFFFFF;
@@ -432,7 +432,7 @@ DESIGNER HOW WORK(EXAMPLES)
   content: "";
   width: 1px;
   height: 80%;
-  border-left: dashed 1px #c1ab58;
+  border-left: dashed 1px #C1AB58;
   left: 0;
   top: 10%;
 }
@@ -443,7 +443,7 @@ DESIGNER HOW WORK(EXAMPLES)
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  border: solid 5px #f2ebcc;
+  border: solid 5px #F2EBCC;
   padding: 2em;
   margin-top: 80px;
 }
@@ -475,7 +475,7 @@ INTERVIEW
 
 .section-interviews {
   width: 100%;
-  background-color: #f8f4e4;
+  background-color: #F8F4E4;
   margin-top: 120px;
   padding: 125px 0 120px calc((100% - 1336px) / 2);
 }
@@ -824,13 +824,13 @@ INTERVIEW
   content: "";
   display: inline-block;
   width: 52px;
-  border-bottom: #c1ab58 1px solid;
+  border-bottom: #C1AB58 1px solid;
   margin-right: 10px;
 }
 
 .interview-counter::after {
   content: "Interview\00A0"counter(interview-counter, decimal-leading-zero);
-  color: #c1ab58;
+  color: #C1AB58;
   font-size: 12px;
   font-weight: 600;
 }
@@ -925,7 +925,7 @@ img.img-works-example {
 .description-works-example {
   color: #FFFFFF;
   font-weight: 600;
-  line-height: 1.7em;
+  line-height: 1.7;
   padding: 0 20px;
   width: 100%;
   height: 100%;
@@ -979,11 +979,11 @@ SP
     background-color: #151515;
     border-radius: 10px;
     width: 25%;
-    box-shadow: 0 0 0 1px #e5e5e5;
+    box-shadow: 0 0 0 1px #E5E5E5;
   }
 
   .sp-scroll-bar::-webkit-scrollbar-track {
-    background: #e5e5e5;
+    background: #E5E5E5;
   }
 
   .entry-button-container {
@@ -1051,7 +1051,7 @@ DESINGER WORK STYLE(SP)
     width: 100%;
     min-width: 323px;
     height: 498px;
-    background: #f8f4e4;
+    background: #F8F4E4;
     margin-bottom: 20px;
   }
 
@@ -1131,7 +1131,7 @@ DESIGNER HOW WORK(EXAMPLES) (SP)
     font-size: 18px;
     grid-column: 1;
     grid-row: 1/2;
-    border-bottom: dashed 1px #c1ab58;
+    border-bottom: dashed 1px #C1AB58;
     padding: 0 0 12px 0;
   }
 
@@ -1272,7 +1272,7 @@ INTERVIEWS(SP)
     width: 100%;
     min-width: 342px;
     height: 50px;
-    background: #e0cb7d;
+    background: #E0CB7D;
     padding: 0 1em 0 2em;
     justify-content: space-between;
     align-items: center;

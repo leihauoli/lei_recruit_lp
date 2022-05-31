@@ -193,7 +193,7 @@ HEADER
   height: 50px;
   flex-shrink: 0;
 }
-.header-menu-list {
+.main-header.is-change .header-menu-list {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
@@ -210,11 +210,11 @@ HEADER
 .header-menu-list > li > a:hover {
   color: #C1AB58;
 }
-.header-menu-list.is-change > li > a {
+.main-header.is-change .header-menu-list > li > a {
   color: #151515;
   transition: color 0.2s;
 }
-.header-menu-list.is-change > li > a:hover {
+.main-header.is-change .header-menu-list > li > a:hover {
   color: #C1AB58;
 }
 .header-entry-list {
@@ -324,7 +324,7 @@ HAMBURGER MENU
     transform: translate(0) rotate(0);
     transition: transform 0.2s;
   }
-  .hamburger-menu.is-change span {
+  .main-header.is-change .hamburger-menu > span {
     background-color: #151515;
   }
   .hamburger-menu > span + span {

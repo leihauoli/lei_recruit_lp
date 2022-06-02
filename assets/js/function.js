@@ -65,7 +65,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
 /**
  * ハンバーガーメニュー
  */
- LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
+LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
   ACTIVE_CLASS: 'is-active',
   FIXED_CLASS: 'is-fixed',
   SLIDE_SPEED: 400,
@@ -104,7 +104,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
 /**
  * スムーススクロール
  */
- LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll = {
+LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll = {
   SMOOTH_SCROLL_SPEED: 200,
   init: function(){
     this.setParameters();

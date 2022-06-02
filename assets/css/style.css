@@ -28,7 +28,7 @@ body.is-fixed {
   white-space: nowrap;
   overflow: hidden;
   color: #FFFFFF;
-  font-size: min(5.23vw, 70px);
+  font-size: calc(70 / 1366 * 100vw);
   font-weight: 700;
   z-index: 2;
 }
@@ -124,7 +124,7 @@ body.is-fixed {
   height: 100%;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 36px;
@@ -291,7 +291,7 @@ HAMBURGER MENU
   display: none;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .main-header {
     height: 60px;
   }
@@ -467,7 +467,7 @@ FOOTER
   bottom: 66px;
   right: 70px;
 }
-.footer-logo-list > li +li {
+.footer-logo-list > li + li {
   margin-left: 20px;
 }
 .footer-wantedly-logo {
@@ -478,7 +478,7 @@ FOOTER
   width: 21.49px;
   height: 21.36px;
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .main-footer {
     justify-content: flex-start;
     flex-direction: column;
@@ -514,17 +514,7 @@ ABOUT　レイビジョン
   left: 40px;
 }
 .head-section-about > img {
-  width: min(43.22vw, 577.49px);
-  height: 100%;
-}
-.section-vision::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  background: url(/assets/images/about-bg.png) no-repeat;
-  width: 100%;
-  height: 100%;
+  width: calc(577.49 / 1366 * 100vw);
 }
 .vision-wrapper {
   display: flex;
@@ -545,17 +535,16 @@ ABOUT　レイビジョン
   z-index: -1;
 }
 .vision-txt-right {
-  margin-top: min(3.66vw, 50px);
-  font-size: min(1.31vw, 18px);;
+  margin-top: calc(50 / 1366 * 100vw);
+  font-size: calc(18 / 1366 * 100vw);;
   line-height: 2;
 }
 .vision-container {
-  margin-top: min(25.07vw, 335px);
-  width: 100%;
+  margin-top: calc(335 / 1366 * 100vw);
   max-width: 520px;
 }
 .vision-container + .vision-container {
-  margin: 90px 0 0 min(11.27vw, 154px);
+  margin: 90px 0 0 calc(154 / 1366 * 100vw);
 }
 .vision-num-content {
   display: flex;
@@ -563,14 +552,14 @@ ABOUT　レイビジョン
   font-weight: 700;
 }
 .vision-num-txt-main {
-  margin-left: min(1.17vw, 16px);
-  font-size: min(13.17vw, 180px);
+  margin-left: calc(16 / 1366 * 100vw);
+  font-size: calc(180 / 1366 * 100vw);
   opacity: 1;
   writing-mode: vertical-lr;
   position: relative;
 }
 .vision-num-punctuation {
-  font-size: min(8.78vw, 120px);
+  font-size: calc(120 / 1366 * 100vw);
   position: absolute;
   top: 95%;
   right: 0;
@@ -583,32 +572,32 @@ ABOUT　レイビジョン
 .vision-num-list > li {
   display: flex;
   flex-direction: column;
-  margin-left: min(2.78vw, 38px);
-  font-size: min(3.36vw, 46px);
+  margin-left: calc(38 / 1366 * 100vw);
+  font-size: calc(46 / 1366 * 100vw);
 }
-.vision-num-list > li:nth-of-type(4){
+.vision-num-list > li:nth-of-type(4) {
   margin-left: 0;
 }
 .vision-num-list > li > span {
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
 }
-.vision-txt-main {
-  margin-top: min(2.92vw, 40px);
-  font-size: min(2.04vw, 28px);
+.vision-txt-left {
   line-height: 2;
+}
+.vision-txt-main {
+  margin-top: calc(40 / 1366 * 100vw);
+  font-size: calc(28 / 1366 * 100vw);
 }
 .vision-txt-sub {
-  margin-top: min(1.46vw, 20px);
-  font-size: min(1.31vw, 18px);
-  line-height: 2;
+  margin-top: calc(20 / 1366 * 100vw);
+  font-size: calc(18 / 1366 * 100vw);
 }
 .vision-txt-last {
-  margin-top: min(2.19vw, 30px);
-  font-size: min(1.75vw, 24px);
-  line-height: 2;
+  margin-top: calc(30 / 1366 * 100vw);
+  font-size: calc(24 / 1366 * 100vw);
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .section-about {
     padding: 64px 16px 0;
     overflow: hidden;
@@ -629,7 +618,7 @@ ABOUT　レイビジョン
   }
   .vision-container {
     margin-top: 152px;
-    max-width: 100%;
+    
   }
   .vision-container + .vision-container {
     margin: 64px 0 0 0;
@@ -648,9 +637,6 @@ ABOUT　レイビジョン
   }
   .vision-num-txt-main {
     font-size: calc(90 / 375 * 100vw);
-  }
-  .vision-num-txt-main > span {
-    display: inline-block;
   }
   .vision-num-punctuation {
     font-size: calc(60 / 375 * 100vw);
@@ -695,13 +681,9 @@ ABOUT　働き方/制度
   background-color: #FFFFFF;
 }
 .workstyle-list-main > li {
-  opacity: 1;
-  width: calc(100% / 2 - 39px);
+  width: calc(100% / 2 - 40px);
 }
-.workstyle-list-main > li:nth-of-type(2n) {
-  margin-left: 78px;
-}
-.workstyle-list-main > li:nth-of-type(n + 3){
+.workstyle-list-main > li:nth-of-type(n + 3) {
   margin-top: 60px;
 }
 .workstyle-list-main > li > img {
@@ -790,7 +772,7 @@ ABOUT　働き方/制度
   font-weight: 500;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .workstyle-wrapper {
     padding: calc(142 / 375 * 100vw) 0 64px;
   }
@@ -807,7 +789,7 @@ ABOUT　働き方/制度
   .workstyle-list-main > li:nth-of-type(2n) {
     margin-left: 15px;
   }
-  .workstyle-list-main > li:nth-of-type(n + 3){
+  .workstyle-list-main > li:nth-of-type(n + 3) {
     margin-top: 24px;
   }
   .workstyle-ttl {
@@ -830,9 +812,6 @@ ABOUT　働き方/制度
   }
   .workstyle-list-sub > li:nth-of-type(n + 3) {
     margin-top: 24px;
-  }
-  .workstyle-list-sub > li > span {
-    font-size: 12px;
   }
 }
 
@@ -864,7 +843,7 @@ ABOUT　数字で見るレイハウオリ
   width: calc(100% / 4 - 7.5px);
   background-color: #FFFFFF;
   margin-left: 10px;
-  padding: min(3.51vw, 48px) min(1.31vw, 18px) min(2.39vw, 32px);
+  padding: calc(48 / 1366 * 100vw) calc(18 / 1366 * 100vw) calc(32 / 1366 * 100vw);
   font-weight: 700;
   text-align: center;
 }
@@ -890,144 +869,140 @@ ABOUT　数字で見るレイハウオリ
   font-weight: 700;
 }
 .big-panel-ttl {
-  font-size: min(2.9vw, 40px);
-}
-.small-panel-txts {
-  font-size: min(2.2vw, 30px);
-  text-align: center;
+  font-size: calc(40 / 1366 * 100vw);
 }
 .small-panel-ttl {
-  font-size: min(2.2vw, 30px);
+  font-size: calc(30 / 1366 * 100vw);
 }
 .small-panel-image {
-  margin-top: min(2.92vw, 40px);
-  width: min(9.43vw, 128.87px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(128.87 / 1366 * 100vw);
 }
 .panel-numeral {
-  margin-top: min(1.79vw, 24px);
-  font-size: min(2.2vw, 30px);
+  margin-top: calc(24 / 1366 * 100vw);
+  font-size: calc(30 / 1366 * 100vw);
 }
 .panel-numeral-founded {
-  margin-top: min(2.19vw, 30px);
+  margin-top: calc(30 / 1366 * 100vw);
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
-  font-size: min(5.1vw, 70px);
+  font-size: calc(70 / 1366 * 100vw);
   font-weight: 400;
 }
 .panel-img-founded {
-  width: min(16.25vw, 222px);
-  margin-left: min(0.87vw, 12px);
+  width: calc(222 / 1366 * 100vw);
+  margin-left: calc(12 / 1366 * 100vw);
 }
 .panel-img-num-employees {
-  margin-top: min(2.92vw, 40px);
-  width: min(9.34vw, 128.87px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(128.87 / 1366 * 100vw);
 }
 .panel-img-num-employees {
-  margin-top: min(2.92vw, 40px);
-  width: min(9.22vw, 125.97px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(125.97 / 1366 * 100vw);
 }
 .panel-img-paid {
-  margin-top: min(2.92vw, 40px);
-  width: min(13.48vw, 184.19px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(184.19 / 1366 * 100vw);
 }
 .panel-img-side-business {
-  margin-top: min(2.92vw, 40px);
-  width: min(9.22vw, 125.97px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(125.97 / 1366 * 100vw);
 }
 .panel-img-holiday {
-  margin-top: min(2.92vw, 40px);
-  width: min(14.05vw, 192px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(192 / 1366 * 100vw);
 }
 .panel-img-average-age {
-  width: min(37.95vw, 518.39px);
+  width: calc(518.39 / 1366 * 100vw);
 }
 .panel-img-workarea {
-  width: min(6.58vw, 90px);
+  width: calc(90 / 1366 * 100vw);
 }
 .panel-numeral > span {
   display: inline-block;
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
-  font-size: min(5.1vw, 70px);
+  font-size: calc(70 / 1366 * 100vw);
   font-weight: 400;
 }
 .panel-img-engineer {
-  width: min(6.58vw, 90px);
+  width: calc(90 / 1366 * 100vw);
 }
 .panel-img-designer {
-  width: min(5.84vw, 79.88px);
+  width: calc(79.88 / 1366 * 100vw);
 }
 .panel-img-sales {
-  width: min(6.29vw, 86px);
+  width: calc(86 / 1366 * 100vw);
 }
 .panel-img-management {
-  width: min(4.79vw, 66.53px);
+  width: calc(66.53 / 1366 * 100vw);
 }
 .panel-img-gender-ratio {
-  margin-top: min(2.92vw, 40px);
-  width: min(11.49vw, 157.07px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(157.07 / 1366 * 100vw);
 }
 .panel-gender-ratio-numeral {
   display: flex;
   justify-content: center;
-  margin-top: min(2.19vw, 30px);
+  margin-top: calc(30 / 1366 * 100vw);
 }
 .panel-gender-ratio-numeral > li {
-  font-size: min(1.46vw, 20px);
+  font-size: calc(20 / 1366 * 100vw);
   white-space: nowrap;
 }
 .panel-gender-ratio-numeral > li + li {
-  margin-left: min(0.58vw, 8px);
+  margin-left: calc(8 / 1366 * 100vw);
 }
 .panel-gender-ratio-numeral > li > span {
   display: inline-block;
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
-  font-size: min(4.49vw, 60px);
+  font-size: calc(60 / 1366 * 100vw);
   font-weight: 400;
 }
 .panel-img-average-overtime {
-  margin-top: min(2.92vw, 40px);
-  width: min(11.39vw, 155.63px);
+  margin-top: calc(40 / 1366 * 100vw);
+  width: calc(155.63 / 1366 * 100vw);
 }
 .numeral-workarea-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: min(2.19vw, 30px);
+  margin-top: calc(30 / 1366 * 100vw);
 }
 .numeral-workarea-list > li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: min(2.19vw, 30px);
-  padding: min(0.89vw, 12px) min(1.46vw, 20px);
+  margin-left: calc(30 / 1366 * 100vw);
+  padding: calc(12 / 1366 * 100vw) calc(20 / 1366 * 100vw);
   background-color: #F4F4F4;
   border-radius: 6px;
   flex: 1;
 }
 .numeral-workarea-list > li:nth-of-type(n + 3) {
-  margin-top: min(1.5vw, 20px);
+  margin-top: calc(20 / 1366 * 100vw);
 }
 .numeral-workarea-list > li:nth-of-type(1),
 .numeral-workarea-list > li:nth-of-type(3) {
   margin-left: 0;
 }
 .numeral-list > li:nth-of-type(7) {
-  padding: min(2.92vw, 40px) min(3.36vw, 46px);
+  padding: calc(40 / 1366 * 100vw) calc(46 / 1366 * 100vw);
 }
 .panel-workarea-ttl {
-  font-size: min(1.46vw, 20px);
+  font-size: calc(20 / 1366 * 100vw);
 }
 .panel-workarea-numeral {
-  font-size: min(2.2vw, 30px);
+  font-size: calc(30 / 1366 * 100vw);
 }
 .panel-workarea-numeral > span {
   display: inline-block;
-  margin-top: min(1.04vw, 14px);
+  margin-top: calc(14 / 1366 * 100vw);
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
-  font-size: min(4.09vw, 56px);
+  font-size: calc(56 / 1366 * 100vw);
   font-weight: 400;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .numeral-wrapper {
     padding: 64px 0;
   }
@@ -1178,7 +1153,7 @@ RECRUIT 募集要項
   background: url(/assets/images/recruit-bg.jpg) no-repeat center right / cover;
 }
 .head-section-recruit {
-  width: min(41.82vw, 558.76px);
+  width: calc(558.76 / 1366 * 100vw);
   position: absolute;
   top: 53px;
   left: 70px;
@@ -1237,7 +1212,7 @@ RECRUIT 採用までの流れ
 .recruit-flow-head {
   font-size: 40px;
   font-weight: 700;
-  text-align: center
+  text-align: center;
 }
 .recruit-flow-accent {
   margin-top: 76px;
@@ -1330,7 +1305,7 @@ RECRUIT 採用までの流れ
   line-height: 1.7;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .section-recruit {
     padding: 0 16px;
   }
@@ -1404,25 +1379,25 @@ RECRUIT 採用までの流れ
     transform: none;
   }
   .recruit-flow-list > li:nth-of-type(1)::after {
-    background-size: 56.91px 50px;
+    background-size: cover;
     width: 56.91px;
     height: 50px;
     left: 21px;
   }
   .recruit-flow-list > li:nth-of-type(2)::after {
-    background-size: 41.95px 50px;
+    background-size: cover;
     width: 41.95px;
     height: 50px;
     left: 29px;
   }
   .recruit-flow-list > li:nth-of-type(3)::after {
-    background-size: 49.39px 49.39px;
+    background-size: cover;
     width: 49.39px;
     height: 49.39px;
     left: 25px;
   }
   .recruit-flow-list > li:nth-of-type(4)::after {
-    background-size: 60.46px 50.56px;
+    background-size: cover;
     width: 60.46px;
     height: 50.56px;
     left: 20px;

@@ -2,17 +2,6 @@
   font-family: "Noto Sans JP";
 }
 
-/*---------------------------------------------------------------------
-main containers
----------------------------------------------------------------------*/
-.content-header {
-  overflow: hidden;
-  position: relative;
-  background-color: #151515;
-  color: #FFFFFF;
-  font-weight: 600;
-  padding: 0 0.2em 0.1em;
-}
 /*-------------------------------------
 共通パーツ
 -------------------------------------*/
@@ -24,13 +13,12 @@ main containers
   white-space: nowrap;
   overflow: hidden;
   color: #FFFFFF;
-  font-size: min(5.23vw, 70px);
+  font-size: calc(70 / 1366 * 100vw);
   font-weight: 700;
   z-index: 2;
 }
 .ttl-bg-right {
   position: absolute;
-  top: -35px;
   right: 0;
 }
 .ttl-bg-left::before,
@@ -86,6 +74,7 @@ main containers
 .entry-btn-container > li:last-child {
   border: 1px solid #009CBA;
 }
+
 .entry-btn-container > li:first-child::before {
   background-image: linear-gradient(#151515, #151515, #151515, #151515);
 }
@@ -124,17 +113,24 @@ main containers
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 36px;
-  }  .ttl-bg-right {
-    top: -20px;
-  }  .ttl-bg-left > span {
+  }
+  .ttl-bg-left > span {
     display: block;
-  }  .entry-btn-container {
+  }
+  .entry-btn-container {
     display: none;
-  }}
+  }
+}
+@media screen and (min-width: 1367px){
+  .ttl-bg-left,
+  .ttl-bg-right {
+    font-size: 70px;
+  }
+}
 
-/*---------------------------------------------------------------------
+/*-------------------------------------
 DESIGNER チームについて
----------------------------------------------------------------------*/
+-------------------------------------*/
 .section-designer {
   padding: 80px 70px 0;
   max-width: 1226px;
@@ -150,23 +146,17 @@ DESIGNER チームについて
 .head-seciton-designer > img {
   width: calc(589 / 1366 * 100vw);
   max-width: 589px;
-  height: 100%;
 }
 .designer-team-wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 220px 0 120px;
+  padding: 210px 0 120px;
   position: relative;
 }
-.ttl-about-team {
-  top: 90px;
-}
 .designer-team-list {
-  margin-top: 156px;
+  max-width: 1024px;
+  margin: 175px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
 }
 .designer-team-list > li {
   position: relative;
@@ -198,19 +188,18 @@ DESIGNER チームについて
 .designer-member-icon {
   width: 70px;
 }
-.designer-member-name {
-  height: 1.5em;
+.header-designer-member > dd {
   font-size: 16px;
   font-weight: 600;
   padding-left: 16px;
 }
 .designer-member-position {
-  height: 1.5em;
   font-size: 12px;
-  padding-left: 16px;
+  font-weight: 400;
+  padding-top: 10px;
 }
 .para-preference {
-  width: 4em;
+  width: 64px;
   background-color: #151515;
   color: #FFFFFF;
   text-align: center;
@@ -235,11 +224,12 @@ DESIGNER チームについて
   content: "／";
 }
 
-/*---------------------------------------------------------------------
+/*-------------------------------------
 DESIGNER STYLE(行動指針)
----------------------------------------------------------------------*/
+-------------------------------------*/
 .designer-style-wrapper {
-  margin-top: 80px
+  margin: 80px auto 0;
+  max-width: 1024px;
 }
 .header-designer-style {
   text-align: center;
@@ -270,10 +260,10 @@ DESIGNER STYLE(行動指針)
 .designer-style-number::before {
   content: "";
   display: inline-block;
-  width: 2em;
+  width: 32px;
   position: relative;
-  top: -0.3em;
-  margin: 0 0.5em 0 1em;
+  top: -5px;
+  margin: 0 8px 0 16px;
   border-bottom: 2px solid #C1AB58;
 }
 .designer-style-number::after {
@@ -318,16 +308,16 @@ DESIGNER STYLE(行動指針)
   line-height: 1.7;
 }
 
-/*---------------------------------------------------------------------
+/*-------------------------------------
 DESIGNER どんな仕事するのか
----------------------------------------------------------------------*/
+-------------------------------------*/
 .designer-how-work-wrapper {
   margin-top: 80px;
 }
 .designer-how-work-ttl {
   font-weight: 600;
-  text-align: center;
   font-size: 40px;
+  text-align: center;
 }
 .designer-how-work-sub-ttl {
   font-size: 30px;
@@ -335,10 +325,10 @@ DESIGNER どんな仕事するのか
   text-align: center;
 }
 .designer-how-work-supplement {
-  text-align: center;
   margin-top: 20px;
   font-size: 14px;
   line-height: 1.7;
+  text-align: center;
 }
 .designer-how-work-container {
   margin-top: 60px;
@@ -348,13 +338,9 @@ DESIGNER どんな仕事するのか
   counter-reset: how-work-ttl-counter;
 }
 .designer-how-work-definition {
-  width: 100%;
   background-color: #F8F4E4;
   display: grid;
   grid-template-columns: 306px minmax(500px, 716px);
-  align-items: center;
-  justify-content: start;
-  justify-items: start;
   position: relative;
 }
 .designer-how-work-definition:nth-child(even) {
@@ -362,11 +348,11 @@ DESIGNER どんな仕事するのか
 }
 .designer-how-work-definition::after {
   content: "";
-  width: 2em;
-  height: 2em;
+  width: 32px;
+  height: 32px;
   position: absolute;
   bottom: -10px;
-  left: 2em;
+  left: 32px;
   background-color: inherit;
   z-index: 2;
   transform: rotate(45deg);
@@ -376,63 +362,48 @@ DESIGNER どんな仕事するのか
   width: 0;
   height: 0;
 }
-
-/* examples header(dt) */
-.designer-how-work-definition>dt {
+.designer-how-work-definition > dt {
   display: flex;
   align-items: center;
-  text-align: left;
-  width: 100%;
-  position: relative;
-  grid-column: 1/2;
-  padding-left: 2em;
+  padding-left: 32px;
   counter-increment: how-work-ttl-counter;
-  z-index: 3;
 }
 .how-work-ttl-counter {
   content: counter(how-work-ttl-counter, decimal-leading-zero);
   font-weight: 600;
   background-color: #C1AB58;
   border-radius: 50%;
-  width: 2em;
+  width: 32px;
   color: #FFFFFF;
-  height: 2em;
-  display: inline-block;
+  height: 32px;
   text-align: center;
-  line-height: 2;
-  margin-right: 1em;
+  margin-right: 16px;
 }
 .how-work-ttl-counter::before {
   content: counter(how-work-ttl-counter, decimal-leading-zero);
-  line-height: inherit;
+  font-size: 14px;
+  line-height: 32px;
 }
-
-/* examples content(dd) */
-.designer-how-work-definition>dd {
-  grid-column: 2/2;
-  padding-right: 1em;
+.designer-how-work-definition > dd {
   padding: 30px;
   position: relative;
   line-height: 1.7;
 }
-.designer-how-work-definition>dd::before {
+.designer-how-work-definition > dd::before {
   position: absolute;
   content: "";
-  width: 1px;
   height: 80%;
-  border-left: dashed 1px #C1AB58;
+  border-left: 1px dashed #C1AB58;
   left: 0;
   top: 10%;
 }
-
-/* tea party */
 .designer-tea-party-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   border: 5px solid #F2EBCC;
-  padding: 2em;
+  padding: 32px;
   margin-top: 80px;
 }
 .designer-tea-party-content {
@@ -447,22 +418,13 @@ DESIGNER どんな仕事するのか
   line-height: 1.7;
 }
 
-/*---------------------------------------------------------------------
-INTERVIEW
----------------------------------------------------------------------*/
-.header-interviews {
-  width: 100%;
-  max-width: 1226px;
-  position: relative;
-  max-width: 6.5em;
-  min-width: 6.5em;
-  font-size: 70px;
-}
+/*-------------------------------------
+Designer インタビュー
+-------------------------------------*/
 .interviews-wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 120px 0;
-  max-width: 1024px;
   position: relative;
   box-sizing: content-box;
 }
@@ -478,36 +440,46 @@ INTERVIEW
   margin: 0 calc(50% - 50vw);
 }
 .interviews-container {
-  max-width: 1366px;
-  margin-top: 32px;
+  margin-top: 90px;
 }
-.interview-header-02 {
+.interview-thumbnail {
+  width: calc(100vw - 70px);
+  max-width: 1296px;
+  height: calc(500 / 1366 * 100vw);
+  max-height: 500px;
+  position: relative;
+}
+.interview-thumbnail-head {
+  display: flex;
+  flex-direction: column;
+}
+.interview-thumbnail-head span {
+  font-size: calc(50 / 1366 * 100vw);
+}
+.interview-thumbnail-head > span + span {
   margin-top: 10px;
 }
-.interview-header-01,
-.interview-header-02 {
-  font-size: 50px;
+.interview-thumbnail-head-01 > span:last-child {
+  width: 80%;
 }
-.thumbnail-interview {
-  position: relative;
+.interview-thumbnail-head-02 > span:first-child {
+  width: 35%;
+  max-width: 165px;
 }
-.thumbnail-title-interview {
+.thumbnail-ttl-interview {
   position: absolute;
-  left: 170px;
-  top: 50%;
+  top: calc(237 / 1366 * 100vw);
+  left: calc(100 / 1366 * 100vw);
   z-index: 2;
 }
-.thumbnail-background-interview {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.thumbnail-interview-image {
+.interview-thumbnail-image {
+  position: absolute;
+  top: 0;
+  right: 0;
   max-width: 900px;
   max-height: 500px;
-  width: 65%;
-  height: auto;
+  width: calc(900 / 1366 * 100vw);
+  height: calc(500 / 1366 * 100vw);
 }
 .interviewee {
   margin-top: 30px;
@@ -525,17 +497,17 @@ INTERVIEW
   font-weight: 600;
   margin-top: 10px;
 }
-.thumbnail-leihauoli-logo {
-  width: 20%;
-  max-width: 288px;
-  height: 20%;
-  position: relative;
-  top: 100px;
-  margin: 0px 109px 0 30px;
-  display: block;
+.interview-thumbnail-leihauoli-logo {
+  width: calc(287 / 1366 * 100vw);
+  max-width: 287px;
+  height: calc(277 / 1366 * 100vw);
+  max-height: 277px;
+  position: absolute;
+  top: calc(75 / 1366 * 100vw);
+  left: 0;
 }
-.content-interviews {
-  max-width: 1226px;
+.interview-contents {
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
@@ -545,59 +517,16 @@ INTERVIEW
 }
 
 /* schedule time line */
-.schedule-container {
+.interview-schedule-container {
   margin-top: 50px;
   overflow: visible;
   max-width: 342px;
   width: 100%;
 }
-.menu-handler-schedule-interview {
+.interview-schedule-btn {
   display: none;
 }
-.schedule-time-line {
-  border-left: 4px solid #151515;
-  padding-top: 40px;
-  height: 1124px;
-  z-index: 2;
-  margin-top: 20px;
-  position: relative;
-}
-.schedule-time-line::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  width: 20px;
-  height: 20px;
-  display: block;
-  border-radius: 2em;
-  background-color: #151515;
-  left: -11px;
-}
-.schedule-time-line > li {
-  position: relative;
-  left: -2em;
-  background-color: #FFFFFF;
-  width: 4em;
-  height: 20px;
-  line-height: 20px;
-  border-radius: 1em;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-}
-.schedule-time-line > li + li {
-  margin-top: 104px;
-}
-.schedule-todo-list > li > .schedule-todo-detail {
-  line-height: 1.5;
-}
-.schedule-todo-list {
-  position: relative;
-  left: -10px;
-  width: 317px;
-  height: 1124px;
-}
-.div-schedule-interview {
+.interview-schedule-menu {
   display: flex;
   position: relative;
   flex-wrap: nowrap;
@@ -605,7 +534,7 @@ INTERVIEW
   justify-content: center;
   padding: 60px 0 32px 25px;
 }
-.div-schedule-interview::before {
+.interview-schedule-menu::before {
   content: "OneDay";
   font-weight: 600;
   position: absolute;
@@ -613,167 +542,81 @@ INTERVIEW
   font-size: 30px;
   left: 0px;
 }
-.schedule-todo-img {
+.interview-schedule-time-line {
+  border-left: 4px solid #151515;
+  padding-top: 40px;
+  height: 1124px;
+  z-index: 2;
+  margin-top: 20px;
+  position: relative;
+}
+.interview-schedule-time-line::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 32px;
+  background-color: #151515;
+  left: -11px;
+}
+.interview-schedule-time-line > li {
+  position: relative;
+  left: -32px;
+  background-color: #FFFFFF;
+  width: 64px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.interview-schedule-time-line > li + li {
+  margin-top: 104px;
+}
+
+/* インタビュー Q&A */
+.interview-qa-list {
+  margin-left: 120px;
+  max-width: 560px;
+}
+.interview-schedule-todo-list > li > .interview-schedule-todo-detail {
+  line-height: 1.5;
+}
+.interview-schedule-todo-list {
+  position: relative;
+  left: -10px;
+  width: 317px;
+  height: 1124px;
+}
+.interview-schedule-todo-img {
   position: absolute;
   top: calc((100% - 59px) / 2);
   right: 0px;
   width: 50px;
   height: 50px;
-}
-
-/* schedule list */
-.schedule-todo-list > li {
-  position: relative;
-}
-.schedule-todo-list > li::before {
-  content: "";
-  width: 42px;
-  border-top: 1px solid #151515;
-  position: absolute;
-  left: -48px;
-  top: 8px;
-}
-.schedule-todo-list > li {
-  z-index: 1;
-}
-
-/* SHIRAISHI Schedule */
-.interviews-container:nth-of-type(1) .interview-header-01 {
-  max-width: 10.5em;
-  min-width: 10.5em;
-}
-.interviews-container:nth-of-type(1) .interview-header-02 {
-  max-width: 8.5em;
-  min-width: 8.5em;
-}
-.ul-shiraishi-schedule>li:nth-child(1) {
-  margin-top: 70px;
-}
-.ul-shiraishi-schedule>li:nth-child(2) {
-  margin-top: 20px;
-}
-.ul-shiraishi-schedule>li:nth-child(3) {
-  margin-top: 10px;
-}
-.ul-shiraishi-schedule>li:nth-child(4) {
-  margin-top: 22px;
-}
-.ul-shiraishi-schedule>li:nth-child(5) {
-  margin-top: 46px;
-}
-.ul-shiraishi-schedule>li:nth-child(6) {
-  margin-top: 68px;
-}
-.ul-shiraishi-schedule>li:nth-child(7) {
-  margin-top: 46px;
-}
-.ul-shiraishi-schedule>li:nth-child(8) {
-  margin-top: 190px;
-}
-.ul-shiraishi-schedule>li:nth-child(9) {
-  margin-top: 20px;
-}
-.ul-shiraishi-schedule>li:nth-child(10) {
-  margin-top: 30px;
-}
-.ul-shiraishi-schedule>li:nth-child(11) {
-  margin-top: 36px;
-}
-.ul-shiraishi-schedule>li:nth-child(12) {
-  margin-top: 19px;
-}
-.ul-shiraishi-schedule>li:nth-child(13) {
-  margin-top: 46px;
-}
-.ul-shiraishi-schedule>li:nth-child(14) {
-  margin-top: 12px;
-}
-.ul-shiraishi-schedule>li:nth-child(15) {
-  margin-top: 90px;
-}
-
-/* YAHATA Schedule */
-.interviews-container:nth-of-type(2) .interview-header-01 {
-  max-width: 3.5em;
-  min-width: 3.5em;
-}
-.interviews-container:nth-of-type(2) .interview-header-02 {
-  max-width: 9.5em;
-  min-width: 9.5em;
-}
-.ul-yahata-schedule>li:nth-child(1) {
-  margin-top: 62px;
-}
-.ul-yahata-schedule>li:nth-child(2) {
-  margin-top: 10px;
-}
-.ul-yahata-schedule>li:nth-child(3) {
-  margin-top: 32px;
-}
-.ul-yahata-schedule>li:nth-child(4) {
-  margin-top: 90px;
-}
-.ul-yahata-schedule>li:nth-child(5) {
-  margin-top: 16px;
-}
-.ul-yahata-schedule>li:nth-child(6) {
-  margin-top: 108px;
-}
-.ul-yahata-schedule>li:nth-child(7) {
-  margin-top: 11px;
-}
-.ul-yahata-schedule>li:nth-child(8) {
-  margin-top: 15px;
-}
-.ul-yahata-schedule>li:nth-child(9) {
-  margin-top: 96px;
-}
-.ul-yahata-schedule>li:nth-child(10) {
-  margin-top: 15px;
-}
-.ul-yahata-schedule>li:nth-child(11) {
-  margin-top: 25px;
-}
-.ul-yahata-schedule>li:nth-child(12) {
-  margin-top: 122px;
-}
-.ul-yahata-schedule>li:nth-child(13) {
-  margin-top: 109px;
-}
-.ul-yahata-schedule>li:nth-child(14) {
-  margin-top: 21px;
-}
-.ul-yahata-schedule>li:nth-child(15) {
-  margin-top: 24px;
-}
-
-/* interview list */
-.interview-qa-list {
-  margin-left: 120px;
-  counter-reset: interview-counter;
-  width: 560px;
+  padding-left: 8px;
+  box-sizing: content-box;
 }
 .interview-counter {
-  counter-increment: interview-counter;
-  margin-bottom: 5px;
-  width: 100%;
-  height: 16px;
   display: inline-block;
-}
-.interview-counter::before {
   position: relative;
-  top: -3px;
-  content: "";
-  display: inline-block;
-  width: 52px;
-  border-bottom: #C1AB58 1px solid;
-  margin-right: 10px;
-}
-.interview-counter::after {
-  content: "Interview\00A0"counter(interview-counter, decimal-leading-zero);
   color: #C1AB58;
   font-size: 12px;
   font-weight: 600;
+  padding-left: 60px;
+}
+.interview-counter::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: inline-block;
+  width: 52px;
+  border-bottom: 1px solid #C1AB58;
+  left: 0
 }
 .interview-question-term {
   font-size: 20px;
@@ -790,161 +633,164 @@ INTERVIEW
   margin-top: 11px;
   line-height: 1.7;
 }
-.schedule-todo-detail {
-  width: 200px;
-}
-.schedule-ttl {
+.interview-schedule-ttl {
   display: block;
   font-size: 13px;
   font-weight: 600;
 }
-.schedule-todo-detail {
+.interview-schedule-todo-detail {
   display: block;
   font-size: 12px;
-  letter-spacing: 1.1px;
   padding-top: 5px;
+  width: 200px;
 }
 
-/*---------------------------------------------------------------------
-WORKS
----------------------------------------------------------------------*/
-.section-works {
-  margin: 0 auto;
-  max-width: 1226px;
-  padding: 100px 70px 80px;
-  width: 100%;
+/* schedule list */
+.interview-schedule-todo-list > li {
+  position: relative;
 }
-.header-svg-works {
-  width: 552px;
+.interview-schedule-todo-list > li::before {
+  content: "";
+  width: 42px;
+  border-top: 1px solid #151515;
+  position: absolute;
+  left: -48px;
+  top: 8px;
 }
-.works-examples-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  align-items: flex-start;
-  padding: 0 16px;
+
+/* インタビュー01 */
+.interview-schedule-todo-list-01 > li:nth-child(1) {
+  margin-top: 70px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(2) {
+  margin-top: 20px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(3) {
+  margin-top: 10px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(4) {
+  margin-top: 22px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(5) {
+  margin-top: 46px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(6) {
+  margin-top: 68px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(7) {
+  margin-top: 46px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(8) {
+  margin-top: 190px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(9) {
+  margin-top: 20px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(10) {
+  margin-top: 30px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(11) {
+  margin-top: 36px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(12) {
+  margin-top: 19px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(13) {
+  margin-top: 46px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(14) {
+  margin-top: 12px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(15) {
+  margin-top: 90px;
+}
+
+/* インタビュー02 */
+.interview-schedule-todo-list-02 > li:nth-child(1) {
+  margin-top: 62px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(2) {
+  margin-top: 10px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(3) {
+  margin-top: 32px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(4) {
+  margin-top: 90px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(5) {
+  margin-top: 16px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(6) {
+  margin-top: 108px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(7) {
+  margin-top: 11px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(8) {
+  margin-top: 15px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(9) {
+  margin-top: 96px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(10) {
+  margin-top: 15px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(11) {
   margin-top: 25px;
 }
-.works-examples-list > li {
-  position: relative;
-  max-width: 370px;
-  width: 30%;
+.interview-schedule-todo-list-02 > li:nth-child(12) {
+  margin-top: 122px;
 }
-.works-examples-list > li:nth-child(3n + 1) {
-  margin-top: 120px;
+.interview-schedule-todo-list-02 > li:nth-child(13) {
+  margin-top: 109px;
 }
-.works-examples-list > li:nth-child(3n + 2) {
-  margin-top: 60px;
+.interview-schedule-todo-list-02 > li:nth-child(14) {
+  margin-top: 21px;
 }
-.works-examples-list > li:nth-child(3n) {
-  margin-top: 0px;
-}
-.works-example-card {
-  width: 100%;
-  height: auto;
-  position: relative;
+.interview-schedule-todo-list-02 > li:nth-child(15) {
+  margin-top: 24px;
 }
 
-img.works-example-card-img {
-  position: relative;
-  width: 100%;
-}
-.works-example-txt {
-  color: #FFFFFF;
-  font-weight: 600;
-  line-height: 1.7;
-  padding: 0 20px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #0000005c;
-  transition: ease-in-out 0.5s;
-}
-.works-example-txt:hover {
-  opacity: 1;
-}
-.works-example-supplement {
-  display: inline-block;
-  font-weight: 600;
-  font-size: 20px;
-  width: 100%;
-  margin: 10px 0;
-}
-.works-example-type {
-  font-size: 12px;
-  display: inline-block;
-  width: 100%;
-  font-weight: 400;
-}
-
-/*---------------------------------------------------------------------
-SP
----------------------------------------------------------------------*/
 @media screen and (max-width: 1024px) {
-  * {
-    box-sizing: border-box;
-  }
-  .sp-scroll-bar::-webkit-scrollbar {
-    width: 100%;
-    height: 5px;
-  }
-  .sp-scroll-bar::-webkit-scrollbar-thumb {
-    background-color: #151515;
-    border-radius: 10px;
-    width: 25%;
-    box-shadow: 0 0 0 1px #E5E5E5;
-  }
-  .sp-scroll-bar::-webkit-scrollbar-track {
-    background-color: #E5E5E5;
-  }
-  .entry-button-container {
-    display: none;
-  }
-/*---------------------------------------------------------------------
-DESIGNER チームについて
----------------------------------------------------------------------*/
+  /*-------------------------------------
+  DESIGNER チームについて
+  -------------------------------------*/
   .section-designer {
-    padding: 0 16px;
+    padding: 64px 16px 0;
   }
   .head-seciton-designer {
     top: 27px;
+    left: 0;
   }
-  .ttl-about-team {
-    top: 220px;
+  .head-seciton-designer > img {
+    width: 290px;
+    height: 168px;
   }
-  /*team member */
+  .designer-team-wrapper {
+    padding: 160px 0 64px;
+  }
   .designer-team-list {
-    height: auto;
-    margin: 74px auto 0;
-    padding: 0 20px;
+    padding: 0 20px 30px;
     flex-wrap: nowrap;
+    margin-top: 74px;
     overflow-x: auto;
   }
   .designer-team-list > li {
     flex-shrink: 0;
     width: 232px;
     height: auto;
-    margin: 0 20px 30px;
   }
   .designer-team-list > li + li {
     margin-left: 30px;
   }
-  .designer-team-list > li:nth-of-type(3n + 1) {
-    margin-left: 0;
-  }
   .designer-team-list > li:nth-of-type(n + 4) {
     margin-top: 0;
+    margin-left: 30px;
   }
-/*---------------------------------------------------------------------
-DESINGER　STYLE(行動指針)
----------------------------------------------------------------------*/
+  /*-------------------------------------
+  DESINGER　STYLE(行動指針)
+  -------------------------------------*/
   .designer-style-list {
     width: 100%;
     flex-direction: column;
@@ -962,7 +808,7 @@ DESINGER　STYLE(行動指針)
     margin-left: 0;
   }
   .designer-style-number::before {
-    margin-right: 1em;
+    margin-right: 16px;
   }
   .designer-style-icon-window {
     width: 220px;
@@ -978,9 +824,9 @@ DESINGER　STYLE(行動指針)
   .designer-style-message {
     padding: 0;
   }
-/*---------------------------------------------------------------------
-DESIGNER どんな仕事するのか
----------------------------------------------------------------------*/
+  /*-------------------------------------
+  DESIGNER どんな仕事するのか
+  -------------------------------------*/
   .designer-how-work-wrapper {
     margin: 64px auto 0;
   }
@@ -1006,19 +852,16 @@ DESIGNER どんな仕事するのか
   .designer-how-work-definition::after {
     width: 20px;
     height: 20px;
-    bottom: -10px;
     left: calc(50% - 10px);
   }
-  /*examples container(dl)*/
   dl.designer-how-work-examples {
     margin-top: 25px;
   }
-  /*examples header(dt)*/
   .designer-how-work-definition > dt {
     font-size: 18px;
     grid-column: 1;
     grid-row: 1/2;
-    border-bottom: dashed 1px #C1AB58;
+    border-bottom: 1px dashed #C1AB58;
     padding: 0 0 12px 0;
   }
   .designer-how-work-definition > dt::after {
@@ -1027,25 +870,20 @@ DESIGNER どんな仕事するのか
   .how-work-ttl-counter {
     height: 24px;
     width: 24px;
-    line-height: 1;
     margin-right: 10px;
   }
   .how-work-ttl-counter::before {
     font-size: 12px;
+    line-height: 24px;
   }
-  /*examples content(dd)*/
-  .designer-how-work-definition>dd {
-    grid-column: 1;
-    grid-row: 2/2;
+  .designer-how-work-definition > dd {
     padding: 0;
     font-size: 14px;
-    line-height: 1.7;
     margin-top: 11px;
   }
   .designer-how-work-definition > dd::before {
     display: none;
   }
-  /* tea party */
   .designer-tea-party-container {
     flex-direction: column-reverse;
     margin-top: 40px;
@@ -1057,9 +895,7 @@ DESIGNER どんな仕事するのか
     margin-left: 0;
   }
   .designer-tea-party-content > dt {
-    display: block;
-    width: 180px;
-    margin: 0 auto;
+    text-align: center;
     font-size: 24px;
     font-weight: 600;
   }
@@ -1067,39 +903,64 @@ DESIGNER どんな仕事するのか
     font-size: 14px;
     margin-top: 16px;
   }
-/*---------------------------------------------------------------------
-INTERVIEWS(SP)
----------------------------------------------------------------------*/
+  /*-------------------------------------
+  Designer インタビュー
+  -------------------------------------*/
   .section-interviews {
     margin-top: 60px;
     padding: 60px 0 64px 16px;
   }
+  .interviews-wrapper {
+    padding: 64px 0;
+  }
   .header-interviews {
     font-size: 36px;
   }
-  .thumbnail-interview-image {
-    width: 75%;
+  .interviews-container {
+    margin-top: 38px;
   }
-  .content-interviews {
+  .interview-thumbnail {
+    width: calc(100vw - 16px);
+    height: calc(142 / 375 * 100vw);
+  }
+  .interview-thumbnail-head span {
+    font-size: 24px;
+  }
+  .interview-thumbnail-head > span + span {
+    margin-top: 5px;
+  }
+  .interview-thumbnail-head-02 > span:first-child {
+    width: calc(100% - 146px);
+  }
+  .interviewee {
+    margin-top: calc(16 / 375 * 100vw);
+  }
+  .thumbnail-ttl-interview {
+    top: calc(62 / 375 * 100vw);
+    left: calc(20 / 375 * 100vw);
+  }
+  .interview-thumbnail-image {
+    width: calc(256 / 375 * 100vw);
+    height: calc(142 / 375 * 100vw);
+  }
+  .interview-thumbnail-leihauoli-logo {
+    width: calc(70 / 375 * 100vw);
+    height: calc(68 / 375 * 100vw);
+    top: calc(20 / 375 * 100vw);
+  }
+  .interview-contents {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 80px;
   }
   .thumbnail-leihauoli-logo {
     top: 45px;
     left: 0;
     margin-right: 33px;
   }
-  .thumbnail-title-interview {
+  .thumbnail-ttl-interview {
     left: 10%;
-  }
-  .interview-header-01,
-  .interview-header-02 {
-    font-size: 24px;
-  }
-  .interview-header-02 {
-    margin-top: 5px;
   }
   .interviewee-position {
     font-size: 12px;
@@ -1109,73 +970,68 @@ INTERVIEWS(SP)
     font-size: 16px;
   }
   /* schedule time line */
-  .schedule-container {
+  .interview-schedule-container {
     position: relative;
     height: 50px;
     margin-top: 40px;
     overflow: hidden;
     animation-iteration-count: 1;
-    animation-duration: 500ms;
+    animation-duration: 0.4s;
     animation-play-state: paused;
     animation-timing-function: ease-in-out;
   }
-  .menu-handler-schedule-interview {
+  .interview-schedule-btn {
     font-weight: 600;
     position: absolute;
     display: flex;
     width: 100%;
     height: 50px;
     background-color: #E0CB7D;
-    padding: 0 1em 0 2em;
+    padding: 0 16px 0 32px;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
   }
   /* schedule opened*/
-  .menu-handler-schedule-interview::after {
-    position: relative;
-    right: 10px;
+  .interview-schedule-btn::after {
     content: "";
-    display: inline-block;
     width: 5px;
     height: 5px;
     border-right: 5px solid transparent;
     border-bottom: 8px solid #151515;
     border-left: 5px solid transparent;
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 0.4s;
   }
-  .schedule-opened.schedule-container {
-    animation-name: schedule-container-open;
+  .schedule-opened.interview-schedule-container {
+    animation-name: interview-schedule-container-open;
     animation-fill-mode: forwards;
     animation-play-state: running;
   }
   /* schedule closed */
-  .schedule-closed.schedule-container {
-    animation-name: schedule-container-open;
+  .schedule-closed.interview-schedule-container {
+    animation-name: interview-schedule-container-open;
     animation-direction: reverse;
     animation-fill-mode: backwards;
     animation-play-state: running;
   }
-  .schedule-closed>.menu-handler-schedule-interview::after {
+  .schedule-closed>.interview-schedule-btn::after {
     transform: rotate3d(1, 0, 0, -180deg);
   }
-  .div-schedule-interview {
-    width: 100%;
+  .interview-schedule-menu {
     background-color: #FFFFFF;
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 0.4s;
     padding: 82px 0 32px 25px;
   }
-  .div-schedule-interview::before {
+  .interview-schedule-menu::before {
     display: none;
   }
-  .schedule-closed>.div-schedule-interview {
+  .schedule-closed>.interview-schedule-menu {
     transform: translateY(calc(-100% - 50px));
   }
-  .schedule-time-line {
+  .interview-schedule-time-line {
     font-size: 14px;
-    height: auto;
   }
-  ul.schedule-todo-list {
+  .interview-schedule-todo-list {
     width: 317px;
     height: 1124px;
     margin-top: 0;
@@ -1183,20 +1039,23 @@ INTERVIEWS(SP)
   /* interview list */
   .interview-qa-list {
     margin-left: 0;
-    width: 100%;
+    max-width: 100%;
   }
   .interview-question-term {
     font-size: 18px;
     line-height: 1;
     margin-top: 32px;
   }
+  .interview-question-term:first-child {
+    margin-top: 0;
+  }
   .dd-interview-answer {
     font-size: 16px;
   }
-  .schedule-ttl {
+  .interview-schedule-ttl {
     font-size: 13px;
   }
-  .schedule-todo-detail {
+  .interview-schedule-todo-detail {
     font-size: 12px;
     width: 169px;
   }
@@ -1204,112 +1063,117 @@ INTERVIEWS(SP)
     right: 10px;
     transform: scale(1.2);
   }
-  @keyframes schedule-container-open {
+  @keyframes interview-schedule-container-open {
     0% {
       height: 50px;
     }
     100% {
       height: 100%;
-    }  }
-  /* SHIRAISHI Schedule */
-  .ul-shiraishi-schedule>li:nth-child(1) {
-    top: 50px;
+    }
   }
-  .ul-shiraishi-schedule>li:nth-child(2) {
-    top: 50px;
+  .interview-schedule-todo-list-01 > li:nth-child(4) {
+    margin-top: 9px;
   }
-  .ul-shiraishi-schedule>li:nth-child(3) {
-    top: 55px;
+  .interview-schedule-todo-list-01 > li:nth-child(5) {
+    margin-top: 41px;
   }
-  .ul-shiraishi-schedule>li:nth-child(4) {
-    top: 80px;
+}
+@media screen and (min-width: 1367px) {
+  /*-------------------------------------
+  DESIGNER チームについて
+  -------------------------------------*/
+  .interview-thumbnail-head span {
+    font-size: 50px;
   }
-  .ul-shiraishi-schedule>li:nth-child(5) {
-    top: 120px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(6) {
-    top: 188px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(7) {
-    top: 230px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(8) {
-    top: 398px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(9) {
-    top: 395px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(10) {
-    top: 440px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(11) {
-    top: 475px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(12) {
-    top: 480px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(13) {
-    top: 540px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(14) {
-    top: 570px;
-  }
-  .ul-shiraishi-schedule>li:nth-child(15) {
-    top: 655px;
-  }
-  /* YAHATA Schedule */
-  .ul-yahata-schedule>li:nth-child(1) {
-    top: 40px;
-  }
-  .ul-yahata-schedule>li:nth-child(2) {
-    top: 38px;
-  }
-  .ul-yahata-schedule>li:nth-child(3) {
+  .interview-thumbnail-leihauoli-logo {
     top: 75px;
   }
-  .ul-yahata-schedule>li:nth-child(4) {
-    top: 100px;
+  .thumbnail-ttl-interview {
+    top: 237px;
+    left: 100px;
   }
-  .ul-yahata-schedule>li:nth-child(5) {
-    top: 173px;
-  }
-  .ul-yahata-schedule>li:nth-child(6) {
-    top: 278px;
-  }
-  .ul-yahata-schedule>li:nth-child(7) {
-    top: 285px;
-  }
-  .ul-yahata-schedule>li:nth-child(8) {
-    top: 305px;
-  }
-  .ul-yahata-schedule>li:nth-child(9) {
-    top: 395px;
-  }
-  .ul-yahata-schedule>li:nth-child(10) {
-    top: 390px;
-  }
-  .ul-yahata-schedule>li:nth-child(11) {
-    top: 440px;
-  }
-  .ul-yahata-schedule>li:nth-child(12) {
-    top: 548px;
-  }
-  .ul-yahata-schedule>li:nth-child(13) {
-    top: 653px;
-  }
-  .ul-yahata-schedule>li:nth-child(14) {
-    top: 710px;
-  }
-  .ul-yahata-schedule>li:nth-child(15) {
-    top: 715px;
-  }
-  /*---------------------------------------------------------------------
-WORKS(SP)
----------------------------------------------------------------------*/
+}
+
+/*-------------------------------------
+WORKS
+-------------------------------------*/
+.section-works {
+  margin: 0 auto;
+  max-width: 1226px;
+  padding: 100px 70px 80px;
+  box-sizing: content-box;
+  position: relative;
+}
+.head-section-works > img {
+  width: calc(552 / 1366 * 100vw);
+  max-width: 552px;
+}
+.works-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+.works-examples-list > li {
+  position: relative;
+  width: 30%;
+}
+.works-examples-list > li:nth-child(3n + 1) {
+  margin-top: 120px;
+}
+.works-examples-list > li:nth-child(3n + 2) {
+  margin-top: 60px;
+}
+.works-examples-list > li:nth-child(3n) {
+  margin-top: 0px;
+}
+.works-example-card {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+.works-example-card-img {
+  width: 100%;
+}
+.works-example-txt {
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1.7;
+  padding: 0 20px;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(21, 21, 21, 0.5);
+  transition: opacity 0.4s;
+}
+.works-example-txt:hover {
+  opacity: 1;
+}
+.works-example-supplement {
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.works-example-type {
+  margin-top: 10px;
+  font-size: 12px;
+  display: block;
+  font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  /*-------------------------------------
+  WORKS
+  -------------------------------------*/
   .section-works {
     padding: 40px 16px 64px;
   }
-  .header-svg-works {
+  .head-section-works > img {
     width: 290px;
     height: 168px;
   }
@@ -1335,5 +1199,26 @@ WORKS(SP)
   }
   .works-example-txt {
     font-size: 16px;
+  }
+}
+
+/*-------------------------------------
+SP
+-------------------------------------*/
+@media screen and (max-width: 1024px) {
+  .sp-scroll-bar::-webkit-scrollbar {
+    width: 100%;
+    height: 5px;
+  }
+  .sp-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #151515;
+    border-radius: 10px;
+  }
+  .sp-scroll-bar::-webkit-scrollbar-track {
+    background-color: #E5E5E5;
+    border-radius: 10px;
+  }
+  .entry-button-container {
+    display: none;
   }
 }

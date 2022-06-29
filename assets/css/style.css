@@ -8,14 +8,14 @@
 .ttl-bg-left,
 .ttl-bg-right {
   display: inline-block;
-  padding: 0 10px 5px;
   position: relative;
-  white-space: nowrap;
+  z-index: 2;
+  padding: 0 10px 5px;
   overflow: hidden;
   color: #FFFFFF;
-  font-size: calc(70 / 1366 * 100vw);
   font-weight: 700;
-  z-index: 2;
+  font-size: calc(70 / 1366 * 100vw);
+  white-space: nowrap;
 }
 .ttl-bg-right {
   position: absolute;
@@ -27,12 +27,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: -1;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: #333333;
   content: "";
-  z-index: -1;
 }
 .entry-btn-container {
   display: flex;
@@ -41,11 +41,11 @@
 }
 .entry-btn-container > li {
   display: block;
-  text-align: center;
-  overflow: hidden;
   position: relative;
   width: 340px;
+  overflow: hidden;
   border-radius: 100px;
+  text-align: center;
 }
 .entry-btn-container > li + li {
   margin-left: 40px;
@@ -53,18 +53,18 @@
 .entry-btn-container > li > a {
   display: block;
   color: #FFFFFF;
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
   line-height: 60px;
-  transition: color 0.2s;
+  transition: color .2s;
 }
 .entry-btn-container > li::before {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
   border-radius: 100px;
   content: "";
 }
@@ -83,16 +83,16 @@
 }
 .entry-btn-container > li::after {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
+  z-index: -1;
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
   border-radius: 100px;
   content: "";
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 0.2s;
-  z-index: -1;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0, 0, .2, 1);
 }
 .entry-btn-container > li:first-child::after,
 .entry-btn-container > li:last-child::after {
@@ -109,7 +109,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 36px;
@@ -121,7 +121,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 1367px){
+@media screen and (min-width: 1367px) {
   .ttl-bg-left,
   .ttl-bg-right {
     font-size: 70px;
@@ -132,10 +132,10 @@
 DESIGNER チームについて
 -------------------------------------*/
 .section-designer {
-  padding: 80px 70px 0;
-  max-width: 1226px;
   position: relative;
+  max-width: 1226px;
   margin: 0 auto;
+  padding: 80px 70px 0;
   box-sizing: content-box;
 }
 .head-seciton-designer {
@@ -148,15 +148,15 @@ DESIGNER チームについて
   max-width: 589px;
 }
 .designer-team-wrapper {
-  padding: 210px 0 120px;
   position: relative;
+  padding: 210px 0 120px;
 }
 .designer-team-list {
-  max-width: 1024px;
-  margin: 175px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1024px;
+  margin: 175px auto 0;
 }
 .designer-team-list > li {
   position: relative;
@@ -173,45 +173,46 @@ DESIGNER チームについて
 }
 .header-designer-member {
   display: flex;
-  width: 117px;
-  height: 70px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  width: 117px;
+  height: 70px;
 }
 .designer-member-content {
   width: 100%;
   margin-top: 10px;
   padding-top: 17px;
+
   border-top: 1px dashed #E5E5E5;
 }
 .designer-member-icon {
   width: 70px;
 }
 .header-designer-member > dd {
-  font-size: 16px;
-  font-weight: 600;
   padding-left: 16px;
+  font-weight: 600;
+  font-size: 16px;
 }
 .designer-member-position {
-  font-size: 12px;
-  font-weight: 400;
   padding-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
 }
 .para-preference {
   width: 64px;
+  padding: 3px;
   background-color: #151515;
   color: #FFFFFF;
-  text-align: center;
   font-size: 12px;
-  padding: 3px;
+  text-align: center;
 }
 .designer-member-preferences + .designer-member-preferences {
   margin-top: 21px;
 }
 .designer-member-preferences-list {
-  list-style-type: none;
   display: inline-block;
+  list-style-type: none;
   margin-top: 7px;
   font-size: 0;
 }
@@ -228,81 +229,82 @@ DESIGNER チームについて
 DESIGNER STYLE(行動指針)
 -------------------------------------*/
 .designer-style-wrapper {
-  margin: 80px auto 0;
   max-width: 1024px;
+  margin: 80px auto 0;
 }
 .header-designer-style {
-  text-align: center;
-  font-size: 40px;
   font-weight: 600;
+  font-size: 40px;
+  text-align: center;
 }
 .designer-style-list {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
+  margin-top: 40px;
   counter-reset: counter-designer-style;
 }
 .designer-style-list > li {
-  background-color: #F8F4E4;
-  padding: 20px;
   width: calc(100% - 94px / 3);
+  padding: 20px;
+  background-color: #F8F4E4;
 }
 .designer-style-list > li + li {
   margin-left: 47px;
 }
 .designer-style-number {
-  color: #C1AB58;
-  font-size: 12px;
-  font-weight: 600;
   position: relative;
   padding-left: 25px;
+  color: #C1AB58;
+  font-weight: 600;
+  font-size: 12px;
 }
 .designer-style-number::before {
-  content: "";
-  width: 20px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  content: "";
+
   border-bottom: 2px solid #C1AB58;
 }
 .designer-style-icon-window {
-  border-radius: 50%;
-  margin: 20px auto 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #FFFFFF;
+  align-items: center;
   width: calc(220 / 1366 * 100vw);
   max-width: 220px;
   height: calc(220 / 1366 * 100vw);
   max-height: 220px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+  background-color: #FFFFFF;
 }
 .designer-style-icon {
   width: 120px;
 }
 .designer-style-ttl {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
   margin-top: 13px;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
 }
 .designer-style-sub-ttl {
-  text-align: center;
-  font-weight: 600;
-  color: #FFFFFF;
-  background-color: #C1AB58;
   margin-top: 24px;
   padding: 8px 0;
+  background-color: #C1AB58;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
 }
 .designer-style-message {
   margin-top: 14px;
 }
 .designer-style-message > li {
   padding-left: 1em;
-  text-indent: -1em;
   line-height: 1.7;
+  text-indent: -1em;
 }
 .designer-style-message > li::before {
   content: "・";
@@ -320,8 +322,8 @@ DESIGNER どんな仕事するのか
   text-align: center;
 }
 .designer-how-work-sub-ttl {
-  font-size: 30px;
   font-weight: 600;
+  font-size: 30px;
   text-align: center;
 }
 .designer-how-work-supplement {
@@ -338,29 +340,30 @@ DESIGNER どんな仕事するのか
   counter-reset: how-work-ttl-counter;
 }
 .designer-how-work-definition {
-  background-color: #F8F4E4;
   display: grid;
-  grid-template-columns: 306px minmax(500px, 716px);
   position: relative;
+  background-color: #F8F4E4;
+
+  grid-template-columns: 306px minmax(500px, 716px);
 }
 .designer-how-work-definition:nth-child(even) {
   background-color: #F2EBCC;
 }
 .designer-how-work-definition::after {
-  content: "";
-  width: 32px;
-  height: 32px;
   position: absolute;
   bottom: -10px;
   left: 32px;
-  background-color: inherit;
   z-index: 2;
   transform: rotate(45deg);
+  width: 32px;
+  height: 32px;
+  background-color: inherit;
+  content: "";
 }
 .designer-how-work-definition:last-child::after {
-  content: "";
   width: 0;
   height: 0;
+  content: "";
 }
 .designer-how-work-definition > dt {
   display: flex;
@@ -369,49 +372,50 @@ DESIGNER どんな仕事するのか
   counter-increment: how-work-ttl-counter;
 }
 .how-work-ttl-counter {
-  content: counter(how-work-ttl-counter, decimal-leading-zero);
-  font-weight: 600;
-  background-color: #C1AB58;
-  border-radius: 50%;
   width: 32px;
-  color: #FFFFFF;
   height: 32px;
-  text-align: center;
   margin-right: 16px;
+  border-radius: 50%;
+  background-color: #C1AB58;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
+  content: counter(how-work-ttl-counter, decimal-leading-zero);
 }
 .how-work-ttl-counter::before {
-  content: counter(how-work-ttl-counter, decimal-leading-zero);
   font-size: 14px;
   line-height: 32px;
+  content: counter(how-work-ttl-counter, decimal-leading-zero);
 }
 .designer-how-work-definition > dd {
-  padding: 30px;
   position: relative;
+  padding: 30px;
   line-height: 1.7;
 }
 .designer-how-work-definition > dd::before {
   position: absolute;
-  content: "";
-  height: 80%;
-  border-left: 1px dashed #C1AB58;
-  left: 0;
   top: 10%;
+  left: 0;
+  height: 80%;
+  content: "";
+
+  border-left: 1px dashed #C1AB58;
 }
 .designer-tea-party-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  border: 5px solid #F2EBCC;
-  padding: 32px;
   margin-top: 80px;
+  padding: 32px;
+  border: 5px solid #F2EBCC;
 }
 .designer-tea-party-content {
   margin-left: 32px;
 }
 .designer-tea-party-content > dt {
-  font-size: 30px;
   font-weight: 600;
+  font-size: 30px;
 }
 .designer-tea-party-content > dd {
   margin-top: 18px;
@@ -422,32 +426,32 @@ DESIGNER どんな仕事するのか
 Designer インタビュー
 -------------------------------------*/
 .interviews-wrapper {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   padding: 120px 0;
-  position: relative;
   box-sizing: content-box;
 }
 .interviews-wrapper::before {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100vw;
   height: 100%;
-  z-index: -1;
-  background-color: #F8F4E4;
   margin: 0 calc(50% - 50vw);
+  background-color: #F8F4E4;
+  content: "";
 }
 .interviews-container {
   margin-top: 90px;
 }
 .interview-thumbnail {
+  position: relative;
   width: calc(100vw - 70px);
   max-width: 1296px;
   height: calc(500 / 1366 * 100vw);
   max-height: 500px;
-  position: relative;
 }
 .interview-thumbnail-head {
   display: flex;
@@ -476,16 +480,16 @@ Designer インタビュー
   position: absolute;
   top: 0;
   right: 0;
-  max-width: 900px;
-  max-height: 500px;
   width: calc(900 / 1366 * 100vw);
+  max-width: 900px;
   height: calc(500 / 1366 * 100vw);
+  max-height: 500px;
 }
 .interviewee {
-  margin-top: 30px;
   position: relative;
-  font-weight: 600;
   z-index: 2;
+  margin-top: 30px;
+  font-weight: 600;
 }
 .interviewee-position {
   display: block;
@@ -493,26 +497,26 @@ Designer インタビュー
 }
 .interviewee-name {
   display: block;
-  font-size: 20px;
-  font-weight: 600;
   margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
 }
 .interview-thumbnail-leihauoli-logo {
+  position: absolute;
+  top: calc(75 / 1366 * 100vw);
+  left: 0;
   width: calc(287 / 1366 * 100vw);
   max-width: 287px;
   height: calc(277 / 1366 * 100vw);
   max-height: 277px;
-  position: absolute;
-  top: calc(75 / 1366 * 100vw);
-  left: 0;
 }
 .interview-contents {
-  max-width: 1024px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
   margin-top: 60px;
 }
 
@@ -522,50 +526,51 @@ Designer インタビュー
 }
 .interview-schedule-menu {
   display: flex;
-  position: relative;
   flex-wrap: nowrap;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
+  position: relative;
   padding: 60px 0 32px 25px;
 }
 .interview-schedule-menu::before {
-  content: "OneDay";
-  font-weight: 600;
   position: absolute;
-  top: 0px;
+  top: 0;
+  left: 0;
+  font-weight: 600;
   font-size: 30px;
-  left: 0px;
+  content: "OneDay";
 }
 .interview-schedule-time-line {
-  border-left: 4px solid #151515;
-  padding-top: 40px;
-  height: 1124px;
-  z-index: 2;
-  margin-top: 20px;
   position: relative;
+  z-index: 2;
   width: 51px;
+  height: 1124px;
+  margin-top: 20px;
+  padding-top: 40px;
+
+  border-left: 4px solid #151515;
 }
 .interview-schedule-time-line::before {
-  content: "";
+  display: block;
   position: absolute;
   top: -20px;
+  left: -11px;
   width: 20px;
   height: 20px;
-  display: block;
   border-radius: 32px;
   background-color: #151515;
-  left: -11px;
+  content: "";
 }
 .interview-schedule-time-line > li {
-  margin-left: -32px;
-  background-color: #FFFFFF;
   width: 64px;
   height: 20px;
-  line-height: 20px;
+  margin-left: -32px;
   border-radius: 16px;
-  text-align: center;
-  font-size: 14px;
+  background-color: #FFFFFF;
   font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 .interview-schedule-time-line > li + li {
   margin-top: 104px;
@@ -573,8 +578,8 @@ Designer インタビュー
 
 /* インタビュー Q&A */
 .interview-qa-list {
-  margin-left: 120px;
   max-width: 560px;
+  margin-left: 120px;
 }
 .interview-schedule-todo-list > li > .interview-schedule-todo-detail {
   line-height: 1.5;
@@ -587,7 +592,7 @@ Designer インタビュー
 .interview-schedule-todo-img {
   position: absolute;
   top: calc((100% - 59px) / 2);
-  right: 0px;
+  right: 0;
   width: 59px;
   height: 59px;
   padding-left: 8px;
@@ -596,70 +601,72 @@ Designer インタビュー
 .interview-counter {
   display: inline-block;
   position: relative;
-  color: #C1AB58;
-  font-size: 12px;
-  font-weight: 600;
   padding-left: 60px;
+  color: #C1AB58;
+  font-weight: 600;
+  font-size: 12px;
 }
 .interview-counter::before {
+  display: inline-block;
   position: absolute;
   top: 50%;
+  left: 0;;
   transform: translateY(-50%);
-  content: "";
-  display: inline-block;
   width: 52px;
+  content: "";
+
   border-bottom: 1px solid #C1AB58;
-  left: 0
 }
 .interview-question-term {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 2;
   margin-top: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
 }
 .interview-question {
   line-height: 2;
 }
 .interview-answer {
-  font-size: 16px;
-  font-weight: 300;
   margin-top: 11px;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 1.7;
 }
 .interview-schedule-ttl {
   display: block;
-  font-size: 13px;
   font-weight: 600;
+  font-size: 13px;
 }
 .interview-schedule-todo-detail {
   display: block;
-  font-size: 12px;
-  padding-top: 5px;
   width: 200px;
+  padding-top: 5px;
+  font-size: 12px;
 }
 
 /* schedule list */
 .interview-schedule-todo-list > li {
-  width: 100%;
   position: absolute;
+  width: 100%;
 }
 .interview-schedule-todo-list > li::before {
-  content: "";
-  width: 42px;
-  border-top: 1px solid #151515;
   position: absolute;
-  left: -48px;
   top: 6px;
+  left: -48px;
+  width: 42px;
+  content: "";
+
+  border-top: 1px solid #151515;
 }
 .interview-schedule-todo-list > li::after {
-  background-size: contain;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 59px;
   height: 59px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
+  background-size: contain;
   content: "";
-  position: absolute;
 }
 
 /* インタビュー01 */
@@ -817,9 +824,9 @@ Designer インタビュー
     padding: 160px 0 64px;
   }
   .designer-team-list {
-    padding: 0 20px 30px;
     flex-wrap: nowrap;
     margin-top: 74px;
+    padding: 0 20px 30px;
     overflow-x: auto;
   }
   .designer-team-list > li {
@@ -838,8 +845,8 @@ Designer インタビュー
   DESINGER　STYLE(行動指針)
   -------------------------------------*/
   .designer-style-list {
-    width: 100%;
     flex-direction: column;
+    width: 100%;
   }
   .designer-style-list > li {
     width: 100%;
@@ -886,36 +893,38 @@ Designer インタビュー
     font-size: 24px;
   }
   .designer-how-work-supplement {
-    text-align: left;
-    font-size: 14px;
     margin-top: 32px;
+    font-size: 14px;
+    text-align: left;
   }
   .designer-how-work-definition {
+    padding: 18px 15px 16px;
+
     grid-template-columns: 1fr;
     grid-template-rows: 37px auto;
-    padding: 18px 15px 16px;
   }
   .designer-how-work-definition::after {
+    left: calc(50% - 10px);
     width: 20px;
     height: 20px;
-    left: calc(50% - 10px);
   }
   dl.designer-how-work-examples {
     margin-top: 25px;
   }
   .designer-how-work-definition > dt {
+    padding: 0 0 12px 0;
     font-size: 18px;
+
+    border-bottom: 1px dashed #C1AB58;
     grid-column: 1;
     grid-row: 1/2;
-    border-bottom: 1px dashed #C1AB58;
-    padding: 0 0 12px 0;
   }
   .designer-how-work-definition > dt::after {
     display: none;
   }
   .how-work-ttl-counter {
-    height: 24px;
     width: 24px;
+    height: 24px;
     margin-right: 10px;
   }
   .how-work-ttl-counter::before {
@@ -923,9 +932,9 @@ Designer インタビュー
     line-height: 24px;
   }
   .designer-how-work-definition > dd {
+    margin-top: 11px;
     padding: 0;
     font-size: 14px;
-    margin-top: 11px;
   }
   .designer-how-work-definition > dd::before {
     display: none;
@@ -941,13 +950,13 @@ Designer インタビュー
     margin-left: 0;
   }
   .designer-tea-party-content > dt {
-    text-align: center;
-    font-size: 24px;
     font-weight: 600;
+    font-size: 24px;
+    text-align: center;
   }
   .designer-tea-party-content > dd {
-    font-size: 14px;
     margin-top: 16px;
+    font-size: 14px;
   }
   /*-------------------------------------
   Designer インタビュー
@@ -990,9 +999,9 @@ Designer インタビュー
     height: calc(142 / 375 * 100vw);
   }
   .interview-thumbnail-leihauoli-logo {
+    top: calc(20 / 375 * 100vw);
     width: calc(70 / 375 * 100vw);
     height: calc(68 / 375 * 100vw);
-    top: calc(20 / 375 * 100vw);
   }
   .interview-contents {
     display: flex;
@@ -1020,35 +1029,36 @@ Designer インタビュー
     display: none;
   }
   .interview-schedule-btn {
-    margin-top: 40px;
-    font-weight: 600;
-    position: relative;
     display: flex;
-    height: 50px;
-    max-width: 343px;
-    width: 100%;
-    background-color: #E0CB7D;
-    padding: 0 16px 0 32px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 343px;
+    height: 50px;
+    margin-top: 40px;
+    padding: 0 16px 0 32px;
+    background-color: #E0CB7D;
+    font-weight: 600;
   }
   .interview-schedule-btn::after {
     position: absolute;
-    content: "";
     right: 16px;
+    transform: rotate3d(1, 0, 0, -180deg);
     width: 5px;
     height: 5px;
-    border-right: 5px solid transparent;
+    content: "";
+    transition: transform .4s;
+
     border-bottom: 8px solid #151515;
     border-left: 5px solid transparent;
-    transform: rotate3d(1, 0, 0, -180deg);
-    transition: transform 0.4s;
+    border-right: 5px solid transparent;
   }
   .interview-schedule-menu {
     display: none;
-    background-color: #FFFFFF;
     padding: 32px 16px 32px 32px;
+    background-color: #FFFFFF;
   }
   .interview-schedule-menu::before {
     display: none;
@@ -1061,26 +1071,26 @@ Designer インタビュー
     height: 1124px;
     margin-top: 0;
   }
-   /* schedule opened*/
+  /* schedule opened*/
   .interview-schedule-container.is-opened {
-    max-width: 343px;
     width: 100%;
+    max-width: 343px;
   }
   .interview-schedule-container.is-opened ~ .interview-schedule-btn::after {
-    transform: rotate3d(1, 0, 0, 0);
+    transform: rotate3d(1, 0, 0, 0deg);
   }
   .interview-schedule-container.is-opened .interview-schedule-menu {
     display: flex;
   }
   /* interview list */
   .interview-qa-list {
-    margin-left: 0;
     max-width: 100%;
+    margin-left: 0;
   }
   .interview-question-term {
+    margin-top: 32px;
     font-size: 18px;
     line-height: 1;
-    margin-top: 32px;
   }
   .interview-question-term:first-child {
     margin-top: 0;
@@ -1089,13 +1099,13 @@ Designer インタビュー
     font-size: 16px;
   }
   .interview-schedule-ttl {
-    font-size: 13px;
     width: auto;
+    font-size: 13px;
   }
   .interview-schedule-todo-detail {
-    font-size: 12px;
-    margin-right: 67px;
     width: auto;
+    margin-right: 67px;
+    font-size: 12px;
   }
   .interview-schedule-todo-list-01 > li:nth-child(4) {
     /* margin-top: 9px; */
@@ -1124,11 +1134,11 @@ Designer インタビュー
 WORKS
 -------------------------------------*/
 .section-works {
-  margin: 0 auto;
+  position: relative;
   max-width: 1226px;
+  margin: 0 auto;
   padding: 100px 70px 80px;
   box-sizing: content-box;
-  position: relative;
 }
 .head-section-works > img {
   width: calc(552 / 1366 * 100vw);
@@ -1152,45 +1162,45 @@ WORKS
   margin-top: 60px;
 }
 .works-examples-list > li:nth-child(3n) {
-  margin-top: 0px;
+  margin-top: 0;
 }
 .works-example-card {
-  cursor: pointer;
-  position: relative;
   display: block;
+  position: relative;
+  cursor: pointer;
 }
 .works-example-card-img {
   width: 100%;
 }
 .works-example-txt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  padding: 0 20px;
+  background-color: rgba(21, 21, 21, .5);
   color: #FFFFFF;
   font-weight: 600;
   line-height: 1.7;
-  padding: 0 20px;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgba(21, 21, 21, 0.5);
-  transition: opacity 0.4s;
+  transition: opacity .4s;
 }
 .works-example-txt:hover {
   opacity: 1;
 }
 .works-example-supplement {
+  margin-top: 10px;
   font-weight: 600;
   font-size: 20px;
-  margin-top: 10px;
 }
 .works-example-type {
-  margin-top: 10px;
-  font-size: 12px;
   display: block;
+  margin-top: 10px;
   font-weight: 400;
+  font-size: 12px;
 }
 @media screen and (max-width: 1024px) {
   /*-------------------------------------
@@ -1205,23 +1215,23 @@ WORKS
   }
   .works-examples-list {
     flex-wrap: nowrap;
-    overflow-x: scroll;
     margin-top: 39px;
     padding-bottom: 30px;
+    overflow-x: scroll;
   }
   .works-examples-list > li {
-    width: 232px;
     flex-shrink: 0;
+    width: 232px;
     margin: 0 16px;
   }
   .works-examples-list > li:nth-child(3n),
   .works-examples-list > li:nth-child(3n + 1),
   .works-examples-list > li:nth-child(3n + 2) {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .works-example-company {
-    font-size: 16px;
     margin: 16px 0 6px;
+    font-size: 16px;
   }
   .works-example-txt {
     font-size: 16px;
@@ -1237,12 +1247,12 @@ SP
     height: 5px;
   }
   .sp-scroll-bar::-webkit-scrollbar-thumb {
-    background-color: #151515;
     border-radius: 10px;
+    background-color: #151515;
   }
   .sp-scroll-bar::-webkit-scrollbar-track {
-    background-color: #E5E5E5;
     border-radius: 10px;
+    background-color: #E5E5E5;
   }
   .entry-button-container {
     display: none;

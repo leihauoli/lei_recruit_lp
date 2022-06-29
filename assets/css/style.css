@@ -517,12 +517,6 @@ Designer インタビュー
 }
 
 /* schedule time line */
-.interview-schedule-container {
-  margin-top: 50px;
-  overflow: visible;
-  max-width: 342px;
-  width: 100%;
-}
 .interview-schedule-btn {
   display: none;
 }
@@ -588,7 +582,7 @@ Designer インタビュー
 .interview-schedule-todo-list {
   position: relative;
   left: -10px;
-  width: 317px;
+  width: 266px;
   height: 1124px;
 }
 .interview-schedule-todo-img {
@@ -917,7 +911,7 @@ Designer インタビュー
     font-size: 36px;
   }
   .interviews-container {
-    margin-top: 38px;
+    margin-top: 40px;
   }
   .interview-thumbnail {
     width: calc(100vw - 16px);
@@ -969,64 +963,42 @@ Designer インタビュー
     margin-top: 5px;
     font-size: 16px;
   }
-  /* schedule time line */
+
   .interview-schedule-container {
-    position: relative;
-    height: 50px;
-    margin-top: 40px;
-    overflow: hidden;
-    animation-iteration-count: 1;
-    animation-duration: 0.4s;
-    animation-play-state: paused;
-    animation-timing-function: ease-in-out;
+    display: none;
   }
   .interview-schedule-btn {
+    margin-top: 40px;
     font-weight: 600;
-    position: absolute;
+    position: relative;
     display: flex;
-    width: 100%;
     height: 50px;
+    width: 343px;
     background-color: #E0CB7D;
     padding: 0 16px 0 32px;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
   }
-  /* schedule opened*/
   .interview-schedule-btn::after {
+    position: absolute;
     content: "";
+    right: 16px;
     width: 5px;
     height: 5px;
     border-right: 5px solid transparent;
     border-bottom: 8px solid #151515;
     border-left: 5px solid transparent;
-    transition: ease-in-out 0.4s;
-  }
-  .schedule-opened.interview-schedule-container {
-    animation-name: interview-schedule-container-open;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-  }
-  /* schedule closed */
-  .schedule-closed.interview-schedule-container {
-    animation-name: interview-schedule-container-open;
-    animation-direction: reverse;
-    animation-fill-mode: backwards;
-    animation-play-state: running;
-  }
-  .schedule-closed>.interview-schedule-btn::after {
     transform: rotate3d(1, 0, 0, -180deg);
+    transition: transform 0.4s;
   }
   .interview-schedule-menu {
+    display: none;
     background-color: #FFFFFF;
-    transition: ease-in-out 0.4s;
-    padding: 82px 0 32px 25px;
+    padding: 32px 0 32px 25px;
   }
   .interview-schedule-menu::before {
     display: none;
-  }
-  .schedule-closed>.interview-schedule-menu {
-    transform: translateY(calc(-100% - 50px));
   }
   .interview-schedule-time-line {
     font-size: 14px;
@@ -1035,6 +1007,16 @@ Designer インタビュー
     width: 317px;
     height: 1124px;
     margin-top: 0;
+  }
+   /* schedule opened*/
+  .interview-schedule-container.is-opened {
+    width: 343px;
+  }
+  .interview-schedule-container.is-opened ~ .interview-schedule-btn::after {
+    transform: rotate3d(1, 0, 0, 0);
+  }
+  .interview-schedule-container.is-opened .interview-schedule-menu {
+    display: flex;
   }
   /* interview list */
   .interview-qa-list {
@@ -1058,18 +1040,6 @@ Designer インタビュー
   .interview-schedule-todo-detail {
     font-size: 12px;
     width: 169px;
-  }
-  .img-window-schedule {
-    right: 10px;
-    transform: scale(1.2);
-  }
-  @keyframes interview-schedule-container-open {
-    0% {
-      height: 50px;
-    }
-    100% {
-      height: 100%;
-    }
   }
   .interview-schedule-todo-list-01 > li:nth-child(4) {
     margin-top: 9px;

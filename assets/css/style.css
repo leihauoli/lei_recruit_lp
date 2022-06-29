@@ -255,19 +255,17 @@ DESIGNER STYLE(行動指針)
   color: #C1AB58;
   font-size: 12px;
   font-weight: 600;
-  counter-increment: counter-designer-style;
+  position: relative;
+  padding-left: 25px;
 }
 .designer-style-number::before {
   content: "";
-  display: inline-block;
-  width: 32px;
-  position: relative;
-  top: -5px;
-  margin: 0 8px 0 16px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   border-bottom: 2px solid #C1AB58;
-}
-.designer-style-number::after {
-  content: "Style "counter(counter-designer-style, decimal-leading-zero);
 }
 .designer-style-icon-window {
   border-radius: 50%;
@@ -299,13 +297,15 @@ DESIGNER STYLE(行動指針)
   padding: 8px 0;
 }
 .designer-style-message {
-  padding: 0 30px;
   margin-top: 14px;
 }
 .designer-style-message > li {
-  list-style: disc;
-  list-style-position: inside;
+  padding-left: 1em;
+  text-indent: -1em;
   line-height: 1.7;
+}
+.designer-style-message > li::before {
+  content: "・";
 }
 
 /*-------------------------------------
@@ -543,6 +543,7 @@ Designer インタビュー
   z-index: 2;
   margin-top: 20px;
   position: relative;
+  width: 51px;
 }
 .interview-schedule-time-line::before {
   content: "";
@@ -556,8 +557,7 @@ Designer インタビュー
   left: -11px;
 }
 .interview-schedule-time-line > li {
-  position: relative;
-  left: -32px;
+  margin-left: -32px;
   background-color: #FFFFFF;
   width: 64px;
   height: 20px;
@@ -581,7 +581,6 @@ Designer インタビュー
 }
 .interview-schedule-todo-list {
   position: relative;
-  left: -10px;
   width: 266px;
   height: 1124px;
 }
@@ -589,8 +588,8 @@ Designer インタビュー
   position: absolute;
   top: calc((100% - 59px) / 2);
   right: 0px;
-  width: 50px;
-  height: 50px;
+  width: 59px;
+  height: 59px;
   padding-left: 8px;
   box-sizing: content-box;
 }
@@ -641,7 +640,8 @@ Designer インタビュー
 
 /* schedule list */
 .interview-schedule-todo-list > li {
-  position: relative;
+  width: 100%;
+  position: absolute;
 }
 .interview-schedule-todo-list > li::before {
   content: "";
@@ -649,101 +649,153 @@ Designer インタビュー
   border-top: 1px solid #151515;
   position: absolute;
   left: -48px;
-  top: 8px;
+  top: 6px;
+}
+.interview-schedule-todo-list > li::after {
+  background-size: contain;
+  width: 59px;
+  height: 59px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: "";
+  position: absolute;
 }
 
 /* インタビュー01 */
 .interview-schedule-todo-list-01 > li:nth-child(1) {
-  margin-top: 70px;
+  top: 70px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(1)::after {
+  background-image: url(/assets/images/oneday/breakfast.png);
 }
 .interview-schedule-todo-list-01 > li:nth-child(2) {
-  margin-top: 20px;
+  top: 138px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(3) {
-  margin-top: 10px;
+  top: 164px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(3)::after {
+  background-image: url(/assets/images/oneday/working.png);
 }
 .interview-schedule-todo-list-01 > li:nth-child(4) {
-  margin-top: 22px;
+  top: 245px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(5) {
-  margin-top: 46px;
+  top: 309px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(5)::after {
+  background-image: url(/assets/images/oneday/online-meeting.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(5) > .interview-schedule-ttl {
+  margin-right: 67px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(6) {
-  margin-top: 68px;
+  top: 433px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(7) {
-  margin-top: 46px;
+  top: 494px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(8) {
-  margin-top: 190px;
+  top: 700px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(9) {
-  margin-top: 20px;
+  top: 734px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(9)::after {
+  background-image: url(/assets/images/oneday/kindergarten.png);
 }
 .interview-schedule-todo-list-01 > li:nth-child(10) {
-  margin-top: 30px;
+  top: 772px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(11) {
-  margin-top: 36px;
+  top: 823px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(11)::after {
+  background-image: url(/assets/images/oneday/dentifrice.png);
 }
 .interview-schedule-todo-list-01 > li:nth-child(12) {
-  margin-top: 19px;
+  top: 896px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(13) {
-  margin-top: 46px;
+  top: 957px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(14) {
-  margin-top: 12px;
+  top: 984px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(14)::after {
+  background-image: url(/assets/images/oneday/relaxed.png);
 }
 .interview-schedule-todo-list-01 > li:nth-child(15) {
-  margin-top: 90px;
+  top: 1086px;
 }
 
 /* インタビュー02 */
 .interview-schedule-todo-list-02 > li:nth-child(1) {
-  margin-top: 62px;
+  top: 62px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(2) {
-  margin-top: 10px;
+  top: 85px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(2)::after {
+  background-image: url(/assets/images/oneday/calendar.png);
 }
 .interview-schedule-todo-list-02 > li:nth-child(3) {
-  margin-top: 32px;
+  top: 174px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(3)::after {
+  background-image: url(/assets/images/oneday/designing.png);
 }
 .interview-schedule-todo-list-02 > li:nth-child(4) {
-  margin-top: 90px;
+  top: 275px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(5) {
-  margin-top: 16px;
+  top: 312px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(6) {
-  margin-top: 108px;
+  top: 435px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(7) {
-  margin-top: 11px;
+  top: 458px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(7)::after {
+  background-image: url(/assets/images/oneday/take-note.png);
 }
 .interview-schedule-todo-list-02 > li:nth-child(8) {
-  margin-top: 15px;
+  top: 526px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(8)::after {
+  background-image: url(/assets/images/oneday/online-meeting.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(8) > .interview-schedule-ttl {
+  margin-right: 67px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(9) {
-  margin-top: 96px;
+  top: 683px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(10) {
-  margin-top: 15px;
+  top: 707px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(11) {
-  margin-top: 25px;
+  top: 746px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(11)::after {
+  background-image: url(/assets/images/oneday/live-music.png);
 }
 .interview-schedule-todo-list-02 > li:nth-child(12) {
-  margin-top: 122px;
+  top: 931px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(13) {
-  margin-top: 109px;
+  top: 1055px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(14) {
-  margin-top: 21px;
+  top: 1083px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(14)::after {
+  background-image: url(/assets/images/oneday/relaxed.png);
 }
 .interview-schedule-todo-list-02 > li:nth-child(15) {
-  margin-top: 24px;
+  top: 1127px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -973,7 +1025,8 @@ Designer インタビュー
     position: relative;
     display: flex;
     height: 50px;
-    width: 343px;
+    max-width: 343px;
+    width: 100%;
     background-color: #E0CB7D;
     padding: 0 16px 0 32px;
     justify-content: space-between;
@@ -995,7 +1048,7 @@ Designer インタビュー
   .interview-schedule-menu {
     display: none;
     background-color: #FFFFFF;
-    padding: 32px 0 32px 25px;
+    padding: 32px 16px 32px 32px;
   }
   .interview-schedule-menu::before {
     display: none;
@@ -1010,7 +1063,8 @@ Designer インタビュー
   }
    /* schedule opened*/
   .interview-schedule-container.is-opened {
-    width: 343px;
+    max-width: 343px;
+    width: 100%;
   }
   .interview-schedule-container.is-opened ~ .interview-schedule-btn::after {
     transform: rotate3d(1, 0, 0, 0);
@@ -1036,16 +1090,18 @@ Designer インタビュー
   }
   .interview-schedule-ttl {
     font-size: 13px;
+    width: auto;
   }
   .interview-schedule-todo-detail {
     font-size: 12px;
-    width: 169px;
+    margin-right: 67px;
+    width: auto;
   }
   .interview-schedule-todo-list-01 > li:nth-child(4) {
-    margin-top: 9px;
+    /* margin-top: 9px; */
   }
   .interview-schedule-todo-list-01 > li:nth-child(5) {
-    margin-top: 41px;
+    /* margin-top: 41px; */
   }
 }
 @media screen and (min-width: 1367px) {

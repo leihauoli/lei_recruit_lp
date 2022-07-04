@@ -155,7 +155,7 @@ DESIGNER チームについて
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1024px;
-  margin: 175px auto 0;
+  margin: 165px auto 0;
 }
 .designer-team-list > li {
   position: relative;
@@ -827,7 +827,7 @@ Designer インタビュー
   .designer-team-list {
     flex-wrap: nowrap;
     margin-top: 74px;
-    padding: 0 20px 30px;
+    padding: 0 20px 10px;
     overflow-x: auto;
   }
   .designer-team-list > li {
@@ -845,6 +845,9 @@ Designer インタビュー
   /*-------------------------------------
   DESINGER　STYLE(行動指針)
   -------------------------------------*/
+  .designer-style-wrapper {
+    margin-top: 70px;
+  }
   .designer-style-list {
     flex-direction: column;
   }
@@ -943,7 +946,7 @@ Designer インタビュー
     margin-top: 40px;
   }
   .designer-tea-party-container > img {
-    margin-top: 55px;
+    margin-top: 35px;
     max-width: 260px;
   }
   .designer-tea-party-content {

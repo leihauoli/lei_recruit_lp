@@ -17,8 +17,19 @@ LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu.prototype = {
   },
   bindEvent: function(){
     var myself = this;
+    this.closeFlag = false;
+    this.$accordionMenu = this.$trigger.prev();
+
     this.$trigger.on('click', function(){
       myself.toggleAccordion();
+    });
+
+    $(window).on('resize', function(){
+      if (window.matchMedia('(min-width: 1025px)').matches && myself.closeFlag === true){
+        //SP版からPC版にサイズが変化したとき、slideUpによって設定されたdisplay: noneの状態を変化させる
+        myself.$accordionMenu.css('display', '');
+        myself.closeFlag = false;
+      }
     });
   },
   toggleAccordion: function(){
@@ -26,13 +37,14 @@ LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu.prototype = {
 
     var myself = this;
 
-    if (this.$trigger.prev().hasClass(this.OPEN_CLASS)){
-      this.$trigger.prev().slideUp(this.DURATION, function(){
-        myself.$trigger.prev().removeClass(myself.OPEN_CLASS);
+    if (this.$accordionMenu.hasClass(this.OPEN_CLASS)){
+      this.$accordionMenu.slideUp(this.DURATION, function(){
+        myself.$accordionMenu.removeClass(myself.OPEN_CLASS);
       });
+      this.closeFlag = true;
     } else {
-      this.$trigger.prev().addClass(this.OPEN_CLASS);
-      this.$trigger.prev().slideDown(this.DURATION);
+      this.$accordionMenu.addClass(this.OPEN_CLASS).slideDown(this.DURATION);
+      this.closeFlag = false;
     }
   }
 };

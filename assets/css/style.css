@@ -846,9 +846,10 @@ Designer インタビュー
   DESINGER　STYLE(行動指針)
   -------------------------------------*/
   .designer-style-wrapper {
-    margin-top: 70px;
+    margin-top: 64px;
   }
   .designer-style-list {
+    margin-top: 32px;
     flex-direction: column;
   }
   .designer-style-list > li {
@@ -1204,10 +1205,10 @@ WORKS
   WORKS
   -------------------------------------*/
   .section-works {
-    padding: 40px 16px 64px;
+    padding: 48px 16px 64px;
   }
   .head-section-works > img {
-    width: 290px;
+    width: 276px;
     height: 168px;
   }
   .works-examples-list {

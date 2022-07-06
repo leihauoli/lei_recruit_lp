@@ -1467,19 +1467,18 @@ RECRUIT 採用までの流れ
     padding: 0 16px;
   }
   .section-recruit::before {
-    height: calc(180 / 375 * 100vw);
+    height: 180px;
   }
   .head-section-recruit {
     top: 0;
     left: 16px;
-    width: calc(279 / 375 * 100vw);
+    width: 279px;
   }
   .head-section-recruit > img {
     width: 100%;
-    left: 11px;
   }
   .job-description-wrapper {
-    padding: calc(225 / 375 * 100vw) 0 64px;
+    padding: 225px 0 64px;
   }
   .job-description-list > li {
     align-items: flex-start;

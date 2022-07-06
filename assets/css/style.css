@@ -548,7 +548,6 @@ Designer インタビュー
   height: 1124px;
   margin-top: 20px;
   padding-top: 40px;
-
   border-left: 4px solid #151515;
 }
 .interview-schedule-time-line::before {
@@ -618,7 +617,6 @@ Designer インタビュー
   transform: translateY(-50%);
   width: 52px;
   content: "";
-
   border-bottom: 1px solid #C1AB58;
 }
 .interview-question-term {
@@ -659,7 +657,6 @@ Designer インタビュー
   left: -48px;
   width: 42px;
   content: "";
-
   border-top: 1px solid #151515;
 }
 .interview-schedule-todo-list > li::after {

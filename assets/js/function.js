@@ -76,7 +76,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
   setParameters: function(){
     this.$body = $('body');
     this.$header = $('.jsc-main-header');
-    this.$headerMenuList = $('.jsc-header-menu-list');
+    this.$headerMenuList = $('.jsc-header-menu-list-sp');
     this.$headerMenuItem = this.$headerMenuList.find('li').find('a');
     this.$hamburgerMenu = $('.jsc-hamburger-menu');
     this.$headerNavSp = $('.jsc-header-nav-sp');
@@ -88,7 +88,10 @@ LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
       if (myself.$headerMenuList.is(':animated')) return;
       myself.toggleHamburger();
     });
-    this.$headerMenuItem.on('click', this.toggleHamburger.bind(this));
+    this.$headerMenuItem.on('click', function(){
+      if (myself.$headerMenuList.is(':animated')) return;
+      myself.toggleHamburger();
+    });
     this.$headerNavSp.on('click', function(e){
       e.stopPropagation();
     });

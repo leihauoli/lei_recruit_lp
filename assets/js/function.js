@@ -46,7 +46,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
       if (!entry.isIntersecting){
         if (!$('.jsc-main-header').is(':animated')){
           $('.jsc-main-header').removeClass('is-hidden').addClass('is-fixed');
-          $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.svg');
+          $('.jsc-header-logo').attr('src', '/assets/images/header-color-logo.svg');
         }
       } else {
         if (!$('.jsc-main-header').is(':animated')){

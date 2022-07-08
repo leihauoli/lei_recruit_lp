@@ -599,6 +599,7 @@ ABOUT　レイビジョン
 .vision-txt-sub {
   margin-top: calc(20 / 1366 * 100vw);
   font-size: calc(18 / 1366 * 100vw);
+  white-space: nowrap;
 }
 .vision-txt-last {
   margin-top: calc(30 / 1366 * 100vw);
@@ -959,6 +960,7 @@ ABOUT　数字で見るレイハウオリ
   .vision-txt-sub {
     margin-top: 20px;
     font-size: 16px;
+    white-space: normal;
   }
   .vision-txt-last {
     margin-top: 30px;

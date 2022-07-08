@@ -45,16 +45,16 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     Array.prototype.some.call(entries, function(entry){
       if (!entry.isIntersecting){
         if (!$('.jsc-main-header').is(':animated')){
-          $('.jsc-main-header').removeClass('is-hidden').addClass('is-change');
-          $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.png');
+          $('.jsc-main-header').removeClass('is-hidden').addClass('is-fixed');
+          $('.jsc-header-logo').attr('src', '/assets/images/header-black-logo.svg');
         }
       } else {
         if (!$('.jsc-main-header').is(':animated')){
           if ($('.jsc-main-header').css('position') === 'fixed'){
             $('.jsc-main-header').addClass('is-hidden');
           }
-          $('.jsc-main-header').removeClass('is-change');
-          $('.jsc-header-logo').attr('src', '/assets/images/header-logo.png');
+          $('.jsc-main-header').removeClass('is-fixed');
+          $('.jsc-header-logo').attr('src', '/assets/images/header-logo.svg');
         }
       }
     });

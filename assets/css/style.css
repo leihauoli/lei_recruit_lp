@@ -157,7 +157,7 @@ HEADER
   height: 76px;
   background-color: transparent;
 }
-.main-header.is-change {
+.main-header.is-fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -165,7 +165,6 @@ HEADER
   animation: headerSlideIn .2s forwards;
 }
 .main-header.is-hidden {
-  position: absolute;
   transform: translateY(0);
   animation: headerHidden .2s;
 }
@@ -219,11 +218,11 @@ HEADER
 .header-nav-pc > .header-menu-list > li > a:hover {
   color: #C1AB58;
 }
-.main-header.is-change > .header-nav-pc > .header-menu-list > li > a {
+.main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a {
   color: #151515;
   transition: color .2s;
 }
-.main-header.is-change > .header-nav-pc > .header-menu-list > li > a:hover {
+.main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a:hover {
   color: #C1AB58;
 }
 .header-entry-list {
@@ -329,7 +328,7 @@ HAMBURGER MENU
     background-color: #FFFFFF;
     transition: transform .2s;
   }
-  .main-header.is-change .hamburger-menu > span {
+  .main-header.is-fixed .hamburger-menu > span {
     background-color: #151515;
   }
   .hamburger-menu > span + span {
@@ -363,7 +362,7 @@ HAMBURGER MENU
   .header-nav-sp.is-active > .header-menu-list {
     transform: translateX(0);
   }
-  .header-menu-list > li {
+  .header-menu-list > li:not(:last-child) {
     height: 44px;
   }
   .header-menu-list > li + li {
@@ -410,7 +409,7 @@ HAMBURGER MENU
     width: 100%;
   }
   .header-wantedly-logo {
-    width: 27px;
+    width: 24px;
     height: 17px;
   }
   .header-facebook-logo {

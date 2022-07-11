@@ -11,6 +11,21 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
   },
   setParameters: function(){
     this.$window = $(window);
+    this.$header = $('.jsc-main-header');
+    this.$sectionKv = $('.jsc-section-kv');
+    this.setHeaderOptions();
+    this.headerObserver = new IntersectionObserver(this.changeHeaderBg, this.headerOptions);
+  },
+  bindEvent: function(){
+    var myself = this;
+    Array.prototype.forEach.call(this.$sectionKv, function(box){
+      myself.headerObserver.observe(box);
+    });
+    this.$window.on('resize', function(){
+      myself.setHeaderOptions();
+    });
+  },
+  setHeaderOptions: function(){
     if (window.matchMedia('(max-width: 1024px)').matches){
       this.headerOptions = {
         rootMargin: '-60px 0px 0px 0px'
@@ -20,26 +35,6 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
         rootMargin: '-76px 0px 0px 0px'
       };
     }
-    this.$header = $('.jsc-main-header');
-    this.$sectionKv = $('.jsc-section-kv');
-    this.headerObserver = new IntersectionObserver(this.changeHeaderBg, this.headerOptions);
-  },
-  bindEvent: function(){
-    var myself = this;
-    Array.prototype.forEach.call(this.$sectionKv, function(box){
-      myself.headerObserver.observe(box);
-    });
-    this.$window.on('resize', function(){
-      if (window.matchMedia('(max-width: 1024px)').matches){
-        myself.headerOptions = {
-          rootMargin: '-60px 0px 0px 0px'
-        };
-      } else {
-        myself.headerOptions = {
-          rootMargin: '-76px 0px 0px 0px'
-        };
-      }
-    });
   },
   changeHeaderBg: function(entries){
     Array.prototype.some.call(entries, function(entry){
@@ -84,18 +79,13 @@ LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
   },
   bindEvent: function(){
     var myself = this;
-    this.$hamburgerMenu.on('click', function(){
-      if (myself.$headerMenuList.is(':animated')) return;
-      myself.toggleHamburger();
-    });
-    this.$headerMenuItem.on('click', function(){
+    this.$hamburgerMenu.add(this.$headerMenuItem).add(this.$hamburgerBg).on('click', function(){
       if (myself.$headerMenuList.is(':animated')) return;
       myself.toggleHamburger();
     });
     this.$headerNavSp.on('click', function(e){
       e.stopPropagation();
     });
-    this.$hamburgerBg.on('click', this.toggleHamburger.bind(this));
   },
   toggleHamburger: function(){
     this.$body.toggleClass(this.FIXED_CLASS);
@@ -114,13 +104,13 @@ LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll = {
     this.bindEvent();
   },
   setParameters: function(){
-    this.$href = $('a[href^="#"]');
+    this.$link = $('a[href^="#"]');
     this.$body = $('body, html');
     this.$header = $('.jsc-main-header');
   },
   bindEvent: function(){
     var myself = this;
-    this.$href.on('click', function(e){
+    this.$link.on('click', function(e){
       e.preventDefault();
       var href = $(this).attr('href'),
         target = $(href == '#' || href == '' ? 'html' : href),

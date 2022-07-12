@@ -334,13 +334,13 @@ HAMBURGER MENU
   .hamburger-menu > span + span {
     margin-top: 4px;
   }
-  .hamburger-menu.is-active > .hamburger-border-top {
+  .header-nav-sp.is-active > .hamburger-menu > .hamburger-border-top {
     transform: translateY(3px) rotate(45deg);
   }
-  .hamburger-menu.is-active > .hamburger-border-middle {
+  .header-nav-sp.is-active > .hamburger-menu > .hamburger-border-middle {
     display: none;
   }
-  .hamburger-menu.is-active > .hamburger-border-bottom {
+  .header-nav-sp.is-active > .hamburger-menu > .hamburger-border-bottom {
     transform: translateY(-3px) rotate(-45deg);
   }
   .header-nav-sp > .header-menu-list {

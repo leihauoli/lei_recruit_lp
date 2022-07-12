@@ -89,7 +89,6 @@ LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu = {
   },
   toggleHamburger: function(){
     this.$body.toggleClass(this.FIXED_CLASS);
-    this.$hamburgerMenu.toggleClass(this.ACTIVE_CLASS);
     this.$headerNavSp.toggleClass(this.ACTIVE_CLASS);
   }
 };

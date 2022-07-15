@@ -13,7 +13,7 @@ body.is-fixed {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 40px;
 }
 
@@ -27,7 +27,7 @@ body.is-fixed {
   z-index: 2;
   padding: 0 10px 5px;
   overflow: hidden;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: calc(70 / 1366 * 100vw);
   white-space: nowrap;
@@ -39,7 +39,6 @@ body.is-fixed {
 }
 .ttl-bg-left::before,
 .ttl-bg-right::before {
-  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,11 +67,11 @@ body.is-fixed {
 }
 .entry-btn-container > li > a {
   display: block;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   line-height: 60px;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .entry-btn-container > li::before {
   position: absolute;
@@ -88,13 +87,13 @@ body.is-fixed {
   border: 1px solid #151515;
 }
 .entry-btn-container > li:last-child {
-  border: 1px solid #009CBA;
+  border: 1px solid #009cba;
 }
 .entry-btn-container > li:first-child::before {
   background-image: linear-gradient(#151515, #151515, #151515, #151515);
 }
 .entry-btn-container > li:last-child::before {
-  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
+  background-image: linear-gradient(#21bddb, #21bddb, #21bddb, #21bddb);
 }
 .entry-btn-container > li::after {
   position: absolute;
@@ -106,18 +105,18 @@ body.is-fixed {
   height: 0;
   border-radius: 100px;
   content: "";
-  transition-duration: .2s;
-  transition-timing-function: cubic-bezier(0, 0, .2, 1);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 .entry-btn-container > li:first-child::after,
 .entry-btn-container > li:last-child::after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .entry-btn-container > li:first-child:hover > a {
   color: #151515;
 }
 .entry-btn-container > li:last-child:hover > a {
-  color: #21BDDB;
+  color: #21bddb;
 }
 .entry-btn-container > li:hover::after {
   width: 100%;
@@ -139,7 +138,6 @@ body.is-fixed {
     display: none;
   }
 }
-
 @media screen and (min-width: 1367px) {
   .ttl-bg-left,
   .ttl-bg-right {
@@ -161,12 +159,12 @@ HEADER
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #FFFFFF;
-  animation: headerSlideIn .2s forwards;
+  background-color: #ffffff;
+  animation: headerSlideIn 0.2s forwards;
 }
 .main-header.is-hidden {
   transform: translateY(0);
-  animation: headerHidden .2s;
+  animation: headerHidden 0.2s;
 }
 @keyframes headerSlideIn {
   0% {
@@ -210,20 +208,20 @@ HEADER
   margin-left: 60px;
 }
 .header-nav-pc > .header-menu-list > li > a {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: 14px;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .header-nav-pc > .header-menu-list > li > a:hover {
-  color: #C1AB58;
+  color: #c1ab58;
 }
 .main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a {
   color: #151515;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a:hover {
-  color: #C1AB58;
+  color: #c1ab58;
 }
 .header-entry-list {
   display: flex;
@@ -241,7 +239,7 @@ HEADER
   display: block;
   height: 76px;
   padding: 20px 0;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: 13px;
   line-height: 1;
@@ -261,10 +259,10 @@ HEADER
   content: "";
 }
 .header-entry-list > li:first-child::before {
-  background-image: linear-gradient(#C1AB58, #C1AB58, #C1AB58, #C1AB58);
+  background-image: linear-gradient(#c1ab58, #c1ab58, #c1ab58, #c1ab58);
 }
 .header-entry-list > li:last-child::before {
-  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
+  background-image: linear-gradient(#21bddb, #21bddb, #21bddb, #21bddb);
 }
 .header-entry-list > li::after {
   position: absolute;
@@ -276,14 +274,14 @@ HEADER
   height: 0;
   border-radius: 0;
   content: "";
-  transition-duration: .2s;
-  transition-timing-function: cubic-bezier(0, 0, .2, 1);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 .header-entry-list > li:first-child::after {
-  background-color: #B1983C;
+  background-color: #b1983c;
 }
 .header-entry-list > li:last-child::after {
-  background-color: #0CA9C7;
+  background-color: #0ca9c7;
 }
 .header-entry-list > li:hover::after {
   width: 100%;
@@ -325,8 +323,8 @@ HAMBURGER MENU
     transform: translate(0) rotate(0);
     width: 26px;
     height: 2px;
-    background-color: #FFFFFF;
-    transition: transform .2s;
+    background-color: #ffffff;
+    transition: transform 0.2s;
   }
   .main-header.is-fixed .hamburger-menu > span {
     background-color: #151515;
@@ -355,9 +353,9 @@ HAMBURGER MENU
     width: 80%;
     height: 100vh;
     padding: 104px 16px 0;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 0.9);
     content: "";
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
   .header-nav-sp.is-active > .header-menu-list {
     transform: translateX(0);
@@ -380,7 +378,7 @@ HAMBURGER MENU
     font-size: 36px;
   }
   .header-nav-sp.is-active > .header-menu-list > li > a {
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .header-menu-list > li > a::before {
     position: absolute;
@@ -433,75 +431,6 @@ HAMBURGER MENU
   width: 100%;
   height: 100vh;
   background-color: #151515;
-}
-
-/*-------------------------------------
-FOOTER
--------------------------------------*/
-.main-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  padding: 44px 63px 20px 70px;
-  background: #151515;
-}
-.footer-info-copmpany {
-  color: #FFFFFF;
-  font-size: 13px;
-  line-height: 1.5;
-}
-.footer-privacypolicy-link {
-  display: block;
-  margin-top: 30px;
-  font-size: 12px;
-  text-decoration: none;
-  transition: text-decoration .2s;
-}
-.footer-privacypolicy-link:hover {
-  text-decoration: underline;
-}
-.footer-copyright {
-  margin-bottom: 14px;
-  color: #FFFFFF;
-  font-size: 10px;
-}
-.footer-logo-list {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 70px;
-  bottom: 66px;
-}
-.footer-logo-list > li + li {
-  margin-left: 20px;
-}
-.footer-wantedly-logo {
-  width: 24px;
-  height: 17px;
-}
-.footer-facebook-logo {
-  width: 21px;
-  height: 21px;
-}
-@media screen and (max-width: 1024px) {
-  .main-footer {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 32px 16px;
-  }
-  .footer-privacypolicy-link {
-    margin-top: 37px;
-  }
-  .footer-logo-list {
-    right: 16px;
-    bottom: 73px;
-  }
-  .footer-copyright {
-    margin: 30px 0 0 0;
-    text-align: left;
-  }
 }
 
 /*-------------------------------------
@@ -629,7 +558,7 @@ ABOUT　働き方/制度
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 70px 100px 67px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .workstyle-list-main > li {
   width: calc(100% / 2 - 40px);
@@ -738,7 +667,7 @@ ABOUT　数字で見るレイハウオリ
   width: 100vw;
   height: 100%;
   margin: 0 calc(50% - 50vw);
-  background-color: #E0CB7D;
+  background-color: #e0cb7d;
   content: "";
 }
 .numeral-list {
@@ -750,8 +679,9 @@ ABOUT　数字で見るレイハウオリ
 .numeral-list > li {
   width: calc(100% / 4 - 8px);
   margin-left: 10px;
-  padding: calc(48 / 1366 * 100vw) calc(18 / 1366 * 100vw) calc(32 / 1366 * 100vw);
-  background-color: #FFFFFF;
+  padding: calc(48 / 1366 * 100vw) calc(18 / 1366 * 100vw)
+    calc(32 / 1366 * 100vw);
+  background-color: #ffffff;
   font-weight: 700;
   text-align: center;
 }
@@ -899,7 +829,7 @@ ABOUT　数字で見るレイハウオリ
   margin-left: calc(30 / 1366 * 100vw);
   padding: calc(12 / 1366 * 100vw) calc(20 / 1366 * 100vw);
   border-radius: 6px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 .numeral-workarea-list > li:nth-of-type(n + 3) {
   margin-top: calc(20 / 1366 * 100vw);
@@ -923,6 +853,685 @@ ABOUT　数字で見るレイハウオリ
   font-weight: 400;
   font-size: calc(56 / 1366 * 100vw);
   font-family: "Fjalla One", "Noto Sans JP", sans-serif;
+}
+
+/*-------------------------------------
+DESIGNER チームについて
+-------------------------------------*/
+.section-designer {
+  position: relative;
+  max-width: 1226px;
+  margin: 0 auto;
+  padding: 80px 70px 0;
+  box-sizing: content-box;
+}
+.head-seciton-designer {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+.head-seciton-designer > img {
+  width: calc(589 / 1366 * 100vw);
+  max-width: 589px;
+}
+.designer-team-wrapper {
+  position: relative;
+  padding: 210px 0 120px;
+}
+.designer-team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 165px auto 0;
+}
+.designer-team-list > li {
+  position: relative;
+  width: calc((100% - 124px) / 3);
+}
+.designer-team-list > li + li {
+  margin-left: 62px;
+}
+.designer-team-list > li:nth-of-type(3n + 1) {
+  margin-left: 0;
+}
+.designer-team-list > li:nth-of-type(n + 4) {
+  margin-top: 80px;
+}
+.header-designer-member {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 117px;
+  height: 70px;
+}
+.designer-member-content {
+  margin-top: 10px;
+  padding-top: 17px;
+
+  border-top: 1px dashed #e5e5e5;
+}
+.designer-member-icon {
+  width: 70px;
+}
+.header-designer-member > dd {
+  padding-left: 16px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.header-designer-member > dd > p + p {
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.para-preference {
+  width: 64px;
+  padding: 3px;
+  background-color: #151515;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+}
+.designer-member-preferences + .designer-member-preferences {
+  margin-top: 21px;
+}
+.designer-member-preferences-list {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 7px;
+  font-size: 0;
+}
+.designer-member-preferences-list > li {
+  display: inline;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.designer-member-preferences-list > li + li::before {
+  content: "／";
+}
+
+/*-------------------------------------
+DESIGNER STYLE(行動指針)
+-------------------------------------*/
+.designer-style-wrapper {
+  max-width: 1024px;
+  margin: 80px auto 0;
+}
+.header-designer-style {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+}
+.designer-style-list {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 40px;
+  counter-reset: counter-designer-style;
+}
+.designer-style-list > li {
+  width: calc(100% - 94px / 3);
+  padding: 20px;
+  background-color: #f8f4e4;
+}
+.designer-style-list > li + li {
+  margin-left: 47px;
+}
+.designer-style-number {
+  position: relative;
+  padding-left: 25px;
+  color: #c1ab58;
+  font-weight: 600;
+  font-size: 12px;
+}
+.designer-style-number::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  content: "";
+
+  border-bottom: 2px solid #c1ab58;
+}
+.designer-style-icon-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(220 / 1366 * 100vw);
+  max-width: 220px;
+  height: calc(220 / 1366 * 100vw);
+  max-height: 220px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.designer-style-icon {
+  width: 120px;
+}
+.designer-style-ttl {
+  margin-top: 13px;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+.designer-style-sub-ttl {
+  margin-top: 24px;
+  padding: 8px 0;
+  background-color: #c1ab58;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+}
+.designer-style-message {
+  margin-top: 14px;
+}
+.designer-style-message > li {
+  padding-left: 1em;
+  line-height: 1.7;
+  text-indent: -1em;
+}
+.designer-style-message > li::before {
+  content: "・";
+}
+
+/*-------------------------------------
+DESIGNER どんな仕事するのか
+-------------------------------------*/
+.designer-how-work-wrapper {
+  margin-top: 80px;
+}
+.designer-how-work-ttl {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+}
+.designer-how-work-sub-ttl {
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+.designer-how-work-supplement {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+.designer-how-work-container {
+  margin-top: 60px;
+}
+.designer-how-work-examples {
+  margin-top: 20px;
+  counter-reset: how-work-ttl-counter;
+}
+.designer-how-work-definition {
+  display: grid;
+  position: relative;
+  background-color: #f8f4e4;
+
+  grid-template-columns: 306px minmax(500px, 716px);
+}
+.designer-how-work-definition:nth-child(even) {
+  background-color: #f2ebcc;
+}
+.designer-how-work-definition::after {
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  z-index: 2;
+  transform: rotate(45deg);
+  width: 32px;
+  height: 32px;
+  background-color: inherit;
+  content: "";
+}
+.designer-how-work-definition:last-child::after {
+  width: 0;
+  height: 0;
+  content: "";
+}
+.designer-how-work-definition > dt {
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  counter-increment: how-work-ttl-counter;
+}
+.how-work-ttl-counter {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #c1ab58;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  content: counter(how-work-ttl-counter, decimal-leading-zero);
+}
+.how-work-ttl-counter::before {
+  font-size: 14px;
+  line-height: 32px;
+  content: counter(how-work-ttl-counter, decimal-leading-zero);
+}
+.designer-how-work-definition > dd {
+  position: relative;
+  padding: 30px;
+  line-height: 1.7;
+}
+.designer-how-work-definition > dd::before {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 80%;
+  content: "";
+
+  border-left: 1px dashed #c1ab58;
+}
+.designer-tea-party-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding: 40px 45px;
+  border: 5px solid #f2ebcc;
+}
+.designer-tea-party-container > img {
+  max-width: 200px;
+  width: 100%;
+}
+.designer-tea-party-content {
+  margin-left: 32px;
+}
+.designer-tea-party-content > dt {
+  font-weight: 600;
+  font-size: 30px;
+}
+.designer-tea-party-content > dd {
+  margin-top: 18px;
+  line-height: 1.7;
+}
+
+/*-------------------------------------
+Designer インタビュー
+-------------------------------------*/
+.interviews-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 120px 0;
+  box-sizing: content-box;
+}
+.interviews-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  margin: 0 calc(50% - 50vw);
+  background-color: #f8f4e4;
+  content: "";
+}
+.interviews-container {
+  margin-top: 90px;
+}
+.interview-thumbnail {
+  position: relative;
+  width: calc(100vw - 70px);
+  max-width: 1296px;
+  height: calc(500 / 1366 * 100vw);
+  max-height: 500px;
+}
+.interview-thumbnail-head {
+  display: flex;
+  flex-direction: column;
+}
+.interview-thumbnail-head span {
+  font-size: calc(50 / 1366 * 100vw);
+}
+.interview-thumbnail-head > span + span {
+  margin-top: 10px;
+}
+.interview-thumbnail-head-01 > span:last-child {
+  width: 80%;
+}
+.interview-thumbnail-head-02 > span:first-child {
+  width: 35%;
+  max-width: 165px;
+}
+.thumbnail-ttl-interview {
+  position: absolute;
+  top: calc(237 / 1366 * 100vw);
+  left: calc(100 / 1366 * 100vw);
+  z-index: 2;
+}
+.interview-thumbnail-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(900 / 1366 * 100vw);
+  max-width: 900px;
+  height: calc(500 / 1366 * 100vw);
+  max-height: 500px;
+}
+.interviewee {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+  font-weight: 600;
+}
+.interviewee-position {
+  display: block;
+  font-weight: 100;
+}
+.interviewee-name {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.interview-thumbnail-leihauoli-logo {
+  position: absolute;
+  top: calc(75 / 1366 * 100vw);
+  left: 0;
+  width: calc(287 / 1366 * 100vw);
+  max-width: 287px;
+  height: calc(277 / 1366 * 100vw);
+  max-height: 277px;
+}
+.interview-contents {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+/* schedule time line */
+.interview-schedule-btn {
+  display: none;
+}
+.interview-schedule-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 60px 0 32px 25px;
+}
+.interview-schedule-menu::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 30px;
+  content: "OneDay";
+}
+.interview-schedule-time-line {
+  position: relative;
+  z-index: 2;
+  width: 51px;
+  height: 1124px;
+  margin-top: 20px;
+  padding-top: 40px;
+  border-left: 4px solid #151515;
+}
+.interview-schedule-time-line::before {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 32px;
+  background-color: #151515;
+  content: "";
+}
+.interview-schedule-time-line > li {
+  width: 64px;
+  height: 20px;
+  margin-left: -32px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+.interview-schedule-time-line > li + li {
+  margin-top: 104px;
+}
+
+/* インタビュー Q&A */
+.interview-qa-list {
+  max-width: 560px;
+  margin-left: 120px;
+}
+.interview-schedule-container {
+  width: 343px;
+}
+.interview-schedule-todo-list > li > .interview-schedule-todo-detail {
+  line-height: 1.5;
+}
+.interview-schedule-todo-list {
+  position: relative;
+  height: 1124px;
+  width: 266px;
+}
+.interview-schedule-todo-img {
+  position: absolute;
+  top: calc((100% - 59px) / 2);
+  right: 0;
+  width: 59px;
+  height: 59px;
+  padding-left: 8px;
+  box-sizing: content-box;
+}
+.interview-counter {
+  display: inline-block;
+  position: relative;
+  padding-left: 60px;
+  color: #c1ab58;
+  font-weight: 600;
+  font-size: 12px;
+}
+.interview-counter::before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 52px;
+  content: "";
+  border-bottom: 1px solid #c1ab58;
+}
+.interview-question-term {
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
+}
+.interview-question {
+  line-height: 2;
+}
+.interview-answer {
+  margin-top: 11px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.interview-schedule-ttl {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+}
+.interview-schedule-todo-detail {
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+/* schedule list */
+.interview-schedule-todo-list > li {
+  position: absolute;
+  width: 100%;
+}
+.interview-schedule-todo-list > li::before {
+  position: absolute;
+  top: 6px;
+  left: -48px;
+  width: 42px;
+  content: "";
+  border-top: 1px solid #151515;
+}
+.interview-schedule-todo-list > li::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 59px;
+  height: 59px;
+  background-size: contain;
+  content: "";
+}
+
+/* インタビュー01 */
+.interview-schedule-todo-list-01 > li:nth-child(1) {
+  top: 70px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(1)::after {
+  background-image: url(/assets/images/breakfast.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(2) {
+  top: 138px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(3) {
+  top: 164px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(3)::after {
+  background-image: url(/assets/images/working.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(4) {
+  top: 245px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(5) {
+  top: 309px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(5)::after {
+  background-image: url(/assets/images/online-meeting.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(5) > .interview-schedule-ttl {
+  margin-right: 67px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(6) {
+  top: 433px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(7) {
+  top: 494px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(8) {
+  top: 700px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(9) {
+  top: 734px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(9)::after {
+  background-image: url(/assets/images/kindergarten.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(10) {
+  top: 772px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(11) {
+  top: 823px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(11)::after {
+  background-image: url(/assets/images/dentifrice.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(12) {
+  top: 896px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(13) {
+  top: 957px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(14) {
+  top: 984px;
+}
+.interview-schedule-todo-list-01 > li:nth-child(14)::after {
+  background-image: url(/assets/images/relaxed.png);
+}
+.interview-schedule-todo-list-01 > li:nth-child(15) {
+  top: 1086px;
+}
+
+/* インタビュー02 */
+.interview-schedule-todo-list-02 > li:nth-child(1) {
+  top: 62px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(2) {
+  top: 85px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(2)::after {
+  background-image: url(/assets/images/calendar.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(3) {
+  top: 174px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(3)::after {
+  background-image: url(/assets/images/designing.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(4) {
+  top: 275px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(5) {
+  top: 312px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(6) {
+  top: 435px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(7) {
+  top: 458px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(7)::after {
+  background-image: url(/assets/images/take-note.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(8) {
+  top: 526px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(8)::after {
+  background-image: url(/assets/images/online-meeting.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(8) > .interview-schedule-ttl {
+  margin-right: 67px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(9) {
+  top: 683px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(10) {
+  top: 707px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(11) {
+  top: 746px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(11)::after {
+  background-image: url(/assets/images/live-music.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(12) {
+  top: 931px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(13) {
+  top: 1055px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(14) {
+  top: 1083px;
+}
+.interview-schedule-todo-list-02 > li:nth-child(14)::after {
+  background-image: url(/assets/images/relaxed.png);
+}
+.interview-schedule-todo-list-02 > li:nth-child(15) {
+  top: 1127px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1039,7 +1648,8 @@ ABOUT　数字で見るレイハウオリ
     position: relative;
     width: calc(100% / 2 - 5px);
     margin: 0;
-    padding: calc(26 / 375 * 100vw) calc(10 / 375 * 100vw) calc(18 / 375 * 100vw);
+    padding: calc(26 / 375 * 100vw) calc(10 / 375 * 100vw)
+      calc(18 / 375 * 100vw);
   }
   .numeral-list > li:first-child {
     padding: calc(46 / 375 * 100vw) calc(28 / 375 * 100vw);
@@ -1307,6 +1917,436 @@ ABOUT　数字で見るレイハウオリ
   }
 }
 
+@media screen and (max-width: 1024px) {
+  /*-------------------------------------
+  DESIGNER チームについて
+  -------------------------------------*/
+  .section-designer {
+    padding: 64px 16px 0;
+  }
+  .head-seciton-designer {
+    top: 27px;
+    left: 0;
+  }
+  .head-seciton-designer > img {
+    width: 290px;
+    height: 168px;
+  }
+  .designer-team-wrapper {
+    padding: 160px 0 64px;
+  }
+  .designer-team-list {
+    flex-wrap: nowrap;
+    margin-top: 74px;
+    padding: 0 20px 10px;
+    overflow-x: auto;
+  }
+  .designer-team-list > li {
+    flex-shrink: 0;
+    width: 232px;
+    height: auto;
+  }
+  .designer-team-list > li + li {
+    margin-left: 30px;
+  }
+  .designer-team-list > li:nth-of-type(n + 4) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  /*-------------------------------------
+  DESINGER　STYLE(行動指針)
+  -------------------------------------*/
+  .designer-style-wrapper {
+    margin-top: 64px;
+  }
+  .designer-style-list {
+    margin-top: 32px;
+    flex-direction: column;
+  }
+  .designer-style-list > li {
+    width: 100%;
+  }
+  .designer-style-list > li + li {
+    margin: 24px 0 0;
+  }
+  .header-designer-style {
+    font-size: 28px;
+  }
+  .designer-style-number {
+    margin-left: 0;
+  }
+  .designer-style-number::before {
+    margin-right: 16px;
+  }
+  .designer-style-icon-window {
+    width: 220px;
+    height: 220px;
+  }
+  .designer-style-ttl {
+    font-size: 24px;
+  }
+  .designer-style-sub-ttl {
+    margin-top: 21px;
+  }
+  .designer-style-message {
+    padding: 0;
+  }
+  /*-------------------------------------
+  DESIGNER どんな仕事するのか
+  -------------------------------------*/
+  .designer-how-work-wrapper {
+    margin: 64px auto 0;
+  }
+  .designer-how-work-ttl {
+    font-size: 28px;
+  }
+  .designer-how-work-container {
+    margin-top: 39px;
+  }
+  .designer-how-work-sub-ttl {
+    font-size: 24px;
+  }
+  .designer-how-work-supplement {
+    margin-top: 32px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .designer-how-work-definition {
+    padding: 18px 15px 16px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 37px auto;
+  }
+  .designer-how-work-definition::after {
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+  }
+  dl.designer-how-work-examples {
+    margin-top: 25px;
+  }
+  .designer-how-work-definition > dt {
+    padding: 0 0 12px 0;
+    font-size: 18px;
+
+    border-bottom: 1px dashed #c1ab58;
+    grid-column: 1;
+    grid-row: 1/2;
+  }
+  .designer-how-work-definition > dt::after {
+    display: none;
+  }
+  .how-work-ttl-counter {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .how-work-ttl-counter::before {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .designer-how-work-definition > dd {
+    margin-top: 11px;
+    padding: 0;
+    font-size: 14px;
+  }
+  .designer-how-work-definition > dd::before {
+    display: none;
+  }
+  .designer-tea-party-container {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+    padding: 30px 24px 24px;
+  }
+  .designer-tea-party-container > img {
+    margin-top: 35px;
+    max-width: 260px;
+  }
+  .designer-tea-party-content {
+    margin-left: 0;
+  }
+  .designer-tea-party-content > dt {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+  }
+  .designer-tea-party-content > dd {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  /*-------------------------------------
+  Designer インタビュー
+  -------------------------------------*/
+  .section-interviews {
+    margin-top: 60px;
+    padding: 60px 0 64px 16px;
+  }
+  .interviews-wrapper {
+    padding: 64px 0;
+  }
+  .header-interviews {
+    font-size: 36px;
+  }
+  .interviews-container {
+    margin-top: 40px;
+  }
+  .interview-thumbnail {
+    width: calc(100vw - 16px);
+    height: calc(142 / 375 * 100vw);
+  }
+  .interview-thumbnail-head span {
+    font-size: 24px;
+  }
+  .interview-thumbnail-head > span + span {
+    margin-top: 5px;
+  }
+  .interview-thumbnail-head-02 > span:first-child {
+    width: calc(100% - 146px);
+  }
+  .interviewee {
+    margin-top: calc(16 / 375 * 100vw);
+  }
+  .thumbnail-ttl-interview {
+    top: calc(62 / 375 * 100vw);
+    left: calc(20 / 375 * 100vw);
+  }
+  .interview-thumbnail-image {
+    width: calc(256 / 375 * 100vw);
+    height: calc(142 / 375 * 100vw);
+  }
+  .interview-thumbnail-leihauoli-logo {
+    top: calc(20 / 375 * 100vw);
+    width: calc(70 / 375 * 100vw);
+    height: calc(68 / 375 * 100vw);
+  }
+  .interview-contents {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 80px;
+  }
+  .thumbnail-leihauoli-logo {
+    top: 45px;
+    left: 0;
+    margin-right: 33px;
+  }
+  .thumbnail-ttl-interview {
+    left: 10%;
+  }
+  .interviewee-position {
+    font-size: 12px;
+  }
+  .interviewee-name {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .interview-schedule-container {
+    display: none;
+  }
+  .interview-schedule-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 343px;
+    height: 50px;
+    margin-top: 40px;
+    padding: 0 16px 0 32px;
+    background-color: #e0cb7d;
+    font-weight: 600;
+  }
+  .interview-schedule-btn::after {
+    position: absolute;
+    right: 16px;
+    transform: rotate3d(1, 0, 0, -180deg);
+    width: 5px;
+    height: 5px;
+    content: "";
+    transition: transform 0.4s;
+
+    border-bottom: 8px solid #151515;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+  .interview-schedule-menu {
+    display: none;
+    padding: 32px 16px 32px 32px;
+    background-color: #ffffff;
+  }
+  .interview-schedule-menu::before {
+    display: none;
+  }
+  .interview-schedule-time-line {
+    font-size: 14px;
+  }
+  .interview-schedule-todo-list {
+    height: 1124px;
+    margin-top: 0;
+  }
+  /* schedule opened*/
+  .interview-schedule-container.is-opened {
+    width: 100%;
+    max-width: 343px;
+  }
+  .interview-schedule-container.is-opened ~ .interview-schedule-btn::after {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  .interview-schedule-container.is-opened .interview-schedule-menu {
+    display: flex;
+  }
+  /* interview list */
+  .interview-qa-list {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .interview-question-term {
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .interview-question-term:first-child {
+    margin-top: 0;
+  }
+  .dd-interview-answer {
+    font-size: 16px;
+  }
+  .interview-schedule-ttl {
+    width: auto;
+    font-size: 13px;
+  }
+  .interview-schedule-todo-detail {
+    width: auto;
+    margin-right: 67px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1367px) {
+  /*-------------------------------------
+  DESIGNER チームについて
+  -------------------------------------*/
+  .interview-thumbnail-head span {
+    font-size: 50px;
+  }
+  .interview-thumbnail-leihauoli-logo {
+    top: 75px;
+  }
+  .thumbnail-ttl-interview {
+    top: 237px;
+    left: 100px;
+  }
+}
+
+/*-------------------------------------
+WORKS
+-------------------------------------*/
+.section-works {
+  position: relative;
+  max-width: 1226px;
+  margin: 0 auto;
+  padding: 100px 70px 80px;
+  box-sizing: content-box;
+}
+.head-section-works > img {
+  width: calc(552 / 1366 * 100vw);
+  max-width: 552px;
+}
+.works-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+.works-examples-list > li {
+  position: relative;
+  width: 30%;
+}
+.works-examples-list > li:nth-child(3n + 1) {
+  margin-top: 120px;
+}
+.works-examples-list > li:nth-child(3n + 2) {
+  margin-top: 60px;
+}
+.works-examples-list > li:nth-child(3n) {
+  margin-top: 0;
+}
+.works-example-card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.works-example-card-img {
+  width: 100%;
+}
+.works-example-txt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  padding: 0 20px;
+  background-color: rgba(21, 21, 21, 0.5);
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.7;
+  transition: opacity 0.4s;
+}
+.works-example-txt:hover {
+  opacity: 1;
+}
+.works-example-supplement {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.works-example-type {
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}
+@media screen and (max-width: 1024px) {
+  /*-------------------------------------
+  WORKS
+  -------------------------------------*/
+  .section-works {
+    padding: 48px 16px 64px;
+  }
+  .head-section-works > img {
+    width: 276px;
+    height: 168px;
+  }
+  .works-examples-list {
+    flex-wrap: nowrap;
+    margin-top: 39px;
+    padding-bottom: 30px;
+    overflow-x: scroll;
+  }
+  .works-examples-list > li {
+    flex-shrink: 0;
+    width: 232px;
+    margin: 0 16px;
+  }
+  .works-examples-list > li:nth-child(3n),
+  .works-examples-list > li:nth-child(3n + 1),
+  .works-examples-list > li:nth-child(3n + 2) {
+    margin-top: 0;
+  }
+  .works-example-company {
+    margin: 16px 0 6px;
+    font-size: 16px;
+  }
+  .works-example-txt {
+    font-size: 16px;
+  }
+}
+
 /*-------------------------------------
 RECRUIT 募集要項
 -------------------------------------*/
@@ -1352,7 +2392,7 @@ RECRUIT 募集要項
   height: 100%;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   content: "";
 }
 .job-description-list > li {
@@ -1361,7 +2401,7 @@ RECRUIT 募集要項
   padding: 30px 0;
   color: #151515;
 
-  border-bottom: 1px dashed #B9B9B9;
+  border-bottom: 1px dashed #b9b9b9;
 }
 .job-description-list > li:first-child {
   padding-top: 0;
@@ -1406,7 +2446,7 @@ RECRUIT 採用までの流れ
   transform: translateX(-50%);
   width: 500px;
   height: 14px;
-  background-color: #ECE0B1;
+  background-color: #ece0b1;
   content: "";
 }
 .recruit-flow-list {
@@ -1426,7 +2466,7 @@ RECRUIT 採用までの流れ
   top: 29px;
   left: 50%;
   transform: translateX(-50%);
-  color: #C1AB58;
+  color: #c1ab58;
   font-weight: 700;
   font-size: 12px;
   line-height: 1;
@@ -1440,7 +2480,7 @@ RECRUIT 採用までの流れ
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-color: #F8F4E4;
+  background-color: #f8f4e4;
   content: "";
 }
 .recruit-flow-list > li::after {
@@ -1588,5 +2628,94 @@ RECRUIT 採用までの流れ
   }
   .recruit-flow-txt {
     margin-top: 10px;
+  }
+}
+
+/*-------------------------------------
+FOOTER
+-------------------------------------*/
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  padding: 44px 63px 20px 70px;
+  background: #151515;
+}
+.footer-info-copmpany {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.footer-privacypolicy-link {
+  display: block;
+  margin-top: 30px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.footer-privacypolicy-link:hover {
+  text-decoration: underline;
+}
+.footer-copyright {
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-size: 10px;
+}
+.footer-logo-list {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 70px;
+  bottom: 66px;
+}
+.footer-logo-list > li + li {
+  margin-left: 20px;
+}
+.footer-wantedly-logo {
+  width: 24px;
+  height: 17px;
+}
+.footer-facebook-logo {
+  width: 21px;
+  height: 21px;
+}
+@media screen and (max-width: 1024px) {
+  .main-footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 16px;
+  }
+  .footer-privacypolicy-link {
+    margin-top: 37px;
+  }
+  .footer-logo-list {
+    right: 16px;
+    bottom: 73px;
+  }
+  .footer-copyright {
+    margin: 30px 0 0 0;
+    text-align: left;
+  }
+}
+
+/*-------------------------------------
+SP
+-------------------------------------*/
+@media screen and (max-width: 1024px) {
+  .sp-scroll-bar::-webkit-scrollbar {
+    height: 5px;
+  }
+  .sp-scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #151515;
+  }
+  .sp-scroll-bar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e5e5e5;
+  }
+  .entry-button-container {
+    display: none;
   }
 }

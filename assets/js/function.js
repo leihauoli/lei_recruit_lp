@@ -1,70 +1,56 @@
 var LEIHAUOLI = LEIHAUOLI || {};
-LEIHAUOLI.DESIGNER_LP = {};
+LEIHAUOLI.RECRUIT_DESIGNER = LEIHAUOLI.RECRUIT_DESIGNER || {};
 
 /**
- * 機能名
+ * デザイナーのとある一日　アコーディオンメニュー
  */
-LEIHAUOLI.DESIGNER_LP.機能名 = {
-  init: function () {
-    this.setParameters(); //変数を格納する関数を実行
-    this.bindEvent(); //イベント（処理）を発火させる関数を実行
-  },
-  setParameters: function () {
-    //jqueryオブジェクト等はここで変数化してください
-    this.$href = $('a[href^="#"]');
-    this.$body = $("body, html");
-    this.$sample = $(".jsc-sample"); //
-  },
-  bindEvent: function () {
-    //(例)this.$hrefをクリックしたとき、processAを実行させる
-    this.$href.on("click", this.processA.bind(this));
-  },
-  processA: function () {
-    //ここに具体的な処理内容を記述
-  },
-};
+LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu = function(trigger){
+   this.$trigger = $(trigger);
+   this.init();
+ };
 
-/**
- * ハンバーガーメニュー（実装例）
- */
-LEIHAUOLI.DESIGNER_LP.HamburgerMenu = {
-  init: function () {
-    this.setParameters();
+LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu.prototype = {
+  DURATION: 400,
+  OPEN_CLASS: 'is-opened',
+  init: function(){
     this.bindEvent();
   },
-  setParameters: function () {
-    this.$hamburgerMenu = $(".jsc-cm-hamburger-menu");
-    this.$headerMenu = $(".jsc-cm-header-list");
-    this.$hamburgerBorderTop = $(".jsc-cm-hamburger-border-top");
-    this.$hamburgerBorderMiddle = $(".jsc-cm-hamburger-border-middle");
-    this.$hamburgerBorderBottom = $(".jsc-cm-hamburger-border-bottom");
-    this.$menuItem = this.$headerMenu.find("li").find("a");
-    this.$headerBg = $(".jsc-cm-header-bg");
-    this.$menuBg = $(".jsc-cm-header");
-    this.$body = $("body");
-  },
-  bindEvent: function () {
+  bindEvent: function(){
     var myself = this;
-    this.$hamburgerMenu.on("click", function () {
-      if (myself.$headerMenu.is(":animated")) return;
-      myself.toggleHamburger();
+    this.closeFlag = false;
+    this.$accordionMenu = this.$trigger.prev();
+
+    this.$trigger.on('click', function(){
+      myself.toggleAccordion();
     });
-    this.$menuItem.on("click", this.toggleHamburger.bind(this));
-    this.$headerBg.on("click", this.toggleHamburger.bind(this));
+
+    $(window).on('resize', function(){
+      if (window.matchMedia('(min-width: 1025px)').matches && myself.closeFlag === true){
+        //SP版からPC版にサイズが変化したとき、slideUpによって設定されたdisplay: noneの状態を変化させる
+        myself.$accordionMenu.css('display', '');
+        myself.closeFlag = false;
+      }
+    });
   },
-  toggleHamburger: function () {
-    this.$hamburgerMenu.toggleClass("is-active");
-    this.$body.toggleClass("is-fixed");
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      this.$headerMenu.slideToggle(0);
+  toggleAccordion: function(){
+    if (this.$trigger.is(':animated')) return;
+
+    var myself = this;
+
+    if (this.$accordionMenu.hasClass(this.OPEN_CLASS)){
+      this.$accordionMenu.slideUp(this.DURATION, function(){
+        myself.$accordionMenu.removeClass(myself.OPEN_CLASS);
+      });
+      this.closeFlag = true;
     } else {
-      this.$headerMenu.slideToggle(this.SLIDE_SPEED);
+      this.$accordionMenu.addClass(this.OPEN_CLASS).slideDown(this.DURATION);
+      this.closeFlag = false;
     }
-    this.$headerBg.toggleClass("is-active");
-  },
+  }
 };
 
-//各機能をここで呼び出します
-$(function () {
-  LEIHAUOLI.DESIGNER_LP.HamburgerMenu.init();
+$(function(){
+  $('.jsc-interview-schedule-btn').each(function(){
+    new LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu(this);
+  });
 });

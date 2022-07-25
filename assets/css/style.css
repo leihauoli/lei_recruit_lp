@@ -13,7 +13,7 @@ body.is-fixed {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 40px;
 }
 
@@ -27,7 +27,7 @@ body.is-fixed {
   z-index: 2;
   padding: 0 10px 5px;
   overflow: hidden;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: calc(70 / 1366 * 100vw);
   white-space: nowrap;
@@ -67,7 +67,7 @@ body.is-fixed {
 }
 .entry-btn-container > li > a {
   display: block;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 60px;
@@ -87,13 +87,13 @@ body.is-fixed {
   border: 1px solid #151515;
 }
 .entry-btn-container > li:last-child {
-  border: 1px solid #009cba;
+  border: 1px solid #009CBA;
 }
 .entry-btn-container > li:first-child::before {
   background-image: linear-gradient(#151515, #151515, #151515, #151515);
 }
 .entry-btn-container > li:last-child::before {
-  background-image: linear-gradient(#21bddb, #21bddb, #21bddb, #21bddb);
+  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
 }
 .entry-btn-container > li::after {
   position: absolute;
@@ -110,13 +110,13 @@ body.is-fixed {
 }
 .entry-btn-container > li:first-child::after,
 .entry-btn-container > li:last-child::after {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .entry-btn-container > li:first-child:hover > a {
   color: #151515;
 }
 .entry-btn-container > li:last-child:hover > a {
-  color: #21bddb;
+  color: #21BDDB;
 }
 .entry-btn-container > li:hover::after {
   width: 100%;
@@ -159,7 +159,7 @@ HEADER
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   animation: headerSlideIn 0.2s forwards;
 }
 .main-header.is-hidden {
@@ -208,20 +208,20 @@ HEADER
   margin-left: 60px;
 }
 .header-nav-pc > .header-menu-list > li > a {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
   transition: color 0.2s;
 }
 .header-nav-pc > .header-menu-list > li > a:hover {
-  color: #c1ab58;
+  color: #C1AB58;
 }
 .main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a {
   color: #151515;
   transition: color 0.2s;
 }
 .main-header.is-fixed > .header-nav-pc > .header-menu-list > li > a:hover {
-  color: #c1ab58;
+  color: #C1AB58;
 }
 .header-entry-list {
   display: flex;
@@ -239,7 +239,7 @@ HEADER
   display: block;
   height: 76px;
   padding: 20px 0;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 13px;
   line-height: 1;
@@ -259,10 +259,10 @@ HEADER
   content: "";
 }
 .header-entry-list > li:first-child::before {
-  background-image: linear-gradient(#c1ab58, #c1ab58, #c1ab58, #c1ab58);
+  background-image: linear-gradient(#C1AB58, #C1AB58, #C1AB58, #C1AB58);
 }
 .header-entry-list > li:last-child::before {
-  background-image: linear-gradient(#21bddb, #21bddb, #21bddb, #21bddb);
+  background-image: linear-gradient(#21BDDB, #21BDDB, #21BDDB, #21BDDB);
 }
 .header-entry-list > li::after {
   position: absolute;
@@ -278,10 +278,10 @@ HEADER
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 .header-entry-list > li:first-child::after {
-  background-color: #b1983c;
+  background-color: #B1983C;
 }
 .header-entry-list > li:last-child::after {
-  background-color: #0ca9c7;
+  background-color: #0CA9C7;
 }
 .header-entry-list > li:hover::after {
   width: 100%;
@@ -323,7 +323,7 @@ HAMBURGER MENU
     transform: translate(0) rotate(0);
     width: 26px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     transition: transform 0.2s;
   }
   .main-header.is-fixed .hamburger-menu > span {
@@ -378,7 +378,7 @@ HAMBURGER MENU
     font-size: 36px;
   }
   .header-nav-sp.is-active > .header-menu-list > li > a {
-    color: #ffffff;
+    color: #FFFFFF;
   }
   .header-menu-list > li > a::before {
     position: absolute;
@@ -558,7 +558,7 @@ ABOUT　働き方/制度
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 70px 100px 67px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .workstyle-list-main > li {
   width: calc(100% / 2 - 40px);
@@ -667,7 +667,7 @@ ABOUT　数字で見るレイハウオリ
   width: 100vw;
   height: 100%;
   margin: 0 calc(50% - 50vw);
-  background-color: #e0cb7d;
+  background-color: #E0CB7D;
   content: "";
 }
 .numeral-list {
@@ -681,7 +681,7 @@ ABOUT　数字で見るレイハウオリ
   margin-left: 10px;
   padding: calc(48 / 1366 * 100vw) calc(18 / 1366 * 100vw)
     calc(32 / 1366 * 100vw);
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   font-weight: 700;
   text-align: center;
 }
@@ -910,7 +910,7 @@ DESIGNER チームについて
   margin-top: 10px;
   padding-top: 17px;
 
-  border-top: 1px dashed #e5e5e5;
+  border-top: 1px dashed #E5E5E5;
 }
 .designer-member-icon {
   width: 70px;
@@ -929,7 +929,7 @@ DESIGNER チームについて
   width: 64px;
   padding: 3px;
   background-color: #151515;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 12px;
   text-align: center;
 }
@@ -973,7 +973,7 @@ DESIGNER STYLE(行動指針)
 .designer-style-list > li {
   width: calc(100% - 94px / 3);
   padding: 20px;
-  background-color: #f8f4e4;
+  background-color: #F8F4E4;
 }
 .designer-style-list > li + li {
   margin-left: 47px;
@@ -981,7 +981,7 @@ DESIGNER STYLE(行動指針)
 .designer-style-number {
   position: relative;
   padding-left: 25px;
-  color: #c1ab58;
+  color: #C1AB58;
   font-weight: 600;
   font-size: 12px;
 }
@@ -993,7 +993,7 @@ DESIGNER STYLE(行動指針)
   width: 20px;
   content: "";
 
-  border-bottom: 2px solid #c1ab58;
+  border-bottom: 2px solid #C1AB58;
 }
 .designer-style-icon-window {
   display: flex;
@@ -1005,7 +1005,7 @@ DESIGNER STYLE(行動指針)
   max-height: 220px;
   margin: 20px auto 0;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .designer-style-icon {
   width: 120px;
@@ -1019,8 +1019,8 @@ DESIGNER STYLE(行動指針)
 .designer-style-sub-ttl {
   margin-top: 24px;
   padding: 8px 0;
-  background-color: #c1ab58;
-  color: #ffffff;
+  background-color: #C1AB58;
+  color: #FFFFFF;
   font-weight: 600;
   text-align: center;
 }
@@ -1068,12 +1068,12 @@ DESIGNER どんな仕事するのか
 .designer-how-work-definition {
   display: grid;
   position: relative;
-  background-color: #f8f4e4;
+  background-color: #F8F4E4;
 
   grid-template-columns: 306px minmax(500px, 716px);
 }
 .designer-how-work-definition:nth-child(even) {
-  background-color: #f2ebcc;
+  background-color: #F2EBCC;
 }
 .designer-how-work-definition::after {
   position: absolute;
@@ -1102,8 +1102,8 @@ DESIGNER どんな仕事するのか
   height: 32px;
   margin-right: 16px;
   border-radius: 50%;
-  background-color: #c1ab58;
-  color: #ffffff;
+  background-color: #C1AB58;
+  color: #FFFFFF;
   font-weight: 600;
   text-align: center;
   content: counter(how-work-ttl-counter, decimal-leading-zero);
@@ -1125,7 +1125,7 @@ DESIGNER どんな仕事するのか
   height: 80%;
   content: "";
 
-  border-left: 1px dashed #c1ab58;
+  border-left: 1px dashed #C1AB58;
 }
 .designer-tea-party-container {
   display: flex;
@@ -1134,7 +1134,7 @@ DESIGNER どんな仕事するのか
   align-items: center;
   margin-top: 80px;
   padding: 40px 45px;
-  border: 5px solid #f2ebcc;
+  border: 5px solid #F2EBCC;
 }
 .designer-tea-party-container > img {
   max-width: 200px;
@@ -1169,7 +1169,7 @@ Designer インタビュー
   width: 100vw;
   height: 100%;
   margin: 0 calc(50% - 50vw);
-  background-color: #f8f4e4;
+  background-color: #F8F4E4;
   content: "";
 }
 .interviews-container {
@@ -1294,7 +1294,7 @@ Designer インタビュー
   height: 20px;
   margin-left: -32px;
   border-radius: 16px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -1333,7 +1333,7 @@ Designer インタビュー
   display: inline-block;
   position: relative;
   padding-left: 60px;
-  color: #c1ab58;
+  color: #C1AB58;
   font-weight: 600;
   font-size: 12px;
 }
@@ -1345,7 +1345,7 @@ Designer インタビュー
   transform: translateY(-50%);
   width: 52px;
   content: "";
-  border-bottom: 1px solid #c1ab58;
+  border-bottom: 1px solid #C1AB58;
 }
 .interview-question-term {
   margin-top: 50px;
@@ -2029,7 +2029,7 @@ Designer インタビュー
     padding: 0 0 12px 0;
     font-size: 18px;
 
-    border-bottom: 1px dashed #c1ab58;
+    border-bottom: 1px dashed #C1AB58;
     grid-column: 1;
     grid-row: 1/2;
   }
@@ -2155,7 +2155,7 @@ Designer インタビュー
     height: 50px;
     margin-top: 40px;
     padding: 0 16px 0 32px;
-    background-color: #e0cb7d;
+    background-color: #E0CB7D;
     font-weight: 600;
   }
   .interview-schedule-btn::after {
@@ -2174,7 +2174,7 @@ Designer インタビュー
   .interview-schedule-menu {
     display: none;
     padding: 32px 16px 32px 32px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
   }
   .interview-schedule-menu::before {
     display: none;
@@ -2292,7 +2292,7 @@ WORKS
   height: 100%;
   padding: 0 20px;
   background-color: rgba(21, 21, 21, 0.5);
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 600;
   line-height: 1.7;
   transition: opacity 0.4s;
@@ -2392,7 +2392,7 @@ RECRUIT 募集要項
   height: 100%;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
   content: "";
 }
 .job-description-list > li {
@@ -2401,7 +2401,7 @@ RECRUIT 募集要項
   padding: 30px 0;
   color: #151515;
 
-  border-bottom: 1px dashed #b9b9b9;
+  border-bottom: 1px dashed #B9B9B9;
 }
 .job-description-list > li:first-child {
   padding-top: 0;
@@ -2446,7 +2446,7 @@ RECRUIT 採用までの流れ
   transform: translateX(-50%);
   width: 500px;
   height: 14px;
-  background-color: #ece0b1;
+  background-color: #ECE0B1;
   content: "";
 }
 .recruit-flow-list {
@@ -2466,7 +2466,7 @@ RECRUIT 採用までの流れ
   top: 29px;
   left: 50%;
   transform: translateX(-50%);
-  color: #c1ab58;
+  color: #C1AB58;
   font-weight: 700;
   font-size: 12px;
   line-height: 1;
@@ -2480,7 +2480,7 @@ RECRUIT 採用までの流れ
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-color: #f8f4e4;
+  background-color: #F8F4E4;
   content: "";
 }
 .recruit-flow-list > li::after {
@@ -2643,7 +2643,7 @@ FOOTER
   background: #151515;
 }
 .footer-info-copmpany {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -2659,7 +2659,7 @@ FOOTER
 }
 .footer-copyright {
   margin-bottom: 14px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 10px;
 }
 .footer-logo-list {
@@ -2713,7 +2713,7 @@ SP
   }
   .sp-scroll-bar::-webkit-scrollbar-track {
     border-radius: 10px;
-    background-color: #e5e5e5;
+    background-color: #E5E5E5;
   }
   .entry-button-container {
     display: none;

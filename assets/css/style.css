@@ -817,7 +817,7 @@ KEY VISUAL
   }
   90% {
     font-size: calc(120 / 1366 * 100vw);
-    padding-top: calc(264 / 769 * 100vh);
+    padding-top: calc(294 / 769 * 100vh);
   }
   100% {
     opacity: 1;
@@ -1020,12 +1020,12 @@ ABOUT　レイビジョン
   opacity: 1;
 }
 .vision-container {
-  flex: 1;
-  margin-top: calc(335 / 1366 * 100vw);
   overflow: hidden;
+  margin-top: calc(335 / 1366 * 100vw);
 }
 .vision-container + .vision-container {
-  margin: 90px 0 0 calc(154 / 1366 * 100vw);
+  margin-top: 90px;
+  width: calc(550 / 1366 * 100vw);
 }
 .vision-num-content {
   display: flex;
@@ -1080,6 +1080,9 @@ ABOUT　レイビジョン
 }
 .vision-wrapper.is-visible li:nth-of-type(4){
   margin-left: 0;
+}
+.vision-wrapper li > span {
+  opacity: 0;
 }
 .vision-wrapper.is-visible li > span {
   opacity: 0;
@@ -1560,11 +1563,11 @@ ABOUT　数字で見るレイハウオリ
 }
 .numeral-workarea-list > li {
   display: flex;
-  flex: 1;
   justify-content: space-around;
   align-items: center;
   margin-left: calc(30 / 1366 * 100vw);
   padding: calc(12 / 1366 * 100vw) calc(20 / 1366 * 100vw);
+  width: calc(100% / 2 - 15px);
   border-radius: 6px;
   background-color: #F4F4F4;
 }
@@ -1618,7 +1621,8 @@ ABOUT　数字で見るレイハウオリ
     margin-top: 152px;
   }
   .vision-container + .vision-container {
-    margin: 64px 0 0 0;
+    margin-top: 64px;
+    width: 100%;
   }
   .vision-txt-main {
     margin-top: 32px;
@@ -1912,7 +1916,8 @@ ABOUT　数字で見るレイハウオリ
     margin-top: 335px;
   }
   .vision-container + .vision-container {
-    margin: 90px 0 0 154px;
+    margin-top: 90px;
+    width: 550px;
   }
   .vision-num-txt-main {
     margin-left: 16px;
@@ -2069,8 +2074,8 @@ DESIGNER チームについて
   left: 40px;
 }
 .head-section-designer > svg {
-  width: calc(620 / 1366 * 100vw);
-  max-width: 620px;
+  width: calc(619.72 / 1366 * 100vw);
+  max-width: 619.72px;
   opacity: 0;
 }
 .designer-team-wrapper {
@@ -2418,6 +2423,11 @@ Designer インタビュー
   z-index: 2;
   margin-top: 30px;
   font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.interviewee.is-visible {
+  opacity: 1;
 }
 .interviewee-position {
   display: block;
@@ -2437,6 +2447,11 @@ Designer インタビュー
   max-width: 287px;
   height: calc(277 / 1366 * 100vw);
   max-height: 277px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.interview-thumbnail-leihauoli-logo.is-visible {
+  opacity: 1;
 }
 .interview-contents {
   display: flex;
@@ -2911,7 +2926,7 @@ Designer インタビュー
     font-size: 36px;
   }
   .interviews-container {
-    margin-top: 40px;
+    margin-top: 64px;
   }
   .interview-thumbnail {
     width: calc(100vw - 16px);
@@ -3041,6 +3056,9 @@ Designer インタビュー
     margin-top: 32px;
     font-size: 18px;
     line-height: 1;
+  }
+  .interview-question-term:first-child {
+    margin-top: 0;
   }
   .dd-interview-answer {
     font-size: 16px;
@@ -3207,7 +3225,7 @@ RECRUIT 募集要項
   width: calc(559 / 1366 * 100vw);
   max-width: 559px;
 }
-.head-section-recruit > img  {
+.head-section-recruit > svg  {
   width: 100%;
   opacity: 0;
 }

@@ -25,6 +25,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     this.$header = $('.jsc-main-header');
     this.$sectionKv = $('.jsc-section-kv');
     this.$emergeItem = $('.jsc-emerge-item');
+    this.$averageAgeGraph = $('.jsc-average-age-graph');
     this.$panelImg = $('.numeral-list').find('img');
     this.$countUpNum = $('.jsc-count-up-num');
     this.$footer = $('.jsc-main-footer');
@@ -35,6 +36,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     this.itemObserver = new IntersectionObserver(this.emergeItem, this.emergeOptions);
     this.panelImgObserver = new IntersectionObserver(this.boundImg, this.emergeOptions);
     this.countUpObserver = new IntersectionObserver(this.countUp, this.emergeOptions);
+    this.averageAgeGraphObserver = new IntersectionObserver(this.renderGraph, this.emergeOptions);
     this.entryBtnFixObserver = new IntersectionObserver(this.fixedEntryBtn, this.headerOptions);
     this.pageTopFixObserver = new IntersectionObserver(this.fixedPageTop, this.headerOptions);
     this.entryBtnObserver = new IntersectionObserver(this.emergeEntryBtn, this.headerOptions);
@@ -54,6 +56,9 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     });
     Array.prototype.forEach.call(this.$countUpNum, function(box){
       myself.countUpObserver.observe(box);
+    });
+    Array.prototype.forEach.call(this.$averageAgeGraph, function(box){
+      myself.averageAgeGraphObserver.observe(box);
     });
     Array.prototype.forEach.call(this.$footer, function(box){
       myself.entryBtnFixObserver.observe(box);
@@ -136,6 +141,15 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
       if (entry.isIntersecting){
         setTimeout(function(){
           new LEIHAUOLI.RECRUIT_DESIGNER.countUpNum($(entry.target));
+        }, this.DELAY_TIME);
+      }
+    });
+  },
+  renderGraph: function(entries){
+    Array.prototype.some.call(entries, function(entry){
+      if (entry.isIntersecting){
+        setTimeout(function(){
+          new LEIHAUOLI.RECRUIT_DESIGNER.graph($(entry.target));
         }, this.DELAY_TIME);
       }
     });
@@ -309,13 +323,16 @@ LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll = {
 /**
  * 平均年齢のドーナツグラフを描画する
  */
-LEIHAUOLI.RECRUIT_DESIGNER.graph = {
+LEIHAUOLI.RECRUIT_DESIGNER.graph = function(){
+  this.init();
+};
+
+LEIHAUOLI.RECRUIT_DESIGNER.graph.prototype = {
   init: function(){
     this.setParameters();
     this.bindEvent();
   },
   setParameters: function(){
-    this.judgeInnerWidth = window.matchMedia('(max-width: 1024px)').matches;
     this.data = {
       datasets: [{
         label: '平均年齢',
@@ -331,8 +348,13 @@ LEIHAUOLI.RECRUIT_DESIGNER.graph = {
             display: false
         }
       },
-      tooltips: {
-        enabled: false
+      plugins: {
+        tooltip: {
+            enabled: false,
+        },
+      },
+      hover: {
+        mode: null
       },
       cutout: '76.6%',
       animation: {
@@ -349,7 +371,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.graph = {
       options: this.options
     });
   }
-}
+};
 
 /**
  * デザイナーのとある一日　アコーディオンメニュー
@@ -424,7 +446,6 @@ $(function(){
   LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll.init();
   LEIHAUOLI.RECRUIT_DESIGNER.HamburgerMenu.init();
   LEIHAUOLI.RECRUIT_DESIGNER.SmoothScroll.init();
-  LEIHAUOLI.RECRUIT_DESIGNER.graph.init();
   LEIHAUOLI.RECRUIT_DESIGNER.BackToTop.init();
   $('.jsc-interview-schedule-btn').each(function(){
     new LEIHAUOLI.RECRUIT_DESIGNER.AccordionTodoMenu(this);

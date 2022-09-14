@@ -294,14 +294,14 @@ body.is-fixed {
 .stroke-designer-01 {
   fill: none;
   stroke: #FFFFFF;
-  stroke-width: 11;
+  stroke-width: 28;
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }
 .stroke-designer-02 {
   fill: none;
   stroke: #FFFFFF;
-  stroke-width: 10;
+  stroke-width: 39;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
@@ -754,16 +754,14 @@ KEY VISUAL
   z-index: 2;
   position: absolute;
   content: "";
-  text-align: center;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
 .kv-ttl-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: block;
   overflow: hidden;
+  font-size: calc(600 / 1366 * 100vw);
   animation: shrinkTtl 0.8s forwards;
   animation-delay: 1.2s;
   font-weight: 700;
@@ -778,17 +776,16 @@ KEY VISUAL
   opacity: 0;
 }
 .kv-ttl-main > span:first-child {
-  display: flex;
-  flex-wrap: nowrap;
+  display: block;
   height: calc(150 / 1366 * 100vw);
-  justify-content: center;
   white-space: nowrap;
 }
 .kv-ttl-main br {
   display: none;
 }
 .kv-ttl-sub {
-  position: absolute;
+  display: block;
+  margin: 0 auto;
   padding: 0 !important;
   opacity: 0;
   -webkit-text-fill-color: #E0CB7D;
@@ -799,31 +796,34 @@ KEY VISUAL
   animation: fadeInTtl 0.2s forwards;
   animation-delay: 3.2s;
   line-height: 1.5;
-  width: 100%;
-  margin-top: calc(160 / 1366 * 100vw);
+  text-indent: 0;
+  width: calc(1016 / 1366 * 100vw);
 }
 @keyframes shrinkTtl {
   0% {
     opacity: 0;
     font-size: calc(600 / 1366 * 100vw);
+    text-indent: -100vw;
   }
   25% {
     opacity: 1;
-    font-size: calc(600 / 1366 * 100vw);
   }
   50% {
     font-size: calc(600 / 1366 * 100vw);
     padding-top: 0;
+    text-indent: -100vw;
   }
   90% {
     font-size: calc(120 / 1366 * 100vw);
     padding-top: calc(294 / 769 * 100vh);
+    text-indent: calc(192 / 1366 * 100vw)
   }
   100% {
     opacity: 1;
     /* メディアクエリが適用されないため、min()でfont-sizeを制御 */
     font-size: min(9.1vw, 150px);
     padding-top: calc(294 / 769 * 100vh);
+    text-indent: calc(175 / 1366 * 100vw);
   }
 }
 @keyframes fadeInTtl {
@@ -843,52 +843,53 @@ KEY VISUAL
     font-size: 100px;
     text-align: center;
   }
-  .kv-ttl-main {
-    padding-top: calc(256 / 812 * 100vw);
-  }
   .kv-ttl-main > span:first-child {
+    display: inline-block;
     height: 294px;
   }
   .kv-ttl-main > span {
-    display: block;
     padding-left: 0;
   }
-  .kv-ttl-main br {
+  .kv-ttl-main > span > span {
     display: block;
   }
   .kv-ttl-sub {
     font-size: 22px;
-    margin-top: 304px;
+    margin-top: 10px;
+  }
+  :root {
+    --main-gutter: 20px;
   }
   @keyframes shrinkTtl {
     0% {
       opacity: 0;
-      font-size: 400px;
-      padding-top: 0;
-
+      font-size: calc(400 / 375 * 100vw);
+      /* 375px / 2 - (375px - 311px//文字全体の横幅) / 2 */
+      text-indent: calc((-375 / 2 - (375 - 311) / 2) / 375 * 100vw);
     }
     25% {
       opacity: 1;
-      font-size: 400px;
     }
     50% {
-      font-size: 400px;
+      font-size: calc(400 / 375 * 100vw);
       padding-top: 0;
+      text-indent: calc((-375 / 2 - (375 - 311) / 2) / 375 * 100vw);
     }
     90% {
       font-size: 95px;
       padding-top: calc(256 / 812 * 100vh);
+      text-indent: 2.5px;
     }
     100% {
       opacity: 1;
       font-size: 100px;
       padding-top: calc(256 / 812 * 100vh);
+      text-indent: 0;
     }
   }
 }
 @media screen and (min-width: 1367px){
   .kv-ttl-sub {
-    margin-top: 160px;
     font-size: 30px;
   }
 }

@@ -254,7 +254,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.countUpNum.prototype = {
       }
     }, ((myself.maxIndex > 9 || myself.maxIndex === myself.FOUND_YEAR) ? myself.FAST_SPEED : myself.SLOW_SPEED));
   },
-}
+};
 
 /**
  * ハンバーガーメニュー
@@ -440,7 +440,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.BackToTop = {
       myself.$body.animate({scrollTop: 0}, myself.BACK_TO_TOP_SPEED);
     });
   }
-}
+};
 
 $(function(){
   LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll.init();

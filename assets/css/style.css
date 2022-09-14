@@ -39,35 +39,23 @@ body.is-fixed {
   background-color: #333333;
   content: "";
 }
-.ttl-bg-left::before {
-  clip-path: inset(0 100% 0 0);
-}
-/* 黒帯見出し　左から流れるように表示 */
-.ttl-bg-left.is-visible::before {
-  animation: slideInLeft 0.4s forwards;
-}
-.ttl-bg-left > span {
-  clip-path: inset(0 100% 0 0);
-}
-.ttl-bg-left.is-visible > span {
-  display: inline-block;
-  animation: slideInLeft 0.4s forwards;
-  animation-delay: 0.4s;
-}
-/* 黒帯見出し　右から流れるように表示 */
+.ttl-bg-left::before,
 .ttl-bg-right::before {
   clip-path: inset(0 100% 0 0);
 }
+/* 黒帯見出し　左から流れるように表示 */
+.ttl-bg-left.is-visible::before,
 .ttl-bg-right.is-visible::before {
-  animation: slideInLeft 0.4s forwards;
+  animation: slideInLeft .4s forwards;
 }
+.ttl-bg-left > span,
 .ttl-bg-right > span {
   clip-path: inset(0 100% 0 0);
 }
+.ttl-bg-left.is-visible > span,
 .ttl-bg-right.is-visible > span {
   display: inline-block;
-  animation: slideInLeft 0.4s forwards;
-  animation-delay: 0.4s;
+  animation: slideInLeft .4s forwards .4s;
 }
 @keyframes slideInLeft {
   0% {
@@ -166,16 +154,16 @@ body.is-fixed {
 .emerge-item-03.is-visible,
 .emerge-item-04.is-visible {
   opacity: 0;
-  animation: fadeUp 0.4s forwards;
+  animation: fadeUp .4s forwards;
 }
 .emerge-item-02.is-visible {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .emerge-item-03.is-visible {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 .emerge-item-04.is-visible {
-  animation-delay: 0.6s;
+  animation-delay: .6s;
 }
 @keyframes fadeUp {
   0% {
@@ -187,25 +175,12 @@ body.is-fixed {
     transform: translateY(0);
   }
 }
-/* fadeInアニメーション */
-.emerge-count-up {
-  animation: fadeIn 0.4s forwards;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* 左右からブロックごと表示 */
 .vision-txt-left {
   transform: translateX(-100%);
 }
 .vision-txt-left.is-visible {
-  animation: showContentInLeft 0.4s forwards;
+  animation: showContentInLeft .4s forwards;
 }
 @keyframes showContentInLeft {
   0% {
@@ -224,7 +199,7 @@ body.is-fixed {
   transform: translateX(100%);
 }
 .vision-txt-right.is-visible {
-  animation: showContentInRight 0.4s forwards;
+  animation: showContentInRight .4s forwards;
 }
 @keyframes showContentInRight {
   0% {
@@ -265,88 +240,50 @@ body.is-fixed {
 .stroke-border {
   fill: #ECE0B1;
 }
+
+#mask-about > path,
+#mask-designer > path,
+#mask-works > path,
+#mask-recruit > path {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
 /* About */
 .stroke-about-01 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 11;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
-.stroke-about-02{
-  fill: none;
-  stroke: #FFFFFF;
+.stroke-about-02 {
   stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 .stroke-about-03 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
-/* Designer */
+/* Designers */
 .stroke-designer-01 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 28;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
 }
 .stroke-designer-02 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 39;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 /* Works */
 .stroke-works-01 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 11;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 .stroke-works-02 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 /* Recruit */
 .stroke-recruit-01 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 10;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 .stroke-recruit-02 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width:11;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 .stroke-recruit-03 {
-  fill: none;
-  stroke: #FFFFFF;
   stroke-width: 9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
 }
 
 /*-------------------------------------
@@ -368,7 +305,7 @@ body.is-fixed {
   position: absolute;
   bottom: 28px;
   right: 35px;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   font-size: 12px;
   height: 78px;
 }
@@ -391,7 +328,7 @@ body.is-fixed {
     padding: 0 16px;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.4s;
+    transition: opacity .4s;
   }
   .follow-btn-wrapper > .entry-btn-container.is-active {
     opacity: 1;
@@ -433,8 +370,7 @@ HEADER
   background-color: transparent;
   z-index: 5;
   transform: translateY(-100%);
-  animation: firstSlideIn 0.4s forwards;
-  animation-delay: 4s;
+  animation: firstSlideIn .4s forwards 4s;
 }
 .main-header.is-fixed {
   position: fixed;
@@ -736,15 +672,14 @@ KEY VISUAL
   width: 100%;
   height: 100vh;
   position: relative;
-  animation: bgFadeIn 0.2s forwards;
-  animation-delay: 1.2s;
+  animation: bgFadeIn .2s forwards 1.2s;
 }
 @keyframes bgFadeIn {
   0% {
     background-color: transparent;
   }
   100% {
-    background-color: rgba(21, 21, 21, 0.9);
+    background-color: rgba(21, 21, 21, .9);
   }
 }
 .kv-ttl-container {
@@ -762,8 +697,7 @@ KEY VISUAL
   display: block;
   overflow: hidden;
   font-size: calc(600 / 1366 * 100vw);
-  animation: shrinkTtl 0.8s forwards;
-  animation-delay: 1.2s;
+  animation: shrinkTtl .8s forwards 1.2s;
   font-weight: 700;
   line-height: 1;
   width: 100%;
@@ -793,8 +727,7 @@ KEY VISUAL
   font-size: calc(30 / 1366 * 100vw);
   font-weight: 700;
   text-align: center;
-  animation: fadeInTtl 0.2s forwards;
-  animation-delay: 3.2s;
+  animation: fadeInTtl .2s forwards 3.2s;
   line-height: 1.5;
   text-indent: 0;
   width: calc(1016 / 1366 * 100vw);
@@ -1006,7 +939,7 @@ ABOUT　レイビジョン
 }
 .vision-wrapper::before {
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity .4s;
   position: absolute;
   top: 0;
   left: 0;
@@ -1044,7 +977,7 @@ ABOUT　レイビジョン
   opacity: 0;
 }
 .vision-wrapper.is-visible .vision-num-txt-main > span {
-  animation: typingEffect 0.2s forwards;
+  animation: typingEffect .2s forwards;
 }
 @keyframes typingEffect {
   0% {
@@ -1057,10 +990,10 @@ ABOUT　レイビジョン
   }
 }
 .vision-wrapper.is-visible .vision-num-txt-main > span:nth-of-type(2){
-  animation-delay: 0.5s;
+  animation-delay: .5s;
 }
 .vision-wrapper-is-visible .vision-num-txt-main > span:nth-of-type(3){
-  animation-delay: 0.6s;
+  animation-delay: .6s;
 }
 .vision-num-punctuation {
   position: absolute;
@@ -1090,17 +1023,16 @@ ABOUT　レイビジョン
   font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
 }
 .vision-wrapper.is-visible li > span {
-  animation: typingEffect 0.2s forwards;
+  animation: typingEffect .2s forwards;
 }
-
 .vision-wrapper.is-visible li:nth-of-type(1) > span:nth-of-type(1) {
-  animation-delay: 0.7s;
+  animation-delay: .7s;
 }
 .vision-wrapper.is-visible li:nth-of-type(1) > span:nth-of-type(2) {
-  animation-delay: 0.8s;
+  animation-delay: .8s;
 }
 .vision-wrapper.is-visible li:nth-of-type(1) > span:nth-of-type(3) {
-  animation-delay: 0.9s;
+  animation-delay: .9s;
 }
 .vision-wrapper.is-visible li:nth-of-type(1) > span:nth-of-type(4) {
   animation-delay: 1s;
@@ -1112,25 +1044,25 @@ ABOUT　レイビジョン
   animation-delay: 1.2s;
 }
 .vision-wrapper.is-visible li:nth-of-type(2) > span:nth-of-type(1) {
-  animation-delay: 0.7s;
+  animation-delay: .7s;
 }
 .vision-wrapper.is-visible li:nth-of-type(2) > span:nth-of-type(2) {
-  animation-delay: 0.8s;
+  animation-delay: .8s;
 }
 .vision-wrapper.is-visible li:nth-of-type(2) > span:nth-of-type(3) {
-  animation-delay: 0.9s;
+  animation-delay: .9s;
 }
 .vision-wrapper.is-visible li:nth-of-type(2) > span:nth-of-type(4) {
   animation-delay: 1s;
 }
 .vision-wrapper.is-visible li:nth-of-type(3) > span:nth-of-type(1) {
-  animation-delay: 0.7s;
+  animation-delay: .7s;
 }
 .vision-wrapper.is-visible li:nth-of-type(3) > span:nth-of-type(2) {
-  animation-delay: 0.8s;
+  animation-delay: .8s;
 }
 .vision-wrapper.is-visible li:nth-of-type(3) > span:nth-of-type(3) {
-  animation-delay: 0.9s;
+  animation-delay: .9s;
 }
 .vision-wrapper.is-visible li:nth-of-type(3) > span:nth-of-type(4) {
   animation-delay: 1s;
@@ -1139,13 +1071,13 @@ ABOUT　レイビジョン
   animation-delay: 1.1s;
 }
 .vision-wrapper.is-visible li:nth-of-type(4) > span:nth-of-type(1) {
-  animation-delay: 0.7s;
+  animation-delay: .7s;
 }
 .vision-wrapper.is-visible li:nth-of-type(4) > span:nth-of-type(2) {
-  animation-delay: 0.8s;
+  animation-delay: .8s;
 }
 .vision-wrapper.is-visible li:nth-of-type(4) > span:nth-of-type(3) {
-  animation-delay: 0.9s;
+  animation-delay: .9s;
 }
 .vision-wrapper.is-visible li:nth-of-type(4) > span:nth-of-type(4) {
   animation-delay: 1s;
@@ -1351,8 +1283,7 @@ ABOUT　数字で見るレイハウオリ
 }
 .numeral-list img.is-visible {
   transform: scale(1);
-  animation: boundAnime 0.4s forwards;
-  animation-delay: 0.4s;
+  animation: boundAnime .4s forwards .4s;
 }
 @keyframes boundAnime {
   0% {
@@ -2425,7 +2356,7 @@ Designer インタビュー
   margin-top: 30px;
   font-weight: 600;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity .4s;
 }
 .interviewee.is-visible {
   opacity: 1;
@@ -2449,7 +2380,7 @@ Designer インタビュー
   height: calc(277 / 1366 * 100vw);
   max-height: 277px;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity .4s;
 }
 .interview-thumbnail-leihauoli-logo.is-visible {
   opacity: 1;
@@ -2468,7 +2399,7 @@ Designer インタビュー
   transform: translateX(-100%);
 }
 .interview-schedule-menu.is-visible {
-  animation: showContentInLeft 0.4s forwards;
+  animation: showContentInLeft .4s forwards;
 }
 
 /* schedule time line */
@@ -3004,7 +2935,7 @@ Designer インタビュー
     width: 5px;
     height: 5px;
     content: "";
-    transition: transform 0.4s;
+    transition: transform .4s;
     border-bottom: 8px solid #151515;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -3147,7 +3078,7 @@ WORKS
   color: #FFFFFF;
   font-weight: 600;
   line-height: 1.7;
-  transition: opacity 0.4s;
+  transition: opacity .4s;
 }
 .works-example-txt:hover {
   opacity: 1;

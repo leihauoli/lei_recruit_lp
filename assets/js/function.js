@@ -82,12 +82,12 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     }
     Array.prototype.some.call(entries, function(entry){
       if (!entry.isIntersecting){
-        if (!$('.jsc-page-top-btn').is(':animated')){
-          $('.jsc-page-top-btn').fadeIn(myself.FADE_TIME);
+        if (!$('#jsi-page-top-btn').is(':animated')){
+          $('#jsi-page-top-btn').fadeIn(myself.FADE_TIME);
         }
       } else {
-        if (!$('.jsc-page-top-btn').is(':animated')){
-          $('.jsc-page-top-btn').fadeOut(myself.FADE_TIME);
+        if (!$('#jsi-page-top-btn').is(':animated')){
+          $('#jsi-page-top-btn').fadeOut(myself.FADE_TIME);
         }
       }
     });
@@ -210,11 +210,11 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
     }
     Array.prototype.some.call(entries, function(entry){
       if (entry.isIntersecting){
-        $('.jsc-page-top-btn').css({
+        $('#jsi-page-top-btn').css({
           'position': 'absolute'
         });
       } else {
-        $('.jsc-page-top-btn').css({
+        $('#jsi-page-top-btn').css({
           'position': 'fixed',
           'bottom': '28px'
         });
@@ -431,7 +431,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.BackToTop = {
     this.bindEvent();
   },
   setParameters: function(){
-    this.$pageTopBtn = $('.jsc-page-top-btn');
+    this.$pageTopBtn = $('#jsi-page-top-btn');
     this.$body = $('body, html');
   },
   bindEvent: function(){

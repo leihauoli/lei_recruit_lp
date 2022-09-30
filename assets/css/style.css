@@ -357,6 +357,14 @@ body.is-fixed {
   .page-top-btn {
     display: none;
   }
+  .follow-btn-wrapper > .entry-btn-container > li:first-child:hover > a,
+  .follow-btn-wrapper > .entry-btn-container > li:last-child:hover > a {
+    color: #FFFFFF;
+  }
+  .follow-btn-wrapper > .entry-btn-container > li:hover::after {
+    width: 0;
+    height: 0;
+  }
 }
 
 /*-------------------------------------
@@ -610,6 +618,9 @@ HAMBURGER MENU
     position: relative;
     padding-left: 3px;
     height: 100%;
+    color: #FFFFFF;
+  }
+  .header-menu-list > li > a:hover {
     color: #FFFFFF;
   }
   .header-menu-list > li > a::before {
@@ -907,6 +918,9 @@ FOOTER
   }
   .footer-privacypolicy-link {
     margin-top: 37px;
+  }
+  .footer-privacypolicy-link:hover {
+    text-decoration: none;
   }
   .footer-logo-list {
     right: 16px;
@@ -3147,6 +3161,9 @@ WORKS
   }
   .works-example-txt {
     font-size: 16px;
+  }
+  .works-example-txt:hover {
+    opacity: 0;
   }
 }
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125.967" height="160" viewBox="0 0 125.967 160">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1684" data-name="長方形 1684" width="125.967" height="160" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_2489" data-name="グループ 2489" transform="translate(-0.308)">
+    <g id="グループ_2488" data-name="グループ 2488" transform="translate(0.308)" clip-path="url(#clip-path)">
+      <path id="パス_5256" data-name="パス 5256" d="M111.352,151.634H14.232A12.233,12.233,0,0,1,2,139.4V102.706A37.982,37.982,0,0,1,39.982,64.724H85.6a37.983,37.983,0,0,1,37.983,37.982V139.4a12.233,12.233,0,0,1-12.233,12.233" transform="translate(0.191 6.175)" fill="#fff"/>
+      <path id="パス_5257" data-name="パス 5257" d="M111.352,151.634H14.232A12.233,12.233,0,0,1,2,139.4V102.706A37.982,37.982,0,0,1,39.982,64.724H85.6a37.983,37.983,0,0,1,37.983,37.982V139.4A12.233,12.233,0,0,1,111.352,151.634Z" transform="translate(0.191 6.175)" fill="none" stroke="#070203" stroke-miterlimit="10" stroke-width="4"/>
+      <path id="パス_5258" data-name="パス 5258" d="M100.76,148.911H21.167v-49.3A6.336,6.336,0,0,1,27.5,93.275H94.425a6.335,6.335,0,0,1,6.335,6.336Z" transform="translate(2.019 8.899)" fill="#e0cb7d"/>
+      <path id="パス_5259" data-name="パス 5259" d="M100.76,148.911H21.167v-49.3A6.336,6.336,0,0,1,27.5,93.275H94.425a6.335,6.335,0,0,1,6.335,6.336Z" transform="translate(2.019 8.899)" fill="none" stroke="#070203" stroke-miterlimit="10" stroke-width="4"/>
+      <path id="パス_5260" data-name="パス 5260" d="M61.886,120.619a4.037,4.037,0,1,1-4.037-4.037,4.037,4.037,0,0,1,4.037,4.037" transform="translate(5.134 11.122)" fill="#fff"/>
+      <circle id="楕円形_79" data-name="楕円形 79" cx="4.037" cy="4.037" r="4.037" transform="translate(58.947 127.704)" fill="none" stroke="#070203" stroke-miterlimit="10" stroke-width="4"/>
+      <path id="パス_5261" data-name="パス 5261" d="M87.861,29.931A27.931,27.931,0,1,1,59.931,2,27.931,27.931,0,0,1,87.861,29.931" transform="translate(3.053 0.191)" fill="#fff"/>
+      <circle id="楕円形_80" data-name="楕円形 80" cx="27.931" cy="27.931" r="27.931" transform="translate(35.053 2.191)" fill="none" stroke="#070203" stroke-miterlimit="10" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

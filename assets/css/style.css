@@ -2070,11 +2070,7 @@ DESIGNER チームについて
 }
 .header-designer-member {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 117px;
-  height: 70px;
+  align-items: center;
 }
 .designer-member-content {
   margin-top: 10px;

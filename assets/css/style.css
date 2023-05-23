@@ -676,7 +676,7 @@ KEY VISUAL
 .section-kv {
   height: 100vh;
   width: 100%;
-  background: url(/assets/images/kv-bg.jpg) center / cover;
+  background: url(/assets/images/kv-bg.webp) center / cover;
 
 }
 .kv-container {
@@ -717,7 +717,7 @@ KEY VISUAL
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: url(/assets/images/kv-bg.jpg) center / cover;
+  background: url(/assets/images/kv-bg.webp) center / cover;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -737,7 +737,7 @@ _:lang(x)+_:-webkit-full-screen-document, .kv-ttl-main {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: url(/assets/images/kv-bg.jpg) center / cover;
+  background: url(/assets/images/kv-bg.webp) center / cover;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -960,7 +960,7 @@ ABOUT　レイビジョン
   top: 0;
   left: 0;
   content: "";
-  background: url(/assets/images/about-bg.png) no-repeat;
+  background: url(/assets/images/about-bg.webp) no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -981,7 +981,7 @@ ABOUT　レイビジョン
   width: 100vw;
   height: 100%;
   margin: 0 calc(50% - 50vw);
-  background: url(/assets/images/vision-bg.jpg) no-repeat center / contain;
+  background: url(/assets/images/vision-bg.webp) no-repeat center / contain;
   content: "";
 }
 .vision-wrapper.is-visible::before {
@@ -1156,7 +1156,7 @@ ABOUT　働き方/制度
   width: 100vw;
   height: 400px;
   margin: 0 calc(50% - 50vw);
-  background: url(/assets/images/workstyle-bg.jpg) no-repeat center / cover;
+  background: url(/assets/images/workstyle-bg.webp) no-repeat center / cover;
   content: "";
 }
 .workstyle-wrapper > .ttl-bg-right {
@@ -2586,7 +2586,7 @@ Designer インタビュー
   top: 70px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(1)::after {
-  background-image: url(/assets/images/breakfast.png);
+  background-image: url(/assets/images/breakfast.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(2) {
   top: 138px;
@@ -2595,7 +2595,7 @@ Designer インタビュー
   top: 164px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(3)::after {
-  background-image: url(/assets/images/working.png);
+  background-image: url(/assets/images/working.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(4) {
   top: 245px;
@@ -2604,7 +2604,7 @@ Designer インタビュー
   top: 309px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(5)::after {
-  background-image: url(/assets/images/online-meeting.png);
+  background-image: url(/assets/images/online-meeting.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(5) > .interview-schedule-ttl {
   margin-right: 67px;
@@ -2622,7 +2622,7 @@ Designer インタビュー
   top: 734px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(9)::after {
-  background-image: url(/assets/images/kindergarten.png);
+  background-image: url(/assets/images/kindergarten.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(10) {
   top: 772px;
@@ -2631,7 +2631,7 @@ Designer インタビュー
   top: 823px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(11)::after {
-  background-image: url(/assets/images/dentifrice.png);
+  background-image: url(/assets/images/dentifrice.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(12) {
   top: 896px;
@@ -2643,7 +2643,7 @@ Designer インタビュー
   top: 984px;
 }
 .interview-schedule-todo-list-01 > li:nth-child(14)::after {
-  background-image: url(/assets/images/relaxed.png);
+  background-image: url(/assets/images/relaxed.webp);
 }
 .interview-schedule-todo-list-01 > li:nth-child(15) {
   top: 1086px;
@@ -2657,13 +2657,13 @@ Designer インタビュー
   top: 85px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(2)::after {
-  background-image: url(/assets/images/calendar.png);
+  background-image: url(/assets/images/calendar.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(3) {
   top: 174px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(3)::after {
-  background-image: url(/assets/images/designing.png);
+  background-image: url(/assets/images/designing.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(4) {
   top: 275px;
@@ -2678,13 +2678,13 @@ Designer インタビュー
   top: 458px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(7)::after {
-  background-image: url(/assets/images/take-note.png);
+  background-image: url(/assets/images/take-note.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(8) {
   top: 526px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(8)::after {
-  background-image: url(/assets/images/online-meeting.png);
+  background-image: url(/assets/images/online-meeting.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(8) > .interview-schedule-ttl {
   margin-right: 67px;
@@ -2699,7 +2699,7 @@ Designer インタビュー
   top: 746px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(11)::after {
-  background-image: url(/assets/images/live-music.png);
+  background-image: url(/assets/images/live-music.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(12) {
   top: 931px;
@@ -2711,7 +2711,7 @@ Designer インタビュー
   top: 1083px;
 }
 .interview-schedule-todo-list-02 > li:nth-child(14)::after {
-  background-image: url(/assets/images/relaxed.png);
+  background-image: url(/assets/images/relaxed.webp);
 }
 .interview-schedule-todo-list-02 > li:nth-child(15) {
   top: 1127px;
@@ -3185,7 +3185,7 @@ RECRUIT 募集要項
   width: 100vw;
   height: 400px;
   margin: 0 calc(50% - 50vw);
-  background: url(/assets/images/recruit-bg.jpg) no-repeat center right / cover;
+  background: url(/assets/images/recruit-bg.webp) no-repeat center right / cover;
 }
 .head-section-recruit {
   position: absolute;

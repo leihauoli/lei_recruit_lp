@@ -3073,6 +3073,10 @@ WORKS
   align-items: flex-start;
   margin-top: 25px;
 }
+.works-examples-list::after {
+  content:"";
+  width: 30%;
+}
 .works-examples-list > li {
   position: relative;
   width: 30%;

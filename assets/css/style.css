@@ -1361,7 +1361,7 @@ ABOUT　数字で見るレイハウオリ
 }
 .count-period {
   position: relative;
-  padding-right: calc(20 / 1366 * 100vw);
+  padding-right: calc(12 / 1366 * 100vw);
 }
 .count-period::after {
   position: absolute;
@@ -1429,9 +1429,14 @@ ABOUT　数字で見るレイハウオリ
   transform: translate(-50%, -50%);
   font-size: calc(30 / 1366 * 100vw);
 }
+.average-age-ttl > span {
+  font-size: 0;
+}
 .average-age-num {
   display: inline-block;
+  font-family: 'Fjalla One', 'Noto Sans JP', sans-serif;
   font-size: calc(56 / 1366 * 100vw);
+  line-height: 1.25;
 }
 .average-age-small-letter {
   font-size: calc(20 / 1366 * 100vw);
@@ -1458,9 +1463,13 @@ ABOUT　数字で見るレイハウオリ
   bottom: 0;
   right: 0;
 }
+.average-age-percent-head {
+  font-family: "Fjalla One", "Noto Sans JP", sans-serif;
+}
 .average-age-percent > span {
   display: inline-block;
   padding-top: calc(8 / 1366 * 100vw);
+  font-family: "Fjalla One", "Noto Sans JP", sans-serif;
   font-size: calc(40 / 1366 * 100vw);
 }
 .average-age-percent > .count-period {
@@ -1713,7 +1722,7 @@ ABOUT　数字で見るレイハウオリ
     margin-top: calc(16 / 375 * 100vw);
   }
   .count-period {
-    padding-right: calc(12 / 375 * 100vw);
+    padding-right: calc(8 / 375 * 100vw);
   }
   .count-period::after {
     right: 0;
@@ -1953,7 +1962,7 @@ ABOUT　数字で見るレイハウオリ
     margin-top: 40px;
   }
   .count-period {
-    padding-right: 20px;
+    padding-right: 12px;
   }
   /* 平均年齢 */
   .numeral-list > li:nth-of-type(6) {

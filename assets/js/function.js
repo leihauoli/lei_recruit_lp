@@ -58,7 +58,7 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
       myself.countUpObserver.observe(box);
     });
     Array.prototype.forEach.call(this.$averageAgeGraph, function(box){
-      myself.averageAgeGraphObserver.observe(box);
+      myself.averageAgeGraphObserver.observe(box, this);
     });
     Array.prototype.forEach.call(this.$footer, function(box){
       myself.entryBtnFixObserver.observe(box);
@@ -145,12 +145,13 @@ LEIHAUOLI.RECRUIT_DESIGNER.AnimateByScroll = {
       }
     });
   },
-  renderGraph: function(entries){
+  renderGraph: function(entries, observer){
     Array.prototype.some.call(entries, function(entry){
       if (entry.isIntersecting){
         setTimeout(function(){
           new LEIHAUOLI.RECRUIT_DESIGNER.graph($(entry.target));
         }, this.DELAY_TIME);
+        observer.unobserve(entry.target);
       }
     });
   },
